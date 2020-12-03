@@ -1,0 +1,62 @@
+2017-03-08 13:48:32 Notice: Notice (8): Undefined variable: candidatos in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Votacions/add.ctp, line 14]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Votacions/add.ctp, line 14
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2017-03-08 13:48:51 Notice: Notice (8): Undefined variable: candidatos in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Votacions/add.ctp, line 14]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Votacions/add.ctp, line 14
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2017-03-27 08:32:24 Notice: Notice (8): Array to string conversion in [/var/www/owncloud/Shared/aplicaciones/sath/lib/Cake/Model/Datasource/DboSource.php, line 2752]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+implode - [internal], line ??
+DboSource::conditionKeysToString() - CORE/Cake/Model/Datasource/DboSource.php, line 2752
+DboSource::conditions() - CORE/Cake/Model/Datasource/DboSource.php, line 2650
+DboSource::buildStatement() - CORE/Cake/Model/Datasource/DboSource.php, line 1943
+DboSource::buildAssociationQuery() - CORE/Cake/Model/Datasource/DboSource.php, line 1674
+DboSource::read() - CORE/Cake/Model/Datasource/DboSource.php, line 1118
+Model::_readDataSource() - CORE/Cake/Model/Model.php, line 3038
+Model::find() - CORE/Cake/Model/Model.php, line 3010
+Model::exists() - CORE/Cake/Model/Model.php, line 2920
+PersonasController::view() - APP/Controller/PersonasController.php, line 106
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 491
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2017-03-27 08:32:26 Notice: Notice (8): Array to string conversion in [/var/www/owncloud/Shared/aplicaciones/sath/lib/Cake/Model/Datasource/DboSource.php, line 2752]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+implode - [internal], line ??
+DboSource::conditionKeysToString() - CORE/Cake/Model/Datasource/DboSource.php, line 2752
+DboSource::conditions() - CORE/Cake/Model/Datasource/DboSource.php, line 2650
+DboSource::buildStatement() - CORE/Cake/Model/Datasource/DboSource.php, line 1943
+DboSource::buildAssociationQuery() - CORE/Cake/Model/Datasource/DboSource.php, line 1674
+DboSource::read() - CORE/Cake/Model/Datasource/DboSource.php, line 1118
+Model::_readDataSource() - CORE/Cake/Model/Model.php, line 3038
+Model::find() - CORE/Cake/Model/Model.php, line 3010
+Model::exists() - CORE/Cake/Model/Model.php, line 2920
+PersonasController::view() - APP/Controller/PersonasController.php, line 106
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 491
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+

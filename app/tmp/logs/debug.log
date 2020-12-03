@@ -1,0 +1,2903 @@
+2018-02-27 12:18:28 Notice: Notice (8): Array to string conversion in [/var/www/owncloud/Shared/aplicaciones/sath/lib/Cake/Model/Datasource/DboSource.php, line 468]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+PDOStatement::execute() - [internal], line ??
+DboSource::_execute() - CORE/Cake/Model/Datasource/DboSource.php, line 468
+DboSource::execute() - CORE/Cake/Model/Datasource/DboSource.php, line 434
+DboSource::fetchAll() - CORE/Cake/Model/Datasource/DboSource.php, line 671
+DboSource::query() - CORE/Cake/Model/Datasource/DboSource.php, line 614
+Model::__call() - CORE/Cake/Model/Model.php, line 834
+Persona::Expediente() - APP/Controller/DescuentoxomisionsController.php, line 251
+DescuentoxomisionsController::reporte_planilla() - APP/Controller/DescuentoxomisionsController.php, line 251
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 491
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-14 14:17:12 Notice: Notice (8): Undefined variable: permisoCoberturas in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/PermisoCoberturas/index_administrador.ctp, line 86]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/PermisoCoberturas/index_administrador.ctp, line 86
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-14 14:17:17 Notice: Notice (8): Undefined variable: permisoCoberturas in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/PermisoCoberturas/index_administrador.ctp, line 86]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/PermisoCoberturas/index_administrador.ctp, line 86
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-14 14:17:20 Notice: Notice (8): Undefined variable: permisoCoberturas in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/PermisoCoberturas/index_administrador.ctp, line 86]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/PermisoCoberturas/index_administrador.ctp, line 86
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-14 14:17:33 Notice: Notice (8): Undefined variable: permisoCoberturas in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/PermisoCoberturas/index_administrador.ctp, line 86]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/PermisoCoberturas/index_administrador.ctp, line 86
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:12 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:14 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:18 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:23 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 08:58:47 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 158]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2018-03-15 09:00:15 Notice: Notice (8): Undefined index: justificado in [/var/www/owncloud/Shared/aplicaciones/sath/app/View/Descuentoxomisions/index.ctp, line 159]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+include - APP/View/Descuentoxomisions/index.ctp, line 159
+View::_evaluate() - CORE/Cake/View/View.php, line 971
+View::_render() - CORE/Cake/View/View.php, line 933
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 963
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2019-11-27 11:21:27 Notice: Notice (8): Undefined variable: response in [/var/www/quejas/app/Controller/CasosController.php, line 154]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+CasosController::obtener_establecimientos() - APP/Controller/CasosController.php, line 154
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 491
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 117
+
+2020-05-26 08:18:49 Notice: Notice (8): Undefined offset: 2 in [/var/www/genero/app/Controller/EmpleadosController.php, line 176]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+EmpleadosController::buscar_expediente() - APP/Controller/EmpleadosController.php, line 176
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 491
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 117
+
+2020-05-26 08:18:49 Notice: Notice (8): Undefined offset: 1 in [/var/www/genero/app/Controller/EmpleadosController.php, line 176]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+EmpleadosController::buscar_expediente() - APP/Controller/EmpleadosController.php, line 176
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 491
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 117
+
+2020-05-26 08:18:50 Notice: Notice (8): Undefined offset: 2 in [/var/www/genero/app/Controller/EmpleadosController.php, line 176]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+EmpleadosController::buscar_expediente() - APP/Controller/EmpleadosController.php, line 176
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 491
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 117
+
+2020-05-26 08:18:50 Notice: Notice (8): Undefined offset: 1 in [/var/www/genero/app/Controller/EmpleadosController.php, line 176]
+Trace:
+ErrorHandler::handleError() - CORE/Cake/Error/ErrorHandler.php, line 230
+EmpleadosController::buscar_expediente() - APP/Controller/EmpleadosController.php, line 176
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 491
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 117
+
+2020-10-13 22:01:16 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:01:20 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:02:01 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:02:01 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:02:03 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:02:04 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:02:07 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:02:08 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:02:11 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:02:11 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:02:20 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:03:01 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:03:03 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:03:05 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:03:54 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:03:55 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 26
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:04:21 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:05:11 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:05:58 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:06:19 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:06:27 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:06:30 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error500() - CORE\Cake\Error\ExceptionRenderer.php, line 260
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:06:32 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:07:05 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:07:09 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:07:30 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:07:51 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:07:52 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:07:54 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:07:57 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:08:00 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:08:03 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:08:38 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:08:41 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error400() - CORE\Cake\Error\ExceptionRenderer.php, line 236
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2020-10-13 22:08:53 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:09:21 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:09:32 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:09:43 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:09:50 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:10:25 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:10:41 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:10:46 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:11:10 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:12:12 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:12:15 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:12:17 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:12:19 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:12:20 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2020-10-13 22:12:37 Debug: Notice (1024): Element Not Found: Elements\menu\atencion.ctp in [C:\xampp\htdocs\estadistica\lib\Cake\View\View.php, line 425]
+Trace:
+ErrorHandler::handleError() - CORE\Cake\Error\ErrorHandler.php, line 230
+View::element() - CORE\Cake\View\View.php, line 425
+include - APP\View\Menus\index.ctp, line 22
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+CakeObject::requestAction() - CORE\Cake\Core\CakeObject.php, line 104
+include - APP\View\Layouts\default.ctp, line 142
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+ExceptionRenderer::_outputMessage() - CORE\Cake\Error\ExceptionRenderer.php, line 292
+ExceptionRenderer::error500() - CORE\Cake\Error\ExceptionRenderer.php, line 260
+ExceptionRenderer::render() - CORE\Cake\Error\ExceptionRenderer.php, line 190
+ErrorHandler::handleException() - CORE\Cake\Error\ErrorHandler.php, line 127
+[main] - [internal], line ??
+

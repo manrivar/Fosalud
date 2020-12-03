@@ -1,0 +1,520 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11-13-2015, 02:10:46 PM
+    Author     : superbeesv
+*/
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
+.texto_opciones{
+    font-size: 12px;
+    
+}
+
+.encabezado{
+    font-weight: bold;
+}
+
+.banner-responsive{
+    display: none;
+}
+
+/* .main_menu{
+
+} */
+
+@media (min-width: 320px){
+    .texto_opciones{
+        font-size: 9px;
+    }
+
+}
+
+@media (max-width: 320px){
+    .banner-responsive{
+        display: inline;
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-noneresponsive{
+        display: none;
+    }
+}
+
+@media (min-width:480px) {
+    .texto_opciones{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px){
+    .banner-responsive{
+        display: inline;
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-noneresponsive{
+        display: none;
+    }
+}
+
+
+
+@media (min-width:600px) {
+    .texto_opciones{
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 640px){
+    .banner-responsive{
+        display: inline;
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-noneresponsive{
+        display: none;
+    }
+}
+
+
+
+
+@media (min-width:860px) {
+    .texto_opciones{
+        font-size: 12px;
+    }
+}
+
+@media  (min-width:992px){
+    .texto_opciones{
+        font-size: 15px;
+    }
+}
+
+@media  (min-width:1200px){
+    .texto_opciones{
+        font-size: 17px;
+    }
+}
+
+.box-candidato{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+    border: #aaa solid 1px;
+   background: #eee;
+   border-radius: 10px;
+   /*width: 30%;*/
+}
+
+
+.box-candidato img{
+    margin: 15px auto;
+    border: 10px solid #2F71A9;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 16px;
+    background-size: 50% auto;
+    width: 60%
+    
+}
+
+.box-nombre p{
+    font-size: 12px !important;
+    font-weight: 600;
+    margin-left: -13px;
+    margin-top: 2px;
+    
+     
+}
+
+.img-vote{
+    border-radius:60px !important;
+    border: 10px solid #1E8EA1;
+}
+
+.img-negado{
+    border-radius:60px !important;
+    border: 10px solid #FF5B45;
+}
+
+.style18 { 
+  height: 30px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+} 
+.style18:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+
+
+/*Mensaje*/
+
+
+.caja_mensaje{
+    margin-top: 100px;
+}
+
+/*Fin mensaje*/
+
+
+
+/*MAÑANA DEPORTIVA*/
+.img_deportiva{
+    border-radius: 50px;
+}
+
+.hr-deportiva{
+width: 65%;
+height: 5px;
+background-color: #3BB4BE;
+text-align: center;
+margin: 0 auto;
+margin-top: 10px;
+margin-bottom: 21px;
+}
+
+.caja_textod{
+     padding: 0px;
+     text-align: center;
+}
+
+.caja_textod h3{
+    font-family: 'Marck Script', cursive; 
+    font-size: 2rem;
+}
+
+.caja_boton1{
+    margin-top: 22px;
+}
+
+.caja_botond{
+   
+   display:flex;
+    flex-direction:row;
+    justify-content:center;
+    width:100%;
+    min-height:100%;
+    margin-bottom:3rem;
+    text-align: center;
+    margin: auto;
+
+}
+
+.caja_botond a{
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+/*BOTON MAÑANA DEPORTIVA*/
+.button_inner{
+    color: #fff;
+    background-color: #2670ca;
+    border-bottom: 8px solid #1f61b1;
+    font-size: 1.5rem;
+    border-radius: 104px;
+}
+
+.button_inner:hover{
+    color: #fff;
+    background-color: #5CBDCF !important;
+    border-bottom: 8px solid #3BB4BE !important;
+    font-size: 1.5rem;
+}
+.type_8{
+border: 0;
+height: 55px;
+background-image: url(http://www.fosalud.gob.sv/empresa/type_82.png);
+background-repeat: no-repeat;
+}
+
+/**/
+.hr_texto{
+width: 95%;
+margin-top: 0px;
+border: 0;
+    border-bottom-width: 0px;
+    border-bottom-style: none;
+    border-bottom-color: currentcolor;
+border-bottom: 1px dashed black;
+background: #70A8FF;
+margin-left: 43px;
+}
+
+.style-five{
+    height: 75px;
+background: #fff url(http://www.fosalud.gob.sv/empresa/cartoon_pencil2.png) no-repeat scroll left;
+    background-size: auto auto;
+background-size: 80px 75px;
+margin-left: -3px;
+}
+
+/* FIN MAÑANA DEPORTIVA */
+
+.azul{
+    width: 100%;
+background-color: #1F61B1;
+height: 7px;
+margin-bottom: -23px;
+
+}
+
+.azul:hover{
+    width: 100%;
+background-color: #3BB4BE;
+height: 7px;
+margin-bottom: -23px;
+}
+
+.box-menuc{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+    border: #aaa solid 1px;
+   background: #A1E1D9;
+   border-radius: 10px;
+   width: 60%;
+}
+
+
+.box-menuc img{
+    margin: 15px auto;
+    border: 10px solid #E8A10C;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 16px;
+    background-size: 100% auto;
+    width: 70%
+    
+}
+.tarde{
+    background-color: #fff3cd !important;
+    color: red;
+} 
+
+.tel_stilo{
+	background-color: #4cd2be !important;
+	border-color: #3d9b8d !important;
+	border: 1px;
+}
+
+.tel_stilo h4{
+	color: #fff !important;
+}
+
+
+
+
+.imagen_1{
+    padding: 10px; 
+    margin: 10px; 
+    border: 2px 
+    solid black; 
+    float: center; 
+    width: 1000px;
+}
+
+
+
+.A{
+  background: white;
+}
+
+.B{
+  background: white;
+}
+
+#bloque{
+  width: 200%;
+  height: 224%
+}
+
+#bloque .A, #bloque .B{
+  display: inline-block;
+}
+
+
+    *  {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        font-size: 100%;
+        line-height: 1;
+    }
+
+    p {
+        font-size: 15px;
+        font-size: 1.5rem;    
+        line-height: 1.333333334;
+        margin-bottom: 20px;
+        margin-bottom: 0rem;
+        text-align: justify;
+    }
+
+    .three-columns {
+        
+        -webkit-column-count: 3; /* Chrome, Safari, Opera */
+        -moz-column-count: 3; /* Firefox */
+        column-count: 3;
+    }
+
+h4.tale{
+    font-size: 15px;
+        font-size: 50rem;    
+        line-height: 1.333333334;
+        margin-bottom: 20px;
+        margin-bottom: 0rem;
+        text-align: justify;
+}
+
+table.mas{
+
+    table-layout: fixed;
+    width: 400px;
+    height: 500px;
+    border-collapse: separate;
+    
+    border-width: 5px;
+
+    padding:0.5625rem 2.625rem; text-align:center;
+
+}
+
+
+
+/*columnas responsive*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+
+ /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 100; /* Stay at the top */
+  left: 0;
+  background-color: #303030; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 26px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+
+.padre {
+    display: flex;
+    justify-content: center;
+}
+
+.hijo {
+    padding: 10px;
+    margin: 10px;
+}
+
+#div1 {
+    overflow:scroll;
+    height:500px;
+    width:1900px;
+}
+      
+      
