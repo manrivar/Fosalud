@@ -16,7 +16,7 @@
 <div class="col-lg-12 col-xs-12 col-sm-12">
   <ol class="breadcrumb">
     <li>
-      <span class="glyphicon glyphicon-list"></span> 
+      <span class="fa fa-undo"></span> 
       <?php 
         echo $this->Html->Link('Regresar', array('controller' => 'Ateninfcurativas', 'action' => 'index')); 
       ?>
@@ -42,7 +42,6 @@
   <button class="btn btn-primary" name="search">
     <span class="glyphicon glyphicon-search"></span>
   </button> 
-
 </form>
 <!-- inicicio de la tabla -->
 <div class = "table-responsive">
@@ -64,11 +63,9 @@
       <th class="text-center" colspan ="3">OCTUBRE</th>
       <th class="text-center" colspan ="3">NOVIEMBRE</th>
       <th class="text-center" colspan ="3">DICIEMBRE</th>
-      <th class="text-center" rowspan ="2">TOTAL ANUAL</th>
+      <th class="text-center" colspan ="3">TOTAL ANUAL</th>
     </tr>
     <tr>
-      
-      
       <th class = "text-center" >Inscripcion</th>
       <th class = "text-center" >Control</th>
       <th class = "text-center" >Total</th>
@@ -105,7 +102,9 @@
       <th class = "text-center" >Inscripcion</th>
       <th class = "text-center" >Control</th>
       <th class = "text-center" >Total</th>
-      
+      <th class = "text-center" >Total Inscripcion</th>
+      <th class = "text-center" >Total Control</th>
+      <th class = "text-center" >Total</th>
     </tr>
   </thead>
   <?php
@@ -116,7 +115,6 @@
       $query =mysqli_query($conectar, "SELECT * FROM `acinfxestas` inner join sibasis on sibasis.id = acinfxestas.sibasis_id inner join establecimientos on establecimientos.id = acinfxestas.establecimientos_id  WHERE `año` = '$date1' and acinfxestas.regiones_id = '$regioneid'" ) or die(mysqli_error());
       $row = mysqli_num_rows($query);
       
-
       if($row > 0){
         while($fetch = mysqli_fetch_assoc($query)){
           ?>
@@ -172,7 +170,12 @@
       <td><?php echo ($fetch['ins_diciembre'] + $fetch['con_diciembre']); ?></td>
       <?php 
         $total1 = ($fetch['ins_enero'] + $fetch['con_enero'] + $fetch['ins_febrero'] + $fetch['con_febrero'] + $fetch['ins_marzo'] + $fetch['con_marzo'] + $fetch['ins_abril'] + $fetch['con_abril'] + $fetch['ins_mayo'] + $fetch['con_mayo'] + $fetch['ins_junio'] + $fetch['con_junio'] + $fetch['ins_julio'] + $fetch['con_julio'] + $fetch['ins_agosto'] + $fetch['con_agosto'] + $fetch['ins_septiembre'] + $fetch['con_septiembre'] + $fetch['ins_octubre'] + $fetch['con_octubre'] + $fetch['ins_noviembre'] + $fetch['con_noviembre'] + $fetch['ins_diciembre'] + $fetch['con_diciembre']);
-        ?>
+        $totalins = ($fetch['ins_enero'] + $fetch['ins_febrero'] + $fetch['ins_marzo'] + $fetch['ins_abril'] + $fetch['ins_mayo'] + $fetch['ins_junio'] + $fetch['ins_julio'] + $fetch['ins_agosto'] + $fetch['ins_septiembre'] + $fetch['ins_octubre'] + $fetch['ins_noviembre'] + $fetch['ins_diciembre']);
+        $totalcon = ($fetch['con_enero'] + $fetch['con_febrero'] + $fetch['con_marzo'] + $fetch['con_abril'] + $fetch['con_mayo'] + $fetch['con_junio'] + $fetch['con_julio'] + $fetch['con_agosto'] + $fetch['con_septiembre'] + $fetch['con_octubre'] + $fetch['con_noviembre'] + $fetch['con_diciembre']);                                                       
+        
+      ?>
+      <td><?php echo $totalins; ?></td>
+      <td><?php echo $totalcon; ?></td>
       <td><?php echo $total1; ?></td>
           </tr> 
         <?php
@@ -190,44 +193,48 @@
           SUM(con_septiembre) AS total21, SUM(con_octubre) AS total22, SUM(con_noviembre) AS total23, SUM(con_diciembre) AS total24 FROM acinfxestas 
           WHERE acinfxestas.año = '$date1' and acinfxestas.regiones_id =".$regioneid ); 
           $row = mysqli_fetch_assoc($result); 
-          $suma = ($row['total'] + $row['total2'] + $row['total3'] + $row['total4']);
+          $sumains = ($row['total'] + $row['total2'] + $row['total3'] + $row['total4'] + $row['total5'] + $row['total6'] + $row['total7'] + $row['total8'] + $row['total9'] + $row['total10'] + $row['total11'] + $row['total12']);
+          $sumacon = ($row['total13'] + $row['total14'] + $row['total15'] + $row['total16'] + $row['total17'] + $row['total18'] + $row['total19'] + $row['total20'] + $row['total21'] + $row['total22'] + $row['total23'] + $row['total24']); 
+          $suma = $sumains + $sumacon;
         ?>
         <th><?php echo $row['total']; ?></th>
         <th><?php echo $row['total13']; ?></th>
-        <td></td>
+        <td><?php echo ($row['total'] + $row['total13']); ?></td>
         <th><?php echo $row['total2']; ?></th>
         <th><?php echo $row['total14']; ?></th>
-        <td></td>
+        <td><?php echo ($row['total2'] + $row['total14']); ?></td>
         <th><?php echo $row['total3']; ?></th>
         <th><?php echo $row['total15']; ?></th>
-        <td></td>
+        <td><?php echo ($row['total3'] + $row['total15']); ?></td>
         <th><?php echo $row['total4']; ?></th>
         <th><?php echo $row['total16']; ?></th>
-        <td></td>
+        <td><?php echo ($row['total4'] + $row['total16']); ?></td>
         <th><?php echo $row['total5']; ?></th>
         <th><?php echo $row['total17']; ?></th>
-        <td></td>
+        <td><?php echo ($row['total5'] + $row['total17']); ?></td>
         <th><?php echo $row['total6']; ?></th>
         <th><?php echo $row['total18']; ?></th>
-        <td></td>
+        <td><?php echo ($row['total6'] + $row['total18']); ?></td>
         <th><?php echo $row['total7']; ?></th>
         <th><?php echo $row['total19']; ?></th>
-        <td></td>
+        <td><?php echo ($row['total7'] + $row['total19']); ?></td>
         <th><?php echo $row['total8']; ?></th>
         <th><?php echo $row['total20']; ?></th>
-        <td></td>
+        <td><?php echo ($row['total8'] + $row['total20']); ?></td>
         <th><?php echo $row['total9']; ?></th>
         <th><?php echo $row['total21']; ?></th>
-        <td></td>
+        <td><?php echo ($row['total9'] + $row['total21']); ?></td>
         <th><?php echo $row['total10']; ?></th>
         <th><?php echo $row['total22']; ?></th>
-        <td></td>
+        <td><?php echo ($row['total10'] + $row['total22']); ?></td>
         <th><?php echo $row['total11']; ?></th>
         <th><?php echo $row['total23']; ?></th>
-        <td></td>
+        <td><?php echo ($row['total11'] + $row['total23']); ?></td>
         <th><?php echo $row['total12']; ?></th>
         <th><?php echo $row['total24']; ?></th>
-        <td></td>
+        <td><?php echo ($row['total12'] + $row['total24']); ?></td>
+        <th><?php echo $sumains; ?></th>
+        <th><?php echo $sumacon; ?></th>
         <th><?php echo $suma; ?></th>
         <?php 
         }  
@@ -301,7 +308,12 @@
 
       <?php 
         $total1 = ($fetch['ins_enero'] + $fetch['con_enero'] + $fetch['ins_febrero'] + $fetch['con_febrero'] + $fetch['ins_marzo'] + $fetch['con_marzo'] + $fetch['ins_abril'] + $fetch['con_abril'] + $fetch['ins_mayo'] + $fetch['con_mayo'] + $fetch['ins_junio'] + $fetch['con_junio'] + $fetch['ins_julio'] + $fetch['con_julio'] + $fetch['ins_agosto'] + $fetch['con_agosto'] + $fetch['ins_septiembre'] + $fetch['con_septiembre'] + $fetch['ins_octubre'] + $fetch['con_octubre'] + $fetch['ins_noviembre'] + $fetch['con_noviembre'] + $fetch['ins_diciembre'] + $fetch['con_diciembre']);
+        $totalins = ($fetch['ins_enero'] + $fetch['ins_febrero'] + $fetch['ins_marzo'] + $fetch['ins_abril'] + $fetch['ins_mayo'] + $fetch['ins_junio'] + $fetch['ins_julio'] + $fetch['ins_agosto'] + $fetch['ins_septiembre'] + $fetch['ins_octubre'] + $fetch['ins_noviembre'] + $fetch['ins_diciembre']);
+        $totalcon = ($fetch['con_enero'] + $fetch['con_febrero'] + $fetch['con_marzo'] + $fetch['con_abril'] + $fetch['con_mayo'] + $fetch['con_junio'] + $fetch['con_julio'] + $fetch['con_agosto'] + $fetch['con_septiembre'] + $fetch['con_octubre'] + $fetch['con_noviembre'] + $fetch['con_diciembre']);                                                       
+        
       ?>
+      <td><?php echo $totalins; ?></td>
+      <td><?php echo $totalcon; ?></td>
       <td><?php echo $total1; ?></td>
       </tr> 
     <?php
@@ -311,53 +323,76 @@
   <tr>
   <td colspan = "2"> Total </td>
     <?php
-      $result = mysqli_query($conectar, "SELECT SUM(ins_enero) AS total, SUM(ins_febrero) AS total2, SUM(ins_marzo) AS total3, SUM(ins_abril) AS total4, SUM(ins_mayo) AS total5, 
-      SUM(ins_junio) AS total6, SUM(ins_julio) AS total7, SUM(ins_agosto) AS total8, SUM(ins_septiembre) AS total9, SUM(ins_octubre) AS total10, SUM(ins_noviembre) AS total11, SUM(ins_diciembre) AS total12, 
-      SUM(con_enero) AS total13, SUM(con_febrero) AS total14, SUM(con_marzo) AS total15, SUM(con_abril) AS total16, SUM(con_mayo) AS total17, SUM(con_junio) AS total18, SUM(con_julio) AS total19, SUM(con_agosto) AS total20, 
-      SUM(con_septiembre) AS total21, SUM(con_octubre) AS total22, SUM(con_noviembre) AS total23, SUM(con_diciembre) AS total24 FROM acinfxestas 
+      $result = mysqli_query($conectar, "SELECT SUM(ins_enero) AS total, SUM(ins_febrero) AS total2, SUM(ins_marzo) AS total3, SUM(ins_abril) AS total4, SUM(ins_mayo) AS total5, SUM(ins_junio) AS total6, SUM(ins_julio) AS total7, SUM(ins_agosto) AS total8, SUM(ins_septiembre) AS total9, SUM(ins_octubre) AS total10, SUM(ins_noviembre) AS total11, SUM(ins_diciembre) AS total12, SUM(con_enero) AS total13, SUM(con_febrero) AS total14, SUM(con_marzo) AS total15, SUM(con_abril) AS total16, SUM(con_mayo) AS total17, SUM(con_junio) AS total18, SUM(con_julio) AS total19, SUM(con_agosto) AS total20, SUM(con_septiembre) AS total21, SUM(con_octubre) AS total22, SUM(con_noviembre) AS total23, SUM(con_diciembre) AS total24 FROM acinfxestas 
       WHERE acinfxestas.año = 2020 and acinfxestas.regiones_id =".$regioneid ); 
       $row = mysqli_fetch_assoc($result); 
-      $suma = ($row['total'] + $row['total2'] + $row['total3'] + $row['total4']);
+      $sumains = ($row['total'] + $row['total2'] + $row['total3'] + $row['total4'] + $row['total5'] + $row['total6'] + $row['total7'] + $row['total8'] + $row['total9'] + $row['total10'] + $row['total11'] + $row['total12']);
+      $sumacon = ($row['total13'] + $row['total14'] + $row['total15'] + $row['total16'] + $row['total17'] + $row['total18'] + $row['total19'] + $row['total20'] + $row['total21'] + $row['total22'] + $row['total23'] + $row['total24']); 
+      $suma = $sumains + $sumacon;
     ?>
     <th><?php echo $row['total']; ?></th>
     <th><?php echo $row['total13']; ?></th>
-    <td><?php echo ($row['total'] + $row['total13']); ?></td>
+    <td ><?php echo ($row['total'] + $row['total13']); ?></td>
 
     <th><?php echo $row['total2']; ?></th>
     <th><?php echo $row['total14']; ?></th>
-    <td></td>
+    <td ><?php echo ($row['total2'] + $row['total14']); ?></td>
+
     <th><?php echo $row['total3']; ?></th>
     <th><?php echo $row['total15']; ?></th>
-    <td></td>
+    <td ><?php echo ($row['total3'] + $row['total15']); ?></td>
+
     <th><?php echo $row['total4']; ?></th>
     <th><?php echo $row['total16']; ?></th>
-    <td></td>
+    <td ><?php echo ($row['total4'] + $row['total16']); ?></td>
+
     <th><?php echo $row['total5']; ?></th>
     <th><?php echo $row['total17']; ?></th>
-    <td></td>
+    <td ><?php echo ($row['total5'] + $row['total17']); ?></td>
+
     <th><?php echo $row['total6']; ?></th>
     <th><?php echo $row['total18']; ?></th>
-    <td></td>
+    <td ><?php echo ($row['total6'] + $row['total18']); ?></td>
+
     <th><?php echo $row['total7']; ?></th>
     <th><?php echo $row['total19']; ?></th>
-    <td></td>
+    <td ><?php echo ($row['total7'] + $row['total19']); ?></td>
+
     <th><?php echo $row['total8']; ?></th>
     <th><?php echo $row['total20']; ?></th>
-    <td></td>
+    <td ><?php echo ($row['total8'] + $row['total20']); ?></td>
+
     <th><?php echo $row['total9']; ?></th>
     <th><?php echo $row['total21']; ?></th>
-    <td></td>
+    <td ><?php echo ($row['total9'] + $row['total21']); ?></td>
+
     <th><?php echo $row['total10']; ?></th>
     <th><?php echo $row['total22']; ?></th>
-    <td></td>
+    <td ><?php echo ($row['total10'] + $row['total22']); ?></td>
+
     <th><?php echo $row['total11']; ?></th>
     <th><?php echo $row['total23']; ?></th>
-    <td></td>
+    <td ><?php echo ($row['total11'] + $row['total23']); ?></td>
+
     <th><?php echo $row['total12']; ?></th>
     <th><?php echo $row['total24']; ?></th>
-    <td></td>
+    <td ><?php echo ($row['total12'] + $row['total24']); ?></td>
+    <th><?php echo $sumains; ?></th>
+    <th><?php echo $sumacon; ?></th>
     <th><?php echo $suma; ?></th>
   <?php 
+  // consulta sql para obtener el dato del trimestre uno en la region metropolitana
+  $res = mysqli_query($conectar, 'SELECT SUM(ins_enero) + SUM(con_enero) AS total, SUM(ins_febrero) + SUM(con_febrero) AS total2, SUM(ins_marzo) + SUM(con_marzo) AS total3, SUM(ins_abril) + SUM(con_abril) AS total4, SUM(ins_mayo) + SUM(con_mayo) AS total5, SUM(ins_junio) + SUM(con_junio) AS total6, 
+  SUM(ins_julio) + SUM(con_julio) AS total7, SUM(ins_agosto) + SUM(con_agosto) AS total8, SUM(ins_septiembre) + SUM(con_septiembre) AS total9, SUM(ins_octubre) + SUM(con_octubre) AS total10, SUM(ins_noviembre) + SUM(con_noviembre) AS total11, SUM(ins_diciembre) + SUM(con_diciembre) AS total12 FROM acinfxestas 
+  WHERE acinfxestas.regiones_id ='.$regioneid); 
+  $rew = mysqli_fetch_assoc($res);
+ // update a la base de datos para el trimestre
+ $trim1 = ($rew['total'] + $rew['total2'] + $rew['total3']);
+ $trim2 = ($rew['total4'] + $rew['total5'] + $rew['total6']);
+ $trim3 = ($fetch['total7'] + $rew['total8'] + $rew['total9']);
+ $trim4 = ($rew['total10'] + $rew['total11'] + $rew['total12']);
+ mysqli_query($conectar, 'UPDATE ateninfcurativas SET trimestre1 ='.$trim1.', trimestre2 ='.$trim2.', trimestre3 ='.$trim3.', trimestre4 ='.$trim4.' WHERE ateninfcurativas.regiones_id ='.$regioneid);
+
   } 
   ?>
   </tr>

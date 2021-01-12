@@ -60,8 +60,7 @@
 				echo $this->Form->input('con_diciembre', array('label' => 'Diciembre'));
 			?>
 			</div>
-			</div>
-
+			</div> 
 			<div>
 				<button id="enviar".<?php $regione_id ?> onclick="" class="btn-block btn-primary">Guardar</button>
 			</div>

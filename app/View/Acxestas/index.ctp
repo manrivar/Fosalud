@@ -16,7 +16,7 @@
 <div class="col-lg-12 col-xs-12 col-sm-12">
   <ol class="breadcrumb">
     <li>
-      <span class="glyphicon glyphicon-list"></span> 
+      <span class="fa fa-undo"></span> 
       <?php 
         echo $this->Html->Link('Regresar', array('controller' => 'Atencurativas', 'action' => 'index')); 
       ?>
@@ -44,8 +44,9 @@
   </button> 
   
 </form>
+<div class = "table-responsive">
 <!-- inicicio de la tabla -->
-<table class = "table table-bordered">
+<table class = "table table-bordered table-condensed">
   <thead class = "alert-info">
     <tr>
       <th class="text-center">SIBASI</th>
@@ -186,8 +187,19 @@
     <th><?php echo $row['total12']; ?></th>
     <th><?php echo $suma; ?></th>
   <?php 
+   // consulta sql para obtener el dato del trimestre uno en la region metropolitana
+   $res = mysqli_query($conectar, 'SELECT SUM(enero) AS total, SUM(febrero) AS total2, SUM(marzo) AS total3, SUM(abril) AS total4, SUM(mayo) AS total5, SUM(junio) AS total6, SUM(julio) AS total7, SUM(agosto) AS total8, SUM(septiembre) AS total9, SUM(octubre) AS total10, SUM(noviembre) AS total11, SUM(diciembre) AS total12 FROM acxestas WHERE acxestas.regiones_id ='.$regioneid); 
+   $rew = mysqli_fetch_assoc($res);
+  // update a la base de datos para el trimestre
+  $trim1 = ($rew['total'] + $rew['total2'] + $rew['total3']);
+  $trim2 = ($rew['total4'] + $rew['total5'] + $rew['total6']);
+  $trim3 = ($fetch['total7'] + $rew['total8'] + $rew['total9']);
+  $trim4 = ($rew['total10'] + $rew['total11'] + $rew['total12']);
+  mysqli_query($conectar, 'UPDATE atencurativas SET trimestre1 ='.$trim1.', trimestre2 ='.$trim2.', trimestre3 ='.$trim3.', trimestre4 ='.$trim4.' WHERE atencurativas.regiones_id ='.$regioneid);
+
   } 
   ?>
   </tr>
   </tfoot>
 </table>
+</div> 

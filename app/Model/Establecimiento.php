@@ -30,6 +30,13 @@
             'order' => '',
             'depend' => false
             ),
+            'Ecxesta' => array(
+                'className' => 'Ecxesta',
+                'foreignKey' => 'establecimientos_id',
+                'conditions' => '',
+                'order' => '',
+                'depend' => false
+            )
         );
 
         public $belongsTo = array(

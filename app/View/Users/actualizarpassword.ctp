@@ -24,7 +24,6 @@
                             <div class="input text required form-group">
                                 <label for="UserUsername">Usuario</label>
                                 <input class="form-control" type="text" id="UserUsername" value="<?php echo $usuario; ?>" maxlength="255" disabled="disabled" name="data[User][username]"/>
-
                             </div>
 
                             <div class="input password required form-group">
@@ -33,12 +32,10 @@
                                 <input class="form-control" type="hidden"  id="UserId" value="<?php echo $UserId; ?>" name="data[User][id]"/>
                                 <input class="form-control" type="hidden"  id="Normal" value="1" name="data[User][normal]"/>
                             </div> 
-
                         </div>
                         <div class="">
                             <div><button onclick="window.UserEditForm.submit();" class="btn-block btn-primary"><span class="glyphicon glyphicon-ok-sign"></span> Actualizar</button></div>
                         </div>
-
                     </form>
                 </div>
                 <div style="text-align: center;" class="span5">

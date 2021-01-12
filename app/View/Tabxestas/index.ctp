@@ -44,6 +44,7 @@
   </button> 
 
 </form>
+<div class = "table-responsive">
 <!-- inicicio de la tabla -->
 <table class = "table table-bordered">
   <thead class = "alert-info">
@@ -191,3 +192,4 @@
   </tr>
   </tfoot>
 </table>
+</div>

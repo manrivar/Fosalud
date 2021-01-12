@@ -6,7 +6,7 @@
          public function index($regiones_id){
             //Region Occidente
             if($regiones_id == 1){
-                $this->set('acmatxestas', $this->Tabxesta->find('all', array(
+                $this->set('tabxestas', $this->Tabxesta->find('all', array(
                     'conditions' => array('Tabxesta.regiones_id' => '1')
                 )));
                 $regiones_id = $this->Tabxesta->findByRegiones_id($regiones_id);
@@ -14,7 +14,7 @@
             }
             //Region Centro
             if($regiones_id == 2){
-                $this->set('acmatxestas', $this->Tabxesta->find('all', array(
+                $this->set('tabxestas', $this->Tabxesta->find('all', array(
                     'conditions' => array('Tabxesta.regiones_id' => '2')
                 )));
                 $regiones_id = $this->Tabxesta->findByRegiones_id($regiones_id);
@@ -22,7 +22,7 @@
             }
             //Region Metropolitana
             if($regiones_id == 3){
-                $this->set('acmatxestas', $this->Tabxesta->find('all', array(
+                $this->set('tabxestas', $this->Tabxesta->find('all', array(
                     'conditions' => array('Tabxesta.regiones_id' => '3')
                 )));
                 $regiones_id = $this->Tabxesta->findByRegiones_id($regiones_id);
@@ -30,7 +30,7 @@
             }
             //Region Paracentral
             if($regiones_id == 4){
-                $this->set('acmatxestas', $this->Tabxesta->find('all', array(
+                $this->set('tabxestas', $this->Tabxesta->find('all', array(
                     'conditions' => array('Tabxesta.regiones_id' => '4')
                 )));
                 $regiones_id = $this->Tabxesta->findByRegiones_id($regiones_id);
@@ -38,7 +38,7 @@
             }
             //Region Oriente
             if($regiones_id == 5){
-                $this->set('acmatxestas', $this->Tabxesta->find('all', array(
+                $this->set('tabxestas', $this->Tabxesta->find('all', array(
                     'conditions' => array('Tabxesta.regiones_id' => '5')
                 )));
                 $regiones_id = $this->Tabxesta->findByRegiones_id($regiones_id);
@@ -66,7 +66,7 @@
                     $this->Tabxesta->id = $establecimientos_id;
                     if ($this->Tabxesta->save($this->request->data)) {
                         $this->Flash->success(__('La atencion curativa se modifico con exito'));
-                        return $this->redirect(array('controller' => 'acmatxestas', 'action' => 'index', 1));
+                        return $this->redirect(array('controller' => 'tabxestas', 'action' => 'index', 1));
                     }
                     $this->Flash->error(__('No se puede modificar la atencion curativa'));
                 }
@@ -100,7 +100,7 @@
                          $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
                          $this->Bitacora->save($Bitacora);
                         $this->Flash->success(__('La atencion curativa se modifico con exito'));
-                        return $this->redirect(array('controller' => 'acmatxestas', 'action' => 'index', 2));  
+                        return $this->redirect(array('controller' => 'tabxestas', 'action' => 'index', 2));  
                         }
                     $this->Flash->error(__('No se puede modificar la atencion curativa'));
                 }
@@ -128,7 +128,7 @@
                     $this->Tabxesta->id = $establecimientos_id;
                     if ($this->Tabxesta->save($this->request->data)) {
                         $this->Flash->success(__('La atencion curativa se modifico con exito'));
-                        return $this->redirect(array('controller' => 'acmatxestas', 'action' => 'index', 3));
+                        return $this->redirect(array('controller' => 'tabxestas', 'action' => 'index', 3));
                     }
                     $this->Flash->error(__('No se puede modificar la atencion curativa'));
                 }
@@ -156,7 +156,7 @@
                     $this->Tabxesta->id = $establecimientos_id;
                     if ($this->Tabxesta->save($this->request->data)) {
                         $this->Flash->success(__('La atencion curativa se modifico con exito'));
-                        return $this->redirect(array('controller' => 'acmatxestas', 'action' => 'index', 4));
+                        return $this->redirect(array('controller' => 'tabxestas', 'action' => 'index', 4));
                     }
                     $this->Flash->error(__('No se puede modificar la atencion curativa'));
                 }
@@ -184,7 +184,8 @@
                     $this->Tabxesta->id = $establecimientos_id;
                     if ($this->Tabxesta->save($this->request->data)) {
                         $this->Flash->success(__('La atencion curativa se modifico con exito'));
-                        return $this->redirect(array('controller' => 'acmatxestas', 'action' => 'index', 5));
+                        return $this->redirect(array('controller' => 'tabxestas
+                        ', 'action' => 'index', 5));
                     }
                     $this->Flash->error(__('No se puede modificar la atencion curativa'));
                 }

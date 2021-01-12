@@ -39,7 +39,8 @@ if (isset($q) and $q != "") {
 
 <div class="col-lg-2 col-sm-12 col-xs-12 col-md-2"></div>
 <div class="col-lg-9 col-sm-12 col-xs-12 col-md-8">
-    <table class="table table-responsive">
+<div class = "table-responsive">
+    <table class="table ">
         <thead>
             <tr>
                 <th><?php echo $this->Paginator->sort('id'); ?></th>
@@ -86,6 +87,7 @@ if (isset($q) and $q != "") {
             <?php endforeach; ?>
         </tbody>
     </table>
+    </div>
     <p>
         <?php
         echo $this->Paginator->counter(array(
@@ -99,6 +101,4 @@ if (isset($q) and $q != "") {
         echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
         ?>
     </div>
-
-
 </div>

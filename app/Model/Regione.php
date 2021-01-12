@@ -26,6 +26,12 @@
             'conditions' => '',
             'depend' => false
             ),
+            'Regione' => array(
+                'className' => 'Tabaquismo',
+                'foreignKey' => 'regiones_id',
+                'conditions' => '',
+                'depend' => false
+            )
         );  
         
         public $hasMany = array(
@@ -57,6 +63,12 @@
                 'order' => '',
                 'depend' => false
             ),
+            'Ecxesta' => array(
+                'className' => 'Ecxesta',
+                'foreignKey' => 'regiones_id',
+                'conditions' => '',
+                'depend' => false
+            )
         );  
     }
 ?>

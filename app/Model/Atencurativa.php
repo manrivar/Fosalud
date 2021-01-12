@@ -1,10 +1,9 @@
 <?php 
-
 	class Atencurativa extends AppModel 
 	{
 	    public $belongsTo = array(
 	        'Regione' => array(
-	            'classname' => 'Regione',
+	            'className' => 'Regione',
 	            'foreignKey' => 'regiones_id'
 	        )
 	    );

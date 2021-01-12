@@ -11,7 +11,7 @@
 
 <div class="row">
     <div class="users  col-lg-8 col-xs-12 col-sm-12 col-md-8">
-        <form role="form" accept-charset="utf-8" method="post" id="UserEditForm" action="<?= $this->base; ?>/users/edit/<?= $this->request->data["User"]["id"];?>">
+        <form role="form" accept-charset="utf-8" method="post" id="UserEditForm" action="<?php $this->base; ?>/users/edit/<?= $this->request->data["User"]["id"];?>">
             <div style="display:none;">
                 <input type="hidden" value="PUT" name="_method">
             </div>        

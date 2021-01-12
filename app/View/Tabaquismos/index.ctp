@@ -40,6 +40,7 @@
   </button> 
   
 </form>
+<div class = "table-responsive">
 <!-- Inicio de la tabla -->
 <table class="table">
   <thead class="alert-info">
@@ -138,4 +139,5 @@
   ?>
   </tr>
   </tfoot>
-</table>
+  </table>
+  </div>

@@ -168,14 +168,14 @@ and open the template in the editor.
 }
 
 
-/*Mensaje*/
+/* Mensaje */
 
 
 .caja_mensaje{
     margin-top: 100px;
 }
 
-/*Fin mensaje*/
+/* Fin Mensaje */
 
 
 
@@ -210,7 +210,7 @@ margin-bottom: 21px;
 
 .caja_botond{
    
-   display:flex;
+    display:flex;
     flex-direction:row;
     justify-content:center;
     width:100%;
@@ -218,7 +218,6 @@ margin-bottom: 21px;
     margin-bottom:3rem;
     text-align: center;
     margin: auto;
-
 }
 
 .caja_botond a{
@@ -501,6 +500,7 @@ body {
   .sidenav a {font-size: 18px;}
 } 
 
+/* estilo para divs horizontales y centrados */
 .padre {
     display: flex;
     justify-content: center;
@@ -511,10 +511,45 @@ body {
     margin: 10px;
 }
 
+@media (min-width: 680px) and (max-width: 1024px){
+
+}
+
+/* tener scroll en divs */
 #div1 {
     overflow:scroll;
     height:500px;
     width:1900px;
 }
-      
-      
+
+/* prueba para divs responsive*/
+main {  
+    width: 100%;  
+  }  
+    
+  .first {  
+    width: 30%;  
+    height: 100 px;  
+    background: #CCC;  
+    float: left;  
+    
+  }  
+    
+  .second {  
+    width: 30%;  
+    height: 100 px;  
+    background: green;  
+    float: left;  
+  }  
+    
+  .third {  
+    width: 30%;  
+    height: 100 px;  
+    background: red;  
+    float: left;  
+  }  
+    
+  .clear {  
+    clear: both;  
+  }   
+/* fin prueba */

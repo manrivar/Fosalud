@@ -131,8 +131,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             <div id="header">
                 <div class="centrardiv" style="background-color: #313945;">
                     
-                        <?php echo $this->Html->image("banner_header.jpg", array("class"=>"banner-noneresponsive img-responsive","alt" => "Fondo Social para la Salud",'width'=>'100%')); ?>
-                        <?php echo $this->Html->image("banner_responsive.jpg", array("class"=>"banner-responsive img-responsive","alt" => "Fondo Social para la Salud",'width'=>'100%')); ?>
+                        <?php echo $this->Html->image("banner_header.svg", array("class"=>"banner-noneresponsive img-responsive","alt" => "Fondo Social para la Salud",'width'=>'100%')); ?>
+                        <?php echo $this->Html->image("banner_responsive.svg", array("class"=>"banner-responsive img-responsive","alt" => "Fondo Social para la Salud",'width'=>'100%')); ?>
                
                 </div>
 

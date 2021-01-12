@@ -19,7 +19,17 @@ class UsersController extends AppController {
      * @var array
      */ 
     public $components = array('Paginator', 'Flash', 'Session');
-    public $helpers = array('Html', 'Form', 'Time');
+    public $helpers = array('Html', 'Form', 'Time', 'Csv');
+     
+
+    function download() { 
+        $this->set('orders', $this->Order->find('all')); 
+        $this->layout = null; 
+        $this->autoLayout = false; 
+        Configure::write('debug', '0'); 
+    } 
+
+
 
 
     public function Autorizacion() {
@@ -331,14 +341,12 @@ class UsersController extends AppController {
      * @return void
      */
     public function Bienvenida() {
-       
-    
+
     }
     public function normativa() {
 
     }
-    public function estadistica_y_epidemiologia()
-    {
+    public function estadistica_y_epidemiologia(){
        
     }
     public function programas_especiales(){
@@ -350,11 +358,15 @@ class UsersController extends AppController {
     public function new(){
     
     }
+    public function Atenmenu(){
 
+    }
+    public function Atenmenu2(){
 
-   
+    }
+    public function importar(){
 
-
+    }
 
 
     /**
@@ -584,10 +596,7 @@ class UsersController extends AppController {
     }
 
     
-    public function Atenmenu(){
-
-    }
-
+    
     
 
 

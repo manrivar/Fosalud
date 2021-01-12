@@ -10,11 +10,10 @@
   $uno = $atenmatcurativas
 ?>
 
-
 <div class="col-lg-12 col-xs-12 col-sm-12">
   <ol class="breadcrumb">
     <li>
-      <span class="glyphicon glyphicon-list"></span> <?php echo $this->Html->Link('Regresar', array('controller' => 'Users', 'action' => 'atenmenu')); ?>
+      <span class="fa fa-undo"></span> <?php echo $this->Html->Link('Regresar', array('controller' => 'Users', 'action' => 'atenmenu')); ?>
     </li>
   </ol>
 </div>
@@ -41,6 +40,7 @@
   </button> 
   
 </form>
+<div class = "table-responsive">
 <!-- Inicio de la tabla -->
 <table class="table table-bordered">
   <thead class="alert-info">
@@ -140,3 +140,4 @@
   </tr>
   </tfoot>
 </table>
+</div>

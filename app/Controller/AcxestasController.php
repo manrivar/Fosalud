@@ -189,6 +189,9 @@
                     $this->request->data = $aten;
                 }
             }
-        } 	
+        } 
+        public function subir() {
+
+        }	
     }
 ?>

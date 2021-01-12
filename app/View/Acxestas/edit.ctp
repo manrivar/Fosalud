@@ -26,8 +26,7 @@
 				echo $atens; 
 				?>			
 			</legend>
-
-			<?php
+		<?php
 				echo $this->Form->input('establecimientos_id', array('type' => 'hidden'));
 				echo $this->Form->input('enero');
 				echo $this->Form->input('febrero');

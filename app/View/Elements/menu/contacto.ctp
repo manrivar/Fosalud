@@ -1,0 +1,1 @@
+<li><a href='<?= $this->base; ?>/files/contactos/contactos.pdf' target='_blank'><span class="glyphicon glyphicon-phone-alt"></span> Contactos</a></li>

@@ -22,7 +22,10 @@
                      ?>
 
                      <ul class="nav navbar-nav">
-                    <li><a href="<?php echo $this->base . '/users/bienvenida'; ?>"><span class="glyphicon glyphicon-phone-alt"></span>  Contactos</a></li>
+                     <?php
+                      echo $this->Element('menu/contacto');  
+                    ?>
+                    <!-- <li><a href="<?php echo $this->base .'/file/contactos.pdf'; ?>"><span class="glyphicon glyphicon-phone-alt"></span>  Contactos</a></li> -->
                     
                     
                     <?php
@@ -33,9 +36,11 @@
                     break;
                 
                     endswitch;
-                  
-                    echo $this->Element('menu/ayuda'); 
-                    
+                    ?>
+                    <li><a href="<?php echo $this->base . '/users/importar'; ?>"><span class="fa fa-upload"></span> Importar</a></li> 
+
+                    <?php
+                      echo $this->Element('menu/ayuda');  
                     ?>
                     
                     <li class="dropdown"> 

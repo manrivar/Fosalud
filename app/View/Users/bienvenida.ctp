@@ -47,7 +47,7 @@
       </div>
 
       <div class="hijo">
-        <a href="<?=$this->base?>/users/atenmenu" ><img src="<?= $this->base ?>/img/ima/Ask A Doctor.png" width="200" height="224">
+        <a href="<?=$this->base?>/users/atenmenu2" ><img src="<?= $this->base ?>/img/ima/Ask A Doctor.png" width="200" height="224">
         <div class="box-nombre">
           <center><h4>Programas <br> Especiales</h4></center>
         </div>
