@@ -8,9 +8,6 @@ $dbname = "estadistica2";
 // Generando la conexión con el servidor
 $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
 
-//prueba prueba otra vez jajaja
-
-
 ?>
 <html>
 
