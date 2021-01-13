@@ -53,9 +53,6 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
   </div>
 
   <?php
-  $date1 = $_POST['date1'];
-  $aten = $_POST['aten'];
-  $regi = $_POST['regi'];
   // formulario de subida del archivo
   if (isset($_POST["upload"])) {
     if ($_FILES['product_file']['name']) {
@@ -64,7 +61,7 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
       if (end($filename) == "csv") {
         $handle = fopen($_FILES['product_file']['tmp_name'], "r");
 
-        while ($data = fgetcsv($handle)) {
+        while ($data = fgetcsv($handle, 0,";" )) {
           //lectura de los campos en el archivo Csv
           $id = mysqli_real_escape_string($conectar, $data[0]);
           $establecimientos_id = mysqli_real_escape_string($conectar, $data[1]);
@@ -86,10 +83,8 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
           $date1 = $_POST['date1'];
           $aten = $_POST['aten'];
           $regi = $_POST['regi'];
-
-          
           $query = "
-                            UPDATE $aten
+                            UPDATE acxestas
                             SET establecimientos_id = '$establecimientos_id', 
                             regiones_id = '$regiones_id', 
                             enero = '$enero',
