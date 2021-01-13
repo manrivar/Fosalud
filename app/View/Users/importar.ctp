@@ -86,7 +86,6 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
           $date1 = $_POST['date1'];
           $aten = $_POST['aten'];
           $regi = $_POST['regi'];
-
           $query = "
                             UPDATE $aten
                             SET establecimientos_id = '$establecimientos_id', 
