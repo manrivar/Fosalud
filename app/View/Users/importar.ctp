@@ -77,9 +77,7 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
           $diciembre = mysqli_real_escape_string($conectar, $data[14]);
 
           //Query que efectuara el update a la base de datos 
-          $date1 = $_POST['date1'];
-          $aten = $_POST['aten'];
-          $regi = $_POST['regi'];
+          
           $query = "
                             UPDATE acxestas
                             SET establecimientos_id = '$establecimientos_id', 
