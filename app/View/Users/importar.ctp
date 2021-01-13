@@ -4,6 +4,8 @@ $hostname = "localhost";
 $usuariodb = "root";
 $passworddb = "";
 $dbname = "estadistica2";
+//realizar un if en esta parte con la funcion isset
+$aten = "acxestas"; 
 
 // Generando la conexión con el servidor
 $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
@@ -48,8 +50,99 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
       </form>
     </div>
   </div>
-
   <?php
+  
+  if ($aten == "acinfxestas") {
+    // formulario de subida del archivo
+    if (isset($_POST["upload"])) {
+      if ($_FILES['product_file']['name']) {
+        $filename = explode(".", $_FILES['product_file']['name']);
+
+        if (end($filename) == "csv") {
+          $handle = fopen($_FILES['product_file']['tmp_name'], "r");
+
+          while ($data = fgetcsv($handle, 0, ";")) {
+            //lectura de los campos en el archivo Csv
+            $id = mysqli_real_escape_string($conectar, $data[0]);
+            $establecimientos_id = mysqli_real_escape_string($conectar, $data[1]);
+            $regiones_id = mysqli_real_escape_string($conectar, $data[2]);
+            $enero = mysqli_real_escape_string($conectar, $data[3]);
+            $enero2 = mysqli_real_escape_string($conectar, $data[4]);
+            $febrero = mysqli_real_escape_string($conectar, $data[5]);
+            $febrero2 = mysqli_real_escape_string($conectar, $data[6]);
+            $marzo = mysqli_real_escape_string($conectar, $data[7]);
+            $marzo2 = mysqli_real_escape_string($conectar, $data[8]);
+            $abril = mysqli_real_escape_string($conectar, $data[9]);
+            $abril2 = mysqli_real_escape_string($conectar, $data[10]);
+            $mayo = mysqli_real_escape_string($conectar, $data[11]);
+            $mayo2 = mysqli_real_escape_string($conectar, $data[12]);
+            $junio = mysqli_real_escape_string($conectar, $data[13]);
+            $junio2 = mysqli_real_escape_string($conectar, $data[14]);
+            $julio = mysqli_real_escape_string($conectar, $data[15]);
+            $julio2 = mysqli_real_escape_string($conectar, $data[16]);
+            $agosto = mysqli_real_escape_string($conectar, $data[17]);
+            $agosto2 = mysqli_real_escape_string($conectar, $data[18]);
+            $septiembre = mysqli_real_escape_string($conectar, $data[19]);
+            $septiembre2 = mysqli_real_escape_string($conectar, $data[20]);
+            $octubre = mysqli_real_escape_string($conectar, $data[21]);
+            $octubre2 = mysqli_real_escape_string($conectar, $data[22]);
+            $noviembre = mysqli_real_escape_string($conectar, $data[23]);
+            $noviembre2 = mysqli_real_escape_string($conectar, $data[24]);
+            $diciembre = mysqli_real_escape_string($conectar, $data[25]);
+            $diciembre2 = mysqli_real_escape_string($conectar, $data[26]);
+
+            //Query que efectuara el update a la base de datos 
+
+            $query = "
+                            UPDATE acinfxestas
+                            SET establecimientos_id = '$establecimientos_id', 
+                            regiones_id = '$regiones_id', 
+                            ins_enero = '$enero',
+                            con_enero = '$enero2',
+                            ins_febrero = '$febrero',
+                            con_febrero = '$febrero2',
+                            ins_marzo = '$marzo',
+                            con_marzo = '$marzo2',
+                            ins_abril = '$abril',
+                            con_abril = '$abril2',
+                            ins_mayo = '$mayo',
+                            con_mayo = '$mayo2',
+                            ins_junio = '$junio',
+                            con_junio = '$junio2',
+                            ins_julio = '$julio',
+                            con_julio = '$julio2',
+                            ins_agosto = '$agosto',
+                            con_agosto = '$agosto2',
+                            ins_septiembre = '$septiembre',
+                            con_septiembre = '$septiembre2',
+                            ins_octubre = '$octubre',
+                            con_octubre = '$octubre2',
+                            ins_noviembre = '$noviembre',
+                            con_noviembre = '$noviembre2',
+                            ins_diciembre = '$diciembre'
+                            con_diciembre = '$diciembre2'
+                            WHERE id = '$id'
+                            ";
+            mysqli_query($conectar, $query);
+          }
+          fclose($handle);
+          header("location: index.php?updation=1");
+        } else {
+          $message = '<label class="text-danger">Por favor solo seleccione archivos .csv</label>';
+        }
+      } else {
+        $message = '<label class="text-danger"></label>';
+      }
+    }
+    if (isset($_GET["updation"])) {
+      $message = '<label class="text-success">Importacion se efecto correctamente</label>';
+    }
+    $query = "SELECT *, sibasis.nombre as sibnombre FROM acxestas inner join establecimientos on acxestas.establecimientos_id = establecimientos.id inner join sibasis on acxestas.sibasis_id = sibasis.id 
+            inner join regiones on acxestas.regiones_id = regiones.id ORDER BY establecimientos.id ASC ";
+    $result = mysqli_query($conectar, $query);
+  }
+
+// codigo que funciona no tocar 
   // formulario de subida del archivo
   if (isset($_POST["upload"])) {
     if ($_FILES['product_file']['name']) {
@@ -129,6 +222,11 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
   <center>
     <h2>Informacion previa a la subida del archivo<h2>
   </center>
+  <?php 
+  if ($aten == "acinfxestas") {
+    # code...
+  }
+  ?>
   <div class="table-responsive">
     <!-- inicicio de la tabla -->
     <table class="table table-bordered table-condensed">
@@ -222,32 +320,9 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
           </tr>';
         }
       }
-
-
       ?>
       </h2>
 </body>
 
 </html>
 
-<!-- <?php
-
-      $sql = "SELECT establecimientos_id, enero, febrero FROM acxestas";
-      $resultados = mysqli_query($sql, $conectar);
-      mysqli_close($conectar);
-
-      while ($reg = mysqli_fetch_array($resultados)) {
-        $var = $reg["establecimientos_id"] . ";" . $reg["enero"] . ";" . $reg["febrero"] . "\n";
-
-        /* 
-   Formamos una cadena con los datos separados por punto y coma, y le concatenamos el salto de linea, para diferenciar entre un registro y otro.
-   */
-      }
-      //aqui le decimos al navegador que vamos a enviar a un archivo del tipo CSV
-      // header("Content-Description: File Transfer");
-      // header("Content-Type: application/force-download");
-      // header("Content-Disposition: attachment; filename=archivo.csv");
-      // echo $var;
-
-      ?>      
- -->
