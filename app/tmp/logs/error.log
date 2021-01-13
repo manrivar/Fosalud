@@ -52286,3 +52286,23 @@ Stack Trace:
 #2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
 #3 [internal function]: App::shutdown()
 #4 {main}
+2021-01-13 22:16:18 Error: [ParseError] syntax error, unexpected '$conectar' (T_VARIABLE)
+Request URL: /Fosalud/users/importar
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2021-01-13 22:16:29 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /Fosalud/users/importar
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#5 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
