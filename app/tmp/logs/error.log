@@ -52187,3 +52187,102 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 117
 
+2021-01-12 21:43:18 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php, line 207]
+2021-01-12 21:43:19 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /Fosalud/Users/importar
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 207)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 207, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-12 21:50:37 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php, line 207]
+2021-01-12 21:50:37 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /Fosalud/users/importar
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 207)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 207, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-12 21:50:37 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\CakeSession.php, line 710]
+2021-01-12 21:50:38 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /Fosalud/users/bienvenida
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-12 21:50:38 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\CakeSession.php, line 710]
+2021-01-12 21:50:38 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /Fosalud/users/bienvenida
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-12 21:50:38 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\CakeSession.php, line 710]
+2021-01-12 21:50:38 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /Fosalud/users/bienvenida
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-12 21:56:19 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php, line 207]
+2021-01-12 21:56:19 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /Fosalud/users/importar
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 207)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 207, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-12 22:03:01 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php, line 207]
+2021-01-12 22:03:02 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /Fosalud/users/importar
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 207)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 207, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-12 22:03:02 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\CakeSession.php, line 710]
+2021-01-12 22:03:02 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /Fosalud/users/importar
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-12 22:03:02 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\CakeSession.php, line 710]
+2021-01-12 22:03:02 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /Fosalud/users/importar
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-12 22:03:02 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\CakeSession.php, line 710]
+2021-01-12 22:03:03 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /Fosalud/users/importar
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-12 22:03:03 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\CakeSession.php, line 710]
+2021-01-12 22:03:03 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /Fosalud/users/importar
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 710, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
