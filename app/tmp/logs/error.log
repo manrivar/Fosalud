@@ -52306,3 +52306,1927 @@ Stack Trace:
 #4 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #5 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2021-01-19 20:57:33 Error: [MissingTableException] Table atencurativas for model Atencurativa was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'atencurativas',
+  'class' => 'Atencurativa',
+  'ds' => 'default',
+)
+Request URL: /Sispro/Fosalud/Atencurativas/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3660): Model->setSource('atencurativas')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): Model->getDataSource()
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\AtencurativasController.php(10): Model->find('all')
+#4 [internal function]: AtencurativasController->index()
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AtencurativasController), Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AtencurativasController), Object(CakeRequest))
+#8 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2021-01-20 14:52:13 Error: [MissingTableException] Table atencurativas for model Atencurativa was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'atencurativas',
+  'class' => 'Atencurativa',
+  'ds' => 'default',
+)
+Request URL: /Sispro/Fosalud/Atencurativas/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3660): Model->setSource('atencurativas')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): Model->getDataSource()
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\AtencurativasController.php(10): Model->find('all')
+#4 [internal function]: AtencurativasController->index()
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AtencurativasController), Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AtencurativasController), Object(CakeRequest))
+#8 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2021-01-20 14:52:20 Error: [MissingTableException] Table atencurativas for model Atencurativa was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'atencurativas',
+  'class' => 'Atencurativa',
+  'ds' => 'default',
+)
+Request URL: /Sispro/Fosalud/Atencurativas/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3660): Model->setSource('atencurativas')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): Model->getDataSource()
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\AtencurativasController.php(10): Model->find('all')
+#4 [internal function]: AtencurativasController->index()
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AtencurativasController), Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AtencurativasController), Object(CakeRequest))
+#8 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2021-01-20 15:00:26 Error: [MissingControllerException] Controller class AtencurativasController could not be found.
+Exception Attributes: array (
+  'class' => 'AtencurativasController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/Atencurativas/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 15:00:42 Error: [MissingControllerException] Controller class AtencurativasController could not be found.
+Exception Attributes: array (
+  'class' => 'AtencurativasController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/Atencurativas/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 15:01:37 Error: [MissingTableException] Table acxestas for model Acxesta was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'acxestas',
+  'class' => 'Acxesta',
+  'ds' => 'default',
+)
+Request URL: /Sispro/Fosalud/Acxestas/index/3/2020
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3660): Model->setSource('acxestas')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): Model->getDataSource()
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\AcxestasController.php(27): Model->find('all', Array)
+#4 [internal function]: AcxestasController->index('3', '2020')
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AcxestasController), Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AcxestasController), Object(CakeRequest))
+#8 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2021-01-20 15:24:59 Error: [MissingHelperException] Helper class HealingcareHelper could not be found.
+Exception Attributes: array (
+  'class' => 'HealingcareHelper',
+  'plugin' => false,
+)
+Request URL: /Sispro/Fosalud/Healingcares/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Healingcare')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(858): HelperCollection->__isset('Healingcare')
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\View\Healingcares\index.ctp(9): View->__get('Healingcare')
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#9 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2021-01-20 15:25:55 Error: [MissingHelperException] Helper class HealingcareHelper could not be found.
+Exception Attributes: array (
+  'class' => 'HealingcareHelper',
+  'plugin' => false,
+)
+Request URL: /Sispro/Fosalud/Healingcares/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Healingcare')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(858): HelperCollection->__isset('Healingcare')
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\View\Healingcares\index.ctp(9): View->__get('Healingcare')
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#9 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2021-01-20 15:26:58 Error: [MissingHelperException] Helper class HealingcareHelper could not be found.
+Exception Attributes: array (
+  'class' => 'HealingcareHelper',
+  'plugin' => false,
+)
+Request URL: /Sispro/Fosalud/Healingcares/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Healingcare')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(858): HelperCollection->__isset('Healingcare')
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\View\Healingcares\index.ctp(9): View->__get('Healingcare')
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#9 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2021-01-20 15:36:59 Error: [MissingControllerException] Controller class AtencurativasController could not be found.
+Exception Attributes: array (
+  'class' => 'AtencurativasController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/Atencurativas/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 15:44:50 Error: [MissingControllerException] Controller class AtencurativasController could not be found.
+Exception Attributes: array (
+  'class' => 'AtencurativasController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/Atencurativas/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 16:27:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 16:27:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 16:36:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 16:38:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 16:43:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 16:44:11 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 16:59:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 17:00:44 Error: [Error] Call to a member function paginate() on array
+Request URL: /Sispro/Fosalud/Healingcares/index?start_date=2021-01-01&end_date=2021-01-30
+Stack Trace:
+#0 [internal function]: HealingcaresController->index()
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HealingcaresController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-20 17:00:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'healingcares.created' in 'where clause'
+Request URL: /Sispro/Fosalud/Healingcares/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT `Healing...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT `Healing...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT `Healing...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Healingcare), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HealingcaresController.php(39): PaginatorComponent->paginate()
+#8 [internal function]: HealingcaresController->index()
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HealingcaresController), Array)
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#12 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2021-01-20 17:01:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 17:02:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'healingcares.created' in 'where clause'
+Request URL: /Sispro/Fosalud/Healingcares/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT `Healing...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT `Healing...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT `Healing...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Healingcare), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HealingcaresController.php(39): PaginatorComponent->paginate()
+#8 [internal function]: HealingcaresController->index()
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HealingcaresController), Array)
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#12 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2021-01-20 17:16:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 17:25:58 Error: [MissingControllerException] Controller class RegionsController could not be found.
+Exception Attributes: array (
+  'class' => 'RegionsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/regions/view/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 17:27:16 Error: [MissingViewException] View file "Hcxestablishments\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Hcxestablishments\\index.ctp',
+)
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Hcxestablishmen...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-20 17:27:58 Error: [MissingViewException] View file "Hcxestablishments\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Hcxestablishments\\index.ctp',
+)
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Hcxestablishmen...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-20 18:16:52 Error: [MissingControllerException] Controller class AtencurativasController could not be found.
+Exception Attributes: array (
+  'class' => 'AtencurativasController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/Atencurativas
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 18:17:09 Error: [MissingControllerException] Controller class AtencurativasController could not be found.
+Exception Attributes: array (
+  'class' => 'AtencurativasController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/Atencurativas
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 18:26:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 18:26:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'healingcare.created' in 'where clause'
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?start_date=2021-01-01&end_date=2021-01-30&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT `Hcxesta...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT `Hcxesta...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT `Hcxesta...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(48): PaginatorComponent->paginate()
+#8 [internal function]: HcxestablishmentsController->index('3')
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#12 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2021-01-20 20:43:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 21:12:47 Error: [MissingComponentException] Component class DebugkitComponent could not be found.
+Exception Attributes: array (
+  'class' => 'DebugkitComponent',
+  'plugin' => false,
+)
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Debugkit', Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(644): ComponentCollection->init(Object(HcxestablishmentsController))
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-20 21:13:07 Error: [MissingComponentException] Component class DebugKitComponent could not be found.
+Exception Attributes: array (
+  'class' => 'DebugKitComponent',
+  'plugin' => false,
+)
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('DebugKit', Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(644): ComponentCollection->init(Object(HcxestablishmentsController))
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-20 21:13:13 Error: [MissingComponentException] Component class debugKitComponent could not be found.
+Exception Attributes: array (
+  'class' => 'debugKitComponent',
+  'plugin' => false,
+)
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('debugKit', Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(644): ComponentCollection->init(Object(HcxestablishmentsController))
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-20 21:13:20 Error: [MissingComponentException] Component class debugkitComponent could not be found.
+Exception Attributes: array (
+  'class' => 'debugkitComponent',
+  'plugin' => false,
+)
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('debugkit', Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(644): ComponentCollection->init(Object(HcxestablishmentsController))
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-20 21:30:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 21:30:55 Error: [CakeException] Method value does not exist
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?start_date=2021-01-01&end_date=2021-01-30&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(35): CakeRequest->__call('value', Array)
+#1 [internal function]: HcxestablishmentsController->index('3')
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2021-01-20 21:39:21 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 21:44:29 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= '2021-12-31'    LIMIT 20' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT `Hcxesta...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT `Hcxesta...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT `Hcxesta...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(50): PaginatorComponent->paginate()
+#8 [internal function]: HcxestablishmentsController->index('3')
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#12 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2021-01-20 22:10:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-20 22:22:09 Error: Fatal Error (1): Class 'Object' not found in [C:\xampp\htdocs\Sispro\Fosalud\app\Plugin\DebugKit\Model\ToolbarAccess.php, line 30]
+2021-01-20 22:22:09 Error: [FatalErrorException] Class 'Object' not found
+Request URL: /Sispro/Fosalud/debug_kit/toolbar_access/sql_explain
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Object' ...', 'C:\\xampp\\htdocs...', 30)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Class 'Object' ...', 'C:\\xampp\\htdocs...', 30, Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-20 22:22:20 Error: Fatal Error (1): Class 'Object' not found in [C:\xampp\htdocs\Sispro\Fosalud\app\Plugin\DebugKit\Model\ToolbarAccess.php, line 30]
+2021-01-20 22:22:21 Error: [FatalErrorException] Class 'Object' not found
+Request URL: /Sispro/Fosalud/debug_kit/toolbar_access/sql_explain
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Object' ...', 'C:\\xampp\\htdocs...', 30)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Class 'Object' ...', 'C:\\xampp\\htdocs...', 30, Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-20 22:22:23 Error: Fatal Error (1): Class 'Object' not found in [C:\xampp\htdocs\Sispro\Fosalud\app\Plugin\DebugKit\Model\ToolbarAccess.php, line 30]
+2021-01-20 22:22:23 Error: [FatalErrorException] Class 'Object' not found
+Request URL: /Sispro/Fosalud/debug_kit/toolbar_access/sql_explain
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Object' ...', 'C:\\xampp\\htdocs...', 30)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Class 'Object' ...', 'C:\\xampp\\htdocs...', 30, Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-20 22:22:39 Error: Fatal Error (1): Class 'Object' not found in [C:\xampp\htdocs\Sispro\Fosalud\app\Plugin\DebugKit\Model\ToolbarAccess.php, line 30]
+2021-01-20 22:22:39 Error: [FatalErrorException] Class 'Object' not found
+Request URL: /Sispro/Fosalud/debug_kit/toolbar_access/sql_explain
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Object' ...', 'C:\\xampp\\htdocs...', 30)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Class 'Object' ...', 'C:\\xampp\\htdocs...', 30, Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-21 02:50:34 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 15:32:05 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'hcxestablishment.year' in 'where clause'
+Request URL: /Sispro/Fosalud/Healingcares/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT `Healing...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT `Healing...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT `Healing...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Healingcare), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HealingcaresController.php(49): Model->find('all', Array)
+#7 [internal function]: HealingcaresController->index()
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HealingcaresController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-21 15:32:57 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'helaingcares.year' in 'where clause'
+Request URL: /Sispro/Fosalud/Healingcares/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT `Healing...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT `Healing...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT `Healing...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Healingcare), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HealingcaresController.php(49): Model->find('all', Array)
+#7 [internal function]: HealingcaresController->index()
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HealingcaresController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-21 15:33:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'healingcares.year' in 'where clause'
+Request URL: /Sispro/Fosalud/Healingcares/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT `Healing...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT `Healing...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT `Healing...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Healingcare), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HealingcaresController.php(49): Model->find('all', Array)
+#7 [internal function]: HealingcaresController->index()
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HealingcaresController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-21 15:33:29 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 15:35:36 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 15:39:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'hcxestablishment.created' in 'where clause'
+Request URL: /Sispro/Fosalud/Healingcares/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT `Healing...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT `Healing...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT `Healing...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Healingcare), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HealingcaresController.php(57): PaginatorComponent->paginate()
+#8 [internal function]: HealingcaresController->index()
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HealingcaresController), Array)
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#12 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2021-01-21 15:46:44 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 16:13:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 16:31:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/js/yearpicker/showview.js
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 16:31:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/js/yearpicker/showview.js
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 16:32:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/js/yearpicker/showview.js
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 16:48:28 Error: [MissingActionException] Action HealingcaresController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'HealingcaresController',
+  'action' => 'js',
+)
+Request URL: /Sispro/Fosalud/Healingcares/js/yearpicker.js
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-01-21 16:48:28 Error: [MissingActionException] Action HealingcaresController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'HealingcaresController',
+  'action' => 'css',
+)
+Request URL: /Sispro/Fosalud/Healingcares/css/yearpicker.css
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-01-21 16:49:15 Error: [MissingActionException] Action HealingcaresController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'HealingcaresController',
+  'action' => 'js',
+)
+Request URL: /Sispro/Fosalud/Healingcares/js/yearpicker.js
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-01-21 16:49:15 Error: [MissingActionException] Action HealingcaresController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'HealingcaresController',
+  'action' => 'css',
+)
+Request URL: /Sispro/Fosalud/Healingcares/css/yearpicker.css
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-01-21 16:50:02 Error: [MissingActionException] Action HealingcaresController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'HealingcaresController',
+  'action' => 'js',
+)
+Request URL: /Sispro/Fosalud/Healingcares/js/yearpicker.js
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-01-21 16:50:03 Error: [MissingActionException] Action HealingcaresController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'HealingcaresController',
+  'action' => 'css',
+)
+Request URL: /Sispro/Fosalud/Healingcares/css/yearpicker.css
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-01-21 16:51:26 Error: [MissingActionException] Action HealingcaresController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'HealingcaresController',
+  'action' => 'js',
+)
+Request URL: /Sispro/Fosalud/Healingcares/js/yearpicker.js
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-01-21 16:51:27 Error: [MissingActionException] Action HealingcaresController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'HealingcaresController',
+  'action' => 'css',
+)
+Request URL: /Sispro/Fosalud/Healingcares/css/yearpicker.css
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-01-21 16:51:43 Error: [MissingActionException] Action HealingcaresController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'HealingcaresController',
+  'action' => 'css',
+)
+Request URL: /Sispro/Fosalud/Healingcares/css/yearpicker.css
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-01-21 17:20:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 17:20:48 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 17:21:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 17:23:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 18:28:54 Error: [Error] Unsupported operand types
+Request URL: /Sispro/Fosalud/Healingcares/index?yir=2020&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\View\Healingcares\index.ctp(14): FormHelper->select('yir', Array, 1)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#7 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2021-01-21 18:30:20 Error: [Error] Unsupported operand types
+Request URL: /Sispro/Fosalud/Healingcares/index?yir=2020&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\View\Healingcares\index.ctp(13): FormHelper->select('yir', Array, 0)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#7 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2021-01-21 18:56:11 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 19:00:05 Error: [MissingViewException] View file "Hcxestablishments\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Hcxestablishments\\view.ctp',
+)
+Request URL: /Sispro/Fosalud/Hcxestablishments/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Hcxestablishmen...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-21 19:01:52 Error: [MissingViewException] View file "Hcxestablishments\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Hcxestablishments\\view.ctp',
+)
+Request URL: /Sispro/Fosalud/Hcxestablishments/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Hcxestablishmen...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-21 20:14:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 21:32:14 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `sispro`.`healingcares` AS `Healingcare` LEFT JOIN `sispro`.`regions` AS...' at line 1
+Request URL: /Sispro/Fosalud/Healingcares/index?yir=2021&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hea...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hea...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hea...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Healingcare), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HealingcaresController.php(56): Model->find('all', Array)
+#7 [internal function]: HealingcaresController->index()
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HealingcaresController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-21 22:26:17 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Hcxestablishment.trimester1' in 'field list'
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(80): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 14:44:53 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Hcxestablishment.trimester1' in 'field list'
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(88): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 14:56:40 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dec FROM `sispro`.`hcxestablishments` AS `Hcxestablishment` LEFT JOIN `sispro...' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(89): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 14:58:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Hcxestablishment.trimester1' in 'field list'
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(88): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 15:01:30 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/img/images/ui-bg_glass_55_fbf9ee_1x400.png
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-22 15:16:39 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dec FROM `sispro`.`hcxestablishments` AS `Hcxestablishment` LEFT JOIN `sispro...' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?yir=2020&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(64): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 15:17:23 Error: [ParseError] syntax error, unexpected 'public' (T_PUBLIC), expecting end of file
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?yir=2020&search=
+Stack Trace:
+#0 [internal function]: App::load('Hcxestablishmen...')
+#1 [internal function]: spl_autoload_call('Hcxestablishmen...')
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(266): class_exists('Hcxestablishmen...')
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2021-01-22 15:18:53 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dec FROM `sispro`.`hcxestablishments` AS `Hcxestablishment` LEFT JOIN `sispro...' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?yir=2020&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(90): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 15:19:23 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dec FROM `sispro`.`hcxestablishments` AS `Hcxestablishment` LEFT JOIN `sispro...' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?yir=2020&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(90): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 15:21:46 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dec FROM `sispro`.`hcxestablishments` AS `Hcxestablishment` LEFT JOIN `sispro...' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?yir=2020&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(62): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 15:35:35 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dec FROM `sispro`.`hcxestablishments` AS `Hcxestablishment` LEFT JOIN `sispro...' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?yir=2020&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(62): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 15:36:48 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dec FROM `sispro`.`hcxestablishments` AS `Hcxestablishment` LEFT JOIN `sispro...' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?yir=2020&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(62): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 15:40:05 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dec FROM `sispro`.`hcxestablishments` AS `Hcxestablishment` LEFT JOIN `sispro...' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?yir=2021&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(62): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 15:45:19 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dec FROM `sispro`.`hcxestablishments` AS `Hcxestablishment` LEFT JOIN `sispro...' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?yir=2020&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(63): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 16:05:59 Error: [ParseError] syntax error, unexpected ';', expecting ']'
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 [internal function]: App::load('Hcxestablishmen...')
+#1 [internal function]: spl_autoload_call('Hcxestablishmen...')
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(266): class_exists('Hcxestablishmen...')
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2021-01-22 16:15:41 Error: [Error] Call to a member function get() on null
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?yir=2020&search=
+Stack Trace:
+#0 [internal function]: HcxestablishmentsController->index('3')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-22 16:15:53 Error: [Error] Call to a member function get() on null
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3?yir=2020&search=
+Stack Trace:
+#0 [internal function]: HcxestablishmentsController->index('3')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-22 16:15:56 Error: [Error] Call to a member function get() on null
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 [internal function]: HcxestablishmentsController->index('3')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-22 16:18:17 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('get', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('get', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(614): DboSource->fetchAll('get', Array, Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(834): DboSource->query('get', Array, Object(Hcxestablishment))
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(30): Model->__call('get', Array)
+#6 [internal function]: HcxestablishmentsController->index('3')
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2021-01-22 17:30:59 Error: [ParseError] syntax error, unexpected '<', expecting end of file
+Request URL: /Sispro/Fosalud/Healingcares/index/sort:total/direction:asc?yir=2020&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2021-01-22 17:53:15 Error: [MissingControllerException] Controller class EstablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'EstablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/establishments/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-22 18:14:24 Error: [MissingTableException] Table ateninfcurativas for model Ateninfcurativa was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'ateninfcurativas',
+  'class' => 'Ateninfcurativa',
+  'ds' => 'default',
+)
+Request URL: /Sispro/Fosalud/Ateninfcurativas/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3660): Model->setSource('ateninfcurativa...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): Model->getDataSource()
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\AteninfcurativasController.php(8): Model->find('all')
+#4 [internal function]: AteninfcurativasController->index()
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AteninfcurativasController), Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AteninfcurativasController), Object(CakeRequest))
+#8 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2021-01-22 18:20:37 Error: [MissingControllerException] Controller class AteninfcurativasController could not be found.
+Exception Attributes: array (
+  'class' => 'AteninfcurativasController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/Ateninfcurativas/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-22 18:24:06 Error: [MissingViewException] View file "Childhealingcares\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Childhealingcares\\edit.ctp',
+)
+Request URL: /Sispro/Fosalud/Childhealingcares/edit/1
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Childhealingcar...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhealingcaresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-22 18:37:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Childhcxestablishment.january' in 'field list'
+Request URL: /Sispro/Fosalud/Childhcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Chi...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Chi...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Chi...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Childhcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\ChildhcxestablishmentsController.php(94): Model->find('all', Array)
+#7 [internal function]: ChildhcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 18:39:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Childhcxestablishment.january' in 'field list'
+Request URL: /Sispro/Fosalud/Childhcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Chi...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Chi...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Chi...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Childhcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\ChildhcxestablishmentsController.php(94): Model->find('all', Array)
+#7 [internal function]: ChildhcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 18:40:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Childhcxestablishment.january' in 'field list'
+Request URL: /Sispro/Fosalud/Childhcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Chi...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Chi...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Chi...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Childhcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\ChildhcxestablishmentsController.php(94): Model->find('all', Array)
+#7 [internal function]: ChildhcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 18:47:30 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Childhcxestablishment.january' in 'field list'
+Request URL: /Sispro/Fosalud/Childhcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Chi...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Chi...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Chi...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Childhcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\ChildhcxestablishmentsController.php(94): Model->find('all', Array)
+#7 [internal function]: ChildhcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 18:47:55 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Childhcxestablishment.ins_ins_february' in 'field list'
+Request URL: /Sispro/Fosalud/Childhcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Chi...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Chi...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Chi...', Array)
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Childhcxestablishment), Array)
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\ChildhcxestablishmentsController.php(94): Model->find('all', Array)
+#7 [internal function]: ChildhcxestablishmentsController->index('3')
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-01-22 20:59:55 Error: [ParseError] syntax error, unexpected ';'
+Request URL: /Sispro/Fosalud/Childhcxestablishments/index/3/sort:sibases_id/direction:asc?yir=2020&search=
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2021-01-22 21:46:05 Error: [ArgumentCountError] Too few arguments to function ChildhcxestablishmentsController::index(), 0 passed and exactly 1 expected
+Request URL: /Sispro/Fosalud/Childhcxestablishments
+Stack Trace:
+#0 [internal function]: ChildhcxestablishmentsController->index()
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-22 21:52:14 Error: [ArgumentCountError] Too few arguments to function ChildhcxestablishmentsController::edit(), 1 passed and exactly 2 expected
+Request URL: /Sispro/Fosalud/Childhcxestablishments/edit/1
+Stack Trace:
+#0 [internal function]: ChildhcxestablishmentsController->edit('1')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-22 21:53:05 Error: [NotFoundException] Invalid childhcxestablishment
+Request URL: /Sispro/Fosalud/Childhcxestablishments/edit/1
+Stack Trace:
+#0 [internal function]: ChildhcxestablishmentsController->edit('1')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-22 21:53:20 Error: [NotFoundException] Invalid childhcxestablishment
+Request URL: /Sispro/Fosalud/Childhcxestablishments/edit/1
+Stack Trace:
+#0 [internal function]: ChildhcxestablishmentsController->edit('1')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-22 21:53:47 Error: [NotFoundException] Invalid childhcxestablishment
+Request URL: /Sispro/Fosalud/Childhcxestablishments/edit/1
+Stack Trace:
+#0 [internal function]: ChildhcxestablishmentsController->edit('1')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-22 22:12:34 Error: [MissingViewException] View file "Childhealingcares\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Childhealingcares\\edit.ctp',
+)
+Request URL: /Sispro/Fosalud/Childhealingcares/edit/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Childhealingcar...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhealingcaresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-22 22:12:41 Error: [MissingViewException] View file "Childhealingcares\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Childhealingcares\\edit.ctp',
+)
+Request URL: /Sispro/Fosalud/Childhealingcares/edit/1
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Childhealingcar...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhealingcaresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-22 22:13:15 Error: [MissingViewException] View file "Childhealingcares\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Childhealingcares\\edit.ctp',
+)
+Request URL: /Sispro/Fosalud/Childhealingcares/edit/2
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Childhealingcar...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhealingcaresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-22 22:13:41 Error: [MissingViewException] View file "Childhealingcares\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Childhealingcares\\edit.ctp',
+)
+Request URL: /Sispro/Fosalud/Childhealingcares/edit/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Childhealingcar...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhealingcaresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-25 14:52:37 Error: [MissingControllerException] Controller class EstablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'EstablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/establishments/view/21
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 14:59:14 Error: [ArgumentCountError] Too few arguments to function HcxestablishmentsController::index(), 0 passed and exactly 1 expected
+Request URL: /Sispro/Fosalud/Hcxestablishments
+Stack Trace:
+#0 [internal function]: HcxestablishmentsController->index()
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-25 15:06:30 Error: [ArgumentCountError] Too few arguments to function HcxestablishmentsController::edit(), 1 passed and exactly 2 expected
+Request URL: /Sispro/Fosalud/Hcxestablishments/edit/1
+Stack Trace:
+#0 [internal function]: HcxestablishmentsController->edit('1')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-25 15:20:30 Error: [MissingControllerException] Controller class EstablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'EstablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/establishments/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 15:20:32 Error: [MissingControllerException] Controller class SibasesController could not be found.
+Exception Attributes: array (
+  'class' => 'SibasesController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/sibases/view/6
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 15:20:39 Error: [MissingViewException] View file "Childhcxestablishments\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Childhcxestablishments\\view.ctp',
+)
+Request URL: /Sispro/Fosalud/Childhcxestablishments/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Childhcxestabli...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-25 15:31:56 Error: [ArgumentCountError] Too few arguments to function ChildhcxestablishmentsController::index(), 0 passed and exactly 1 expected
+Request URL: /Sispro/Fosalud/Childhcxestablishments
+Stack Trace:
+#0 [internal function]: ChildhcxestablishmentsController->index()
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-25 15:56:01 Error: [MissingViewException] View file "Maternalhealingcares\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Maternalhealingcares\\index.ctp',
+)
+Request URL: /Sispro/Fosalud/Maternalhealingcares/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Maternalhealing...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MaternalhealingcaresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-25 16:20:20 Error: [MissingControllerException] Controller class MaternalhcxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'MaternalhcxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/Maternalhcxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 16:54:49 Error: [ArgumentCountError] Too few arguments to function MaternalhcxestablishmentsController::index(), 0 passed and exactly 1 expected
+Request URL: /Sispro/Fosalud/Maternalhcxestablishments/index
+Stack Trace:
+#0 [internal function]: MaternalhcxestablishmentsController->index()
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(MaternalhcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MaternalhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-25 17:01:19 Error: [ArgumentCountError] Too few arguments to function MaternalhcxestablishmentsController::index(), 0 passed and exactly 1 expected
+Request URL: /Sispro/Fosalud/Maternalhcxestablishments
+Stack Trace:
+#0 [internal function]: MaternalhcxestablishmentsController->index()
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(MaternalhcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MaternalhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-25 17:09:39 Error: [ArgumentCountError] Too few arguments to function MaternalhcxestablishmentsController::index(), 0 passed and exactly 1 expected
+Request URL: /Sispro/Fosalud/Maternalhcxestablishments/index
+Stack Trace:
+#0 [internal function]: MaternalhcxestablishmentsController->index()
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(MaternalhcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MaternalhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-25 17:10:49 Error: [ArgumentCountError] Too few arguments to function MaternalhcxestablishmentsController::index(), 0 passed and exactly 1 expected
+Request URL: /Sispro/Fosalud/Maternalhcxestablishments
+Stack Trace:
+#0 [internal function]: MaternalhcxestablishmentsController->index()
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(MaternalhcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MaternalhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-25 17:14:20 Error: [ArgumentCountError] Too few arguments to function MaternalhcxestablishmentsController::index(), 0 passed and exactly 1 expected
+Request URL: /Sispro/Fosalud/Maternalhcxestablishments
+Stack Trace:
+#0 [internal function]: MaternalhcxestablishmentsController->index()
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(MaternalhcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MaternalhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-25 17:19:56 Error: [MissingTableException] Table examclinicos for model Examclinico was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'examclinicos',
+  'class' => 'Examclinico',
+  'ds' => 'default',
+)
+Request URL: /Sispro/Fosalud/Examclinicos/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3660): Model->setSource('examclinicos')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): Model->getDataSource()
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\ExamclinicosController.php(10): Model->find('all')
+#4 [internal function]: ExamclinicosController->index()
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ExamclinicosController), Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ExamclinicosController), Object(CakeRequest))
+#8 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2021-01-25 17:48:57 Error: [MissingControllerException] Controller class ExamclinicosController could not be found.
+Exception Attributes: array (
+  'class' => 'ExamclinicosController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/Examclinicos/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 18:16:43 Error: [Error] Call to a member function find() on null
+Request URL: /Sispro/Fosalud/Cexestablishments/index/3
+Stack Trace:
+#0 [internal function]: CexestablishmentsController->index('3')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(CexestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CexestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-25 20:20:38 Error: [MissingTableException] Table tabaquismos for model Tabaquismo was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'tabaquismos',
+  'class' => 'Tabaquismo',
+  'ds' => 'default',
+)
+Request URL: /Sispro/Fosalud/Tabaquismos/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3660): Model->setSource('tabaquismos')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3038): Model->getDataSource()
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\TabaquismosController.php(8): Model->find('all')
+#4 [internal function]: TabaquismosController->index()
+#5 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TabaquismosController), Array)
+#6 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TabaquismosController), Object(CakeRequest))
+#8 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2021-01-25 20:41:34 Error: [MissingControllerException] Controller class TabaquismosController could not be found.
+Exception Attributes: array (
+  'class' => 'TabaquismosController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/Tabaquismos/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 20:41:52 Error: [MissingControllerException] Controller class TabaquismosController could not be found.
+Exception Attributes: array (
+  'class' => 'TabaquismosController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/Tabaquismos/index
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 20:57:21 Error: [MissingControllerException] Controller class SmokesxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'SmokesxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/smokesxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 21:03:13 Error: [MissingControllerException] Controller class SmokesxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'SmokesxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/smokesxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 21:03:21 Error: [MissingControllerException] Controller class SmokesxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'SmokesxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/smokesxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 21:03:29 Error: [MissingControllerException] Controller class SmokesxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'SmokesxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/smokesxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 21:03:50 Error: [MissingControllerException] Controller class SmokesxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'SmokesxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/smokesxestablishments/index/3
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 21:04:36 Error: [MissingControllerException] Controller class SmokesxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'SmokesxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Sispro/Fosalud/smokesxestablishments/index/1
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-25 21:36:22 Error: [MissingViewException] View file "Smokes\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Smokes\\edit.ctp',
+)
+Request URL: /Sispro/Fosalud/Smokes/edit/1
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Smokes\\edit')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmokesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-26 15:54:45 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Request URL: /Sispro/Fosalud/smokesxestablishments/index/2
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('UPDATE smokes S...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('UPDATE smokes S...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(547): DboSource->fetchAll('UPDATE smokes S...')
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3463): DboSource->query('UPDATE smokes S...')
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\SmokesxestablishmentsController.php(126): Model->query('UPDATE smokes S...')
+#6 [internal function]: SmokesxestablishmentsController->index('2')
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(SmokesxestablishmentsController), Array)
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmokesxestablishmentsController), Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2021-01-26 16:19:26 Error: [ArgumentCountError] Too few arguments to function HcxestablishmentsController::index(), 0 passed and exactly 1 expected
+Request URL: /Sispro/Fosalud/Hcxestablishments
+Stack Trace:
+#0 [internal function]: HcxestablishmentsController->index()
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-26 16:22:40 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/1
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('UPDATE healingc...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('UPDATE healingc...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(547): DboSource->fetchAll('UPDATE healingc...')
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3463): DboSource->query('UPDATE healingc...')
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(126): Model->query('UPDATE healingc...')
+#6 [internal function]: HcxestablishmentsController->index('1')
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2021-01-26 16:22:44 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/2
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('UPDATE healingc...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('UPDATE healingc...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(547): DboSource->fetchAll('UPDATE healingc...')
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3463): DboSource->query('UPDATE healingc...')
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(126): Model->query('UPDATE healingc...')
+#6 [internal function]: HcxestablishmentsController->index('2')
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2021-01-26 16:25:27 Error: [MissingActionException] Action HealingcaresController::yir=2021() could not be found.
+Exception Attributes: array (
+  'controller' => 'HealingcaresController',
+  'action' => 'yir=2021',
+)
+Request URL: /Sispro/Fosalud/Healingcares/yir=2021
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-01-26 16:28:13 Error: [MissingActionException] Action HealingcaresController::index,() could not be found.
+Exception Attributes: array (
+  'controller' => 'HealingcaresController',
+  'action' => 'index,',
+)
+Request URL: /Sispro/Fosalud/Healingcares/index,?yir=2021
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingcaresController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-01-26 16:51:35 Error: [ArgumentCountError] Too few arguments to function HcxestablishmentsController::edit(), 2 passed and exactly 3 expected
+Request URL: /Sispro/Fosalud/Hcxestablishments/edit/32/5
+Stack Trace:
+#0 [internal function]: HcxestablishmentsController->edit('32', '5')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-26 16:51:42 Error: [ArgumentCountError] Too few arguments to function HcxestablishmentsController::edit(), 2 passed and exactly 3 expected
+Request URL: /Sispro/Fosalud/Hcxestablishments/edit/32/5
+Stack Trace:
+#0 [internal function]: HcxestablishmentsController->edit('32', '5')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-26 17:11:42 Error: [ArgumentCountError] Too few arguments to function HcxestablishmentsController::edit(), 2 passed and exactly 3 expected
+Request URL: /Sispro/Fosalud/Hcxestablishments/edit/32/5
+Stack Trace:
+#0 [internal function]: HcxestablishmentsController->edit('32', '5')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-26 17:12:54 Error: Fatal Error (64): Cannot use empty array elements in arrays in [C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php, line 185]
+2021-01-26 17:12:54 Error: [FatalErrorException] Cannot use empty array elements in arrays
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/5/%3Fyir%3D2020?yir=2020
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot use empt...', 'C:\\xampp\\htdocs...', 185)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(64, 'Cannot use empt...', 'C:\\xampp\\htdocs...', 185, Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-26 17:42:52 Error: [MissingViewException] View file "Smokes\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Smokes\\edit.ctp',
+)
+Request URL: /Sispro/Fosalud/Smokes/edit/7
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Smokes\\edit')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmokesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-26 18:00:45 Error: [ArgumentCountError] Too few arguments to function HcxestablishmentsController::index(), 1 passed and exactly 2 expected
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/5
+Stack Trace:
+#0 [internal function]: HcxestablishmentsController->index('5')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-26 18:01:25 Error: [ArgumentCountError] Too few arguments to function HcxestablishmentsController::index(), 1 passed and exactly 2 expected
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3%3Fyir%3D2020?yir=2020
+Stack Trace:
+#0 [internal function]: HcxestablishmentsController->index('3?yir=2020')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-26 18:03:37 Error: [ArgumentCountError] Too few arguments to function HcxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Sispro/Fosalud/Hcxestablishments/index?yir=2020%2F3
+Stack Trace:
+#0 [internal function]: HcxestablishmentsController->index()
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-26 18:22:31 Error: [ParseError] syntax error, unexpected '$yer' (T_VARIABLE), expecting ')'
+Request URL: /Sispro/Fosalud/smokesxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmokesxestablishmentsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2021-01-26 18:22:45 Error: [ParseError] syntax error, unexpected '$yer' (T_VARIABLE), expecting ')'
+Request URL: /Sispro/Fosalud/smokesxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmokesxestablishmentsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2021-01-26 18:32:52 Error: [ArgumentCountError] Too few arguments to function ChildhcxestablishmentsController::index(), 1 passed and exactly 2 expected
+Request URL: /Sispro/Fosalud/Childhcxestablishments/index/3
+Stack Trace:
+#0 [internal function]: ChildhcxestablishmentsController->index('3')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-26 20:08:46 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sispro.childhealingcare' doesn't exist
+Request URL: /Sispro/Fosalud/Childhcxestablishments/index/1/%3Fyir%3D2021?yir=2021
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('UPDATE childhea...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('UPDATE childhea...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(547): DboSource->fetchAll('UPDATE childhea...')
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3463): DboSource->query('UPDATE childhea...')
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\ChildhcxestablishmentsController.php(110): Model->query('UPDATE childhea...')
+#6 [internal function]: ChildhcxestablishmentsController->index('1', '?yir=2021')
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ChildhcxestablishmentsController), Array)
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ChildhcxestablishmentsController), Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2021-01-26 21:42:56 Error: [MissingViewException] View file "Maternalhcxestablishments\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Maternalhcxestablishments\\view.ctp',
+)
+Request URL: /Sispro/Fosalud/Maternalhcxestablishments/view/12
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Maternalhcxesta...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MaternalhcxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-26 21:43:52 Error: [MissingViewException] View file "Maternalhealingcares\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Maternalhealingcares\\edit.ctp',
+)
+Request URL: /Sispro/Fosalud/Maternalhealingcares/edit/6
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Maternalhealing...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MaternalhealingcaresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-26 21:43:57 Error: [MissingViewException] View file "Maternalhealingcares\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Maternalhealingcares\\edit.ctp',
+)
+Request URL: /Sispro/Fosalud/Maternalhealingcares/edit/6
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Maternalhealing...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MaternalhealingcaresController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-27 16:06:02 Error: [MissingViewException] View file "Clinicalexams\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Clinicalexams\\edit.ctp',
+)
+Request URL: /Sispro/Fosalud/Clinicalexams/edit/6
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Clinicalexams\\e...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClinicalexamsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-27 16:06:06 Error: [MissingViewException] View file "Clinicalexams\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Clinicalexams\\edit.ctp',
+)
+Request URL: /Sispro/Fosalud/Clinicalexams/edit/6
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Clinicalexams\\e...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClinicalexamsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-27 16:06:11 Error: [MissingViewException] View file "Clinicalexams\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Clinicalexams\\edit.ctp',
+)
+Request URL: /Sispro/Fosalud/Clinicalexams/edit/6
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Clinicalexams\\e...')
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClinicalexamsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-27 16:34:56 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+Request URL: /Sispro/Fosalud/Hcxestablishments/index/3/2020
+Stack Trace:
+#0 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('UPDATE healingc...', Array)
+#2 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('UPDATE healingc...', Array, Array)
+#3 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Datasource\DboSource.php(547): DboSource->fetchAll('UPDATE healingc...')
+#4 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Model\Model.php(3463): DboSource->query('UPDATE healingc...')
+#5 C:\xampp\htdocs\Sispro\Fosalud\app\Controller\HcxestablishmentsController.php(128): Model->query('UPDATE healingc...')
+#6 [internal function]: HcxestablishmentsController->index('3', '2020')
+#7 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#8 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\Sispro\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#10 C:\xampp\htdocs\Sispro\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
