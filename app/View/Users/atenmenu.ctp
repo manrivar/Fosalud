@@ -75,11 +75,13 @@
 
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
-        <a href="#">
-            <img src="<?= $this->base ?>/img/ima/violence.png" width="200" height="224">
+        <a href="<?= $this->base ?>/Talks/index">
+            <img src="<?= $this->base ?>/img/ima/Speech2.png" width="200" height="224">
 
             <div class="box-nombre">
-                <h4>Violencia</h4>
+                <center>
+                    <h4>Charlas</h4>
+                </center>
             </div>
         </a>
     </div>
@@ -159,36 +161,6 @@
             <div class="box-nombre">
                 <center>
                     <h4>Rehidratacion<br> Oral</h4>
-                </center>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
-    <div style="text-align:center;">
-        <a href="#">
-            <img src="<?= $this->base ?>/img/ima/Bladder.png" width="200" height="224">
-
-            <div class="box-nombre">
-                <center>
-                    <h4>Cambio<br> De Sonda</h4>
-                </center>
-            </div>
-        </a>
-    </div>
-</div>
-
-
-
-<div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
-    <div style="text-align:center;">
-        <a href="#">
-            <img src="<?= $this->base ?>/img/ima/Speech2.png" width="200" height="224">
-
-            <div class="box-nombre">
-                <center>
-                    <h4>Charlas</h4>
                 </center>
             </div>
         </a>
