@@ -12,7 +12,7 @@
 <hr>
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
-    <a href="<?=$this->base?>/Tabaquismos/index">
+    <a href="<?=$this->base?>/Smokes/index">
     <img src="<?= $this->base ?>/img/ima/Smoke.png" width="200" height="224">
 
         <div class="box-nombre">

@@ -75,9 +75,17 @@ class DATABASE_CONFIG {
 		'host' => '127.0.0.1',
 		'login' => 'root', 
 		'password' => '',
-		'database' => 'estadistica2',
+		'database' => 'sispro',
 	);
-	
+
+	public $esta = array(
+			'datasource' => 'Database/Mysql',
+			'persistent' => false,
+			'host' => '127.0.0.1',
+			'login' => 'root',
+			'password' => '',
+			'database' => 'estadistica2',
+		);
          
 	
 	public $test = array(

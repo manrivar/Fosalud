@@ -39,6 +39,7 @@ class AppController extends Controller {
     
 
     public $components = array(
+        'DebugKit.Toolbar',
         'Acl',
         'Auth' => array(
             'loginRedirect' => array(
