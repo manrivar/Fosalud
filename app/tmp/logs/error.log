@@ -54262,3 +54262,21 @@ Stack Trace:
 #10 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
 #11 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2021-01-28 16:14:01 Error: [MissingControllerException] Controller class AdvicesxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'AdvicesxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud/Advicesxestablishments/index/3/2020
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-28 16:27:13 Error: [MissingControllerException] Controller class AdvicesxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'AdvicesxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud/Advicesxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

@@ -1,7 +1,7 @@
 <div class="col-lg-12 col-xs-12 col-sm-12">
     <ol class="breadcrumb">
         <li>
-            <span class="fa fa-undo"></span> <?php echo $this->Html->Link('Regresar', array('controller' => 'Maternalhealingcares', 'action' => 'index?yir=' . $yer)); ?>
+            <span class="fa fa-undo"></span> <?php echo $this->Html->Link('Regresar', array('controller' => 'Talks', 'action' => 'index?yir=' . $yer)); ?>
         </li>
     </ol>
 </div>
@@ -189,7 +189,7 @@
                     <td><?php echo $n_jan;  ?></td>
                     <td><?php echo $d_jan;  ?></td>
                     <td><?php echo $o_jan;  ?></td>
-                    <td><?php echo $m_jan + $d_jan + $d_jan + $o_jan; ?></td>
+                    <td><?php echo $m_jan + $n_jan + $d_jan + $o_jan; ?></td>
                     <td><?php echo $m_feb;  ?></td>
                     <td><?php echo $n_feb;  ?></td>
                     <td><?php echo $d_feb;  ?></td>
@@ -234,7 +234,7 @@
                     <td><?php echo $n_oct;  ?></td>
                     <td><?php echo $d_oct;  ?></td>
                     <td><?php echo $o_oct;  ?></td>
-                    <td><?php echo $n_oct + $n_oct + $d_oct + $o_oct; ?></td>
+                    <td><?php echo $m_oct + $n_oct + $d_oct + $o_oct; ?></td>
                     <td><?php echo $m_nov;  ?></td>
                     <td><?php echo $n_nov;  ?></td>
                     <td><?php echo $d_nov;  ?></td>
