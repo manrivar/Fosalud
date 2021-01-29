@@ -33,41 +33,41 @@
 
 
 
-                    <th><?php echo $this->Paginator->sort('med_january', 'inscripcion'); ?></th>
-                    <th><?php echo $this->Paginator->sort('den_january', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('med_january', 'Medico'); ?></th>
+                    <th><?php echo $this->Paginator->sort('den_january', 'Odontologo'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                    <th><?php echo $this->Paginator->sort('med_february', 'inscripcion'); ?></th>
-                    <th><?php echo $this->Paginator->sort('den_february', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('med_february', 'Medico'); ?></th>
+                    <th><?php echo $this->Paginator->sort('den_february', 'Odontologo'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                    <th><?php echo $this->Paginator->sort('med_march', 'inscripcion'); ?></th>
-                    <th><?php echo $this->Paginator->sort('den_march', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('med_march', 'Medico'); ?></th>
+                    <th><?php echo $this->Paginator->sort('den_march', 'Odontologo'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                    <th><?php echo $this->Paginator->sort('med_april', 'inscripcion'); ?></th>
-                    <th><?php echo $this->Paginator->sort('den_april', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('med_april', 'Medico'); ?></th>
+                    <th><?php echo $this->Paginator->sort('den_april', 'Odontologo'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                    <th><?php echo $this->Paginator->sort('med_may', 'inscripcion'); ?></th>
-                    <th><?php echo $this->Paginator->sort('den_may', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('med_may', 'Medico'); ?></th>
+                    <th><?php echo $this->Paginator->sort('den_may', 'Odontologo'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                    <th><?php echo $this->Paginator->sort('med_june', 'inscripcion'); ?></th>
-                    <th><?php echo $this->Paginator->sort('den_june', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('med_june', 'Medico'); ?></th>
+                    <th><?php echo $this->Paginator->sort('den_june', 'Odontologo'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                    <th><?php echo $this->Paginator->sort('med_july', 'inscripcion'); ?></th>
-                    <th><?php echo $this->Paginator->sort('den_july', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('med_july', 'Medico'); ?></th>
+                    <th><?php echo $this->Paginator->sort('den_july', 'Odontologo'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                    <th><?php echo $this->Paginator->sort('med_august', 'inscripcion'); ?></th>
-                    <th><?php echo $this->Paginator->sort('den_august', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('med_august', 'Medico'); ?></th>
+                    <th><?php echo $this->Paginator->sort('den_august', 'Odontologo'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                    <th><?php echo $this->Paginator->sort('med_september', 'inscripcion'); ?></th>
-                    <th><?php echo $this->Paginator->sort('den_september', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('med_september', 'Medico'); ?></th>
+                    <th><?php echo $this->Paginator->sort('den_september', 'Odontologo'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                    <th><?php echo $this->Paginator->sort('med_october', 'inscripcion'); ?></th>
-                    <th><?php echo $this->Paginator->sort('den_october', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('med_october', 'Medico'); ?></th>
+                    <th><?php echo $this->Paginator->sort('den_october', 'Odontologo'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                    <th><?php echo $this->Paginator->sort('med_november', 'inscripcion'); ?></th>
-                    <th><?php echo $this->Paginator->sort('den_november', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('med_november', 'Medico'); ?></th>
+                    <th><?php echo $this->Paginator->sort('den_november', 'Odontologo'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                    <th><?php echo $this->Paginator->sort('med_december', 'inscripcion'); ?></th>
-                    <th><?php echo $this->Paginator->sort('den_december', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('med_december', 'Medico'); ?></th>
+                    <th><?php echo $this->Paginator->sort('den_december', 'Odontologo'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('year', 'Año'); ?></th>

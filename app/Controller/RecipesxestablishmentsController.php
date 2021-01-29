@@ -108,8 +108,8 @@ class RecipesxestablishmentsController extends AppController
             $trim4 = $months[0][0]['m_oct'] + $months[0][0]['m_nov'] + $months[0][0]['m_decem'] + 
                      $months[0][0]['d_oct'] + $months[0][0]['d_nov'] + $months[0][0]['d_decem'];
 
-            $this->loadModel('Recipes');
-            $this->Recipes->query("UPDATE recipes SET trimester1 = $trim1, trimester2 = $trim2, trimester3 = $trim3, trimester4 = $trim4 WHERE recipes.regions_id = $region && recipes.year = $yir");
+            $this->loadModel('Recipe');
+            $this->Recipe->query("UPDATE recipes SET trimester1 = $trim1, trimester2 = $trim2, trimester3 = $trim3, trimester4 = $trim4 WHERE recipes.regions_id = $region && recipes.year = $yir");
         } else {
             // Recipesxestablishment.year debe ser cambiado al año actual, igual que en el filtro
             $months = $this->Recipesxestablishment->find(
@@ -158,8 +158,8 @@ class RecipesxestablishmentsController extends AppController
             $trim4 = $months[0][0]['m_oct'] + $months[0][0]['m_nov'] + $months[0][0]['m_decem'] +
                      $months[0][0]['d_oct'] + $months[0][0]['d_nov'] + $months[0][0]['d_decem'];
 
-            $this->loadModel('Recipes');
-            $this->Recipes->query("UPDATE recipes SET trimester1 = $trim1, trimester2 = $trim2, trimester3 = $trim3, trimester4 = $trim4 WHERE recipes.regions_id = $region && recipes.year = $yer");
+            $this->loadModel('Recipe');
+            $this->Recipe->query("UPDATE recipes SET trimester1 = $trim1, trimester2 = $trim2, trimester3 = $trim3, trimester4 = $trim4 WHERE recipes.regions_id = $region && recipes.year = $yer");
         }
     }
 
