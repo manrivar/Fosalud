@@ -54396,3 +54396,27 @@ Stack Trace:
 #3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RecipesxestablishmentsController), Object(CakeRequest))
 #4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2021-01-29 15:33:18 Error: [MissingViewException] View file "Familyplannings\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Familyplannings\\index.ctp',
+)
+Request URL: /Fosalud/Familyplannings/index
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Familyplannings...')
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FamilyplanningsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-01-29 15:33:31 Error: [MissingViewException] View file "Familyplannings\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Familyplannings\\index.ctp',
+)
+Request URL: /Fosalud/Familyplannings/index
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Familyplannings...')
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FamilyplanningsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
