@@ -141,7 +141,7 @@
 
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
-        <a href="#">
+        <a href="<?= $this->base ?>/Healings/index">
             <img src="<?= $this->base ?>/img/ima/Plaster.png" width="200" height="224">
 
             <div class="box-nombre">
@@ -155,7 +155,7 @@
 
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
-        <a href="#">
+        <a href="<?= $this->base ?>/Rehydrations/index">
             <img src="<?= $this->base ?>/img/ima/Water.png" width="200" height="224">
 
             <div class="box-nombre">

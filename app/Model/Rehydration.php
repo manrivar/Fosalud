@@ -1,11 +1,11 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Healingcare Model
+ * Rehydration Model
  *
  * @property Regions $Regions
  */
-class Healingcare extends AppModel
+class Rehydration extends AppModel
 {
 	/**
 	 * belongsTo associations
