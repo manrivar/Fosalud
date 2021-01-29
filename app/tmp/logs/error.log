@@ -54429,3 +54429,33 @@ Request URL: /Fosalud/Nebulizations/index
 Stack Trace:
 #0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2021-01-29 18:52:41 Error: Fatal Error (64): Cannot declare class Healingxestablishment, because the name is already in use in [C:\xampp\htdocs\Fosalud\app\Model\Healingsxestablishment.php, line 44]
+2021-01-29 18:52:42 Error: [FatalErrorException] Cannot declare class Healingxestablishment, because the name is already in use
+Request URL: /Fosalud/Healingsxestablishments/index/1/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot declare ...', 'C:\\xampp\\htdocs...', 44)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(64, 'Cannot declare ...', 'C:\\xampp\\htdocs...', 44, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-29 18:52:53 Error: Fatal Error (64): Cannot declare class Healingxestablishment, because the name is already in use in [C:\xampp\htdocs\Fosalud\app\Model\Healingsxestablishment.php, line 44]
+2021-01-29 18:52:54 Error: [FatalErrorException] Cannot declare class Healingxestablishment, because the name is already in use
+Request URL: /Fosalud/Healingsxestablishments/index/1/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot declare ...', 'C:\\xampp\\htdocs...', 44)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(970): ErrorHandler::handleError(64, 'Cannot declare ...', 'C:\\xampp\\htdocs...', 44, Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2021-01-29 21:02:14 Error: [MissingViewException] View file "Rehxestablishments\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Rehxestablishments\\add.ctp',
+)
+Request URL: /Fosalud/Rehxestablishments/add
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Rehxestablishme...')
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RehxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
