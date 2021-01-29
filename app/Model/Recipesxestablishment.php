@@ -26,8 +26,8 @@ class Recipesxestablishment extends AppModel
             'fields' => '',
             'order' => ''
         ),
-        'Sibases' => array(
-            'className' => 'Sibases',
+        'Sibase' => array(
+            'className' => 'Sibase',
             'foreignKey' => 'sibases_id',
             'conditions' => '',
             'fields' => '',
