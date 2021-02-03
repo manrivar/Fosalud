@@ -7,11 +7,14 @@
 </div>
 
 <div class="advicexestablishments index">
-    <h2><?php echo __('Establecimientos'); ?></h2>
+    <h2><center><?php echo __('Consejerias - Establecimientos'); ?></center></h2>
 
     <div class="table-responsive">
         <table class="table table-bordered table-condensed" cellpadding="0" cellspacing="0">
             <thead>
+                <tr>
+                    <th colspan="19">Odontologia</th>
+                </tr>
                 <tr>
                     <th><?php echo $this->Paginator->sort('id'); ?></th>
                     <th><?php echo $this->Paginator->sort('establishments_id', 'Establecimientos'); ?></th>

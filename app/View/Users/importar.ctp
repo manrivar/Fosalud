@@ -5,7 +5,7 @@ $usuariodb = "root";
 $passworddb = "";
 $dbname = "estadistica2";
 //realizar un if en esta parte con la funcion isset
-$aten = "acxestas"; 
+$aten = "acxestas";
 
 // Generando la conexión con el servidor
 $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
@@ -20,6 +20,15 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
 <body>
   <div class="padre">
     <div class="hijo">
+      <?= $this->Form->create('users', ['type' => 'post']); ?>
+      <?php $option = array('2020' => '2020', '2021' => '2021', '2022' => '2022', '2023' => '2023', '2024' => '2024', '2025' => '2025', '2026' => '2026', '2027' => '2027', '2028' => '2028', '2029' => '2029', '2030' => '2030'); ?>
+
+      <?php echo $this->Form->input('yir', array(
+        'label' => '',
+        'options' => $option,
+        'empty' => 'Selecciona un año',
+        'selected' => 'Selecciona un año'
+      )); ?>
       <form class="form-inline" method="POST" action="<?= $this->base ?>/Users/importar">
         <select class="form-control" placeholder="End" name="date1">
           <option value="" selected>Seleccione año</option>
@@ -51,7 +60,7 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
     </div>
   </div>
   <?php
-  
+
   if ($aten == "acinfxestas") {
     // formulario de subida del archivo
     if (isset($_POST["upload"])) {
@@ -142,7 +151,7 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
     $result = mysqli_query($conectar, $query);
   }
 
-// codigo que funciona no tocar 
+  // codigo que funciona no tocar 
   // formulario de subida del archivo
   if (isset($_POST["upload"])) {
     if ($_FILES['product_file']['name']) {
@@ -151,7 +160,7 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
       if (end($filename) == "csv") {
         $handle = fopen($_FILES['product_file']['tmp_name'], "r");
 
-        while ($data = fgetcsv($handle, 0,";" )) {
+        while ($data = fgetcsv($handle, 0, ";")) {
           //lectura de los campos en el archivo Csv
           $id = mysqli_real_escape_string($conectar, $data[0]);
           $establecimientos_id = mysqli_real_escape_string($conectar, $data[1]);
@@ -170,7 +179,7 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
           $diciembre = mysqli_real_escape_string($conectar, $data[14]);
 
           //Query que efectuara el update a la base de datos 
-          
+
           $query = "
                             UPDATE acxestas
                             SET establecimientos_id = '$establecimientos_id', 
@@ -222,7 +231,7 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
   <center>
     <h2>Informacion previa a la subida del archivo<h2>
   </center>
-  <?php 
+  <?php
   if ($aten == "acinfxestas") {
     # code...
   }
@@ -325,4 +334,3 @@ $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
 </body>
 
 </html>
-
