@@ -6,7 +6,9 @@
     </ol>
 </div>
 
-<h2>Advices</h2>
+<h2>
+    <center>Consejerias</center>
+</h2>
 
 <?= $this->Form->create('advices', ['type' => 'get']); ?>
 <?php $option = array('2020' => '2020', '2021' => '2021', '2022' => '2022', '2023' => '2023', '2024' => '2024', '2025' => '2025', '2026' => '2026', '2027' => '2027', '2028' => '2028', '2029' => '2029', '2030' => '2030'); ?>
@@ -17,10 +19,7 @@
     'empty' => 'Selecciona un año',
     'selected' => 'Selecciona un año'
 )); ?>
-<!-- <?= $this->Form->control('yir', ['class' => 'datepicker', 'value' => $this->request->query('yir')]); ?> -->
-<button class="btn btn-primary" name="search">
-    <span class="glyphicon glyphicon-search"></span>
-</button>
+<button class="btn btn-primary" name="search">Buscar</button>
 <?= $this->Form->end() ?>
 
 <div class="table-responsive">

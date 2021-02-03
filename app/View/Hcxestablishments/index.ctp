@@ -7,7 +7,7 @@
 </div>
 
 <div class="hcxestablishments index">
-  <h2><?php echo __('Establecimientos'); ?></h2>
+  <h2><center><?php echo __('Atencion Curativa - Establecimientos'); ?></center></h2>
  
   <div class="table-responsive">
     <table class="table table-bordered table-condensed" cellpadding="0" cellspacing="0">
