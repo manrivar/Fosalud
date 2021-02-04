@@ -7,7 +7,7 @@
 </div>
 
 <div class="recipesxestablishments index">
-    <h2><?php echo __('Establecimientos'); ?></h2>
+    <h2><center><?php echo __('Recetas - Establecimientos'); ?></center></h2>
     <div class="table-responsive">
         <table class="table table-bordered table-condensed" cellpadding="0" cellspacing="0">
             <thead>
