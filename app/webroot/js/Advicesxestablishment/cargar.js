@@ -3,6 +3,7 @@
 //autocomplete
 var base = $("#base").val();
 
+
 $(function () {
     $("#detalleSeleccion").fadeOut();
 
@@ -96,7 +97,8 @@ $("#arch").change(function () {
 $("#subirExcel").click(function () {
     var inputFile = document.getElementById("arch");
     var base = $("#base").val();
-    var cargos = $("#cargos").val();
+    var regions = $("#regions").val();
+    var year = $("#year").val();
     var file = inputFile.files;
     var archivos = inputFile.files.length;
 
@@ -121,8 +123,9 @@ $("#subirExcel").click(function () {
 
 
     var data = new FormData();
-    data.append("bandera", 1);
-    data.append("cargos", cargos);
+    data.append("bandera", 2);
+    data.append("regions", regions);
+    data.append("year", year);
 
     /*
      * ENVIO DE ARCHIVOS POR POST
@@ -135,7 +138,7 @@ $("#subirExcel").click(function () {
     }
 
 
-    var url = base + "/resultadoxobjetivos/cargar/";
+    var url = base + "/Advicesxestablishments/cargar/";
     $.ajax({
         url: url,
         type: "POST",
