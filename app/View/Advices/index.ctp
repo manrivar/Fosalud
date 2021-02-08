@@ -9,6 +9,7 @@
 <h2>
     <center>Consejerias</center>
 </h2>
+<span class="fa fa-undo"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Advicesxestablishments', 'action' => 'cargar_Evaluacion')); ?>
 
 <?= $this->Form->create('advices', ['type' => 'get']); ?>
 <?php $option = array('2020' => '2020', '2021' => '2021', '2022' => '2022', '2023' => '2023', '2024' => '2024', '2025' => '2025', '2026' => '2026', '2027' => '2027', '2028' => '2028', '2029' => '2029', '2030' => '2030'); ?>

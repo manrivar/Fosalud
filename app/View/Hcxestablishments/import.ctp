@@ -10,7 +10,6 @@
             'options' => $option,
             'empty' => 'Selecciona un año',
             'selected' => 'Selecciona un año'
-
         ));
         echo $this->Form->input('regions', array(
             'label' => 'Region',
