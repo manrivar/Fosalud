@@ -25,6 +25,7 @@ App::uses('Controller', 'Controller');
 App::uses('CakeEmail', 'Network/Email');
 App::uses('Folder', 'Utility');
 App::uses('File', 'Utility');
+App::import('Vendor', 'excel-r/PHPExcel');
 
 /**
  * Application Controller

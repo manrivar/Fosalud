@@ -56290,3 +56290,51 @@ Stack Trace:
 #3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdvicesxestablishmentsController), Object(CakeRequest))
 #4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2021-02-10 18:04:16 Error: [MissingViewException] View file "Cexestablishments\cargar__evaluacion.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Cexestablishments\\cargar__evaluacion.ctp',
+)
+Request URL: /Fosalud/Cexestablishments/cargar_Evaluacion
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Cexestablishmen...')
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CexestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-10 18:04:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud/js/Cexestablishment/cargar.js
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-02-10 18:11:05 Error: [Error] Class 'PHPExcel_Reader_Excel2007' not found
+Request URL: /Fosalud/Cexestablishments/cargar/
+Stack Trace:
+#0 [internal function]: CexestablishmentsController->cargar()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(CexestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CexestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-10 18:17:32 Error: [MissingControllerException] Controller class CesxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'CesxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud/Cesxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-02-10 18:18:06 Error: [MissingControllerException] Controller class CesxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'CesxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud/Cesxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

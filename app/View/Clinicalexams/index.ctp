@@ -6,7 +6,10 @@
   </ol>
 </div>
 
-<h2><Center>Examenes Clinicos</Center></h2>
+<h2>
+  <Center>Examenes Clinicos</Center>
+</h2>
+<span class="fa fa-undo"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Cexestablishments', 'action' => 'cargar_Evaluacion')); ?>
 
 <?= $this->Form->create('clinicalexams', ['type' => 'get']); ?>
 <?php $option = array('2020' => '2020', '2021' => '2021', '2022' => '2022', '2023' => '2023', '2024' => '2024', '2025' => '2025', '2026' => '2026', '2027' => '2027', '2028' => '2028', '2029' => '2029', '2030' => '2030'); ?>
