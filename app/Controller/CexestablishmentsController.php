@@ -1,7 +1,5 @@
 <?php
 App::uses('AppController', 'Controller');
-//importar vendor de excel
-App::import('Vendor', 'excel-r/PHPExcel');
 /**
  * Cexestablishments Controller
  *
@@ -66,32 +64,48 @@ class CexestablishmentsController extends AppController
             $months = $this->Cexestablishment->find(
                 'all',
                 array(
-                    'fields' => array('SUM(Cexestablishment.january) as jan, SUM(Cexestablishment.february) as feb, SUM(Cexestablishment.march) as mar, SUM(Cexestablishment.april) as apr, SUM(Cexestablishment.may) as may, SUM(Cexestablishment.june) as jun, SUM(Cexestablishment.july) as jul,  SUM(Cexestablishment.august) as aug, SUM(Cexestablishment.september) as sep, SUM(Cexestablishment.october) as oct, SUM(Cexestablishment.november) as nov, SUM(Cexestablishment.december) as decem'),
+                    'fields' => array('SUM(Cexestablishment.cit_january) as ci_jan, SUM(Cexestablishment.cit_february) as ci_feb, SUM(Cexestablishment.cit_march) as ci_mar, SUM(Cexestablishment.cit_april) as ci_apr, SUM(Cexestablishment.cit_may) as ci_may, SUM(Cexestablishment.cit_june) as ci_jun, SUM(Cexestablishment.cit_july) as ci_jul,  SUM(Cexestablishment.cit_august) as ci_aug, SUM(Cexestablishment.cit_september) as ci_sep, SUM(Cexestablishment.cit_october) as ci_oct, SUM(Cexestablishment.cit_november) as ci_nov, SUM(Cexestablishment.cit_december) as ci_decem, SUM(Cexestablishment.mam_january) as mam_jan, SUM(Cexestablishment.mam_february) as mam_feb, SUM(Cexestablishment.mam_march) as mam_mar, SUM(Cexestablishment.mam_april) as mam_apr, SUM(Cexestablishment.mam_may) as mam_may, SUM(Cexestablishment.mam_june) as mam_jun, SUM(Cexestablishment.mam_july) as mam_jul,  SUM(Cexestablishment.mam_august) as mam_aug, SUM(Cexestablishment.mam_september) as mam_sep, SUM(Cexestablishment.mam_october) as mam_oct, SUM(Cexestablishment.mam_november) as mam_nov, SUM(Cexestablishment.mam_december) as mam_decem'),
                     'conditions' => array(
                         'Cexestablishment.year =' => $yir,
                         'Cexestablishment.regions_id' => $reg
                     )
                 )
             );
-            $mostrar_total_jan = $months[0][0]['jan'];
-            $mostrar_total_feb = $months[0][0]['feb'];
-            $mostrar_total_mar = $months[0][0]['mar'];
-            $mostrar_total_apr = $months[0][0]['apr'];
-            $mostrar_total_may = $months[0][0]['may'];
-            $mostrar_total_jun = $months[0][0]['jun'];
-            $mostrar_total_jul = $months[0][0]['jul'];
-            $mostrar_total_aug = $months[0][0]['aug'];
-            $mostrar_total_sep = $months[0][0]['sep'];
-            $mostrar_total_oct = $months[0][0]['oct'];
-            $mostrar_total_nov = $months[0][0]['nov'];
-            $mostrar_total_dec = $months[0][0]['decem'];
-            $this->set(array('jan' => $mostrar_total_jan, 'feb' => $mostrar_total_feb, 'mar' => $mostrar_total_mar, 'apr' => $mostrar_total_apr, 'may' => $mostrar_total_may, 'jun' => $mostrar_total_jun, 'jul' => $mostrar_total_jul, 'aug' => $mostrar_total_aug, 'sep' => $mostrar_total_sep, 'oct' => $mostrar_total_oct, 'nov' => $mostrar_total_nov, 'decem' => $mostrar_total_dec));
+            $mostrar_total_jan = $months[0][0]['ci_jan'];
+            $mostrar_total_feb = $months[0][0]['ci_feb'];
+            $mostrar_total_mar = $months[0][0]['ci_mar'];
+            $mostrar_total_apr = $months[0][0]['ci_apr'];
+            $mostrar_total_may = $months[0][0]['ci_may'];
+            $mostrar_total_jun = $months[0][0]['ci_jun'];
+            $mostrar_total_jul = $months[0][0]['ci_jul'];
+            $mostrar_total_aug = $months[0][0]['ci_aug'];
+            $mostrar_total_sep = $months[0][0]['ci_sep'];
+            $mostrar_total_oct = $months[0][0]['ci_oct'];
+            $mostrar_total_nov = $months[0][0]['ci_nov'];
+            $mostrar_total_dec = $months[0][0]['ci_decem'];
+            $mostrar_total_jan_m = $months[0][0]['mam_jan'];
+            $mostrar_total_feb_m = $months[0][0]['mam_feb'];
+            $mostrar_total_mar_m = $months[0][0]['mam_mar'];
+            $mostrar_total_apr_m = $months[0][0]['mam_apr'];
+            $mostrar_total_may_m = $months[0][0]['mam_may'];
+            $mostrar_total_jun_m = $months[0][0]['mam_jun'];
+            $mostrar_total_jul_m = $months[0][0]['mam_jul'];
+            $mostrar_total_aug_m = $months[0][0]['mam_aug'];
+            $mostrar_total_sep_m = $months[0][0]['mam_sep'];
+            $mostrar_total_oct_m = $months[0][0]['mam_oct'];
+            $mostrar_total_nov_m = $months[0][0]['mam_nov'];
+            $mostrar_total_dec_m = $months[0][0]['mam_decem'];
+            $this->set(array('ci_jan' => $mostrar_total_jan, 'ci_feb' => $mostrar_total_feb, 'ci_mar' => $mostrar_total_mar, 'ci_apr' => $mostrar_total_apr, 'ci_may' => $mostrar_total_may, 'ci_jun' => $mostrar_total_jun, 'ci_jul' => $mostrar_total_jul, 'ci_aug' => $mostrar_total_aug, 'ci_sep' => $mostrar_total_sep, 'ci_oct' => $mostrar_total_oct, 'ci_nov' => $mostrar_total_nov, 'ci_decem' => $mostrar_total_dec, 'mam_jan' => $mostrar_total_jan_m, 'mam_feb' => $mostrar_total_feb_m, 'mam_mar' => $mostrar_total_mar_m, 'mam_apr' => $mostrar_total_apr_m, 'mam_may' => $mostrar_total_may_m, 'mam_jun' => $mostrar_total_jun_m, 'mam_jul' => $mostrar_total_jul_m, 'mam_aug' => $mostrar_total_aug_m, 'mam_sep' => $mostrar_total_sep_m, 'mam_oct' => $mostrar_total_oct_m, 'mam_nov' => $mostrar_total_nov_m, 'mam_decem' => $mostrar_total_dec_m));
 
             // UPDATE PARA LA TABLA CLINICALEXAMS
-            $trim1 = $months[0][0]['jan'] + $months[0][0]['feb'] + $months[0][0]['mar'];
-            $trim2 = $months[0][0]['apr'] + $months[0][0]['may'] + $months[0][0]['jun'];
-            $trim3 = $months[0][0]['jul'] + $months[0][0]['aug'] + $months[0][0]['sep'];
-            $trim4 = $months[0][0]['oct'] + $months[0][0]['nov'] + $months[0][0]['decem'];
+            $trim1 = $months[0][0]['ci_jan'] + $months[0][0]['ci_feb'] + $months[0][0]['ci_mar'] +
+                     $months[0][0]['mam_jan'] + $months[0][0]['mam_feb'] + $months[0][0]['mam_mar'];
+            $trim2 = $months[0][0]['ci_apr'] + $months[0][0]['ci_may'] + $months[0][0]['ci_jun'] +
+                     $months[0][0]['mam_apr'] + $months[0][0]['mam_may'] + $months[0][0]['mam_jun'];
+            $trim3 = $months[0][0]['ci_jul'] + $months[0][0]['ci_aug'] + $months[0][0]['ci_sep'] +
+                     $months[0][0]['mam_jul'] + $months[0][0]['mam_aug'] + $months[0][0]['mam_sep'];
+            $trim4 = $months[0][0]['ci_oct'] + $months[0][0]['ci_nov'] + $months[0][0]['ci_decem'] +
+                     $months[0][0]['mam_oct'] + $months[0][0]['mam_nov'] + $months[0][0]['mam_decem'];
 
             $this->loadModel('Clinicalexam');
             $this->Clinicalexam->query("UPDATE clinicalexams SET trimester1 = $trim1, trimester2 = $trim2, trimester3 = $trim3, trimester4 = $trim4 WHERE clinicalexams.regions_id = $region && clinicalexams.year = $yir");
@@ -101,32 +115,48 @@ class CexestablishmentsController extends AppController
             $months = $this->Cexestablishment->find(
                 'all',
                 array(
-                    'fields' => array('SUM(Cexestablishment.january) as jan, SUM(Cexestablishment.february) as feb, SUM(Cexestablishment.march) as mar, SUM(Cexestablishment.april) as apr, SUM(Cexestablishment.may) as may, SUM(Cexestablishment.june) as jun, SUM(Cexestablishment.july) as jul,  SUM(Cexestablishment.august) as aug, SUM(Cexestablishment.september) as sep, SUM(Cexestablishment.october) as oct, SUM(Cexestablishment.november) as nov, SUM(Cexestablishment.december) as decem'),
+                    'fields' => array('SUM(Cexestablishment.cit_january) as ci_jan, SUM(Cexestablishment.cit_february) as ci_feb, SUM(Cexestablishment.cit_march) as ci_mar, SUM(Cexestablishment.cit_april) as ci_apr, SUM(Cexestablishment.cit_may) as ci_may, SUM(Cexestablishment.cit_june) as ci_jun, SUM(Cexestablishment.cit_july) as ci_jul,  SUM(Cexestablishment.cit_august) as ci_aug, SUM(Cexestablishment.cit_september) as ci_sep, SUM(Cexestablishment.cit_october) as ci_oct, SUM(Cexestablishment.cit_november) as ci_nov, SUM(Cexestablishment.cit_december) as ci_decem, SUM(Cexestablishment.mam_january) as mam_jan, SUM(Cexestablishment.mam_february) as mam_feb, SUM(Cexestablishment.mam_march) as mam_mar, SUM(Cexestablishment.mam_april) as mam_apr, SUM(Cexestablishment.mam_may) as mam_may, SUM(Cexestablishment.mam_june) as mam_jun, SUM(Cexestablishment.mam_july) as mam_jul,  SUM(Cexestablishment.mam_august) as mam_aug, SUM(Cexestablishment.mam_september) as mam_sep, SUM(Cexestablishment.mam_october) as mam_oct, SUM(Cexestablishment.mam_november) as mam_nov, SUM(Cexestablishment.mam_december) as mam_decem'),
                     'conditions' => array(
                         'Cexestablishment.year =' => $yer,
                         'Cexestablishment.regions_id' => $reg
                     )
                 )
             );
-            $mostrar_total_jan = $months[0][0]['jan'];
-            $mostrar_total_feb = $months[0][0]['feb'];
-            $mostrar_total_mar = $months[0][0]['mar'];
-            $mostrar_total_apr = $months[0][0]['apr'];
-            $mostrar_total_may = $months[0][0]['may'];
-            $mostrar_total_jun = $months[0][0]['jun'];
-            $mostrar_total_jul = $months[0][0]['jul'];
-            $mostrar_total_aug = $months[0][0]['aug'];
-            $mostrar_total_sep = $months[0][0]['sep'];
-            $mostrar_total_oct = $months[0][0]['oct'];
-            $mostrar_total_nov = $months[0][0]['nov'];
-            $mostrar_total_dec = $months[0][0]['decem'];
-            $this->set(array('jan' => $mostrar_total_jan, 'feb' => $mostrar_total_feb, 'mar' => $mostrar_total_mar, 'apr' => $mostrar_total_apr, 'may' => $mostrar_total_may, 'jun' => $mostrar_total_jun, 'jul' => $mostrar_total_jul, 'aug' => $mostrar_total_aug, 'sep' => $mostrar_total_sep, 'oct' => $mostrar_total_oct, 'nov' => $mostrar_total_nov, 'decem' => $mostrar_total_dec));
+            $mostrar_total_jan = $months[0][0]['ci_jan'];
+            $mostrar_total_feb = $months[0][0]['ci_feb'];
+            $mostrar_total_mar = $months[0][0]['ci_mar'];
+            $mostrar_total_apr = $months[0][0]['ci_apr'];
+            $mostrar_total_may = $months[0][0]['ci_may'];
+            $mostrar_total_jun = $months[0][0]['ci_jun'];
+            $mostrar_total_jul = $months[0][0]['ci_jul'];
+            $mostrar_total_aug = $months[0][0]['ci_aug'];
+            $mostrar_total_sep = $months[0][0]['ci_sep'];
+            $mostrar_total_oct = $months[0][0]['ci_oct'];
+            $mostrar_total_nov = $months[0][0]['ci_nov'];
+            $mostrar_total_dec = $months[0][0]['ci_decem'];
+            $mostrar_total_jan_m = $months[0][0]['mam_jan'];
+            $mostrar_total_feb_m = $months[0][0]['mam_feb'];
+            $mostrar_total_mar_m = $months[0][0]['mam_mar'];
+            $mostrar_total_apr_m = $months[0][0]['mam_apr'];
+            $mostrar_total_may_m = $months[0][0]['mam_may'];
+            $mostrar_total_jun_m = $months[0][0]['mam_jun'];
+            $mostrar_total_jul_m = $months[0][0]['mam_jul'];
+            $mostrar_total_aug_m = $months[0][0]['mam_aug'];
+            $mostrar_total_sep_m = $months[0][0]['mam_sep'];
+            $mostrar_total_oct_m = $months[0][0]['mam_oct'];
+            $mostrar_total_nov_m = $months[0][0]['mam_nov'];
+            $mostrar_total_dec_m = $months[0][0]['mam_decem'];
+            $this->set(array('ci_jan' => $mostrar_total_jan, 'ci_feb' => $mostrar_total_feb, 'ci_mar' => $mostrar_total_mar, 'ci_apr' => $mostrar_total_apr, 'ci_may' => $mostrar_total_may, 'ci_jun' => $mostrar_total_jun, 'ci_jul' => $mostrar_total_jul, 'ci_aug' => $mostrar_total_aug, 'ci_sep' => $mostrar_total_sep, 'ci_oct' => $mostrar_total_oct, 'ci_nov' => $mostrar_total_nov, 'ci_decem' => $mostrar_total_dec, 'mam_jan' => $mostrar_total_jan_m, 'mam_feb' => $mostrar_total_feb_m, 'mam_mar' => $mostrar_total_mar_m, 'mam_apr' => $mostrar_total_apr_m, 'mam_may' => $mostrar_total_may_m, 'mam_jun' => $mostrar_total_jun_m, 'mam_jul' => $mostrar_total_jul_m, 'mam_aug' => $mostrar_total_aug_m, 'mam_sep' => $mostrar_total_sep_m, 'mam_oct' => $mostrar_total_oct_m, 'mam_nov' => $mostrar_total_nov_m, 'mam_decem' => $mostrar_total_dec_m));
 
             // UPDATE PARA LA TABLA CLINICALEXAMS "El AÑO EN CLINICALEXAMS.YEAR DEBE SER CAMBIADO AL AÑO ACTUAL"
-            $trim1 = $months[0][0]['jan'] + $months[0][0]['feb'] + $months[0][0]['mar'];
-            $trim2 = $months[0][0]['apr'] + $months[0][0]['may'] + $months[0][0]['jun'];
-            $trim3 = $months[0][0]['jul'] + $months[0][0]['aug'] + $months[0][0]['sep'];
-            $trim4 = $months[0][0]['oct'] + $months[0][0]['nov'] + $months[0][0]['decem'];
+            $trim1 = $months[0][0]['ci_jan'] + $months[0][0]['ci_feb'] + $months[0][0]['ci_mar'] +
+            $months[0][0]['mam_jan'] + $months[0][0]['mam_feb'] + $months[0][0]['mam_mar'];
+            $trim2 = $months[0][0]['ci_apr'] + $months[0][0]['ci_may'] + $months[0][0]['ci_jun'] +
+            $months[0][0]['mam_apr'] + $months[0][0]['mam_may'] + $months[0][0]['mam_jun'];
+            $trim3 = $months[0][0]['ci_jul'] + $months[0][0]['ci_aug'] + $months[0][0]['ci_sep'] +
+            $months[0][0]['mam_jul'] + $months[0][0]['mam_aug'] + $months[0][0]['mam_sep'];
+            $trim4 = $months[0][0]['ci_oct'] + $months[0][0]['ci_nov'] + $months[0][0]['ci_decem'] +
+            $months[0][0]['mam_oct'] + $months[0][0]['mam_nov'] + $months[0][0]['mam_decem'];
 
             $this->loadModel('Clinicalexam');
             $this->Clinicalexam->query("UPDATE clinicalexams SET trimester1 = $trim1, trimester2 = $trim2, trimester3 = $trim3, trimester4 = $trim4 WHERE clinicalexams.regions_id = $region && clinicalexams.year = $yer");
