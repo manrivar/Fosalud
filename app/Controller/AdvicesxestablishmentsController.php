@@ -1,7 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
-//importar vendor de excel
-App::import('Vendor', 'excel-r/PHPExcel');
+
 /**
  * Advicesxestablishments Controller
  *
@@ -258,7 +257,20 @@ class AdvicesxestablishmentsController extends AppController
             'fields' => array('count(*) as total')
                 )
         );
-        if ($existe[0][0]['total'] != 20) {
+
+        if ($reg == 1) {
+            $estanum = 12;  
+        } elseif ($reg == 2) {
+            $estanum = 19; 
+        } elseif ($reg == 3) {
+            $estanum = 20;
+        } elseif ($reg == 4) {
+            $estanum = 13;
+        } elseif ($reg == 5) {
+            $estanum = 19;
+        }
+        
+        if ($existe[0][0]['total'] != $estanum) {
             echo "YA EXISTEN REGISTROS PARA ESTE CARGO FUNCIONAL, VERIFIQUE";
             print_r($existe);
             print_r($reg);
@@ -390,10 +402,10 @@ class AdvicesxestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
-        $this->redirect([
-            'controller' => 'Advicesxestablishments',
-            'action' => 'index', $reg, $year
-        ]);
+        // $this->redirect([
+        //     'controller' => 'Advicesxestablishments',
+        //     'action' => 'index', $reg, $year
+        // ]);
     }
 
    
