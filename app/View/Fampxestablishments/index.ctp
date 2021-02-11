@@ -7,28 +7,70 @@
 </div>
 
 <div class="fampxestablishments index">
-    <h2><center><?php echo __('Planificacion Familiar - Establecimientos'); ?></center></h2>
-
+    <h2>
+        <center><?php echo __('Planificacion Familiar - Establecimientos'); ?></center>
+    </h2>
     <div class="table-responsive">
         <table class="table table-bordered table-condensed" cellpadding="0" cellspacing="0">
             <thead>
                 <tr>
-                    <th><?php echo $this->Paginator->sort('id'); ?></th>
-                    <th><?php echo $this->Paginator->sort('establishments_id', 'Establecimientos'); ?></th>
-                    <th><?php echo $this->Paginator->sort('sibases_id', 'Sibasis'); ?></th>
-                    <th><?php echo $this->Paginator->sort('regions_id', 'Regiones'); ?></th>
-                    <th><?php echo $this->Paginator->sort('january', 'Enero'); ?></th>
-                    <th><?php echo $this->Paginator->sort('february', 'Febrero'); ?></th>
-                    <th><?php echo $this->Paginator->sort('march', 'Marzo'); ?></th>
-                    <th><?php echo $this->Paginator->sort('april', 'Abril'); ?></th>
-                    <th><?php echo $this->Paginator->sort('may', 'Mayo'); ?></th>
-                    <th><?php echo $this->Paginator->sort('june', 'Junio'); ?></th>
-                    <th><?php echo $this->Paginator->sort('july', 'Julio'); ?></th>
-                    <th><?php echo $this->Paginator->sort('august', 'Agosto'); ?></th>
-                    <th><?php echo $this->Paginator->sort('september', 'Septiembre'); ?></th>
-                    <th><?php echo $this->Paginator->sort('october', 'Octubre'); ?></th>
-                    <th><?php echo $this->Paginator->sort('november', 'Noviembre'); ?></th>
-                    <th><?php echo $this->Paginator->sort('december', 'Diciembre'); ?></th>
+                    <th class="text-center" rowspan="2"><?php echo $this->Paginator->sort('id'); ?></th>
+                    <th class="text-center" rowspan="2"><?php echo $this->Paginator->sort('sibases_id', 'Sibasis'); ?></th>
+                    <th class="text-center" rowspan="2"><?php echo $this->Paginator->sort('establishments_id', 'Establecimientos'); ?></th>
+                    <th class="text-center" colspan="3">ENERO</th>
+                    <th class="text-center" colspan="3">FEBRERO</th>
+                    <th class="text-center" colspan="3">MARZO</th>
+                    <th class="text-center" colspan="3">ABRIL</th>
+                    <th class="text-center" colspan="3">MAYO</th>
+                    <th class="text-center" colspan="3">JUNIO</th>
+                    <th class="text-center" colspan="3">JULIO</th>
+                    <th class="text-center" colspan="3">AGOSTO</th>
+                    <th class="text-center" colspan="3">SEPTIEMBRE</th>
+                    <th class="text-center" colspan="3">OCTUBRE</th>
+                    <th class="text-center" colspan="3">NOVIEMBRE</th>
+                    <th class="text-center" colspan="3">DICIEMBRE</th>
+                    <th class="text-center" colspan="3">TOTAL ANUAL</th>
+                </tr>
+                <tr>
+
+
+
+                    <th><?php echo $this->Paginator->sort('ins_january', 'inscripcion'); ?></th>
+                    <th><?php echo $this->Paginator->sort('con_january', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                    <th><?php echo $this->Paginator->sort('ins_february', 'inscripcion'); ?></th>
+                    <th><?php echo $this->Paginator->sort('con_february', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                    <th><?php echo $this->Paginator->sort('ins_march', 'inscripcion'); ?></th>
+                    <th><?php echo $this->Paginator->sort('con_march', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                    <th><?php echo $this->Paginator->sort('ins_april', 'inscripcion'); ?></th>
+                    <th><?php echo $this->Paginator->sort('con_april', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                    <th><?php echo $this->Paginator->sort('ins_may', 'inscripcion'); ?></th>
+                    <th><?php echo $this->Paginator->sort('con_may', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                    <th><?php echo $this->Paginator->sort('ins_june', 'inscripcion'); ?></th>
+                    <th><?php echo $this->Paginator->sort('con_june', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                    <th><?php echo $this->Paginator->sort('ins_july', 'inscripcion'); ?></th>
+                    <th><?php echo $this->Paginator->sort('con_july', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                    <th><?php echo $this->Paginator->sort('ins_august', 'inscripcion'); ?></th>
+                    <th><?php echo $this->Paginator->sort('con_august', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                    <th><?php echo $this->Paginator->sort('ins_september', 'inscripcion'); ?></th>
+                    <th><?php echo $this->Paginator->sort('con_september', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                    <th><?php echo $this->Paginator->sort('ins_october', 'inscripcion'); ?></th>
+                    <th><?php echo $this->Paginator->sort('con_october', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                    <th><?php echo $this->Paginator->sort('ins_november', 'inscripcion'); ?></th>
+                    <th><?php echo $this->Paginator->sort('con_november', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                    <th><?php echo $this->Paginator->sort('ins_december', 'inscripcion'); ?></th>
+                    <th><?php echo $this->Paginator->sort('con_december', 'Control'); ?></th>
+                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('year', 'Año'); ?></th>
                     <th class="actions"><?php echo __('Actions'); ?></th>
@@ -39,27 +81,48 @@
                     <tr>
                         <td><?php echo h($fampxestablishment['Fampxestablishment']['id']); ?>&nbsp;</td>
                         <td>
-                            <?php echo $this->Html->link($fampxestablishment['Establishment']['establishment_name'], array('controller' => 'establishments', 'action' => 'view', $fampxestablishment['Establishment']['id'])); ?>
-                        </td>
-                        <td>
                             <?php echo $this->Html->link($fampxestablishment['Sibase']['sibase_name'], array('controller' => 'sibases', 'action' => 'view', $fampxestablishment['Sibase']['id'])); ?>
                         </td>
                         <td>
-                            <?php echo $this->Html->link($fampxestablishment['Region']['region_name'], array('controller' => 'regions', 'action' => 'view', $fampxestablishment['Region']['id'])); ?>
+                            <?php echo $this->Html->link($fampxestablishment['Establishment']['establishment_name'], array('controller' => 'establishments', 'action' => 'view', $fampxestablishment['Establishment']['id'])); ?>
                         </td>
-                        <?php $total = $fampxestablishment['Fampxestablishment']['january'] + $fampxestablishment['Fampxestablishment']['february'] + $fampxestablishment['Fampxestablishment']['march'] + $fampxestablishment['Fampxestablishment']['april'] + $fampxestablishment['Fampxestablishment']['may'] + $fampxestablishment['Fampxestablishment']['june'] + $fampxestablishment['Fampxestablishment']['july'] + $fampxestablishment['Fampxestablishment']['august'] + $fampxestablishment['Fampxestablishment']['september'] + $fampxestablishment['Fampxestablishment']['october'] + $fampxestablishment['Fampxestablishment']['november'] + $fampxestablishment['Fampxestablishment']['december'];  ?>
-                        <td><?php echo h($fampxestablishment['Fampxestablishment']['january']); ?>&nbsp;</td>
-                        <td><?php echo h($fampxestablishment['Fampxestablishment']['february']); ?>&nbsp;</td>
-                        <td><?php echo h($fampxestablishment['Fampxestablishment']['march']); ?>&nbsp;</td>
-                        <td><?php echo h($fampxestablishment['Fampxestablishment']['april']); ?>&nbsp;</td>
-                        <td><?php echo h($fampxestablishment['Fampxestablishment']['may']); ?>&nbsp;</td>
-                        <td><?php echo h($fampxestablishment['Fampxestablishment']['june']); ?>&nbsp;</td>
-                        <td><?php echo h($fampxestablishment['Fampxestablishment']['july']); ?>&nbsp;</td>
-                        <td><?php echo h($fampxestablishment['Fampxestablishment']['august']); ?>&nbsp;</td>
-                        <td><?php echo h($fampxestablishment['Fampxestablishment']['september']); ?>&nbsp;</td>
-                        <td><?php echo h($fampxestablishment['Fampxestablishment']['october']); ?>&nbsp;</td>
-                        <td><?php echo h($fampxestablishment['Fampxestablishment']['november']); ?>&nbsp;</td>
-                        <td><?php echo h($fampxestablishment['Fampxestablishment']['december']); ?>&nbsp;</td>
+                        <?php $total = $fampxestablishment['Fampxestablishment']['ins_january'] + $fampxestablishment['Fampxestablishment']['ins_february'] + $fampxestablishment['Fampxestablishment']['ins_march'] + $fampxestablishment['Fampxestablishment']['ins_april'] + $fampxestablishment['Fampxestablishment']['ins_may'] + $fampxestablishment['Fampxestablishment']['ins_june'] + $fampxestablishment['Fampxestablishment']['ins_july'] + $fampxestablishment['Fampxestablishment']['ins_august'] + $fampxestablishment['Fampxestablishment']['ins_september'] + $fampxestablishment['Fampxestablishment']['ins_october'] + $fampxestablishment['Fampxestablishment']['ins_november'] + $fampxestablishment['Fampxestablishment']['ins_december'] + $fampxestablishment['Fampxestablishment']['con_january'] + $fampxestablishment['Fampxestablishment']['con_february'] + $fampxestablishment['Fampxestablishment']['con_march'] + $fampxestablishment['Fampxestablishment']['con_april'] + $fampxestablishment['Fampxestablishment']['con_may'] + $fampxestablishment['Fampxestablishment']['con_june'] + $fampxestablishment['Fampxestablishment']['con_july'] + $fampxestablishment['Fampxestablishment']['con_august'] + $fampxestablishment['Fampxestablishment']['con_september'] + $fampxestablishment['Fampxestablishment']['con_october'] + $fampxestablishment['Fampxestablishment']['con_november'] + $fampxestablishment['Fampxestablishment']['con_december'];  ?>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_january']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['con_january']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_january'] + $fampxestablishment['Fampxestablishment']['con_january']); ?></td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_february']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['con_february']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_february'] + $fampxestablishment['Fampxestablishment']['con_february']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_march']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['con_march']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_march'] + $fampxestablishment['Fampxestablishment']['con_march']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_april']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['con_april']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_april'] + $fampxestablishment['Fampxestablishment']['con_april']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_may']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['con_may']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_may'] + $fampxestablishment['Fampxestablishment']['con_may']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_june']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['con_june']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_june'] + $fampxestablishment['Fampxestablishment']['con_june']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_july']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['con_july']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_july'] + $fampxestablishment['Fampxestablishment']['con_july']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_august']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['con_august']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_august'] + $fampxestablishment['Fampxestablishment']['con_august']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_september']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['con_september']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_september'] + $fampxestablishment['Fampxestablishment']['con_september']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_october']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['con_october']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_october'] + $fampxestablishment['Fampxestablishment']['con_october']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_november']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['con_november']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_november'] + $fampxestablishment['Fampxestablishment']['con_november']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_december']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['con_december']); ?>&nbsp;</td>
+                        <td><?php echo h($fampxestablishment['Fampxestablishment']['ins_december'] + $fampxestablishment['Fampxestablishment']['con_december']); ?>&nbsp;</td>
                         <td><?php echo $total; ?>&nbsp;</td>
                         <td><?php echo h($fampxestablishment['Fampxestablishment']['year']); ?>&nbsp;</td>
                         <td class="actions">
@@ -72,21 +135,45 @@
                 <?php endforeach; ?>
             </tbody>
             <tfoot>
-                <?php $total2 = $jan + $feb + $mar + $apr + $may + $jun + $jul + $aug + $sep + $oct + $nov + $decem; ?>
+                <?php $total2 = $i_jan + $i_feb + $i_mar + $i_apr + $i_may + $i_jun + $i_jul + $i_aug + $i_sep + $i_oct + $i_nov + $i_decem + $c_jan + $c_feb + $c_mar + $c_apr + $c_may + $c_jun + $c_jul + $c_aug + $c_sep + $c_oct + $c_nov + $c_decem; ?>
                 <tr>
-                    <td colspan="4"> Total </td>
-                    <td><?php echo $jan;  ?></td>
-                    <td><?php echo $feb;  ?></td>
-                    <td><?php echo $mar;  ?></td>
-                    <td><?php echo $apr;  ?></td>
-                    <td><?php echo $may;  ?></td>
-                    <td><?php echo $jun;  ?></td>
-                    <td><?php echo $jul;  ?></td>
-                    <td><?php echo $aug;  ?></td>
-                    <td><?php echo $sep;  ?></td>
-                    <td><?php echo $oct;  ?></td>
-                    <td><?php echo $nov;  ?></td>
-                    <td><?php echo $decem;  ?></td>
+                    <td colspan="3"> Total </td>
+                    <td><?php echo $i_jan;  ?></td>
+                    <td><?php echo $c_jan;  ?></td>
+                    <td><?php echo $i_jan + $c_jan; ?></td>
+                    <td><?php echo $i_feb;  ?></td>
+                    <td><?php echo $c_feb;  ?></td>
+                    <td><?php echo $i_feb + $c_feb; ?></td>
+                    <td><?php echo $i_mar;  ?></td>
+                    <td><?php echo $c_mar;  ?></td>
+                    <td><?php echo $i_mar + $c_mar; ?></td>
+                    <td><?php echo $i_apr;  ?></td>
+                    <td><?php echo $c_apr;  ?></td>
+                    <td><?php echo $i_apr + $c_apr; ?></td>
+                    <td><?php echo $i_may;  ?></td>
+                    <td><?php echo $c_may;  ?></td>
+                    <td><?php echo $i_may + $c_may; ?></td>
+                    <td><?php echo $i_jun;  ?></td>
+                    <td><?php echo $c_jun;  ?></td>
+                    <td><?php echo $i_jun + $c_jun; ?></td>
+                    <td><?php echo $i_jul;  ?></td>
+                    <td><?php echo $c_jul;  ?></td>
+                    <td><?php echo $i_jul + $c_jul; ?></td>
+                    <td><?php echo $i_aug;  ?></td>
+                    <td><?php echo $c_aug;  ?></td>
+                    <td><?php echo $i_aug + $c_aug; ?></td>
+                    <td><?php echo $i_sep;  ?></td>
+                    <td><?php echo $c_sep;  ?></td>
+                    <td><?php echo $i_sep + $c_sep; ?></td>
+                    <td><?php echo $i_oct;  ?></td>
+                    <td><?php echo $c_oct;  ?></td>
+                    <td><?php echo $i_oct + $c_oct; ?></td>
+                    <td><?php echo $i_nov;  ?></td>
+                    <td><?php echo $c_nov;  ?></td>
+                    <td><?php echo $i_nov + $c_nov; ?></td>
+                    <td><?php echo $i_decem;  ?></td>
+                    <td><?php echo $c_decem;  ?></td>
+                    <td><?php echo $i_decem + $c_decem; ?></td>
                     <td><?php echo $total2;  ?></td>
                     <td></td>
                     <td></td>

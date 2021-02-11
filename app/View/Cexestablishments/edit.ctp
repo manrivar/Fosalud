@@ -2,37 +2,78 @@
     <ol class="breadcrumb">
         <li><span class="glyphicon glyphicon-list"></span>
             <?php
-            echo $this->Html->link(__('Regresar'), array('action' => 'index',$reg, '?yir=' . $yer));
+            echo $this->Html->link(__('Regresar'), array('action' => 'index', $reg, '?yir=' . $yer));
             ?>
         </li>
     </ol>
 </div>
 
-<div class="cexestablishments form">
-    <?php echo $this->Form->create('Cexestablishment'); ?>
-    <fieldset>
-        <legend><?php echo __('Edit Cexestablishment'); ?></legend>
+<div class="row">
+    <div class="recipesxestablishments form">
+        <?php echo $this->Form->create('Cexestablishment'); ?>
+        <fieldset>
+            <legend><?php echo __('Edit Cexestablishment'); ?></legend>
+            <div class="padre">
+                <div class="hijo">
+                    <label>
+                        <h4>
+                            <center>Citologia</center>
+                        </h4>
+                    </label>
+                    <?php
+                    echo $this->Form->input('id');
+                    echo $this->Form->input('establishments_id');
+                    echo $this->Form->input('sibases_id');
+                    echo $this->Form->input('regions_id');
+                    echo $this->Form->input('cit_january', array('label' => 'Enero'));
+                    echo $this->Form->input('cit_february', array('label' => 'Febrero'));
+                    echo $this->Form->input('cit_march', array('label' => 'Marzo'));
+                    echo $this->Form->input('cit_april', array('label' => 'Abril'));
+                    echo $this->Form->input('cit_may', array('label' => 'Mayo'));
+                    echo $this->Form->input('cit_june', array('label' => 'Junio'));
+                    echo $this->Form->input('cit_july', array('label' => 'Julio'));
+                    echo $this->Form->input('cit_august', array('label' => 'Agosto'));
+                    echo $this->Form->input('cit_september', array('label' => 'Septiembre'));
+                    echo $this->Form->input('cit_october', array('label' => 'Octubre'));
+                    echo $this->Form->input('cit_november', array('label' => 'Noviembre'));
+                    echo $this->Form->input('cit_december', array('label' => 'Diciembre'));
+                    ?>
+                </div>
+                <div class="hijo">
+                    <label>
+                        <h4>
+                            <center>Examenes de Mama</center>
+                        </h4>
+                    </label>
+                    <?php
+                    // los campos de control infatil deben ir aqui 
+                    echo $this->Form->input('id');
+                    echo $this->Form->input('establishments_id');
+                    echo $this->Form->input('sibases_id');
+                    echo $this->Form->input('regions_id');
+                    echo $this->Form->input('mam_january', array('label' => 'Enero'));
+                    echo $this->Form->input('mam_february', array('label' => 'Febrero'));
+                    echo $this->Form->input('mam_march', array('label' => 'Marzo'));
+                    echo $this->Form->input('mam_april', array('label' => 'Abril'));
+                    echo $this->Form->input('mam_may', array('label' => 'Mayo'));
+                    echo $this->Form->input('mam_june', array('label' => 'Junio'));
+                    echo $this->Form->input('mam_july', array('label' => 'Julio'));
+                    echo $this->Form->input('mam_august', array('label' => 'Agosto'));
+                    echo $this->Form->input('mam_september', array('label' => 'Septiembre'));
+                    echo $this->Form->input('mam_october', array('label' => 'Octubre'));
+                    echo $this->Form->input('mam_november', array('label' => 'Noviembre'));
+                    echo $this->Form->input('mam_december', array('label' => 'Diciembre'));
+                    ?>
+                </div>
+            </div>
+            <div>
+                <button id="enviar" onclick="" class="btn-block btn-primary">Guardar</button>
+            </div>
+        </fieldset>
         <?php
-        echo $this->Form->input('id');
-        echo $this->Form->input('establishments_id', array('label' => 'Establecimiento'));
-        echo $this->Form->input('sibases_id', array('label' => 'Sibasi'));
-        echo $this->Form->input('regions_id', array('label' => 'Region'));
-        echo $this->Form->input('january', array('label' => 'Enero'));
-        echo $this->Form->input('february', array('label' => 'Febrero'));
-        echo $this->Form->input('march', array('label' => 'Marzo'));
-        echo $this->Form->input('april', array('label' => 'Abril'));
-        echo $this->Form->input('may', array('label' => 'Mayo'));
-        echo $this->Form->input('june', array('label' => 'Junio'));
-        echo $this->Form->input('july', array('label' => 'Julio'));
-        echo $this->Form->input('august', array('label' => 'Agosto'));
-        echo $this->Form->input('september', array('label' => 'Septiembre'));
-        echo $this->Form->input('october', array('label' => 'Octubre'));
-        echo $this->Form->input('november', array('label' => 'Noviembre'));
-        echo $this->Form->input('december', array('label' => 'Diciembre'));
-        echo $this->Form->input('year', array('label' => 'Año'));
+        echo $this->Form->end();
         ?>
-    </fieldset>
-    <?php echo $this->Form->end(__('Submit')); ?>
+    </div>
 </div>
 <div class="actions">
     <h3><?php echo __('Actions'); ?></h3>
