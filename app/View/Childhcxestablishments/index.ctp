@@ -1,13 +1,14 @@
 <div class="col-lg-12 col-xs-12 col-sm-12">
   <ol class="breadcrumb">
     <li>
+    
       <span class="fa fa-undo"></span> <?php echo $this->Html->Link('Regresar', array('controller' => 'Childhealingcares', 'action' => 'index?yir='.$yer)); ?>
     </li>
   </ol>
 </div>
 
 <div class="childhcxestablishments index">
-  <h2><center><?php echo __('Establecimientos'); ?></center></h2>
+  <h2><center><?php echo __('Atencion Infantil - Establecimientos'); ?></center></h2>
   <div class="table-responsive">
     <table class="table table-bordered table-condensed" cellpadding="0" cellspacing="0">
       <thead>
