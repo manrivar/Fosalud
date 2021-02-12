@@ -7,11 +7,11 @@
 </div>
 
 <h2>
-    <center>Consejerias</center>
+    <center>Pacientes Vistos</center>
 </h2>
-<span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Advicesxestablishments', 'action' => 'cargar_Evaluacion')); ?>
+<span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Patientsxestablishments', 'action' => 'cargar_Evaluacion')); ?>
 
-<?= $this->Form->create('advices', ['type' => 'get']); ?>
+<?= $this->Form->create('patients', ['type' => 'get']); ?>
 <?php $option = array('2020' => '2020', '2021' => '2021', '2022' => '2022', '2023' => '2023', '2024' => '2024', '2025' => '2025', '2026' => '2026', '2027' => '2027', '2028' => '2028', '2029' => '2029', '2030' => '2030'); ?>
 
 <?php echo $this->Form->input('yir', array(
@@ -36,24 +36,24 @@
                 <th><?php echo $this->Paginator->sort('trimester4', 'Trimestre 4'); ?></th>
                 <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                 <th><?php echo $this->Paginator->sort('year', 'Año'); ?></th>
-                
+
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($advices as $advice) : ?>
+            <?php foreach ($patients as $patient) : ?>
                 <tr>
-                    <td><?php echo h($advice['Advice']['id']); ?>&nbsp;</td>
+                    <td><?php echo h($patient['Patient']['id']); ?>&nbsp;</td>
                     <td>
-                        <?php $region = $advice['Region']['id']; ?>
-                        <?php echo $this->Html->link($advice['Region']['region_name'], array('controller' => 'Advicesxestablishments', 'action' => 'index', $region, $yer)); ?>
+                        <?php $region = $patient['Region']['id']; ?>
+                        <?php echo $this->Html->link($patient['Region']['region_name'], array('controller' => 'Patientsxestablishments', 'action' => 'index', $region, $yer)); ?>
                     </td>
-                    <?php $total = $advice['Advice']['trimester1'] + $advice['Advice']['trimester2'] + $advice['Advice']['trimester3'] + $advice['Advice']['trimester4'] ?>
-                    <td><?php echo h($advice['Advice']['trimester1']); ?>&nbsp;</td>
-                    <td><?php echo h($advice['Advice']['trimester2']); ?>&nbsp;</td>
-                    <td><?php echo h($advice['Advice']['trimester3']); ?>&nbsp;</td>
-                    <td><?php echo h($advice['Advice']['trimester4']); ?>&nbsp;</td>
+                    <?php $total = $patient['Patient']['trimester1'] + $patient['Patient']['trimester2'] + $patient['Patient']['trimester3'] + $patient['Patient']['trimester4'] ?>
+                    <td><?php echo h($patient['Patient']['trimester1']); ?>&nbsp;</td>
+                    <td><?php echo h($patient['Patient']['trimester2']); ?>&nbsp;</td>
+                    <td><?php echo h($patient['Patient']['trimester3']); ?>&nbsp;</td>
+                    <td><?php echo h($patient['Patient']['trimester4']); ?>&nbsp;</td>
                     <td><?php echo $total; ?>&nbsp;</td>
-                    <td><?php echo h($advice['Advice']['year']); ?>&nbsp;</td>
+                    <td><?php echo h($patient['Patient']['year']); ?>&nbsp;</td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
