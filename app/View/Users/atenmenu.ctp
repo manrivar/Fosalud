@@ -166,4 +166,70 @@
         </a>
     </div>
 </div>
+
+<div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
+    <div style="text-align:center;">
+        <a href="<?= $this->base ?>//index">
+            <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
+
+            <div class="box-nombre">
+                <center>
+                    <h4>Vacunas</h4>
+                </center>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
+    <div style="text-align:center;">
+        <a href="<?= $this->base ?>/Tubers/index">
+            <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
+
+            <div class="box-nombre"> 
+                <center>
+                    <h4>Tuberculosis</h4>
+                </center>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
+    <div style="text-align:center;">
+        <a href="<?= $this->base ?>/Patients/index">
+            <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
+
+            <div class="box-nombre">
+                <center>
+                    <h4>Pacientes<br> Vistos</h4>
+                </center>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
+    <div style="text-align:center;">
+        <a href="<?= $this->base ?>//index">
+            <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
+
+            <div class="box-nombre">
+                <center>
+                    <h4>Eventos de<br> Notificacion</h4>
+                </center>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
+    <div style="text-align:center;">
+        <a href="<?= $this->base ?>//index">
+            <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
+
+            <div class="box-nombre">
+                <center>
+                    <h4>Enfermedades<br> Cronicas</h4>
+                </center>
+            </div>
+        </a>
+    </div>
+</div>
 <!-- *************************************************************************************************************** -->

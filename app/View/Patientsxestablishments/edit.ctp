@@ -9,10 +9,12 @@
 </div>
 
 <div class="row">
-    <div class="advicesxestablishments form">
-        <?php echo $this->Form->create('Advicesxestablishment'); ?>
+    <div class="patientsxestablishments form">
+        <?php echo $this->Form->create('Patientsxestablishment'); ?>
         <fieldset>
-            <legend><center><?php echo __('Editar Consejerias'); ?></center></legend>
+            <legend>
+                <center><?php echo __('Editar Pacientes Vistos'); ?></center>
+            </legend>
             <div class="padre">
                 <div class="hijo">
                     <?php

@@ -56478,3 +56478,124 @@ Stack Trace:
 #10 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RecipesxestablishmentsController), Object(CakeRequest))
 #11 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2021-02-11 20:45:00 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Hcxestablishment.january' in 'field list'
+Request URL: /Fosalud/Hcxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Fosalud\app\Controller\HcxestablishmentsController.php(103): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3', '2021')
+#8 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-02-11 20:46:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Hcxestablishment.january' in 'field list'
+Request URL: /Fosalud/Hcxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Hcx...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Hcx...', Array, Array)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Hcx...', Array)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Fosalud\app\Controller\HcxestablishmentsController.php(103): Model->find('all', Array)
+#7 [internal function]: HcxestablishmentsController->index('3', '2021')
+#8 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-02-11 21:19:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'recipesxestablishment.year' in 'where clause'
+Request URL: /Fosalud/Hcxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT `Hcxesta...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT `Hcxesta...', Array, Array)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT `Hcxesta...', Array)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Hcxestablishment), Array)
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\xampp\htdocs\Fosalud\app\Controller\HcxestablishmentsController.php(58): PaginatorComponent->paginate()
+#8 [internal function]: HcxestablishmentsController->index('3', '2021')
+#9 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(HcxestablishmentsController), Array)
+#10 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HcxestablishmentsController), Object(CakeRequest))
+#12 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2021-02-12 14:54:40 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud//index
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-02-12 15:00:47 Error: [MissingViewException] View file "Nebulizations\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Nebulizations\\edit.ctp',
+)
+Request URL: /Fosalud/Nebulizations/edit/7
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Nebulizations\\e...')
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NebulizationsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-12 15:35:39 Error: [MissingViewException] View file "Patients\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Patients\\index.ctp',
+)
+Request URL: /Fosalud/Patients/index
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Patients\\index')
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-12 16:03:09 Error: [MissingViewException] View file "Patientsxestablishments\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Patientsxestablishments\\index.ctp',
+)
+Request URL: /Fosalud/Patientsxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Patientsxestabl...')
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PatientsxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-12 16:40:36 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud//index
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-02-12 16:40:40 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud//index
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-02-12 16:41:04 Error: [MissingControllerException] Controller class TubersController could not be found.
+Exception Attributes: array (
+  'class' => 'TubersController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud/Tubers/index
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
