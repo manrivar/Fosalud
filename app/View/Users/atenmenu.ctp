@@ -169,7 +169,7 @@
 
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
-        <a href="<?= $this->base ?>//index">
+        <a href="<?= $this->base ?>/Vaccines/index">
             <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
 
             <div class="box-nombre">
@@ -208,7 +208,7 @@
 </div>
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
-        <a href="<?= $this->base ?>//index">
+        <a href="<?= $this->base ?>/Events/index">
             <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
 
             <div class="box-nombre">
@@ -221,7 +221,7 @@
 </div>
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
-        <a href="<?= $this->base ?>//index">
+        <a href="<?= $this->base ?>/Diseases/index">
             <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
 
             <div class="box-nombre">
