@@ -56599,3 +56599,421 @@ Request URL: /Fosalud/Tubers/index
 Stack Trace:
 #0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2021-02-12 17:54:04 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'trimester1' in 'field list'
+Request URL: /Fosalud/Tubersxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('UPDATE tubersxe...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('UPDATE tubersxe...', Array, Array)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(547): DboSource->fetchAll('UPDATE tubersxe...')
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3463): DboSource->query('UPDATE tubersxe...')
+#5 C:\xampp\htdocs\Fosalud\app\Controller\TubersxestablishmentsController.php(158): Model->query('UPDATE tubersxe...')
+#6 [internal function]: TubersxestablishmentsController->index('3', '2021')
+#7 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TubersxestablishmentsController), Array)
+#8 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TubersxestablishmentsController), Object(CakeRequest))
+#10 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2021-02-15 15:38:00 Error: [Error] Unsupported operand types
+Request URL: /Fosalud/Vaccinesxestablishments/index/3/2020
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(VaccinesxestablishmentsController), Object(CakeRequest))
+#6 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2021-02-15 15:40:59 Error: [Error] Unsupported operand types
+Request URL: /Fosalud/Vaccinesxestablishments/index/3/2020
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(VaccinesxestablishmentsController), Object(CakeRequest))
+#6 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2021-02-15 15:53:03 Error: [Error] Unsupported operand types
+Request URL: /Fosalud/Vaccinesxestablishments/index/3/2020
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(VaccinesxestablishmentsController), Object(CakeRequest))
+#6 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2021-02-15 15:57:28 Error: [Error] Unsupported operand types
+Request URL: /Fosalud/Vaccinesxestablishments/index/3/2020
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(VaccinesxestablishmentsController), Object(CakeRequest))
+#6 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2021-02-15 16:05:19 Error: [Error] Unsupported operand types
+Request URL: /Fosalud/Vaccinesxestablishments/index/3/2020
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(VaccinesxestablishmentsController), Object(CakeRequest))
+#6 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2021-02-15 16:12:17 Error: [Error] Unsupported operand types
+Request URL: /Fosalud/Vaccinesxestablishments/index/3/2020
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(VaccinesxestablishmentsController), Object(CakeRequest))
+#6 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2021-02-15 16:20:25 Error: [Error] Unsupported operand types
+Request URL: /Fosalud/Vaccinesxestablishments/index/3/2020
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(VaccinesxestablishmentsController), Object(CakeRequest))
+#6 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2021-02-15 16:20:30 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ñ_january asc  LIMIT 20' at line 1
+Request URL: /Fosalud/Vaccinesxestablishments/index/3/2020/sort:ni%C3%B1_january/direction:asc
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT `Vaccine...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT `Vaccine...', Array, Array)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT `Vaccine...', Array)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Vaccinesxestablishment), Array)
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\xampp\htdocs\Fosalud\app\Controller\VaccinesxestablishmentsController.php(57): PaginatorComponent->paginate()
+#8 [internal function]: VaccinesxestablishmentsController->index('3', '2020')
+#9 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(VaccinesxestablishmentsController), Array)
+#10 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(VaccinesxestablishmentsController), Object(CakeRequest))
+#12 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2021-02-15 16:57:38 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 16:59:09 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 16:59:30 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:00:41 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:00:55 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:03:36 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:04:22 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:04:37 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:04:48 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:05:09 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:05:15 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:05:23 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:05:45 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:05:58 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:06:08 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:06:20 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:06:29 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 17:06:39 Error: [ArgumentCountError] Too few arguments to function TalksxestablishmentsController::index(), 0 passed and exactly 2 expected
+Request URL: /Fosalud/Talksxestablishments
+Stack Trace:
+#0 [internal function]: TalksxestablishmentsController->index()
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(TalksxestablishmentsController), Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TalksxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 18:10:06 Error: [MissingControllerException] Controller class EventsxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'EventsxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud/Eventsxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-02-15 18:11:15 Error: [MissingControllerException] Controller class EventsxestablishmentsController could not be found.
+Exception Attributes: array (
+  'class' => 'EventsxestablishmentsController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud/Eventsxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-02-15 18:11:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Eventsxestablishment.chi_january' in 'field list'
+Request URL: /Fosalud/Eventsxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Eve...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Eve...', Array, Array)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Eve...', Array)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Eventsxestablishment), Array)
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Fosalud\app\Controller\EventsxestablishmentsController.php(152): Model->find('all', Array)
+#7 [internal function]: EventsxestablishmentsController->index('3', '2021')
+#8 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(EventsxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(EventsxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-02-15 18:27:46 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Eventsxestablishment.chi_january' in 'field list'
+Request URL: /Fosalud/Eventsxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Eve...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Eve...', Array, Array)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Eve...', Array)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Eventsxestablishment), Array)
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Fosalud\app\Controller\EventsxestablishmentsController.php(152): Model->find('all', Array)
+#7 [internal function]: EventsxestablishmentsController->index('3', '2021')
+#8 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(EventsxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(EventsxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-02-15 18:27:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Eventsxestablishment.chi_january' in 'field list'
+Request URL: /Fosalud/Eventsxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Eve...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Eve...', Array, Array)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Eve...', Array)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Eventsxestablishment), Array)
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Fosalud\app\Controller\EventsxestablishmentsController.php(152): Model->find('all', Array)
+#7 [internal function]: EventsxestablishmentsController->index('3', '2021')
+#8 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(EventsxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(EventsxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-02-15 18:31:44 Error: [MissingViewException] View file "Eventsxestablishments\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Eventsxestablishments\\index.ctp',
+)
+Request URL: /Fosalud/Eventsxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Eventsxestablis...')
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(EventsxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 20:45:36 Error: [MissingControllerException] Controller class DiseasesController could not be found.
+Exception Attributes: array (
+  'class' => 'DiseasesController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud/Diseases/index
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-02-15 20:46:21 Error: [MissingViewException] View file "Diseases\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Diseases\\index.ctp',
+)
+Request URL: /Fosalud/Diseases/index
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Diseases\\index')
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(DiseasesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2021-02-15 21:12:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Diseasesxestablishment.hip_january' in 'field list'
+Request URL: /Fosalud/Diseasesxestablishments/index/3/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Dis...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Dis...', Array, Array)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Dis...', Array)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Diseasesxestablishment), Array)
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Fosalud\app\Controller\DiseasesxestablishmentsController.php(120): Model->find('all', Array)
+#7 [internal function]: DiseasesxestablishmentsController->index('3', '2021')
+#8 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(DiseasesxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(DiseasesxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-02-15 21:13:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Diseasesxestablishment.hip_january' in 'field list'
+Request URL: /Fosalud/Diseasesxestablishments/index/2/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Dis...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Dis...', Array, Array)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Dis...', Array)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Diseasesxestablishment), Array)
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Fosalud\app\Controller\DiseasesxestablishmentsController.php(120): Model->find('all', Array)
+#7 [internal function]: DiseasesxestablishmentsController->index('2', '2021')
+#8 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(DiseasesxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(DiseasesxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2021-02-15 21:26:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Diseasesxestablishment.dia_march' in 'field list'
+Request URL: /Fosalud/Diseasesxestablishments/index/2/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(468): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(434): DboSource->_execute('SELECT SUM(`Dis...', Array)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(671): DboSource->execute('SELECT SUM(`Dis...', Array, Array)
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Datasource\DboSource.php(1120): DboSource->fetchAll('SELECT SUM(`Dis...', Array)
+#4 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Diseasesxestablishment), Array)
+#5 C:\xampp\htdocs\Fosalud\lib\Cake\Model\Model.php(3010): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\Fosalud\app\Controller\DiseasesxestablishmentsController.php(120): Model->find('all', Array)
+#7 [internal function]: DiseasesxestablishmentsController->index('2', '2021')
+#8 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(DiseasesxestablishmentsController), Array)
+#9 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(DiseasesxestablishmentsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
