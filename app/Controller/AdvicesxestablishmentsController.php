@@ -232,12 +232,13 @@ class AdvicesxestablishmentsController extends AppController
         }
     }
 
-    public function cargar_Evaluacion()
+    public function cargar_Evaluacion($yer)
     {
         //llamada a funcion de autorizacion para validar acceso a funcion
         $this->Autorizacion();
         $regions = $this->Advicesxestablishment->Region->find('list');
         $this->set(compact('regions'));
+        $this->set(array('yer' => $yer));
     }
 
      public function cargar() {

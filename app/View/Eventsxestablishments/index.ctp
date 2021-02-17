@@ -33,62 +33,62 @@
                 </tr>
                 <tr>
                     <th><?php echo $this->Paginator->sort('den_january', 'Dengue'); ?></th>
-                    <th><?php echo $this->Paginator->sort('chi_january', 'Chikunguya'); ?></th>
+                    <th><?php echo $this->Paginator->sort('chi_january', 'Chikungunya'); ?></th>
                     <th><?php echo $this->Paginator->sort('zik_january', 'Zika'); ?></th>
                     <th><?php echo $this->Paginator->sort('c19_january', 'Covid-19'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('den_february', 'Dengue'); ?></th>
-                    <th><?php echo $this->Paginator->sort('chi_february', 'Chikunguya'); ?></th>
+                    <th><?php echo $this->Paginator->sort('chi_february', 'Chikungunya'); ?></th>
                     <th><?php echo $this->Paginator->sort('zik_february', 'Zika'); ?></th>
                     <th><?php echo $this->Paginator->sort('c19_february', 'Covid-19'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('den_march', 'Dengue'); ?></th>
-                    <th><?php echo $this->Paginator->sort('chi_march', 'Chikunguya'); ?></th>
+                    <th><?php echo $this->Paginator->sort('chi_march', 'Chikungunya'); ?></th>
                     <th><?php echo $this->Paginator->sort('zik_march', 'Zika'); ?></th>
                     <th><?php echo $this->Paginator->sort('c19_march', 'Covid-19'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('den_april', 'Dengue'); ?></th>
-                    <th><?php echo $this->Paginator->sort('chi_april', 'Chikunguya'); ?></th>
+                    <th><?php echo $this->Paginator->sort('chi_april', 'Chikungunya'); ?></th>
                     <th><?php echo $this->Paginator->sort('zik_april', 'Zika'); ?></th>
                     <th><?php echo $this->Paginator->sort('c19_april', 'Covid-19'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('den_may', 'Dengue'); ?></th>
-                    <th><?php echo $this->Paginator->sort('chi_may', 'Chikunguya'); ?></th>
+                    <th><?php echo $this->Paginator->sort('chi_may', 'Chikungunya'); ?></th>
                     <th><?php echo $this->Paginator->sort('zik_may', 'Zika'); ?></th>
                     <th><?php echo $this->Paginator->sort('c19_may', 'Covid-19'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('den_june', 'Dengue'); ?></th>
-                    <th><?php echo $this->Paginator->sort('chi_june', 'Chikunguya'); ?></th>
+                    <th><?php echo $this->Paginator->sort('chi_june', 'Chikungunya'); ?></th>
                     <th><?php echo $this->Paginator->sort('zik_june', 'Zika'); ?></th>
                     <th><?php echo $this->Paginator->sort('c19_june', 'Covid-19'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('den_july', 'Dengue'); ?></th>
-                    <th><?php echo $this->Paginator->sort('chi_july', 'Chikunguya'); ?></th>
+                    <th><?php echo $this->Paginator->sort('chi_july', 'Chikungunya'); ?></th>
                     <th><?php echo $this->Paginator->sort('zik_july', 'Zika'); ?></th>
                     <th><?php echo $this->Paginator->sort('c19_july', 'Covid-19'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('den_august', 'Dengue'); ?></th>
-                    <th><?php echo $this->Paginator->sort('chi_august', 'Chikunguya'); ?></th>
+                    <th><?php echo $this->Paginator->sort('chi_august', 'Chikungunya'); ?></th>
                     <th><?php echo $this->Paginator->sort('zik_august', 'Zika'); ?></th>
                     <th><?php echo $this->Paginator->sort('c19_august', 'Covid-19'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('den_september', 'Dengue'); ?></th>
-                    <th><?php echo $this->Paginator->sort('chi_september', 'Chikunguya'); ?></th>
+                    <th><?php echo $this->Paginator->sort('chi_september', 'Chikungunya'); ?></th>
                     <th><?php echo $this->Paginator->sort('zik_september', 'Zika'); ?></th>
                     <th><?php echo $this->Paginator->sort('c19_september', 'Covid-19'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('den_october', 'Dengue'); ?></th>
-                    <th><?php echo $this->Paginator->sort('chi_october', 'Chikunguya'); ?></th>
+                    <th><?php echo $this->Paginator->sort('chi_october', 'Chikungunya'); ?></th>
                     <th><?php echo $this->Paginator->sort('zik_october', 'Zika'); ?></th>
                     <th><?php echo $this->Paginator->sort('c19_october', 'Covid-19'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('den_november', 'Dengue'); ?></th>
-                    <th><?php echo $this->Paginator->sort('chi_november', 'Chikunguya'); ?></th>
+                    <th><?php echo $this->Paginator->sort('chi_november', 'Chikungunya'); ?></th>
                     <th><?php echo $this->Paginator->sort('zik_november', 'Zika'); ?></th>
                     <th><?php echo $this->Paginator->sort('c19_november', 'Covid-19'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th><?php echo $this->Paginator->sort('den_december', 'Dengue'); ?></th>
-                    <th><?php echo $this->Paginator->sort('chi_december', 'Chikunguya'); ?></th>
+                    <th><?php echo $this->Paginator->sort('chi_december', 'Chikungunya'); ?></th>
                     <th><?php echo $this->Paginator->sort('zik_december', 'Zika'); ?></th>
                     <th><?php echo $this->Paginator->sort('c19_december', 'Covid-19'); ?></th>
                     <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>

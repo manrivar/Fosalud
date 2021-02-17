@@ -12,14 +12,18 @@
     <div class="advicesxestablishments form">
         <?php echo $this->Form->create('Advicesxestablishment'); ?>
         <fieldset>
-            <legend><center><?php echo __('Editar Consejerias'); ?></center></legend>
+            <div>
+                <legend>
+                    <center><?php echo __('Editar Consejerias'); ?></center>
+                </legend>
+            </div>
             <div class="padre">
                 <div class="hijo">
                     <?php
                     echo $this->Form->input('id');
-                    echo $this->Form->input('establishments_id');
-                    echo $this->Form->input('sibases_id');
-                    echo $this->Form->input('regions_id');
+                    // echo $this->Form->input('establishments_id');
+                    // echo $this->Form->input('sibases_id');
+                    // echo $this->Form->input('regions_id');
                     echo $this->Form->input('january', array('label' => 'Enero'));
                     echo $this->Form->input('february', array('label' => 'Febrero'));
                     echo $this->Form->input('march', array('label' => 'Marzo'));

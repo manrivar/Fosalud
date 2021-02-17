@@ -7,34 +7,34 @@
 </div>
 
 <div class="advicexestablishments index">
-    <h2><center><?php echo __('Consejerias - Establecimientos'); ?></center></h2>
+    <h2>
+        <center><?php echo __('Consejerias - Establecimientos'); ?></center>
+    </h2>
 
     <div class="table-responsive">
         <table class="table table-bordered table-condensed" cellpadding="0" cellspacing="0">
             <thead>
                 <tr>
-                    <th colspan="19">Odontologia</th>
+                    <th colspan="17" bgcolor="#AEEAF1">Odontologia</th>
                 </tr>
                 <tr>
-                    <th><?php echo $this->Paginator->sort('id'); ?></th>
-                    <th><?php echo $this->Paginator->sort('establishments_id', 'Establecimientos'); ?></th>
-                    <th><?php echo $this->Paginator->sort('sibases_id', 'Sibasis'); ?></th>
-                    <th><?php echo $this->Paginator->sort('regions_id', 'Regiones'); ?></th>
-                    <th><?php echo $this->Paginator->sort('january', 'Enero'); ?></th>
-                    <th><?php echo $this->Paginator->sort('february', 'Febrero'); ?></th>
-                    <th><?php echo $this->Paginator->sort('march', 'Marzo'); ?></th>
-                    <th><?php echo $this->Paginator->sort('april', 'Abril'); ?></th>
-                    <th><?php echo $this->Paginator->sort('may', 'Mayo'); ?></th>
-                    <th><?php echo $this->Paginator->sort('june', 'Junio'); ?></th>
-                    <th><?php echo $this->Paginator->sort('july', 'Julio'); ?></th>
-                    <th><?php echo $this->Paginator->sort('august', 'Agosto'); ?></th>
-                    <th><?php echo $this->Paginator->sort('september', 'Septiembre'); ?></th>
-                    <th><?php echo $this->Paginator->sort('october', 'Octubre'); ?></th>
-                    <th><?php echo $this->Paginator->sort('november', 'Noviembre'); ?></th>
-                    <th><?php echo $this->Paginator->sort('december', 'Diciembre'); ?></th>
-                    <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                    <th><?php echo $this->Paginator->sort('year', 'Año'); ?></th>
-                    <th class="actions"><?php echo __('Actions'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('id'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('establishments_id', 'Establecimientos'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('sibases_id', 'Sibasis'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('january', 'Enero'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('february', 'Febrero'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('march', 'Marzo'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('april', 'Abril'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('may', 'Mayo'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('june', 'Junio'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('july', 'Julio'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('august', 'Agosto'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('september', 'Septiembre'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('october', 'Octubre'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('november', 'Noviembre'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('december', 'Diciembre'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('year', 'Año'); ?></th>
                 </tr>
             </thead>
             <tbody>
@@ -42,15 +42,15 @@
                     <tr>
                         <td><?php echo h($advicesxestablishment['Advicesxestablishment']['id']); ?>&nbsp;</td>
                         <td>
-                            <?php echo $this->Html->link($advicesxestablishment['Establishment']['establishment_name'], array('controller' => 'establishments', 'action' => 'view', $advicesxestablishment['Establishment']['id'])); ?>
+                            <?php echo h($advicesxestablishment['Sibase']['sibase_name']); ?>
                         </td>
                         <td>
-                            <?php echo $this->Html->link($advicesxestablishment['Sibase']['sibase_name'], array('controller' => 'sibases', 'action' => 'view', $advicesxestablishment['Sibase']['id'])); ?>
+                            <?php $region = $advicesxestablishment['Advicesxestablishment']['regions_id'] ?>
+                            <?php echo $this->Html->link($advicesxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $advicesxestablishment['Advicesxestablishment']['id'], $region, $yer)); ?>
                         </td>
-                        <td>
-                            <?php echo $this->Html->link($advicesxestablishment['Region']['region_name'], array('controller' => 'regions', 'action' => 'view', $advicesxestablishment['Region']['id'])); ?>
-                        </td>
+
                         <?php $total = $advicesxestablishment['Advicesxestablishment']['january'] + $advicesxestablishment['Advicesxestablishment']['february'] + $advicesxestablishment['Advicesxestablishment']['march'] + $advicesxestablishment['Advicesxestablishment']['april'] + $advicesxestablishment['Advicesxestablishment']['may'] + $advicesxestablishment['Advicesxestablishment']['june'] + $advicesxestablishment['Advicesxestablishment']['july'] + $advicesxestablishment['Advicesxestablishment']['august'] + $advicesxestablishment['Advicesxestablishment']['september'] + $advicesxestablishment['Advicesxestablishment']['october'] + $advicesxestablishment['Advicesxestablishment']['november'] + $advicesxestablishment['Advicesxestablishment']['december'];  ?>
+                        <td bgcolor="#CBEEF2"><?php echo $total; ?>&nbsp;</td>
                         <td><?php echo h($advicesxestablishment['Advicesxestablishment']['january']); ?>&nbsp;</td>
                         <td><?php echo h($advicesxestablishment['Advicesxestablishment']['february']); ?>&nbsp;</td>
                         <td><?php echo h($advicesxestablishment['Advicesxestablishment']['march']); ?>&nbsp;</td>
@@ -63,21 +63,15 @@
                         <td><?php echo h($advicesxestablishment['Advicesxestablishment']['october']); ?>&nbsp;</td>
                         <td><?php echo h($advicesxestablishment['Advicesxestablishment']['november']); ?>&nbsp;</td>
                         <td><?php echo h($advicesxestablishment['Advicesxestablishment']['december']); ?>&nbsp;</td>
-                        <td><?php echo $total; ?>&nbsp;</td>
                         <td><?php echo h($advicesxestablishment['Advicesxestablishment']['year']); ?>&nbsp;</td>
-                        <td class="actions">
-                            <?php $region = $advicesxestablishment['Advicesxestablishment']['regions_id'] ?>
-                            <?php echo $this->Html->link(__('View'), array('action' => 'view', $advicesxestablishment['Advicesxestablishment']['id'])); ?>
-                            <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $advicesxestablishment['Advicesxestablishment']['id'], $region, $yer)); ?>
-                            <?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $advicesxestablishment['Advicesxestablishment']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $advicesxestablishment['Advicesxestablishment']['id']))); ?>
-                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
             <tfoot>
                 <?php $total2 = $jan + $feb + $mar + $apr + $may + $jun + $jul + $aug + $sep + $oct + $nov + $decem; ?>
                 <tr>
-                    <td colspan="4"> Total </td>
+                    <td colspan="3"> Total </td>
+                    <td bgcolor="#AEEAF1"><?php echo $total2;  ?></td>
                     <td><?php echo $jan;  ?></td>
                     <td><?php echo $feb;  ?></td>
                     <td><?php echo $mar;  ?></td>
@@ -90,7 +84,6 @@
                     <td><?php echo $oct;  ?></td>
                     <td><?php echo $nov;  ?></td>
                     <td><?php echo $decem;  ?></td>
-                    <td><?php echo $total2;  ?></td>
                     <td></td>
                     <td></td>
                 </tr>

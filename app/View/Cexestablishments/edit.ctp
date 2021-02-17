@@ -12,7 +12,11 @@
     <div class="recipesxestablishments form">
         <?php echo $this->Form->create('Cexestablishment'); ?>
         <fieldset>
-            <legend><?php echo __('Edit Cexestablishment'); ?></legend>
+            <div>
+                <legend>
+                    <center><?php echo __('Editar Examenes Clinicos'); ?></center>
+                </legend>
+            </div>
             <div class="padre">
                 <div class="hijo">
                     <label>
@@ -22,9 +26,9 @@
                     </label>
                     <?php
                     echo $this->Form->input('id');
-                    echo $this->Form->input('establishments_id');
-                    echo $this->Form->input('sibases_id');
-                    echo $this->Form->input('regions_id');
+                    // echo $this->Form->input('establishments_id');
+                    // echo $this->Form->input('sibases_id');
+                    // echo $this->Form->input('regions_id');
                     echo $this->Form->input('cit_january', array('label' => 'Enero'));
                     echo $this->Form->input('cit_february', array('label' => 'Febrero'));
                     echo $this->Form->input('cit_march', array('label' => 'Marzo'));
@@ -48,9 +52,9 @@
                     <?php
                     // los campos de control infatil deben ir aqui 
                     echo $this->Form->input('id');
-                    echo $this->Form->input('establishments_id');
-                    echo $this->Form->input('sibases_id');
-                    echo $this->Form->input('regions_id');
+                    // echo $this->Form->input('establishments_id');
+                    // echo $this->Form->input('sibases_id');
+                    // echo $this->Form->input('regions_id');
                     echo $this->Form->input('mam_january', array('label' => 'Enero'));
                     echo $this->Form->input('mam_february', array('label' => 'Febrero'));
                     echo $this->Form->input('mam_march', array('label' => 'Marzo'));
@@ -74,13 +78,4 @@
         echo $this->Form->end();
         ?>
     </div>
-</div>
-<div class="actions">
-    <h3><?php echo __('Actions'); ?></h3>
-    <ul>
-
-        <li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $this->Form->value('Cexestablishment.id')), array('confirm' => __('Estas seguro que quieres eliminar este registro?', $this->Form->value('Cexestablishment.id')))); ?></li>
-        <li><?php echo $this->Html->link(__('Lista de Establecimientos'), array('action' => 'index')); ?></li>
-
-    </ul>
 </div>

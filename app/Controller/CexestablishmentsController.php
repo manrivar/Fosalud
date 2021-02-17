@@ -262,12 +262,13 @@ class CexestablishmentsController extends AppController
         }
     }
 
-    public function cargar_Evaluacion()
+    public function cargar_Evaluacion($yer)
     {
         //llamada a funcion de autorizacion para validar acceso a funcion
         $this->Autorizacion();
         $regions = $this->Cexestablishment->Region->find('list');
         $this->set(compact('regions'));
+        $this->set(array('yer' => $yer));
     }
 
     public function cargar()
@@ -291,7 +292,20 @@ class CexestablishmentsController extends AppController
                 'fields' => array('count(*) as total')
             )
         );
-        if ($existe[0][0]['total'] != 20) {
+
+        if ($reg == 1) {
+            $estanum = 12;
+        } elseif ($reg == 2) {
+            $estanum = 19;
+        } elseif ($reg == 3) {
+            $estanum = 20;
+        } elseif ($reg == 4) {
+            $estanum = 13;
+        } elseif ($reg == 5) {
+            $estanum = 19;
+        }
+
+        if ($existe[0][0]['total'] != $estanum) {
             echo "YA EXISTEN REGISTROS PARA ESTE CARGO FUNCIONAL, VERIFIQUE";
             print_r($existe);
             print_r($reg);
@@ -372,41 +386,64 @@ class CexestablishmentsController extends AppController
                  */
 
                 $establishments_id = trim($excelObj->getActiveSheet()->getCell('C' . $i)->getValue());
-                $enero = trim($excelObj->getActiveSheet()->getCell('E' . $i)->getValue());
-                $febrero = trim($excelObj->getActiveSheet()->getCell('F' . $i)->getValue());
-                $marzo = trim($excelObj->getActiveSheet()->getCell('G' . $i)->getValue());
-                $abril = trim($excelObj->getActiveSheet()->getCell('H' . $i)->getValue());
-                $mayo = trim($excelObj->getActiveSheet()->getCell('I' . $i)->getValue());
-                $junio = trim($excelObj->getActiveSheet()->getCell('J' . $i)->getValue());
-                $julio = trim($excelObj->getActiveSheet()->getCell('K' . $i)->getValue());
-                $agosto = trim($excelObj->getActiveSheet()->getCell('L' . $i)->getValue());
-                $septiembre = trim($excelObj->getActiveSheet()->getCell('M' . $i)->getValue());
-                $octubre = trim($excelObj->getActiveSheet()->getCell('N' . $i)->getValue());
-                $noviembre = trim($excelObj->getActiveSheet()->getCell('O' . $i)->getValue());
-                $diciembre = trim($excelObj->getActiveSheet()->getCell('P' . $i)->getValue());
+                $ci_enero = trim($excelObj->getActiveSheet()->getCell('E' . $i)->getValue());
+                $mam_enero = trim($excelObj->getActiveSheet()->getCell('F' . $i)->getValue());
+                $ci_febrero = trim($excelObj->getActiveSheet()->getCell('G' . $i)->getValue());
+                $mam_febrero = trim($excelObj->getActiveSheet()->getCell('H' . $i)->getValue());
+                $ci_marzo = trim($excelObj->getActiveSheet()->getCell('I' . $i)->getValue());
+                $mam_marzo = trim($excelObj->getActiveSheet()->getCell('J' . $i)->getValue());
+                $ci_abril = trim($excelObj->getActiveSheet()->getCell('K' . $i)->getValue());
+                $mam_abril = trim($excelObj->getActiveSheet()->getCell('L' . $i)->getValue());
+                $ci_mayo = trim($excelObj->getActiveSheet()->getCell('M' . $i)->getValue());
+                $mam_mayo = trim($excelObj->getActiveSheet()->getCell('N' . $i)->getValue());
+                $ci_junio = trim($excelObj->getActiveSheet()->getCell('O' . $i)->getValue());
+                $mam_junio = trim($excelObj->getActiveSheet()->getCell('P' . $i)->getValue());
+                $ci_julio = trim($excelObj->getActiveSheet()->getCell('Q' . $i)->getValue());
+                $mam_julio = trim($excelObj->getActiveSheet()->getCell('R' . $i)->getValue());
+                $ci_agosto = trim($excelObj->getActiveSheet()->getCell('S' . $i)->getValue());
+                $mam_agosto = trim($excelObj->getActiveSheet()->getCell('T' . $i)->getValue());
+                $ci_septiembre = trim($excelObj->getActiveSheet()->getCell('U' . $i)->getValue());
+                $mam_septiembre = trim($excelObj->getActiveSheet()->getCell('V' . $i)->getValue());
+                $ci_octubre = trim($excelObj->getActiveSheet()->getCell('W' . $i)->getValue());
+                $mam_octubre = trim($excelObj->getActiveSheet()->getCell('X' . $i)->getValue());
+                $ci_noviembre = trim($excelObj->getActiveSheet()->getCell('Y' . $i)->getValue());
+                $mam_noviembre = trim($excelObj->getActiveSheet()->getCell('Z' . $i)->getValue());
+                $ci_diciembre = trim($excelObj->getActiveSheet()->getCell('AA' . $i)->getValue());
+                $mam_diciembre = trim($excelObj->getActiveSheet()->getCell('AB' . $i)->getValue());
 
 
                 if ($establishments_id != "") {
 
-                    $page['Cexestablishment']['establishments_id'] = $establishments_id;
-                    $page['Cexestablishment']['january'] = $enero;
-                    $page['Cexestablishment']['february'] = $febrero;
-                    $page['Cexestablishment']['march'] = $marzo;
-                    $page['Cexestablishment']['april'] = $abril;
-                    $page['Cexestablishment']['may'] = $mayo;
-                    $page['Cexestablishment']['june'] = $junio;
-                    $page['Cexestablishment']['july'] = $julio;
-                    $page['Cexestablishment']['august'] = $agosto;
-                    $page['Cexestablishment']['septiembre'] = $septiembre;
-                    $page['Cexestablishment']['october'] = $octubre;
-                    $page['Cexestablishment']['november'] = $noviembre;
-                    $page['Cexestablishment']['december'] = $diciembre;
+                    $page['Childhcxestablishment']['cit_january'] = $ci_enero;
+                    $page['Childhcxestablishment']['mam_january'] = $mam_enero;
+                    $page['Childhcxestablishment']['cit_february'] = $ci_febrero;
+                    $page['Childhcxestablishment']['mam_february'] = $mam_febrero;
+                    $page['Childhcxestablishment']['cit_march'] = $ci_marzo;
+                    $page['Childhcxestablishment']['mam_march'] = $mam_marzo;
+                    $page['Childhcxestablishment']['cit_april'] = $ci_abril;
+                    $page['Childhcxestablishment']['mam_april'] = $mam_abril;
+                    $page['Childhcxestablishment']['cit_may'] = $ci_mayo;
+                    $page['Childhcxestablishment']['mam_may'] = $mam_mayo;
+                    $page['Childhcxestablishment']['cit_june'] = $ci_junio;
+                    $page['Childhcxestablishment']['mam_june'] = $mam_junio;
+                    $page['Childhcxestablishment']['cit_july'] = $ci_julio;
+                    $page['Childhcxestablishment']['mam_july'] = $mam_julio;
+                    $page['Childhcxestablishment']['cit_august'] = $ci_agosto;
+                    $page['Childhcxestablishment']['mam_august'] = $mam_agosto;
+                    $page['Childhcxestablishment']['cit_septiembre'] = $ci_septiembre;
+                    $page['Childhcxestablishment']['mam_septiembre'] = $mam_septiembre;
+                    $page['Childhcxestablishment']['cit_october'] = $ci_octubre;
+                    $page['Childhcxestablishment']['mam_october'] = $mam_octubre;
+                    $page['Childhcxestablishment']['cit_november'] = $ci_noviembre;
+                    $page['Childhcxestablishment']['mam_november'] = $mam_noviembre;
+                    $page['Childhcxestablishment']['cit_december'] = $ci_diciembre;
+                    $page['Childhcxestablishment']['mam_december'] = $mam_diciembre;
 
                     $page['EvaluacionObjetivo']['user_reg_id'] = $user_id_reg;
 
                     try {
 
-                        $this->Cexestablishment->query("UPDATE cexestablishments SET january = '$enero', february = '$febrero', march = '$marzo', april = '$abril', may = '$mayo', june = '$junio', july = '$julio', august = '$agosto', september = 'septiembre', october = '$octubre', november = '$noviembre', december = '$diciembre' WHERE establishments_id = '$establishments_id' && regions_id = '$reg' && year = '$year'");
+                        $this->Cexestablishment->query("UPDATE cexestablishments SET cit_january = '$ci_enero', cit_february = '$ci_febrero', cit_march = '$ci_marzo', cit_april = '$ci_abril', cit_may = '$ci_mayo', cit_june = '$ci_junio', cit_july = '$ci_julio', cit_august = '$ci_agosto', cit_september = '$ci_septiembre', cit_october = '$ci_octubre', cit_november = '$ci_noviembre', cit_december = '$ci_diciembre', mam_january = '$mam_enero', mam_february = '$mam_febrero', mam_march = '$mam_marzo', mam_april = '$mam_abril', mam_may = '$mam_mayo', mam_june = '$mam_junio', mam_july = '$mam_julio', mam_august = '$mam_agosto', mam_september = '$mam_septiembre', mam_october = '$mam_octubre', mam_november = '$mam_noviembre', mam_december = '$mam_diciembre' WHERE establishments_id = '$establishments_id' && regions_id = '$reg' && year = '$year'");
                         // insertar
                         // $this->Cexestablishment->create();
                         // $this->Cexestablishment->save($page);

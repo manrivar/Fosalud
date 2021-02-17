@@ -1,8 +1,7 @@
 <div class="col-lg-12 col-xs-12 col-sm-12">
     <ol class="breadcrumb">
-        <li> <span class="glyphicon glyphicon-plus-sign"></span> <?php echo $this->Html->link(('Cargo funcional'), array('controller' => 'cargofuncionals', 'action' => 'add'), array('escapeTitle' => false)); ?></li>
-        <li> <span class="glyphicon glyphicon-list"></span> <?php echo $this->Html->link(('Listar Cargos funcionales'), array('controller' => 'cargofuncionals', 'action' => 'index'), array('escapeTitle' => false)); ?></li>
-        <li> <span class="fa fa-upload"></span> Objetivos y Resultados</li>
+        <li> <span class="fa fa-undo"></span> <?php echo $this->Html->Link('Regresar', array('controller' => 'Healingcares', 'action' => 'index?yir=' . $yer)); ?></li>
+        <li> <span class="fa fa-upload"></span> Carga de Archivo Excel</li>
 
     </ol>
 </div>
@@ -10,7 +9,7 @@
 <div class="col-lg-12">
     <div class="col-lg-12">
         <center>
-            <h3>Carga de archivo Evaluacion de Resultados</h3>
+            <h3>Carga de Atencion Infantil</h3>
         </center>
     </div>
     <div class="col-lg-4">
@@ -20,7 +19,7 @@
             <tbody>
                 <tr>
                     <td>
-                        Seleccione el Cargo Funcional
+                        Seleccione la Region y Año del Archivo a Subir
                     </td>
 
                     <td>
