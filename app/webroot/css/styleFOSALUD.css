@@ -553,4 +553,7 @@ main {
     clear: both;  
   }   
 /* fin prueba */
-
+.edititle {
+  background: #AEEAF1;
+  color: #AEEAF1;
+}
