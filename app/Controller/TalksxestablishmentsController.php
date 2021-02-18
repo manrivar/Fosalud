@@ -315,4 +315,286 @@ class TalksxestablishmentsController extends AppController
         }
         return $this->redirect(array('action' => 'index'));
     }
+    //*****************************************/ prueba de excel *************************************************
+    public function Autorizacion()
+    {
+        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+        if ($nivel_acceso > 2) {
+            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+        }
+    }
+
+    public function cargar_Evaluacion($yer)
+    {
+        //llamada a funcion de autorizacion para validar acceso a funcion
+        $this->Autorizacion();
+        $regions = $this->Talksxestablishment->Region->find('list');
+        $this->set(compact('regions'));
+        $this->set(array('yer' => $yer));
+    }
+
+    public function cargar()
+    {
+        $this->autoRender = false;
+
+        $reg = $this->request->data['regions'];
+        $year = $this->request->data['year'];
+
+
+
+        //corroborar que no existe informaciona sociada a ese regions
+        $existe = $this->Talksxestablishment->find(
+            'all',
+            array(
+                'conditions' => array(
+                    'Talksxestablishment.regions_id' => $reg,
+                    'Talksxestablishment.year' => $year
+                ),
+
+                'fields' => array('count(*) as total')
+            )
+        );
+
+        if ($reg == 1) {
+            $estanum = 12;
+        } elseif ($reg == 2) {
+            $estanum = 19;
+        } elseif ($reg == 3) {
+            $estanum = 20;
+        } elseif ($reg == 4) {
+            $estanum = 13;
+        } elseif ($reg == 5) {
+            $estanum = 19;
+        }
+
+        if ($existe[0][0]['total'] != $estanum) {
+            echo "YA EXISTEN REGISTROS PARA ESTE CARGO FUNCIONAL, VERIFIQUE";
+            print_r($existe);
+            print_r($reg);
+            print_r($year);
+        } else {
+            $user_id_reg = $this->Session->read('Auth.User.id');
+            $carpeta = $user_id_reg;
+            //datos de archivo excel
+            $dir = WWW_ROOT . DS . 'files/' . $carpeta . "";
+            $dir_ver = 'files/' . $carpeta . "";
+            $fileName = $dir_ver;
+            $path = $_FILES['archivo0']['name'];
+            $ext = pathinfo($path, PATHINFO_EXTENSION);
+
+
+            //validar que es un excel
+            if ($ext != "xlsx") {
+                return "<div class='error'><h3>El archivo no es soportado por el sistema. Utilice un archivo de Excel valido (XLSX) </h3></div>";
+            }
+
+
+            /*
+             * CARGA DE TODOS LOS ARCHIVOS
+             */
+            $fileNameArray = array();
+            for ($i = 0; $i < sizeof($_FILES); $i++) {
+
+                if (!empty($_FILES['archivo' . $i]['tmp_name']) && is_uploaded_file($_FILES['archivo' . $i]['tmp_name'])) {
+                    $filename = basename($_FILES['archivo' . $i]['name']);
+                    $out = $dir . "/" . $filename;
+                    if (file_exists($dir) && is_dir($dir)) {
+                        //Si la carpeta existe solo se copia el archivo del temporal hacia la carpeta de sesion
+
+                        move_uploaded_file($_FILES['archivo' . $i]['tmp_name'], $dir . "/" . $filename);
+                    } elseif (mkdir($dir, 0777)) {
+                        //Si la carpeta de sesion no existe, se crea la carpeta con permisos y se copia el archivo
+                        move_uploaded_file($_FILES['archivo' . $i]['tmp_name'], $dir . "/" . $filename);
+                    }
+                }
+
+                $fileName .= '/' . $filename;
+                $fileNameArray[$i] = $fileName;
+                $fileName = $dir_ver;
+            }
+
+            $fileName = $fileNameArray[0];
+            $data = new PHPExcel_Reader_Excel2007();
+            $excelObj = $data->load($fileName);
+            $worksheetNames = $excelObj->getSheetNames($fileName);
+
+
+            $numeroPestanas = $excelObj->getSheetCount();
+
+            /*
+             * Pestaña de Permanentes
+             */
+            $existe = $numeroPestanas - 0;
+
+            if ($existe == 0)
+                $fijos = array();
+            else
+                $fijos = $excelObj->setActiveSheetIndex(0);
+
+
+            if (!empty($fijos))
+                $datos = true;
+            else
+                return "<h3>Este archivo Excel no cuenta con informacion. Verifique el archivo cargado!</h3>";
+
+            $tope = $excelObj->getActiveSheet()->getHighestRow();
+
+            //$tope = 12;
+            $n = $objetivo_id = 0;
+
+            for ($i = 4; $i <= $tope; $i++) {
+                /*
+                  LECTURA
+                 */
+
+                $establishments_id = trim($excelObj->getActiveSheet()->getCell('C' . $i)->getValue());
+                $m_enero = trim($excelObj->getActiveSheet()->getCell('E' . $i)->getValue());
+                $e_enero = trim($excelObj->getActiveSheet()->getCell('F' . $i)->getValue());
+                $o_enero = trim($excelObj->getActiveSheet()->getCell('G' . $i)->getValue());
+                $ot_enero = trim($excelObj->getActiveSheet()->getCell('H' . $i)->getValue());
+                $m_febrero = trim($excelObj->getActiveSheet()->getCell('I' . $i)->getValue());
+                $e_febrero = trim($excelObj->getActiveSheet()->getCell('J' . $i)->getValue());
+                $o_febrero = trim($excelObj->getActiveSheet()->getCell('K' . $i)->getValue());
+                $ot_febrero = trim($excelObj->getActiveSheet()->getCell('L' . $i)->getValue());
+                $m_marzo = trim($excelObj->getActiveSheet()->getCell('M' . $i)->getValue());
+                $e_marzo = trim($excelObj->getActiveSheet()->getCell('N' . $i)->getValue());
+                $o_marzo = trim($excelObj->getActiveSheet()->getCell('O' . $i)->getValue());
+                $ot_marzo = trim($excelObj->getActiveSheet()->getCell('P' . $i)->getValue());
+                $m_abril = trim($excelObj->getActiveSheet()->getCell('Q' . $i)->getValue());
+                $e_abril = trim($excelObj->getActiveSheet()->getCell('R' . $i)->getValue());
+                $o_abril = trim($excelObj->getActiveSheet()->getCell('S' . $i)->getValue());
+                $ot_abril = trim($excelObj->getActiveSheet()->getCell('T' . $i)->getValue());
+                $m_mayo = trim($excelObj->getActiveSheet()->getCell('U' . $i)->getValue());
+                $e_mayo = trim($excelObj->getActiveSheet()->getCell('V' . $i)->getValue());
+                $o_mayo = trim($excelObj->getActiveSheet()->getCell('W' . $i)->getValue());
+                $ot_mayo = trim($excelObj->getActiveSheet()->getCell('X' . $i)->getValue());
+                $m_junio = trim($excelObj->getActiveSheet()->getCell('Y' . $i)->getValue());
+                $e_junio = trim($excelObj->getActiveSheet()->getCell('Z' . $i)->getValue());
+                $o_junio = trim($excelObj->getActiveSheet()->getCell('AA' . $i)->getValue());
+                $ot_junio = trim($excelObj->getActiveSheet()->getCell('AB' . $i)->getValue());
+                $m_julio = trim($excelObj->getActiveSheet()->getCell('AC' . $i)->getValue());
+                $e_julio = trim($excelObj->getActiveSheet()->getCell('AD' . $i)->getValue());
+                $o_julio = trim($excelObj->getActiveSheet()->getCell('AE' . $i)->getValue());
+                $ot_julio = trim($excelObj->getActiveSheet()->getCell('AF' . $i)->getValue());
+                $m_agosto = trim($excelObj->getActiveSheet()->getCell('AG' . $i)->getValue());
+                $e_agosto = trim($excelObj->getActiveSheet()->getCell('AH' . $i)->getValue());
+                $o_agosto = trim($excelObj->getActiveSheet()->getCell('AI' . $i)->getValue());
+                $ot_agosto = trim($excelObj->getActiveSheet()->getCell('AJ' . $i)->getValue());
+                $m_septiembre = trim($excelObj->getActiveSheet()->getCell('AK' . $i)->getValue());
+                $e_septiembre = trim($excelObj->getActiveSheet()->getCell('AL' . $i)->getValue());
+                $o_septiembre = trim($excelObj->getActiveSheet()->getCell('AM' . $i)->getValue());
+                $ot_septiembre = trim($excelObj->getActiveSheet()->getCell('AN' . $i)->getValue());
+                $m_octubre = trim($excelObj->getActiveSheet()->getCell('AO' . $i)->getValue());
+                $e_octubre = trim($excelObj->getActiveSheet()->getCell('AP' . $i)->getValue());
+                $o_octubre = trim($excelObj->getActiveSheet()->getCell('AQ' . $i)->getValue());
+                $ot_octubre = trim($excelObj->getActiveSheet()->getCell('AR' . $i)->getValue());
+                $m_noviembre = trim($excelObj->getActiveSheet()->getCell('AS' . $i)->getValue());
+                $e_noviembre = trim($excelObj->getActiveSheet()->getCell('AT' . $i)->getValue());
+                $o_noviembre = trim($excelObj->getActiveSheet()->getCell('AU' . $i)->getValue());
+                $ot_noviembre = trim($excelObj->getActiveSheet()->getCell('AV' . $i)->getValue());
+                $m_diciembre = trim($excelObj->getActiveSheet()->getCell('AW' . $i)->getValue());
+                $e_diciembre = trim($excelObj->getActiveSheet()->getCell('AX' . $i)->getValue());
+                $o_diciembre = trim($excelObj->getActiveSheet()->getCell('AY' . $i)->getValue());
+                $ot_diciembre = trim($excelObj->getActiveSheet()->getCell('AZ' . $i)->getValue());
+
+
+                if ($establishments_id != "") {
+
+                    $page['Talksxestablishment']['establishments_id'] = $establishments_id;
+                    $page['Talksxestablishment']['med_january'] = $m_enero;
+                    $page['Talksxestablishment']['nur_january'] = $e_enero;
+                    $page['Talksxestablishment']['den_january'] = $o_enero;
+                    $page['Talksxestablishment']['ot_january'] = $ot_enero;
+                    $page['Talksxestablishment']['med_february'] = $m_febrero;
+                    $page['Talksxestablishment']['nur_february'] = $e_febrero;
+                    $page['Talksxestablishment']['den_february'] = $o_febrero;
+                    $page['Talksxestablishment']['ot_february'] = $ot_febrero;
+                    $page['Talksxestablishment']['med_march'] = $m_marzo;
+                    $page['Talksxestablishment']['nur_march'] = $e_marzo;
+                    $page['Talksxestablishment']['den_march'] = $o_marzo;
+                    $page['Talksxestablishment']['ot_march'] = $ot_marzo;
+                    $page['Talksxestablishment']['med_april'] = $m_abril;
+                    $page['Talksxestablishment']['nur_april'] = $e_abril;
+                    $page['Talksxestablishment']['den_april'] = $o_abril;
+                    $page['Talksxestablishment']['ot_april'] = $ot_abril;
+                    $page['Talksxestablishment']['med_may'] = $m_mayo;
+                    $page['Talksxestablishment']['nur_may'] = $e_mayo;
+                    $page['Talksxestablishment']['den_may'] = $o_mayo;
+                    $page['Talksxestablishment']['ot_may'] = $ot_mayo;
+                    $page['Talksxestablishment']['med_june'] = $m_junio;
+                    $page['Talksxestablishment']['nur_june'] = $e_junio;
+                    $page['Talksxestablishment']['den_june'] = $o_junio;
+                    $page['Talksxestablishment']['ot_june'] = $ot_junio;
+                    $page['Talksxestablishment']['med_july'] = $m_julio;
+                    $page['Talksxestablishment']['nur_july'] = $e_julio;
+                    $page['Talksxestablishment']['den_july'] = $o_julio;
+                    $page['Talksxestablishment']['ot_july'] = $ot_julio;
+                    $page['Talksxestablishment']['med_august'] = $m_agosto;
+                    $page['Talksxestablishment']['nur_august'] = $e_agosto;
+                    $page['Talksxestablishment']['den_august'] = $o_agosto;
+                    $page['Talksxestablishment']['ot_august'] = $ot_agosto;
+                    $page['Talksxestablishment']['med_septiembre'] = $m_septiembre;
+                    $page['Talksxestablishment']['nur_septiembre'] = $e_septiembre;
+                    $page['Talksxestablishment']['den_septiembre'] = $o_septiembre;
+                    $page['Talksxestablishment']['ot_septiembre'] = $ot_septiembre;
+                    $page['Talksxestablishment']['med_october'] = $m_octubre;
+                    $page['Talksxestablishment']['nur_october'] = $e_octubre;
+                    $page['Talksxestablishment']['den_october'] = $o_octubre;
+                    $page['Talksxestablishment']['ot_october'] = $ot_octubre;
+                    $page['Talksxestablishment']['med_november'] = $m_noviembre;
+                    $page['Talksxestablishment']['nur_november'] = $e_noviembre;
+                    $page['Talksxestablishment']['den_november'] = $o_noviembre;
+                    $page['Talksxestablishment']['ot_november'] = $ot_noviembre;
+                    $page['Talksxestablishment']['med_december'] = $m_diciembre;
+                    $page['Talksxestablishment']['nur_december'] = $e_diciembre;
+                    $page['Talksxestablishment']['den_december'] = $o_diciembre;
+                    $page['Talksxestablishment']['ot_december'] = $ot_diciembre;
+
+                    $page['EvaluacionObjetivo']['user_reg_id'] = $user_id_reg;
+
+                    try {
+
+                        $this->Talksxestablishment->query("UPDATE talksxestablishments SET med_january = '$m_enero', med_february = '$m_febrero', med_march = '$m_marzo', med_april = '$m_abril', med_may = '$m_mayo', med_june = '$m_junio', med_july = '$m_julio', med_august = '$m_agosto', med_september = '$m_septiembre', med_october = '$m_octubre', med_november = '$m_noviembre', med_december = '$m_diciembre', nur_january = '$e_enero', nur_february = '$e_febrero', nur_march = '$e_marzo', nur_april = '$e_abril', nur_may = '$e_mayo', nur_june = '$e_junio', nur_july = '$e_julio', nur_august = '$e_agosto', nur_september = '$e_septiembre', nur_october = '$e_octubre', nur_november = '$e_noviembre', nur_december = '$e_diciembre', den_january = '$e_enero', den_february = '$e_febrero', den_march = '$e_marzo', den_april = '$e_abril', den_may = '$e_mayo', den_june = '$e_junio', den_july = '$e_julio', den_august = '$e_agosto', den_september = '$e_septiembre', den_october = '$e_octubre', den_november = '$e_noviembre', den_december = '$e_diciembre',ot_january = '$ot_enero', ot_february = '$ot_febrero', ot_march = '$ot_marzo', ot_april = '$ot_abril', ot_may = '$ot_mayo', ot_june = '$ot_junio', ot_july = '$ot_julio', ot_august = '$ot_agosto', ot_september = '$ot_septiembre', ot_october = '$ot_octubre', ot_november = '$ot_noviembre', ot_december = '$ot_diciembre' WHERE establishments_id = '$establishments_id' && regions_id = '$reg' && year = '$year'");
+                        // insertar
+                        // $this->Talksxestablishment->create();
+                        // $this->Talksxestablishment->save($page);
+
+
+                    } catch (Exception $ex) {
+                        var_dump($ex->getMessage());
+                        $i = $tope;
+                    }
+                }
+            }
+        } //fin de la comprobacion
+        $this->redirect([
+            'controller' => 'Talksxestablishments',
+            'action' => 'index', $reg, $year
+        ]);
+    }
+
+
+
+    public function import()
+    {
+        $regions = $this->Hcxestablishment->Region->find('list');
+        //$yir = $this->request->query('yir');
+        $datos = $this->request->data;
+        $this->set(compact('regions', 'datos'));
+    }
+
+
+    public function ejemplo()
+    {
+        //llamada al modelo de bitacora
+        $this->loadModel('Bitacora');
+        //asignacion de variables 
+        $descripcion = "INGRESO DE DATOS DE LA TABLA X.....";
+        $Bitacora["Bitacora"]["descripcion"] = $descripcion;
+        $Bitacora["Bitacora"]["persona_id"] = 0;
+        $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+        //LLAMADA A FUNCION GUARDAR DEL MODELO BITACORA, se pasa como parametro el objeto $Bitacora
+        $this->Bitacora->save($Bitacora);
+    }
 }

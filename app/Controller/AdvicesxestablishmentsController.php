@@ -403,10 +403,10 @@ class AdvicesxestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
-        // $this->redirect([
-        //     'controller' => 'Advicesxestablishments',
-        //     'action' => 'index', $reg, $year
-        // ]);
+        $this->redirect([
+            'controller' => 'Advicesxestablishments',
+            'action' => 'index', $reg, $year
+        ]);
     }
 
    

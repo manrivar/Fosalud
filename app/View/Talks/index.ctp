@@ -6,7 +6,10 @@
     </ol>
 </div>
 
-<h2><center>Charlas</center></h2>
+<h2>
+    <center>Charlas</center>
+</h2>
+<span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Talksxestablishments', 'action' => 'cargar_Evaluacion', $yer)); ?>
 
 
 <?= $this->Form->create('talk', ['type' => 'get']); ?>
@@ -28,49 +31,41 @@
     <table class="table table-bordered table-condensed" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th><?php echo $this->Paginator->sort('id'); ?></th>
-                <th><?php echo $this->Paginator->sort('regions_id', 'Regiones'); ?></th>
-                <th><?php echo $this->Paginator->sort('trimester1', 'Trimestre 1'); ?></th>
-                <th><?php echo $this->Paginator->sort('trimester2', 'Trimestre 2'); ?></th>
-                <th><?php echo $this->Paginator->sort('trimester3', 'Trimestre 3'); ?></th>
-                <th><?php echo $this->Paginator->sort('trimester4', 'Trimestre 4'); ?></th>
-                <th><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
-                <th><?php echo $this->Paginator->sort('year', 'Año'); ?></th>
-                <th class="actions"><?php echo __('Actions'); ?></th>
+                <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('regions_id', 'Regiones'); ?></th>
+                <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
+                <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('trimester1', 'Trimestre 1'); ?></th>
+                <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('trimester2', 'Trimestre 2'); ?></th>
+                <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('trimester3', 'Trimestre 3'); ?></th>
+                <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('trimester4', 'Trimestre 4'); ?></th>
+                <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('year', 'Año'); ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($talks as $talk) : ?>
                 <tr>
-                    <td><?php echo h($talk['Talk']['id']); ?>&nbsp;</td>
                     <td>
                         <?php $region = $talk['Region']['id']; ?>
                         <?php echo $this->Html->link($talk['Region']['region_name'], array('controller' => 'Talksxestablishments', 'action' => 'index', $region, $yer)); ?>
                     </td>
                     <?php $total = $talk['Talk']['trimester1'] + $talk['Talk']['trimester2'] + $talk['Talk']['trimester3'] + $talk['Talk']['trimester4'] ?>
+                    <td bgcolor="#CBEEF2"><?php echo $total; ?>&nbsp;</td>
                     <td><?php echo h($talk['Talk']['trimester1']); ?>&nbsp;</td>
                     <td><?php echo h($talk['Talk']['trimester2']); ?>&nbsp;</td>
                     <td><?php echo h($talk['Talk']['trimester3']); ?>&nbsp;</td>
                     <td><?php echo h($talk['Talk']['trimester4']); ?>&nbsp;</td>
-                    <td><?php echo $total; ?>&nbsp;</td>
                     <td><?php echo h($talk['Talk']['year']); ?>&nbsp;</td>
-                    <td class="actions">
-                        <?php echo $this->Html->link(__('View'), array('action' => 'view', $talk['Talk']['id'])); ?>
-                        <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $talk['Talk']['id'])); ?>
-                        <?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $talk['Talk']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $talk['Talk']['id']))); ?>
-                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
         <tfoot>
             <?php $total2 = $trim1 + $trim2 + $trim3 + $trim4; ?>
             <tr>
-                <td colspan="2"> Total </td>
+                <td> Total </td>
+                <td bgcolor="#AEEAF1"><?php echo $total2;  ?></td>
                 <td><?php echo $trim1;  ?></td>
                 <td><?php echo $trim2;  ?></td>
                 <td><?php echo $trim3;  ?></td>
                 <td><?php echo $trim4;  ?></td>
-                <td><?php echo $total2;  ?></td>
                 <td></td>
             </tr>
         </tfoot>
@@ -89,13 +84,3 @@
         ?>
     </div>
 </div>
-<div class="actions">
-    <h3><?php echo __('Actions'); ?></h3>
-    <ul>
-        <li><?php echo $this->Html->link(__('List Talks'), array('controller' => 'Talks', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New Talk'), array('action' => 'add')); ?></li>
-    </ul>
-</div>
-<script>
-
-</script>

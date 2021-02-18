@@ -258,12 +258,13 @@ class FampxestablishmentsController extends AppController
         }
     }
 
-    public function cargar_Evaluacion()
+    public function cargar_Evaluacion($yer)
     {
         //llamada a funcion de autorizacion para validar acceso a funcion
         $this->Autorizacion();
         $regions = $this->Fampxestablishment->Region->find('list');
         $this->set(compact('regions'));
+        $this->set(array('yer' => $yer));
     }
 
     public function cargar()
@@ -287,7 +288,20 @@ class FampxestablishmentsController extends AppController
                 'fields' => array('count(*) as total')
             )
         );
-        if ($existe[0][0]['total'] != 20) {
+
+        if ($reg == 1) {
+            $estanum = 12;
+        } elseif ($reg == 2) {
+            $estanum = 19;
+        } elseif ($reg == 3) {
+            $estanum = 20;
+        } elseif ($reg == 4) {
+            $estanum = 13;
+        } elseif ($reg == 5) {
+            $estanum = 19;
+        }
+
+        if ($existe[0][0]['total'] != $estanum) {
             echo "YA EXISTEN REGISTROS PARA ESTE CARGO FUNCIONAL, VERIFIQUE";
             print_r($existe);
             print_r($reg);
@@ -305,7 +319,7 @@ class FampxestablishmentsController extends AppController
 
             //validar que es un excel
             if ($ext != "xlsx") {
-                return "<div class='error'><h3>El archivo de planilla no es soportado por el sistema. Utilice un archivo de Excel valido (XLSX) </h3></div>";
+                return "<div class='error'><h3>El archivo no es soportado por el sistema. Utilice un archivo de Excel valido (XLSX) </h3></div>";
             }
 
 
