@@ -12,7 +12,11 @@
     <div class="vaccinesxestablishments form">
         <?php echo $this->Form->create('Vaccinesxestablishment'); ?>
         <fieldset>
-            <center><legend><?php echo __('Editar Vacunas'); ?></legend></center>
+            <div>
+                <center>
+                    <legend><?php echo __('Editar Vacunas'); ?></legend>
+                </center>
+            </div>
             <div class="padre">
                 <div class="hijo">
                     <label>
@@ -22,9 +26,9 @@
                     </label>
                     <?php
                     echo $this->Form->input('id');
-                    echo $this->Form->input('establishments_id');
-                    echo $this->Form->input('sibases_id');
-                    echo $this->Form->input('regions_id');
+                    // echo $this->Form->input('establishments_id');
+                    // echo $this->Form->input('sibases_id');
+                    // echo $this->Form->input('regions_id');
                     echo $this->Form->input('niñ_january', array('label' => 'Enero'));
                     echo $this->Form->input('niñ_february', array('label' => 'Febrero'));
                     echo $this->Form->input('niñ_march', array('label' => 'Marzo'));
@@ -48,9 +52,9 @@
                     <?php
                     // los campos de control infatil deben ir aqui 
                     echo $this->Form->input('id');
-                    echo $this->Form->input('establishments_id');
-                    echo $this->Form->input('sibases_id');
-                    echo $this->Form->input('regions_id');
+                    // echo $this->Form->input('establishments_id');
+                    // echo $this->Form->input('sibases_id');
+                    // echo $this->Form->input('regions_id');
                     echo $this->Form->input('adu_january', array('label' => 'Enero'));
                     echo $this->Form->input('adu_february', array('label' => 'Febrero'));
                     echo $this->Form->input('adu_march', array('label' => 'Marzo'));
@@ -73,9 +77,9 @@
                     </label>
                     <?php
                     echo $this->Form->input('id');
-                    echo $this->Form->input('establishments_id');
-                    echo $this->Form->input('sibases_id');
-                    echo $this->Form->input('regions_id');
+                    // echo $this->Form->input('establishments_id');
+                    // echo $this->Form->input('sibases_id');
+                    // echo $this->Form->input('regions_id');
                     echo $this->Form->input('inf_january', array('label' => 'Enero'));
                     echo $this->Form->input('inf_february', array('label' => 'Febrero'));
                     echo $this->Form->input('inf_march', array('label' => 'Marzo'));
@@ -98,9 +102,9 @@
                     </label>
                     <?php
                     echo $this->Form->input('id');
-                    echo $this->Form->input('establishments_id');
-                    echo $this->Form->input('sibases_id');
-                    echo $this->Form->input('regions_id');
+                    // echo $this->Form->input('establishments_id');
+                    // echo $this->Form->input('sibases_id');
+                    // echo $this->Form->input('regions_id');
                     echo $this->Form->input('ant_january', array('label' => 'Enero'));
                     echo $this->Form->input('ant_february', array('label' => 'Febrero'));
                     echo $this->Form->input('ant_march', array('label' => 'Marzo'));
@@ -123,9 +127,9 @@
                     </label>
                     <?php
                     echo $this->Form->input('id');
-                    echo $this->Form->input('establishments_id');
-                    echo $this->Form->input('sibases_id');
-                    echo $this->Form->input('regions_id');
+                    // echo $this->Form->input('establishments_id');
+                    // echo $this->Form->input('sibases_id');
+                    // echo $this->Form->input('regions_id');
                     echo $this->Form->input('c19_january', array('label' => 'Enero'));
                     echo $this->Form->input('c19_february', array('label' => 'Febrero'));
                     echo $this->Form->input('c19_march', array('label' => 'Marzo'));

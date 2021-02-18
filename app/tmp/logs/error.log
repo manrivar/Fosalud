@@ -57257,3 +57257,90 @@ Stack Trace:
 #1 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingsxestablishmentsController), Object(CakeRequest))
 #2 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2021-02-18 16:37:31 Error: [MissingActionException] Action RehxestablishmentsController::cargar_Evaluacion() could not be found.
+Exception Attributes: array (
+  'controller' => 'RehxestablishmentsController',
+  'action' => 'cargar_Evaluacion',
+)
+Request URL: /Fosalud/Rehxestablishments/cargar_Evaluacion/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RehxestablishmentsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-02-18 16:50:15 Error: [MissingActionException] Action RehxestablishmentsController::cargar_Evaluacion() could not be found.
+Exception Attributes: array (
+  'controller' => 'RehxestablishmentsController',
+  'action' => 'cargar_Evaluacion',
+)
+Request URL: /Fosalud/Rehxestablishments/cargar_Evaluacion/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RehxestablishmentsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-02-18 16:52:13 Error: [MissingActionException] Action RehxestablishmentsController::cargar_Evaluacion() could not be found.
+Exception Attributes: array (
+  'controller' => 'RehxestablishmentsController',
+  'action' => 'cargar_Evaluacion',
+)
+Request URL: /Fosalud/Rehxestablishments/cargar_Evaluacion/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RehxestablishmentsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-02-18 16:52:22 Error: [MissingActionException] Action RehxestablishmentsController::cargar_Evaluacion() could not be found.
+Exception Attributes: array (
+  'controller' => 'RehxestablishmentsController',
+  'action' => 'cargar_Evaluacion',
+)
+Request URL: /Fosalud/Rehxestablishments/cargar_Evaluacion/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RehxestablishmentsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-02-18 16:54:58 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Fosalud/js/Rehxestablishment/cargar.js
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-02-18 17:15:32 Error: [MissingActionException] Action VaccinesxestablishmentsController::cargar_Evaluacion() could not be found.
+Exception Attributes: array (
+  'controller' => 'VaccinesxestablishmentsController',
+  'action' => 'cargar_Evaluacion',
+)
+Request URL: /Fosalud/Vaccinesxestablishments/cargar_Evaluacion/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(VaccinesxestablishmentsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-02-18 17:39:20 Error: [MissingActionException] Action VaccinesxestablishmentsController::cargar_Evaluacion() could not be found.
+Exception Attributes: array (
+  'controller' => 'VaccinesxestablishmentsController',
+  'action' => 'cargar_Evaluacion',
+)
+Request URL: /Fosalud/Vaccinesxestablishments/cargar_Evaluacion/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(VaccinesxestablishmentsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-02-18 18:06:44 Error: [MissingViewException] View file "Vaccinesxestablishments\cargar__evaluacion.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Vaccinesxestablishments\\cargar__evaluacion.ctp',
+)
+Request URL: /Fosalud/Vaccinesxestablishments/cargar_Evaluacion/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\View\View.php(470): View->_getViewFileName('Vaccinesxestabl...')
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(VaccinesxestablishmentsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
