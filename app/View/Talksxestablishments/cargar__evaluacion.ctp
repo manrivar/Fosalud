@@ -9,7 +9,7 @@
 <div class="col-lg-12">
     <div class="col-lg-12">
         <center>
-            <h3>Carga de Atencion Curativa</h3>
+            <h3>Carga de Consejerias</h3>
         </center>
     </div>
     <div class="col-lg-4">
@@ -85,5 +85,5 @@
 </div>
 <?php
 echo $this->Html->script('common/common');
-echo $this->Html->script('Hcxestablishment/cargar');
+echo $this->Html->script('Talksxestablishment/cargar');
 ?>

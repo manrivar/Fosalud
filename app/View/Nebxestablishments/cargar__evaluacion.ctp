@@ -1,6 +1,6 @@
 <div class="col-lg-12 col-xs-12 col-sm-12">
     <ol class="breadcrumb">
-        <li> <span class="fa fa-undo"></span> <?php echo $this->Html->Link('Regresar', array('controller' => 'Healingcares', 'action' => 'index?yir=' . $yer)); ?></li>
+        <li> <span class="fa fa-undo"></span> <?php echo $this->Html->Link('Regresar', array('controller' => 'Nebulizations', 'action' => 'index?yir=' . $yer)); ?></li>
         <li> <span class="fa fa-upload"></span> Carga de Archivo Excel</li>
 
     </ol>
@@ -9,11 +9,11 @@
 <div class="col-lg-12">
     <div class="col-lg-12">
         <center>
-            <h3>Carga de Atencion Curativa</h3>
+            <h3>Carga de Recetas</h3>
         </center>
     </div>
     <div class="col-lg-4">
-        <?php echo $this->Form->create('Advicesxestablishment'); ?>
+        <?php echo $this->Form->create('Nebxestablishment'); ?>
         <input type="hidden" id="base" name="base" value="<?php echo $this->base; ?>" />
         <table class="table">
             <tbody>
@@ -56,11 +56,6 @@
         <div id='detalleSeleccion' class=" alert alert-info alert-block"></div>
     </div>
 
-
-
-
-
-
     <div class="col-lg-4">
         <button type="button" id="subirExcel" name="subirExcel"><span class="glyphicon glyphicon-cloud-upload"></span> Cargar Datos ... </button>
     </div>
@@ -85,5 +80,5 @@
 </div>
 <?php
 echo $this->Html->script('common/common');
-echo $this->Html->script('Hcxestablishment/cargar');
+echo $this->Html->script('Nebxestablishment/cargar');
 ?>

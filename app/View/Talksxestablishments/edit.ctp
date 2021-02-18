@@ -12,7 +12,9 @@
     <div class="talksxestablishments form">
         <?php echo $this->Form->create('Talksxestablishment'); ?>
         <fieldset>
-            <legend><?php echo __('Edit Talksxestablishment'); ?></legend>
+            <div>
+                <legend><center><?php echo __('Editar Charlas'); ?></center></legend>
+            </div>
             <div class="padre">
                 <div class="hijo">
                     <label>
@@ -22,9 +24,9 @@
                     </label>
                     <?php
                     echo $this->Form->input('id');
-                    echo $this->Form->input('establishments_id');
-                    echo $this->Form->input('sibases_id');
-                    echo $this->Form->input('regions_id');
+                    // echo $this->Form->input('establishments_id');
+                    // echo $this->Form->input('sibases_id');
+                    // echo $this->Form->input('regions_id');
                     echo $this->Form->input('med_january', array('label' => 'Enero'));
                     echo $this->Form->input('med_february', array('label' => 'Febrero'));
                     echo $this->Form->input('med_march', array('label' => 'Marzo'));
@@ -48,9 +50,9 @@
                     <?php
                     // los campos de control infatil deben ir aqui 
                     echo $this->Form->input('id');
-                    echo $this->Form->input('establishments_id');
-                    echo $this->Form->input('sibases_id');
-                    echo $this->Form->input('regions_id');
+                    // echo $this->Form->input('establishments_id');
+                    // echo $this->Form->input('sibases_id');
+                    // echo $this->Form->input('regions_id');
                     echo $this->Form->input('nur_january', array('label' => 'Enero'));
                     echo $this->Form->input('nur_february', array('label' => 'Febrero'));
                     echo $this->Form->input('nur_march', array('label' => 'Marzo'));
@@ -73,9 +75,9 @@
                     </label>
                     <?php
                     echo $this->Form->input('id');
-                    echo $this->Form->input('establishments_id');
-                    echo $this->Form->input('sibases_id');
-                    echo $this->Form->input('regions_id');
+                    // echo $this->Form->input('establishments_id');
+                    // echo $this->Form->input('sibases_id');
+                    // echo $this->Form->input('regions_id');
                     echo $this->Form->input('den_january', array('label' => 'Enero'));
                     echo $this->Form->input('den_february', array('label' => 'Febrero'));
                     echo $this->Form->input('den_march', array('label' => 'Marzo'));
@@ -98,9 +100,9 @@
                     </label>
                     <?php
                     echo $this->Form->input('id');
-                    echo $this->Form->input('establishments_id');
-                    echo $this->Form->input('sibases_id');
-                    echo $this->Form->input('regions_id');
+                    // echo $this->Form->input('establishments_id');
+                    // echo $this->Form->input('sibases_id');
+                    // echo $this->Form->input('regions_id');
                     echo $this->Form->input('ot_january', array('label' => 'Enero'));
                     echo $this->Form->input('ot_february', array('label' => 'Febrero'));
                     echo $this->Form->input('ot_march', array('label' => 'Marzo'));
@@ -124,18 +126,4 @@
         echo $this->Form->end();
         ?>
     </div>
-</div>
-<div class="actions">
-    <h3><?php echo __('Actions'); ?></h3>
-    <ul>
-
-        <li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Talksxestablishment.id')), array('confirm' => __('Are you sure you want to delete # %s?', $this->Form->value('Talksxestablishment.id')))); ?></li>
-        <li><?php echo $this->Html->link(__('List Childhcxestablishments'), array('action' => 'index')); ?></li>
-        <li><?php echo $this->Html->link(__('List Establishments'), array('controller' => 'establishments', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New Establishments'), array('controller' => 'establishments', 'action' => 'add')); ?> </li>
-        <li><?php echo $this->Html->link(__('List Sibases'), array('controller' => 'sibases', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New Sibases'), array('controller' => 'sibases', 'action' => 'add')); ?> </li>
-        <li><?php echo $this->Html->link(__('List Regions'), array('controller' => 'regions', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New Regions'), array('controller' => 'regions', 'action' => 'add')); ?> </li>
-    </ul>
 </div>
