@@ -387,7 +387,7 @@ class AdvicesxestablishmentsController extends AppController
 
                     try {
                         
-                        $this->Advicesxestablishment->query("UPDATE advicesxestablishments SET january = '$enero', february = '$febrero', march = '$marzo', april = '$abril', may = '$mayo', june = '$junio', july = '$julio', august = '$agosto', september = 'septiembre', october = '$octubre', november = '$noviembre', december = '$diciembre' WHERE establishments_id = '$establishments_id' && regions_id = '$reg' && year = '$year'");
+                        $this->Advicesxestablishment->query("UPDATE advicesxestablishments SET january = '$enero', february = '$febrero', march = '$marzo', april = '$abril', may = '$mayo', june = '$junio', july = '$julio', august = '$agosto', september = '$septiembre', october = '$octubre', november = '$noviembre', december = '$diciembre' WHERE establishments_id = '$establishments_id' && regions_id = '$reg' && year = '$year'");
                         // insertar
                         // $this->Advicesxestablishment->create();
                         // $this->Advicesxestablishment->save($page);

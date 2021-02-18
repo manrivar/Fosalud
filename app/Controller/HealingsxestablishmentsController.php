@@ -220,4 +220,215 @@ class HealingsxestablishmentsController extends AppController
         }
         return $this->redirect(array('action' => 'index'));
     }
+    //*****************************************/ prueba de excel *************************************************
+    public function Autorizacion()
+    {
+        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+        if ($nivel_acceso > 2) {
+            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+        }
+    }
+
+    public function cargar_Evaluacion($yer)
+    {
+        //llamada a funcion de autorizacion para validar acceso a funcion
+        $this->Autorizacion();
+        $regions = $this->Healingsxestablishment->Region->find('list');
+        $this->set(compact('regions'));
+        $this->set(array('yer' => $yer));
+    }
+
+    public function cargar()
+    {
+        $this->autoRender = false;
+
+        $reg = $this->request->data['regions'];
+        $year = $this->request->data['year'];
+
+
+
+        //corroborar que no existe informaciona sociada a ese regions
+        $existe = $this->Healingsxestablishment->find(
+            'all',
+            array(
+                'conditions' => array(
+                    'Healingsxestablishment.regions_id' => $reg,
+                    'Healingsxestablishment.year' => $year
+                ),
+
+                'fields' => array('count(*) as total')
+            )
+        );
+
+        if ($reg == 1) {
+            $estanum = 12;
+        } elseif ($reg == 2) {
+            $estanum = 19;
+        } elseif ($reg == 3) {
+            $estanum = 20;
+        } elseif ($reg == 4) {
+            $estanum = 13;
+        } elseif ($reg == 5) {
+            $estanum = 19;
+        }
+
+        if ($existe[0][0]['total'] != $estanum) {
+            echo "YA EXISTEN REGISTROS PARA ESTE CARGO FUNCIONAL, VERIFIQUE";
+            print_r($existe);
+            print_r($reg);
+            print_r($year);
+        } else {
+            $user_id_reg = $this->Session->read('Auth.User.id');
+            $carpeta = $user_id_reg;
+            //datos de archivo excel
+            $dir = WWW_ROOT . DS . 'files/' . $carpeta . "";
+            $dir_ver = 'files/' . $carpeta . "";
+            $fileName = $dir_ver;
+            $path = $_FILES['archivo0']['name'];
+            $ext = pathinfo($path, PATHINFO_EXTENSION);
+
+
+            //validar que es un excel
+            if ($ext != "xlsx") {
+                return "<div class='error'><h3>El archivo de planilla no es soportado por el sistema. Utilice un archivo de Excel valido (XLSX) </h3></div>";
+            }
+
+
+            /*
+             * CARGA DE TODOS LOS ARCHIVOS
+             */
+            $fileNameArray = array();
+            for ($i = 0; $i < sizeof($_FILES); $i++) {
+
+                if (!empty($_FILES['archivo' . $i]['tmp_name']) && is_uploaded_file($_FILES['archivo' . $i]['tmp_name'])) {
+                    $filename = basename($_FILES['archivo' . $i]['name']);
+                    $out = $dir . "/" . $filename;
+                    if (file_exists($dir) && is_dir($dir)) {
+                        //Si la carpeta existe solo se copia el archivo del temporal hacia la carpeta de sesion
+
+                        move_uploaded_file($_FILES['archivo' . $i]['tmp_name'], $dir . "/" . $filename);
+                    } elseif (mkdir($dir, 0777)) {
+                        //Si la carpeta de sesion no existe, se crea la carpeta con permisos y se copia el archivo
+                        move_uploaded_file($_FILES['archivo' . $i]['tmp_name'], $dir . "/" . $filename);
+                    }
+                }
+
+                $fileName .= '/' . $filename;
+                $fileNameArray[$i] = $fileName;
+                $fileName = $dir_ver;
+            }
+
+            $fileName = $fileNameArray[0];
+            $data = new PHPExcel_Reader_Excel2007();
+            $excelObj = $data->load($fileName);
+            $worksheetNames = $excelObj->getSheetNames($fileName);
+
+
+            $numeroPestanas = $excelObj->getSheetCount();
+
+            /*
+             * Pestaña de Permanentes
+             */
+            $existe = $numeroPestanas - 0;
+
+            if ($existe == 0)
+                $fijos = array();
+            else
+                $fijos = $excelObj->setActiveSheetIndex(0);
+
+
+            if (!empty($fijos))
+                $datos = true;
+            else
+                return "<h3>Este archivo Excel no cuenta con informacion. Verifique el archivo cargado!</h3>";
+
+            $tope = $excelObj->getActiveSheet()->getHighestRow();
+
+            //$tope = 12;
+            $n = $objetivo_id = 0;
+
+            for ($i = 4; $i <= $tope; $i++) {
+                /*
+                  LECTURA
+                 */
+
+                $establishments_id = trim($excelObj->getActiveSheet()->getCell('C' . $i)->getValue());
+                $enero = trim($excelObj->getActiveSheet()->getCell('E' . $i)->getValue());
+                $febrero = trim($excelObj->getActiveSheet()->getCell('F' . $i)->getValue());
+                $marzo = trim($excelObj->getActiveSheet()->getCell('G' . $i)->getValue());
+                $abril = trim($excelObj->getActiveSheet()->getCell('H' . $i)->getValue());
+                $mayo = trim($excelObj->getActiveSheet()->getCell('I' . $i)->getValue());
+                $junio = trim($excelObj->getActiveSheet()->getCell('J' . $i)->getValue());
+                $julio = trim($excelObj->getActiveSheet()->getCell('K' . $i)->getValue());
+                $agosto = trim($excelObj->getActiveSheet()->getCell('L' . $i)->getValue());
+                $septiembre = trim($excelObj->getActiveSheet()->getCell('M' . $i)->getValue());
+                $octubre = trim($excelObj->getActiveSheet()->getCell('N' . $i)->getValue());
+                $noviembre = trim($excelObj->getActiveSheet()->getCell('O' . $i)->getValue());
+                $diciembre = trim($excelObj->getActiveSheet()->getCell('P' . $i)->getValue());
+
+
+                if ($establishments_id != "") {
+
+                    $page['Healingsxestablishment']['establishments_id'] = $establishments_id;
+                    $page['Healingsxestablishment']['january'] = $enero;
+                    $page['Healingsxestablishment']['february'] = $febrero;
+                    $page['Healingsxestablishment']['march'] = $marzo;
+                    $page['Healingsxestablishment']['april'] = $abril;
+                    $page['Healingsxestablishment']['may'] = $mayo;
+                    $page['Healingsxestablishment']['june'] = $junio;
+                    $page['Healingsxestablishment']['july'] = $julio;
+                    $page['Healingsxestablishment']['august'] = $agosto;
+                    $page['Healingsxestablishment']['septiembre'] = $septiembre;
+                    $page['Healingsxestablishment']['october'] = $octubre;
+                    $page['Healingsxestablishment']['november'] = $noviembre;
+                    $page['Healingsxestablishment']['december'] = $diciembre;
+
+                    $page['EvaluacionObjetivo']['user_reg_id'] = $user_id_reg;
+
+                    try {
+
+                        $this->Healingsxestablishment->query("UPDATE healingsxestablishments SET january = '$enero', february = '$febrero', march = '$marzo', april = '$abril', may = '$mayo', june = '$junio', july = '$julio', august = '$agosto', september = '$septiembre', october = '$octubre', november = '$noviembre', december = '$diciembre' WHERE establishments_id = '$establishments_id' && regions_id = '$reg' && year = '$year'");
+                        // insertar
+                        // $this->Healingsxestablishment->create();
+                        // $this->Healingsxestablishment->save($page);
+
+
+                    } catch (Exception $ex) {
+                        var_dump($ex->getMessage());
+                        $i = $tope;
+                    }
+                }
+            }
+        } //fin de la comprobacion
+        $this->redirect([
+            'controller' => 'Healingsxestablishments',
+            'action' => 'index', $reg, $year
+        ]);
+    }
+
+
+
+    public function import()
+    {
+        $regions = $this->Hcxestablishment->Region->find('list');
+        //$yir = $this->request->query('yir');
+        $datos = $this->request->data;
+        $this->set(compact('regions', 'datos'));
+    }
+
+
+
+    public function ejemplo()
+    {
+        //llamada al modelo de bitacora
+        $this->loadModel('Bitacora');
+        //asignacion de variables 
+        $descripcion = "INGRESO DE DATOS DE LA TABLA X.....";
+        $Bitacora["Bitacora"]["descripcion"] = $descripcion;
+        $Bitacora["Bitacora"]["persona_id"] = 0;
+        $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+        //LLAMADA A FUNCION GUARDAR DEL MODELO BITACORA, se pasa como parametro el objeto $Bitacora
+        $this->Bitacora->save($Bitacora);
+    }
 }

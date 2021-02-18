@@ -389,7 +389,7 @@ class PatientsxestablishmentsController extends AppController
 
                     try {
 
-                        $this->Patientsxestablishment->query("UPDATE patientsxestablishments SET january = '$enero', february = '$febrero', march = '$marzo', april = '$abril', may = '$mayo', june = '$junio', july = '$julio', august = '$agosto', september = 'septiembre', october = '$octubre', november = '$noviembre', december = '$diciembre' WHERE establishments_id = '$establishments_id' && regions_id = '$reg' && year = '$year'");
+                        $this->Patientsxestablishment->query("UPDATE patientsxestablishments SET january = '$enero', february = '$febrero', march = '$marzo', april = '$abril', may = '$mayo', june = '$junio', july = '$julio', august = '$agosto', september = '$septiembre', october = '$octubre', november = '$noviembre', december = '$diciembre' WHERE establishments_id = '$establishments_id' && regions_id = '$reg' && year = '$year'");
                         // insertar
                         // $this->Patientsxestablishment->create();
                         // $this->Patientsxestablishment->save($page);

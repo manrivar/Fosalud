@@ -388,7 +388,7 @@ class NebxestablishmentsController extends AppController
 
                     try {
 
-                        $this->Nebxestablishment->query("UPDATE nebxestablishments SET january = '$enero', february = '$febrero', march = '$marzo', april = '$abril', may = '$mayo', june = '$junio', july = '$julio', august = '$agosto', september = 'septiembre', october = '$octubre', november = '$noviembre', december = '$diciembre' WHERE establishments_id = '$establishments_id' && regions_id = '$reg' && year = '$year'");
+                        $this->Nebxestablishment->query("UPDATE nebxestablishments SET january = '$enero', february = '$febrero', march = '$marzo', april = '$abril', may = '$mayo', june = '$junio', july = '$julio', august = '$agosto', september = '$septiembre', october = '$octubre', november = '$noviembre', december = '$diciembre' WHERE establishments_id = '$establishments_id' && regions_id = '$reg' && year = '$year'");
                         // insertar
                         // $this->Nebxestablishment->create();
                         // $this->Nebxestablishment->save($page);
