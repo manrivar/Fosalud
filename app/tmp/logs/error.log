@@ -57235,3 +57235,25 @@ Stack Trace:
 #3 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NebxestablishmentsController), Object(CakeRequest))
 #4 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2021-02-18 15:38:33 Error: [MissingActionException] Action InjxestablishmentsController::cargar_Evaluacion() could not be found.
+Exception Attributes: array (
+  'controller' => 'InjxestablishmentsController',
+  'action' => 'cargar_Evaluacion',
+)
+Request URL: /Fosalud/Injxestablishments/cargar_Evaluacion/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InjxestablishmentsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-02-18 16:06:17 Error: [MissingActionException] Action HealingsxestablishmentsController::cargar_Evaluacion() could not be found.
+Exception Attributes: array (
+  'controller' => 'HealingsxestablishmentsController',
+  'action' => 'cargar_Evaluacion',
+)
+Request URL: /Fosalud/Healingsxestablishments/cargar_Evaluacion/2021
+Stack Trace:
+#0 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\Fosalud\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(HealingsxestablishmentsController), Object(CakeRequest))
+#2 C:\xampp\htdocs\Fosalud\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
