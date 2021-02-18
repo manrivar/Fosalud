@@ -39,7 +39,7 @@
                     <tr>
                         <td><?php echo h($healingsxestablishment['Healingsxestablishment']['id']); ?>&nbsp;</td>
                         <td>
-                            <?php echo $this->Html->link($healingsxestablishment['Sibase']['sibase_name'], array('controller' => 'sibases', 'action' => 'view', $healingsxestablishment['Sibase']['id'])); ?>
+                            <?php echo h($healingsxestablishment['Sibase']['sibase_name']); ?>
                         </td>
                         <td>
                             <?php $region = $healingsxestablishment['Healingsxestablishment']['regions_id'] ?>

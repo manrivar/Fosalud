@@ -346,4 +346,310 @@ class VaccinesxestablishmentsController extends AppController
         }
         return $this->redirect(array('action' => 'index'));
     }
+    //*****************************************/ prueba de excel *************************************************
+    public function Autorizacion()
+    {
+        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+        if ($nivel_acceso > 2) {
+            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+        }
+    }
+
+    public function cargar_Evaluacion($yer)
+    {
+        //llamada a funcion de autorizacion para validar acceso a funcion
+        $this->Autorizacion();
+        $regions = $this->Vaccinesxestablishment->Region->find('list');
+        $this->set(compact('regions'));
+        $this->set(array('yer' => $yer));
+    }
+
+    public function cargar()
+    {
+        $this->autoRender = false;
+
+        $reg = $this->request->data['regions'];
+        $year = $this->request->data['year'];
+
+
+
+        //corroborar que no existe informaciona sociada a ese regions
+        $existe = $this->Vaccinesxestablishment->find(
+            'all',
+            array(
+                'conditions' => array(
+                    'Vaccinesxestablishment.regions_id' => $reg,
+                    'Vaccinesxestablishment.year' => $year
+                ),
+
+                'fields' => array('count(*) as total')
+            )
+        );
+
+        if ($reg == 1) {
+            $estanum = 12;
+        } elseif ($reg == 2) {
+            $estanum = 19;
+        } elseif ($reg == 3) {
+            $estanum = 20;
+        } elseif ($reg == 4) {
+            $estanum = 13;
+        } elseif ($reg == 5) {
+            $estanum = 19;
+        }
+
+        if ($existe[0][0]['total'] != $estanum) {
+            echo "YA EXISTEN REGISTROS PARA ESTE CARGO FUNCIONAL, VERIFIQUE";
+            print_r($existe);
+            print_r($reg);
+            print_r($year);
+        } else {
+            $user_id_reg = $this->Session->read('Auth.User.id');
+            $carpeta = $user_id_reg;
+            //datos de archivo excel
+            $dir = WWW_ROOT . DS . 'files/' . $carpeta . "";
+            $dir_ver = 'files/' . $carpeta . "";
+            $fileName = $dir_ver;
+            $path = $_FILES['archivo0']['name'];
+            $ext = pathinfo($path, PATHINFO_EXTENSION);
+
+
+            //validar que es un excel
+            if ($ext != "xlsx") {
+                return "<div class='error'><h3>El archivo no es soportado por el sistema. Utilice un archivo de Excel valido (XLSX) </h3></div>";
+            }
+
+
+            /*
+             * CARGA DE TODOS LOS ARCHIVOS
+             */
+            $fileNameArray = array();
+            for ($i = 0; $i < sizeof($_FILES); $i++) {
+
+                if (!empty($_FILES['archivo' . $i]['tmp_name']) && is_uploaded_file($_FILES['archivo' . $i]['tmp_name'])) {
+                    $filename = basename($_FILES['archivo' . $i]['name']);
+                    $out = $dir . "/" . $filename;
+                    if (file_exists($dir) && is_dir($dir)) {
+                        //Si la carpeta existe solo se copia el archivo del temporal hacia la carpeta de sesion
+
+                        move_uploaded_file($_FILES['archivo' . $i]['tmp_name'], $dir . "/" . $filename);
+                    } elseif (mkdir($dir, 0777)) {
+                        //Si la carpeta de sesion no existe, se crea la carpeta con permisos y se copia el archivo
+                        move_uploaded_file($_FILES['archivo' . $i]['tmp_name'], $dir . "/" . $filename);
+                    }
+                }
+
+                $fileName .= '/' . $filename;
+                $fileNameArray[$i] = $fileName;
+                $fileName = $dir_ver;
+            }
+
+            $fileName = $fileNameArray[0];
+            $data = new PHPExcel_Reader_Excel2007();
+            $excelObj = $data->load($fileName);
+            $worksheetNames = $excelObj->getSheetNames($fileName);
+
+
+            $numeroPestanas = $excelObj->getSheetCount();
+
+            /*
+             * Pestaña de Permanentes
+             */
+            $existe = $numeroPestanas - 0;
+
+            if ($existe == 0)
+                $fijos = array();
+            else
+                $fijos = $excelObj->setActiveSheetIndex(0);
+
+
+            if (!empty($fijos))
+                $datos = true;
+            else
+                return "<h3>Este archivo Excel no cuenta con informacion. Verifique el archivo cargado!</h3>";
+
+            $tope = $excelObj->getActiveSheet()->getHighestRow();
+
+            //$tope = 12;
+            $n = $objetivo_id = 0;
+
+            for ($i = 4; $i <= $tope; $i++) {
+                /*
+                  LECTURA
+                 */
+
+                $establishments_id = trim($excelObj->getActiveSheet()->getCell('C' . $i)->getValue());
+                $n_enero = trim($excelObj->getActiveSheet()->getCell('E' . $i)->getValue());
+                $a_enero = trim($excelObj->getActiveSheet()->getCell('F' . $i)->getValue());
+                $i_enero = trim($excelObj->getActiveSheet()->getCell('G' . $i)->getValue());
+                $an_enero = trim($excelObj->getActiveSheet()->getCell('H' . $i)->getValue());
+                $c_enero = trim($excelObj->getActiveSheet()->getCell('I' . $i)->getValue());
+                $n_febrero = trim($excelObj->getActiveSheet()->getCell('J' . $i)->getValue());
+                $a_febrero = trim($excelObj->getActiveSheet()->getCell('K' . $i)->getValue());
+                $i_febrero = trim($excelObj->getActiveSheet()->getCell('L' . $i)->getValue());
+                $an_febrero = trim($excelObj->getActiveSheet()->getCell('M' . $i)->getValue());
+                $c_febrero = trim($excelObj->getActiveSheet()->getCell('N' . $i)->getValue());
+                $n_marzo = trim($excelObj->getActiveSheet()->getCell('O' . $i)->getValue());
+                $a_marzo = trim($excelObj->getActiveSheet()->getCell('P' . $i)->getValue());
+                $i_marzo = trim($excelObj->getActiveSheet()->getCell('Q' . $i)->getValue());
+                $an_marzo = trim($excelObj->getActiveSheet()->getCell('R' . $i)->getValue());
+                $c_marzo = trim($excelObj->getActiveSheet()->getCell('S' . $i)->getValue());
+                $n_abril = trim($excelObj->getActiveSheet()->getCell('T' . $i)->getValue());
+                $a_abril = trim($excelObj->getActiveSheet()->getCell('U' . $i)->getValue());
+                $i_abril = trim($excelObj->getActiveSheet()->getCell('V' . $i)->getValue());
+                $an_abril = trim($excelObj->getActiveSheet()->getCell('W' . $i)->getValue());
+                $c_abril = trim($excelObj->getActiveSheet()->getCell('X' . $i)->getValue());
+                $n_mayo = trim($excelObj->getActiveSheet()->getCell('Y' . $i)->getValue());
+                $a_mayo = trim($excelObj->getActiveSheet()->getCell('Z' . $i)->getValue());
+                $i_mayo = trim($excelObj->getActiveSheet()->getCell('AA' . $i)->getValue());
+                $an_mayo = trim($excelObj->getActiveSheet()->getCell('AB' . $i)->getValue());
+                $c_mayo = trim($excelObj->getActiveSheet()->getCell('AC' . $i)->getValue());
+                $n_junio = trim($excelObj->getActiveSheet()->getCell('AD' . $i)->getValue());
+                $a_junio = trim($excelObj->getActiveSheet()->getCell('AE' . $i)->getValue());
+                $i_junio = trim($excelObj->getActiveSheet()->getCell('AF' . $i)->getValue());
+                $an_junio = trim($excelObj->getActiveSheet()->getCell('AG' . $i)->getValue());
+                $c_junio = trim($excelObj->getActiveSheet()->getCell('AH' . $i)->getValue());
+                $n_julio = trim($excelObj->getActiveSheet()->getCell('AI' . $i)->getValue());
+                $a_julio = trim($excelObj->getActiveSheet()->getCell('AJ' . $i)->getValue());
+                $i_julio = trim($excelObj->getActiveSheet()->getCell('AK' . $i)->getValue());
+                $an_julio = trim($excelObj->getActiveSheet()->getCell('AL' . $i)->getValue());
+                $c_julio = trim($excelObj->getActiveSheet()->getCell('AM' . $i)->getValue());
+                $n_agosto = trim($excelObj->getActiveSheet()->getCell('AN' . $i)->getValue());
+                $a_agosto = trim($excelObj->getActiveSheet()->getCell('AO' . $i)->getValue());
+                $i_agosto = trim($excelObj->getActiveSheet()->getCell('AP' . $i)->getValue());
+                $an_agosto = trim($excelObj->getActiveSheet()->getCell('AQ' . $i)->getValue());
+                $c_agosto = trim($excelObj->getActiveSheet()->getCell('AR' . $i)->getValue());
+                $n_septiembre = trim($excelObj->getActiveSheet()->getCell('AS' . $i)->getValue());
+                $a_septiembre = trim($excelObj->getActiveSheet()->getCell('AT' . $i)->getValue());
+                $i_septiembre = trim($excelObj->getActiveSheet()->getCell('AU' . $i)->getValue());
+                $an_septiembre = trim($excelObj->getActiveSheet()->getCell('AV' . $i)->getValue());
+                $c_septiembre = trim($excelObj->getActiveSheet()->getCell('AW' . $i)->getValue());
+                $n_octubre = trim($excelObj->getActiveSheet()->getCell('AX' . $i)->getValue());
+                $a_octubre = trim($excelObj->getActiveSheet()->getCell('AY' . $i)->getValue());
+                $i_octubre = trim($excelObj->getActiveSheet()->getCell('AZ' . $i)->getValue());
+                $an_octubre = trim($excelObj->getActiveSheet()->getCell('BA' . $i)->getValue());
+                $c_octubre = trim($excelObj->getActiveSheet()->getCell('BB' . $i)->getValue());
+                $n_noviembre = trim($excelObj->getActiveSheet()->getCell('BC' . $i)->getValue());
+                $a_noviembre = trim($excelObj->getActiveSheet()->getCell('BD' . $i)->getValue());
+                $i_noviembre = trim($excelObj->getActiveSheet()->getCell('BE' . $i)->getValue());
+                $an_noviembre = trim($excelObj->getActiveSheet()->getCell('BF' . $i)->getValue());
+                $c_noviembre = trim($excelObj->getActiveSheet()->getCell('BG' . $i)->getValue());
+                $n_diciembre = trim($excelObj->getActiveSheet()->getCell('BH' . $i)->getValue());
+                $a_diciembre = trim($excelObj->getActiveSheet()->getCell('BI' . $i)->getValue());
+                $i_diciembre = trim($excelObj->getActiveSheet()->getCell('BJ' . $i)->getValue());
+                $an_diciembre = trim($excelObj->getActiveSheet()->getCell('BK' . $i)->getValue());
+                $c_diciembre = trim($excelObj->getActiveSheet()->getCell('BL' . $i)->getValue());
+
+
+                if ($establishments_id != "") {
+
+                    $page['Vaccinesxestablishment']['establishments_id'] = $establishments_id;
+                    $page['Vaccinesxestablishment']['niñ_january'] = $n_enero;
+                    $page['Vaccinesxestablishment']['adu_january'] = $a_enero;
+                    $page['Vaccinesxestablishment']['inf_january'] = $i_enero;
+                    $page['Vaccinesxestablishment']['ant_january'] = $an_enero;
+                    $page['Vaccinesxestablishment']['c19_january'] = $c_enero;
+                    $page['Vaccinesxestablishment']['niñ_february'] = $n_febrero;
+                    $page['Vaccinesxestablishment']['adu_february'] = $a_febrero;
+                    $page['Vaccinesxestablishment']['inf_february'] = $i_febrero;
+                    $page['Vaccinesxestablishment']['ant_february'] = $an_febrero;
+                    $page['Vaccinesxestablishment']['c19_february'] = $c_febrero;
+                    $page['Vaccinesxestablishment']['niñ_march'] = $n_marzo;
+                    $page['Vaccinesxestablishment']['adu_march'] = $a_marzo;
+                    $page['Vaccinesxestablishment']['inf_march'] = $i_marzo;
+                    $page['Vaccinesxestablishment']['ant_march'] = $an_marzo;
+                    $page['Vaccinesxestablishment']['c19_march'] = $c_marzo;
+                    $page['Vaccinesxestablishment']['niñ_april'] = $n_abril;
+                    $page['Vaccinesxestablishment']['adu_april'] = $a_abril;
+                    $page['Vaccinesxestablishment']['inf_april'] = $i_abril;
+                    $page['Vaccinesxestablishment']['ant_april'] = $an_abril;
+                    $page['Vaccinesxestablishment']['c19_april'] = $c_abril;
+                    $page['Vaccinesxestablishment']['niñ_may'] = $n_mayo;
+                    $page['Vaccinesxestablishment']['adu_may'] = $a_mayo;
+                    $page['Vaccinesxestablishment']['inf_may'] = $i_mayo;
+                    $page['Vaccinesxestablishment']['ant_may'] = $an_mayo;
+                    $page['Vaccinesxestablishment']['c19_may'] = $c_mayo;
+                    $page['Vaccinesxestablishment']['niñ_june'] = $n_junio;
+                    $page['Vaccinesxestablishment']['adu_june'] = $a_junio;
+                    $page['Vaccinesxestablishment']['inf_june'] = $i_junio;
+                    $page['Vaccinesxestablishment']['ant_june'] = $an_junio;
+                    $page['Vaccinesxestablishment']['c19_june'] = $c_junio;
+                    $page['Vaccinesxestablishment']['niñ_july'] = $n_julio;
+                    $page['Vaccinesxestablishment']['adu_july'] = $a_julio;
+                    $page['Vaccinesxestablishment']['inf_july'] = $i_julio;
+                    $page['Vaccinesxestablishment']['ant_july'] = $an_julio;
+                    $page['Vaccinesxestablishment']['c19_july'] = $c_julio;
+                    $page['Vaccinesxestablishment']['niñ_august'] = $n_agosto;
+                    $page['Vaccinesxestablishment']['adu_august'] = $a_agosto;
+                    $page['Vaccinesxestablishment']['inf_august'] = $i_agosto;
+                    $page['Vaccinesxestablishment']['ant_august'] = $an_agosto;
+                    $page['Vaccinesxestablishment']['c19_august'] = $c_agosto;
+                    $page['Vaccinesxestablishment']['niñ_septiembre'] = $n_septiembre;
+                    $page['Vaccinesxestablishment']['adu_septiembre'] = $a_septiembre;
+                    $page['Vaccinesxestablishment']['inf_septiembre'] = $i_septiembre;
+                    $page['Vaccinesxestablishment']['ant_septiembre'] = $an_septiembre;
+                    $page['Vaccinesxestablishment']['c19_septiembre'] = $c_septiembre;
+                    $page['Vaccinesxestablishment']['niñ_october'] = $n_octubre;
+                    $page['Vaccinesxestablishment']['adu_october'] = $a_octubre;
+                    $page['Vaccinesxestablishment']['inf_october'] = $i_octubre;
+                    $page['Vaccinesxestablishment']['ant_october'] = $an_octubre;
+                    $page['Vaccinesxestablishment']['c19_october'] = $c_octubre;
+                    $page['Vaccinesxestablishment']['niñ_november'] = $n_noviembre;
+                    $page['Vaccinesxestablishment']['adu_november'] = $a_noviembre;
+                    $page['Vaccinesxestablishment']['inf_november'] = $i_noviembre;
+                    $page['Vaccinesxestablishment']['ant_november'] = $an_noviembre;
+                    $page['Vaccinesxestablishment']['c19_november'] = $c_noviembre;
+                    $page['Vaccinesxestablishment']['niñ_december'] = $n_diciembre;
+                    $page['Vaccinesxestablishment']['adu_december'] = $a_diciembre;
+                    $page['Vaccinesxestablishment']['inf_december'] = $i_diciembre;
+                    $page['Vaccinesxestablishment']['ant_december'] = $an_diciembre;
+                    $page['Vaccinesxestablishment']['c19_december'] = $c_diciembre;
+
+                    $page['EvaluacionObjetivo']['user_reg_id'] = $user_id_reg;
+
+                    try {
+
+                        $this->Vaccinesxestablishment->query("UPDATE vaccinesxestablishments SET niñ_january = '$n_enero', niñ_february = '$n_febrero', niñ_march = '$n_marzo', niñ_april = '$n_abril', niñ_may = '$n_mayo', niñ_june = '$n_junio', niñ_july = '$n_julio', niñ_august = '$n_agosto', niñ_september = '$n_septiembre', niñ_october = '$n_octubre', niñ_november = '$n_noviembre', niñ_december = '$n_diciembre', adu_january = '$a_enero', adu_february = '$a_febrero', adu_march = '$a_marzo', adu_april = '$a_abril', adu_may = '$a_mayo', adu_june = '$a_junio', adu_july = '$a_julio', adu_august = '$a_agosto', adu_september = '$a_septiembre', adu_october = '$a_octubre', adu_november = '$a_noviembre', adu_december = '$a_diciembre', inf_january = '$i_enero', inf_february = '$i_febrero', inf_march = '$i_marzo', inf_april = '$i_abril', inf_may = '$i_mayo', inf_june = '$i_junio', inf_july = '$i_julio', inf_august = '$i_agosto', inf_september = '$i_septiembre', inf_october = '$i_octubre', inf_november = '$i_noviembre', inf_december = '$i_diciembre', ant_january = '$an_enero', ant_february = '$an_febrero', ant_march = '$an_marzo', ant_april = '$an_abril', ant_may = '$an_mayo', ant_june = '$an_junio', ant_july = '$an_julio', ant_august = '$an_agosto', ant_september = '$an_septiembre', ant_october = '$an_octubre', ant_november = '$an_noviembre', ant_december = '$an_diciembre', c19_january = '$c_enero', c19_february = '$c_febrero', c19_march = '$c_marzo', c19_april = '$c_abril', c19_may = '$c_mayo', c19_june = '$c_junio', c19_july = '$c_julio', c19_august = '$c_agosto', c19_september = '$c_septiembre', c19_october = '$c_octubre', c19_november = '$c_noviembre', c19_december = '$c_diciembre' WHERE establishments_id = '$establishments_id' && regions_id = '$reg' && year = '$year'");
+                        // insertar
+                        // $this->Vaccinesxestablishment->create();
+                        // $this->Vaccinesxestablishment->save($page);
+
+
+                    } catch (Exception $ex) {
+                        var_dump($ex->getMessage());
+                        $i = $tope;
+                    }
+                }
+            }
+        } //fin de la comprobacion
+        $this->redirect([
+            'controller' => 'Vaccinesxestablishments',
+            'action' => 'index', $reg, $year
+        ]);
+    }
+
+
+
+    public function import()
+    {
+        $regions = $this->Hcxestablishment->Region->find('list');
+        //$yir = $this->request->query('yir');
+        $datos = $this->request->data;
+        $this->set(compact('regions', 'datos'));
+    }
+
+
+    public function ejemplo()
+    {
+        //llamada al modelo de bitacora
+        $this->loadModel('Bitacora');
+        //asignacion de variables 
+        $descripcion = "INGRESO DE DATOS DE LA TABLA X.....";
+        $Bitacora["Bitacora"]["descripcion"] = $descripcion;
+        $Bitacora["Bitacora"]["persona_id"] = 0;
+        $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+        //LLAMADA A FUNCION GUARDAR DEL MODELO BITACORA, se pasa como parametro el objeto $Bitacora
+        $this->Bitacora->save($Bitacora);
+    }
 }
