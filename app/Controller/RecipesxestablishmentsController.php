@@ -329,15 +329,15 @@ class RecipesxestablishmentsController extends AppController
         );
 
         if ($reg == 1) {
-            $estanum = 12;
+            $estanum = 31;
         } elseif ($reg == 2) {
-            $estanum = 19;
+            $estanum = 33;
         } elseif ($reg == 3) {
             $estanum = 20;
         } elseif ($reg == 4) {
-            $estanum = 13;
+            $estanum = 27;
         } elseif ($reg == 5) {
-            $estanum = 19;
+            $estanum = 56;
         }
 
         if ($existe[0][0]['total'] != $estanum) {
