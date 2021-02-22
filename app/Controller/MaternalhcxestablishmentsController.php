@@ -306,12 +306,11 @@ class MaternalhcxestablishmentsController extends AppController
         
         if ($existe[0][0]['total'] != $estanum) {
             echo "YA EXISTEN REGISTROS PARA ESTE CARGO FUNCIONAL, VERIFIQUE";
-            print_r($existe);
-            print_r($reg);
-            print_r($year);
+           
         } else {
             $user_id_reg = $this->Session->read('Auth.User.id');
-            $carpeta = $user_id_reg;
+            $user_na_reg = $this->Session->read('Auth.User.nombre_usuario');
+            $carpeta = $user_id_reg . "-" . $user_na_reg;
             //datos de archivo excel
             $dir = WWW_ROOT . DS . 'files/' . $carpeta . "";
             $dir_ver = 'files/' . $carpeta . "";
