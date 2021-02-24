@@ -364,11 +364,6 @@ class UsersController extends AppController {
     public function Atenmenu2(){
 
     }
-    public function importar(){
-
-    }
-
-
     /**
      * index method
      *
@@ -433,6 +428,7 @@ class UsersController extends AppController {
      * @return void
      */
     public function add($id = null) {
+        $this->loadmodel('Acceso');
         $this->Autorizacion();
         if ($this->request->is(array('post', 'put'))) {
             $this->User->create();
@@ -443,7 +439,7 @@ class UsersController extends AppController {
                 $this->Flash->success(__('El usuario ha sido guardado.'));
                 //bitacora
                 $this->loadModel('Bitacora');
-                $Bitacora["Bitacora"]["descripcion"] = "CREACION DE USUARIO CON ACCESO ADMINISTRATIVO PARA: " .$this->request->data['User']['nombre_usuario'] ;
+                $Bitacora["Bitacora"]["descripcion"] = "CREACION DE USUARIO CON ACCESO de  PARA: " .$this->request->data['User']['nombre_usuario'] ;
                 $Bitacora["Bitacora"]["empleado_id"] = 0;
                 $Bitacora["Bitacora"]["medico_id"] = 0;
                 $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
