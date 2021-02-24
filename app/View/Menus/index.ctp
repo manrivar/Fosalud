@@ -37,8 +37,7 @@
                 
                     endswitch;
                     ?>
-                    <li><a href="<?php echo $this->base . '/users/importar'; ?>"><span class="fa fa-upload"></span> Importar</a></li> 
-
+                    
                     <?php
                       echo $this->Element('menu/ayuda');  
                     ?>
