@@ -10,6 +10,10 @@
   <h2>
     <center><?php echo __('Atencion Curativa - Establecimientos'); ?></center>
   </h2>
+  <br><br>
+  <?php $reg = $hcxestablishments[0]['Hcxestablishment']['regions_id']; 
+  ?>
+  <span class="fa fa-pie-chart"></span> <?php echo $this->Html->Link('Graficos', array('controller' => 'Hcxestablishments', 'action' => 'chart', $yer, $reg)); ?>
   <div class="table-responsive">
     <table class="table table-bordered table-condensed" cellpadding="0" cellspacing="0">
       <thead>
