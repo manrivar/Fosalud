@@ -10,17 +10,20 @@
   <center>Atencion Curativa</center>
 </h2>
 <span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Hcxestablishments', 'action' => 'cargar_Evaluacion', $yer)); ?>
-
+&nbsp;&nbsp;
+<span class="fa fa-pie-chart"></span> <?php echo $this->Html->Link('Graficos', array('controller' => 'Healingcares', 'action' => 'chart', $yer)); ?>
 
 <?= $this->Form->create('healingcares', ['type' => 'get']); ?>
 <?php $option = array('2020' => '2020', '2021' => '2021', '2022' => '2022', '2023' => '2023', '2024' => '2024', '2025' => '2025', '2026' => '2026', '2027' => '2027', '2028' => '2028', '2029' => '2029', '2030' => '2030'); ?>
 
-<?php echo $this->Form->input('yir', array(
-  'label' => '',
-  'options' => $option,
-  'empty' => 'Selecciona un año',
-  'selected' => 'Selecciona un año'
-)); ?>
+<?php 
+  echo $this->Form->input('yir', array(
+    'label' => '',
+    'options' => $option,
+    'empty' => 'Selecciona un año',
+    'selected' => 'Selecciona un año'
+  )); 
+?>
 <!-- <?= $this->Form->control('yir', ['class' => 'datepicker', 'value' => $this->request->query('yir')]); ?> -->
 <button class="btn btn-primary" name="search">
   <span class="glyphicon glyphicon-search"></span>
