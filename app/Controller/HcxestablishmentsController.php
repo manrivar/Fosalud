@@ -336,13 +336,13 @@ class HcxestablishmentsController extends AppController
         if ($reg == 1) {
             $estanum = 31;
         } elseif ($reg == 2) {
-            $estanum = 33;
+            $estanum = 34;
         } elseif ($reg == 3) {
             $estanum = 20;
         } elseif ($reg == 4) {
             $estanum = 27;
         } elseif ($reg == 5) {
-            $estanum = 56;
+            $estanum = 55;
         }
 
         if ($existe[0][0]['total'] != $estanum) {
@@ -374,7 +374,7 @@ class HcxestablishmentsController extends AppController
 
                 if (!empty($_FILES['archivo' . $i]['tmp_name']) && is_uploaded_file($_FILES['archivo' . $i]['tmp_name'])) {
                     $filename = basename($_FILES['archivo' . $i]['name']);
-                    $out = $dir . "/" . $filename;
+                    
                     if (file_exists($dir) && is_dir($dir)) {
                         //Si la carpeta existe solo se copia el archivo del temporal hacia la carpeta de sesion
 
@@ -520,10 +520,10 @@ class HcxestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
-        $this->redirect([
-            'controller' => 'Hcxestablishments',
-            'action' => 'index', $reg, $year
-        ]);
+        // $this->redirect([
+        //     'controller' => 'Hcxestablishments',
+        //     'action' => 'index', $reg, $year
+        // ]);
     }
 
 
@@ -835,20 +835,47 @@ EOF;
             )
         );
 
+        // Consulta sql la cual devuelve todos los establecimientos de la region en la variable "reg"
+        $hcxesta = $this->Hcxestablishment->Establishment->find(
+            'list',
+            array(
+                'fields' => array('Establishment.establishment_name'),
+                'conditions' => array(
+                    'Establishment.regions_id' => $reg
+                )
+            )
+        );
+
+        //hace que empiece el array en 0
+        $hcxesta = array_values($hcxesta);
+
+        // se encarga de realizar un foreach y mostrar todos los establecimientos de esa region        
+            foreach ($hcxesta as $valo) {
+                $this->Highcharts->setChartParams(
+                    $chartName3, array(
+                        'xAxisCategories' => $hcxesta
+                    )    
+                );
+            }
+
+        // consulta sql que devuelve toda la tabla Hcxestablishments
         $hcxestablishments = $this->Hcxestablishment->find(
             'all',
             array(
                 'fields' => array(),
                 'conditions' => array(
                     'Hcxestablishment.year =' => $yer,
-                    'Hcxestablishment.regions_id' => $reg
+                    'Hcxestablishment.regions_id ' => $reg
                 ),
             )
         );
+        // echo "<pre>";
+        // print_r($hcxestablishments);
+        // echo "</pre>";
 
-        
         foreach ($hcxestablishments as $valor) {
-            $t1 = (intval($valor['Hcxestablishment']['con_january']) + intval($valor['Hcxestablishment']['eme_january']) + intval($valor['Hcxestablishment']['ext_january']));
+           
+            $t1 = intval($valor['Hcxestablishment']['con_january']) + intval($valor['Hcxestablishment']['eme_january']) + intval($valor['Hcxestablishment']['ext_january']);
 
             $t2 = ($valor['Hcxestablishment']['con_february'] + $valor['Hcxestablishment']['eme_february'] + $valor['Hcxestablishment']['ext_february']);
 
@@ -872,48 +899,107 @@ EOF;
 
             $t12 = ($valor['Hcxestablishment']['con_december'] + $valor['Hcxestablishment']['eme_decem'] + $valor['Hcxestablishment']['ext_decem']);
 
-            $dati = array($t1, $t2, $t3, $t4, $t5, $t6, $t7, $t8, $t9, $t10, $t11, $t12);
+            $t13 = intval($valor['Hcxestablishment']['con_january']) + intval($valor['Hcxestablishment']['eme_january']) + intval($valor['Hcxestablishment']['ext_january']);
 
-            while ($row = mysqli_fetch_array($hcxestablishments)) {
+            $t14 = ($valor['Hcxestablishment']['con_february'] + $valor['Hcxestablishment']['eme_february'] + $valor['Hcxestablishment']['ext_february']);
 
-                $data = $row['establishment_name'];
-                echo $data;
-            }
+            $t15 = ($valor['Hcxestablishment']['con_march'] + $valor['Hcxestablishment']['eme_march'] + $valor['Hcxestablishment']['ext_march']);
 
-            $this->Highcharts->setChartParams(
-                $chartName3,
-                array(
-                    'xAxisCategories' => array($data)
-                )
-            );
+            $t16 = ($valor['Hcxestablishment']['con_april'] + $valor['Hcxestablishment']['eme_april'] + $valor['Hcxestablishment']['ext_april']);
 
-            $estaSeries = $this->Highcharts->addChartSeries();
-            $estaSeries->type = 'column';
-            $estaSeries->addName($valor['Establishment']['establishment_name'])
-            ->addData($dati);
+            $t17 = ($valor['Hcxestablishment']['con_may'] + $valor['Hcxestablishment']['eme_may'] + $valor['Hcxestablishment']['ext_may']);
 
-            $Mychart->addSeries($estaSeries);
+            $t18 = ($valor['Hcxestablishment']['con_june'] + $valor['Hcxestablishment']['eme_june'] + $valor['Hcxestablishment']['ext_june']);
 
+            $t19 = ($valor['Hcxestablishment']['con_july'] + $valor['Hcxestablishment']['eme_july'] + $valor['Hcxestablishment']['ext_july']);
+
+            $t20 = ($valor['Hcxestablishment']['con_august'] + $valor['Hcxestablishment']['eme_august'] + $valor['Hcxestablishment']['ext_august']);
+
+            
             echo "<pre>";
-            var_dump($valor);
+            print_r($hcxestablishments);
             echo "</pre>";
+            
+            $data = $hcxestablishments[0];
+            $enero = $this->Highcharts->addChartSeries();
+            $enero->type = 'column';
+            $enero->addName('Enero')
+            ->addData($data);
+
+            $febrero = $this->Highcharts->addChartSeries();
+            $febrero->type = 'column';
+            $febrero->addName('Febrero')
+            ->addData($data);
+
+            $marzo = $this->Highcharts->addChartSeries();
+            $marzo->type = 'column';
+            $marzo->addName('Marzo')
+            ->addData($valor['Hcxestablishment']['con_january']);
+
+            $abril = $this->Highcharts->addChartSeries();
+            $abril->type = 'column';
+            $abril->addName('Abril')
+            ->addData($valor['Hcxestablishment']['con_february']);
+
+            $mayo = $this->Highcharts->addChartSeries();
+            $mayo->type = 'column';
+            $mayo->addName('Mayo')
+            ->addData($valor['Hcxestablishment']['con_january']);
+
+            $junio = $this->Highcharts->addChartSeries();
+            $junio->type = 'column';
+            $junio->addName('Junio')
+            ->addData($valor['Hcxestablishment']['con_february']);
+
+            $julio = $this->Highcharts->addChartSeries();
+            $julio->type = 'column';
+            $julio->addName('Julio')
+            ->addData($valor['Hcxestablishment']['con_january']);
+
+            $agosto = $this->Highcharts->addChartSeries();
+            $agosto->type = 'column';
+            $agosto->addName('Agosto')
+            ->addData($valor['Hcxestablishment']['con_february']);
+
+            $septiembre = $this->Highcharts->addChartSeries();
+            $septiembre->type = 'column';
+            $septiembre->addName('Septiembre')
+            ->addData($valor['Hcxestablishment']['con_january']);
+
+            $octubre = $this->Highcharts->addChartSeries();
+            $octubre->type = 'column';
+            $octubre->addName('Octubre')
+            ->addData($valor['Hcxestablishment']['con_february']);
+
+            $noviembre = $this->Highcharts->addChartSeries();
+            $noviembre->type = 'column';
+            $noviembre->addName('Noviembre')
+            ->addData($valor['Hcxestablishment']['con_january']);
+
+            $diciembre = $this->Highcharts->addChartSeries();
+            $diciembre->type = 'column';
+            $diciembre->addName('Diciembre')
+            ->addData($valor['Hcxestablishment']['con_february']);
+            
         }
+        // $Mychart->addSeries($estaSeries);
+        // $estaSeries = $this->Highcharts->addChartSeries();
+        // $estaSeries->type = 'column';
+        // $estaSeries->addName($valor['Establishment']['establishment_name'])
+        // ->addData($dati);
 
-
-        $johnSeries = $this->Highcharts->addChartSeries();
-        $janeSeries = $this->Highcharts->addChartSeries();
-        $joeSeries = $this->Highcharts->addChartSeries();
-
-        $johnSeries->addName('John')
-            ->addData($this->johnData);
-        $janeSeries->addName('Jane')
-            ->addData($this->janeData);
-        $joeSeries->addName('Joe')
-            ->addData($this->joeData);
-
-        $Mychart->addSeries($johnSeries);
-        $Mychart->addSeries($janeSeries);
-        $Mychart->addSeries($joeSeries);
+        $Mychart->addSeries($enero);
+        $Mychart->addSeries($febrero);
+        $Mychart->addSeries($marzo);
+        $Mychart->addSeries($abril);
+        $Mychart->addSeries($mayo);
+        $Mychart->addSeries($junio);
+        $Mychart->addSeries($julio);
+        $Mychart->addSeries($agosto);
+        $Mychart->addSeries($septiembre);
+        $Mychart->addSeries($octubre);
+        $Mychart->addSeries($noviembre);
+        $Mychart->addSeries($diciembre);
 
         $this->set(compact('chartName3'));
 

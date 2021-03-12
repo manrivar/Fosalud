@@ -268,7 +268,7 @@ class AdvicesxestablishmentsController extends AppController
         } elseif ($reg == 4) {
             $estanum = 27;
         } elseif ($reg == 5) {
-            $estanum = 56;
+            $estanum = 55;
         }
         
         if ($existe[0][0]['total'] != $estanum) {
