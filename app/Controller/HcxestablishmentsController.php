@@ -820,18 +820,18 @@ EOF;
             $chartName3,
             array(
                 'renderTo' => 'columnwrapper', // div to display chart inside
-                'chartWidth' => 1000,
+                'chartWidth' => 1300,
                 'chartHeight' => 750,
                 'chartBackgroundColorLinearGradient' => array(0, 0, 0, 300),
                 'chartBackgroundColorStops' => array(array(0, 'rgb(217, 217, 217)'), array(1, 'rgb(255, 255, 255)')),
                 'title' => 'Stacked Column Chart',
                 'subtitle' => 'Source: World Bank',
                 'xAxisLabelsEnabled' => TRUE,
-                // 'xAxisCategories' => array('Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas'),
                 'yAxisTitleText' => 'Total Fruit Consumption',
-                'enableAutoStep' => FALSE,
+                'enableAutoStep' => false,
                 'creditsEnabled' => FALSE,
-                'plotOptionsSeriesStacking' => 'normal' // other options is 'percent'
+                'plotOptionsSeriesStacking' => 'normal', // other options is 'percent'
+                'plotOptionsColumnDataLabelsEnabled' => true,
             )
         );
 
@@ -859,135 +859,144 @@ EOF;
             }
 
         // consulta sql que devuelve toda la tabla Hcxestablishments
-        $hcxestablishments = $this->Hcxestablishment->find(
-            'all',
-            array(
-                'fields' => array(),
-                'conditions' => array(
-                    'Hcxestablishment.year =' => $yer,
-                    'Hcxestablishment.regions_id ' => $reg
-                ),
-            )
-        );
-        // echo "<pre>";
-        // print_r($hcxestablishments);
-        // echo "</pre>";
+        $mes = $this->Hcxestablishment->query("SELECT con_january + eme_january + ext_january as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
 
-        foreach ($hcxestablishments as $valor) {
-           
-            $t1 = intval($valor['Hcxestablishment']['con_january']) + intval($valor['Hcxestablishment']['eme_january']) + intval($valor['Hcxestablishment']['ext_january']);
+        $mes2 = $this->Hcxestablishment->query("SELECT con_february + eme_february + ext_february as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
 
-            $t2 = ($valor['Hcxestablishment']['con_february'] + $valor['Hcxestablishment']['eme_february'] + $valor['Hcxestablishment']['ext_february']);
+        $mes3 = $this->Hcxestablishment->query("SELECT con_march + eme_march + ext_march as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
 
-            $t3 = ($valor['Hcxestablishment']['con_march'] + $valor['Hcxestablishment']['eme_march'] + $valor['Hcxestablishment']['ext_march']);
+        $mes4 = $this->Hcxestablishment->query("SELECT con_april + eme_april + ext_april as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
 
-            $t4 = ($valor['Hcxestablishment']['con_april'] + $valor['Hcxestablishment']['eme_april'] + $valor['Hcxestablishment']['ext_april']);
+        $mes5 = $this->Hcxestablishment->query("SELECT con_may + eme_may + ext_may as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
 
-            $t5 = ($valor['Hcxestablishment']['con_may'] + $valor['Hcxestablishment']['eme_may'] + $valor['Hcxestablishment']['ext_may']);
+        $mes6 = $this->Hcxestablishment->query("SELECT con_june + eme_june + ext_june as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
 
-            $t6 = ($valor['Hcxestablishment']['con_june'] + $valor['Hcxestablishment']['eme_june'] + $valor['Hcxestablishment']['ext_june']);
+        $mes7 = $this->Hcxestablishment->query("SELECT con_july + eme_july + ext_july as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
 
-            $t7 = ($valor['Hcxestablishment']['con_july'] + $valor['Hcxestablishment']['eme_july'] + $valor['Hcxestablishment']['ext_july']);
+        $mes8 = $this->Hcxestablishment->query("SELECT con_august + eme_august + ext_august as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
 
-            $t8 = ($valor['Hcxestablishment']['con_august'] + $valor['Hcxestablishment']['eme_august'] + $valor['Hcxestablishment']['ext_august']);
+        $mes9 = $this->Hcxestablishment->query("SELECT con_september + eme_september + ext_september as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
 
-            $t9 = ($valor['Hcxestablishment']['con_september'] + $valor['Hcxestablishment']['eme_september'] + $valor['Hcxestablishment']['ext_september']);
+        $mes10 = $this->Hcxestablishment->query("SELECT con_october + eme_october + ext_october as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
 
-            $t10 = ($valor['Hcxestablishment']['con_october'] + $valor['Hcxestablishment']['eme_october'] + $valor['Hcxestablishment']['ext_october']);
+        $mes11 = $this->Hcxestablishment->query("SELECT con_november + eme_november + ext_november as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
 
-            $t11 = ($valor['Hcxestablishment']['con_november'] + $valor['Hcxestablishment']['eme_november'] + $valor['Hcxestablishment']['ext_november']);
-
-            $t12 = ($valor['Hcxestablishment']['con_december'] + $valor['Hcxestablishment']['eme_decem'] + $valor['Hcxestablishment']['ext_decem']);
-
-            $t13 = intval($valor['Hcxestablishment']['con_january']) + intval($valor['Hcxestablishment']['eme_january']) + intval($valor['Hcxestablishment']['ext_january']);
-
-            $t14 = ($valor['Hcxestablishment']['con_february'] + $valor['Hcxestablishment']['eme_february'] + $valor['Hcxestablishment']['ext_february']);
-
-            $t15 = ($valor['Hcxestablishment']['con_march'] + $valor['Hcxestablishment']['eme_march'] + $valor['Hcxestablishment']['ext_march']);
-
-            $t16 = ($valor['Hcxestablishment']['con_april'] + $valor['Hcxestablishment']['eme_april'] + $valor['Hcxestablishment']['ext_april']);
-
-            $t17 = ($valor['Hcxestablishment']['con_may'] + $valor['Hcxestablishment']['eme_may'] + $valor['Hcxestablishment']['ext_may']);
-
-            $t18 = ($valor['Hcxestablishment']['con_june'] + $valor['Hcxestablishment']['eme_june'] + $valor['Hcxestablishment']['ext_june']);
-
-            $t19 = ($valor['Hcxestablishment']['con_july'] + $valor['Hcxestablishment']['eme_july'] + $valor['Hcxestablishment']['ext_july']);
-
-            $t20 = ($valor['Hcxestablishment']['con_august'] + $valor['Hcxestablishment']['eme_august'] + $valor['Hcxestablishment']['ext_august']);
-
+        $mes12 = $this->Hcxestablishment->query("SELECT con_december + eme_december + ext_december as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
             
-            echo "<pre>";
-            print_r($hcxestablishments);
-            echo "</pre>";
-            
-            $data = $hcxestablishments[0];
+        function getSuma($arreglo)
+        {
+            $a_temp = array();
+
+            foreach ($arreglo as $arr) {
+                $a_temp[] = $arr[0]["suma"];
+                
+            }
+            return $a_temp;
+        }
+
+        $mes = getSuma($mes);
+        $mes = array_map('intval', $mes);
+
+        $mes2 = getSuma($mes2);
+        $mes2 = array_map('intval', $mes2);
+
+        $mes3 = getSuma($mes3);
+        $mes3 = array_map('intval', $mes3);
+
+        $mes4 = getSuma($mes4);
+        $mes4 = array_map('intval', $mes4);
+
+        $mes5 = getSuma($mes5);
+        $mes5 = array_map('intval', $mes5);
+
+        $mes6 = getSuma($mes6);
+        $mes6 = array_map('intval', $mes6);
+
+        $mes7 = getSuma($mes7);
+        $mes7 = array_map('intval', $mes7);
+
+        $mes8 = getSuma($mes8);
+        $mes8 = array_map('intval', $mes8);
+
+        $mes9 = getSuma($mes9);
+        $mes9 = array_map('intval', $mes9);
+
+        $mes10 = getSuma($mes10);
+        $mes10 = array_map('intval', $mes10);
+
+        $mes11 = getSuma($mes11);
+        $mes11 = array_map('intval', $mes11);
+
+        $mes12 = getSuma($mes12);
+        $mes12 = array_map('intval', $mes12);
+
+        foreach ($mes as $valor) {
+
+            $data = $mes;
+
             $enero = $this->Highcharts->addChartSeries();
             $enero->type = 'column';
             $enero->addName('Enero')
-            ->addData($data);
+            ->addData($mes);
 
             $febrero = $this->Highcharts->addChartSeries();
             $febrero->type = 'column';
             $febrero->addName('Febrero')
-            ->addData($data);
+            ->addData($mes2);
 
             $marzo = $this->Highcharts->addChartSeries();
             $marzo->type = 'column';
             $marzo->addName('Marzo')
-            ->addData($valor['Hcxestablishment']['con_january']);
+            ->addData($mes3);
 
             $abril = $this->Highcharts->addChartSeries();
             $abril->type = 'column';
             $abril->addName('Abril')
-            ->addData($valor['Hcxestablishment']['con_february']);
+            ->addData($mes4);
 
             $mayo = $this->Highcharts->addChartSeries();
             $mayo->type = 'column';
             $mayo->addName('Mayo')
-            ->addData($valor['Hcxestablishment']['con_january']);
+            ->addData($mes5);
 
             $junio = $this->Highcharts->addChartSeries();
             $junio->type = 'column';
             $junio->addName('Junio')
-            ->addData($valor['Hcxestablishment']['con_february']);
+            ->addData($mes6);
 
             $julio = $this->Highcharts->addChartSeries();
             $julio->type = 'column';
             $julio->addName('Julio')
-            ->addData($valor['Hcxestablishment']['con_january']);
+            ->addData($mes7);
 
             $agosto = $this->Highcharts->addChartSeries();
             $agosto->type = 'column';
             $agosto->addName('Agosto')
-            ->addData($valor['Hcxestablishment']['con_february']);
+            ->addData($mes8);
 
             $septiembre = $this->Highcharts->addChartSeries();
             $septiembre->type = 'column';
             $septiembre->addName('Septiembre')
-            ->addData($valor['Hcxestablishment']['con_january']);
+            ->addData($mes9);
 
             $octubre = $this->Highcharts->addChartSeries();
             $octubre->type = 'column';
             $octubre->addName('Octubre')
-            ->addData($valor['Hcxestablishment']['con_february']);
+            ->addData($mes10);
 
             $noviembre = $this->Highcharts->addChartSeries();
             $noviembre->type = 'column';
             $noviembre->addName('Noviembre')
-            ->addData($valor['Hcxestablishment']['con_january']);
+            ->addData($mes11);
 
             $diciembre = $this->Highcharts->addChartSeries();
             $diciembre->type = 'column';
             $diciembre->addName('Diciembre')
-            ->addData($valor['Hcxestablishment']['con_february']);
+            ->addData($mes12);
+
             
         }
-        // $Mychart->addSeries($estaSeries);
-        // $estaSeries = $this->Highcharts->addChartSeries();
-        // $estaSeries->type = 'column';
-        // $estaSeries->addName($valor['Establishment']['establishment_name'])
-        // ->addData($dati);
-
+    
         $Mychart->addSeries($enero);
         $Mychart->addSeries($febrero);
         $Mychart->addSeries($marzo);
