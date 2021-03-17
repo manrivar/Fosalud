@@ -292,7 +292,7 @@ class FampxestablishmentsController extends AppController
         if ($reg == 1) {
             $estanum = 31;
         } elseif ($reg == 2) {
-            $estanum = 33;
+            $estanum = 34;
         } elseif ($reg == 3) {
             $estanum = 20;
         } elseif ($reg == 4) {
