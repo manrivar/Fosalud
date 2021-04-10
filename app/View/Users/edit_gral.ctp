@@ -11,6 +11,7 @@
 <div class="row">
 
 
+
     <div class="users col-lg-8 col-xs-12 col-sm-12 col-md-8">
         <?php echo $this->Form->create('User'); ?>
         <fieldset class="form-group">
@@ -28,11 +29,10 @@
             echo $this->Form->input('estado', array("label" => "Estado",'empty'=>'Seleccione','options'=>$estados));
             ?>
 
-            
-
             <div>
                 <button id="enviar" onclick="" class="btn-block btn-primary">Actualizar</button>
             </div>
+
         </fieldset>
         <?php echo $this->Form->end(); ?>
 

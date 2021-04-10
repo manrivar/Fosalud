@@ -29,7 +29,7 @@ class AdvicesxestablishmentsController extends AppController
         // metodo para filtrar por fechas
         $yir = $this->request->query('yir');
         $reg = $region;
-
+        $this->set(array('reg' => $reg));
         $conditions = [];
         if ($yir) {
             $conditions[] = [
@@ -410,7 +410,7 @@ class AdvicesxestablishmentsController extends AppController
 
     public function import()
     {
-        $regions = $this->Hcxestablishment->Region->find('list');
+        $regions = $this->Advicesxestablishment->Region->find('list');
         //$yir = $this->request->query('yir');
         $datos = $this->request->data;
         $this->set(compact('regions', 'datos'));
@@ -430,4 +430,83 @@ class AdvicesxestablishmentsController extends AppController
         //LLAMADA A FUNCION GUARDAR DEL MODELO BITACORA, se pasa como parametro el objeto $Bitacora
         $this->Bitacora->save($Bitacora);
     }    
+
+    public function chart($yer, $reg)
+    {
+        $this->set(array('yer' => $yer));
+        $this->set(array('reg' => $reg));
+
+         $mon = $this->Advicesxestablishment->find('all',
+            array(
+                'fields' => array('SUM(Advicesxestablishment.january) as jan, SUM(Advicesxestablishment.february) as feb, SUM(Advicesxestablishment.march) as mar, SUM(Advicesxestablishment.april) as apr, SUM(Advicesxestablishment.may) as may, SUM(Advicesxestablishment.june) as jun, SUM(Advicesxestablishment.july) as jul, SUM(Advicesxestablishment.august) as aug, SUM(Advicesxestablishment.september) as sep, SUM(Advicesxestablishment.october) as oct, SUM(Advicesxestablishment.november) as nov, SUM(Advicesxestablishment.december) as decem'),
+                'conditions' => array(
+                    'Advicesxestablishment.year =' => $yer,
+                    'Advicesxestablishment.regions_id' => $reg
+                )
+            )
+        );
+        
+        $tot_jan = $mon[0][0]['jan'];
+        $tot_feb = $mon[0][0]['feb'];
+        $tot_mar = $mon[0][0]['mar'];
+        $tot_apr = $mon[0][0]['apr'];
+        $tot_may = $mon[0][0]['may'];
+        $tot_jun = $mon[0][0]['jun'];
+        $tot_jul = $mon[0][0]['jul'];
+        $tot_aug = $mon[0][0]['aug'];
+        $tot_sep = $mon[0][0]['sep'];
+        $tot_oct = $mon[0][0]['oct'];
+        $tot_nov = $mon[0][0]['nov'];
+        $tot_dec = $mon[0][0]['decem'];
+        
+        
+        // *************************************************************************************************************************************
+
+        function getSuma($arreglo)
+        {
+            $a_temp = array();
+
+            foreach ($arreglo as $arr) {
+                $a_temp[] = $arr[0]["suma"];
+                
+            }
+            return $a_temp;
+        }
+
+        $tot_jan = getSuma($tot_jan);
+        $tot_jan = array_map('intval', $tot_jan);
+
+
+        $ene = $tot_jan;
+        $feb = array(intval($tot_feb));
+        $mar = array(intval($tot_mar));
+        $abr = array(intval($tot_apr));
+        $may = array(intval($tot_may));
+        $jun = array(intval($tot_jun));
+        $jul = array(intval($tot_jul));
+        $aug = array(intval($tot_aug));
+        $sep = array(intval($tot_sep));
+        $oct = array(intval($tot_oct));
+        $nov = array(intval($tot_nov));
+        $dec = array(intval($tot_dec));
+        // suma
+        // promedio
+        $prom1 = ($tot_jan + $tot_jan + $tot_jan) / 3;
+        $prom2 = ($tot_feb + $tot_feb + $tot_feb) / 3;
+        $prom3 = ($tot_mar + $tot_mar + $tot_mar) / 3;
+        $prom4 = ($tot_apr + $tot_apr + $tot_apr) / 3;
+        $prom5 = ($tot_may + $tot_may + $tot_may) / 3;
+        $prom6 = ($tot_jun + $tot_jun + $tot_jun) / 3;
+        $prom7 = ($tot_jul + $tot_jul + $tot_jul) / 3;
+        $prom8 = ($tot_aug + $tot_aug + $tot_aug) / 3;
+        $prom9 = ($tot_sep + $tot_sep + $tot_sep) / 3;
+        $prom10 = ($tot_oct + $tot_oct + $tot_oct) / 3;
+        $prom11 = ($tot_nov + $tot_nov + $tot_nov) / 3;
+        $prom12 = ($tot_dec + $tot_dec + $tot_dec) / 3;
+
+        $yearData = array($ene, $feb, $mar, $abr, $may, $jun, $jul, $aug, $sep, $oct, $nov, $dec);
+        $avgData = array($prom1, $prom2, $prom3, $prom4, $prom5, $prom6, $prom7, $prom8, $prom9, $prom10, $prom11, $prom12);
+        $this->set(array('yearData' => $yearData));
+
+    }
 }

@@ -1,3 +1,8 @@
+<?php
+echo $this->Html->script('zingchart/modules/zingchart-line.min');
+echo $this->Html->script('zingchart/zingchart.min');
+?>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
 <div class="col-lg-12 col-xs-12 col-sm-12">
   <ol class="breadcrumb">
     <li>
@@ -91,3 +96,24 @@
     ?>
   </div>
 </div>
+
+<div id="myChart"></div>
+<!-- Just before the closing body tag is best -->
+<?php print_r($uno);?>
+<script>  
+  zingchart.render({    
+    id: 'myChart',    
+    data: {      
+      type: 'hbar',
+      'scale-x': {
+      labels: [ "Q1", "Q2", "Q3", "Q4" ]
+      },    
+      series: [        
+        { values: [54,23,34,23] },        
+        { values: [10,15,16,20] }      
+      ]    
+    }  
+  });
+
+</script>
+</body>

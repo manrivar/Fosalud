@@ -520,10 +520,10 @@ class HcxestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
-        // $this->redirect([
-        //     'controller' => 'Hcxestablishments',
-        //     'action' => 'index', $reg, $year
-        // ]);
+        $this->redirect([
+            'controller' => 'Hcxestablishments',
+            'action' => 'index', $reg, $year
+        ]);
     }
 
 
@@ -677,7 +677,7 @@ class HcxestablishmentsController extends AppController
                 'chartBackgroundColorLinearGradient' => array(0, 0, 0, 300),
                 'chartBackgroundColorStops' => array(array(0, 'rgb(217, 217, 217)'), array(1, 'rgb(255, 255, 255)')),
                 'title' => 'Atenciones Curativas - Anual',
-                'subtitle' => 'Fuente: Simmow, Vigepes, Seps, Vacunas, Silin, Desastres',
+                'subtitle' => 'Fuente: Simmow',
                 'xAxisLabelsEnabled' => TRUE,
                 'xAxisCategories' => array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'),
                 'yAxisTitleText' => 'Unidades',
@@ -730,15 +730,12 @@ class HcxestablishmentsController extends AppController
                 )
             )
         );
-// echo "<pre>";
-// print_r($mont);
-// echo 'hola a todos'.$mont[20]['Establishment']['establishment_name'];
-// echo "</pre>";
+
         $tot = $sum_con + $sum_eme + $sum_ext;
 
-        $p1 = ($sum_con * 100)/$tot;
-        $p2 = ($sum_eme * 100)/$tot;
-        $p3 = ($sum_ext * 100)/$tot;
+        $p1 = ($sum_con * 100) / $tot;
+        $p2 = ($sum_eme * 100) / $tot;
+        $p3 = ($sum_ext * 100) / $tot;
         $p11 = number_format($p1, 2, '.', '');
         $p22 = number_format($p2, 2, '.', '');
         $p33 = number_format($p3, 2, '.', '');
@@ -775,7 +772,7 @@ EOF;
             $chartName2,
             array(
                 'renderTo' => 'pie3dwrapper', // div to display chart inside
-                'chartWidth' => 500,
+                'chartWidth' => 1300,
                 'chartHeight' => 600,
                 'options3d' => array(
                     'enabled' => true,
@@ -815,6 +812,13 @@ EOF;
                 'exporting' => TRUE
             )
         );
+        $dataLabelsFormat = <<<EOF
+function(){point.x}
+EOF;
+
+        $tooltipFormatFunction = <<<EOF
+function(){series.name}: {point.y}<br/>Total: {point.stackTotal}
+EOF;
 
         $this->Highcharts->setChartParams(
             $chartName3,
@@ -832,6 +836,10 @@ EOF;
                 'creditsEnabled' => FALSE,
                 'plotOptionsSeriesStacking' => 'normal', // other options is 'percent'
                 'plotOptionsColumnDataLabelsEnabled' => true,
+                'plotOptionsPieDataLabelsFormat' => $dataLabelsFormat,
+                'tooltipFormatter' => $tooltipFormatFunction,
+                'headerFormat' => '<b>{point.x}</b><br/>',
+                'pointFormat' => '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
             )
         );
 
@@ -893,7 +901,7 @@ EOF;
             }
             return $a_temp;
         }
-
+        
         $mes = getSuma($mes);
         $mes = array_map('intval', $mes);
 
@@ -993,7 +1001,6 @@ EOF;
             $diciembre->type = 'column';
             $diciembre->addName('Diciembre')
             ->addData($mes12);
-
             
         }
     
@@ -1012,301 +1019,5 @@ EOF;
 
         $this->set(compact('chartName3'));
 
-
-
-
-
-        // $chartName3 = 'Bar Chart';
-        // $Mychart = $this->Highcharts->create($chartName3, 'bar');
-
-        // $this->Highcharts->setChartParams(
-        //     $chartName3,
-        //     array(
-        //         'renderTo' => 'barwrapper', // div to display chart inside
-        //         'chartWidth' => 1300,
-        //         'chartHeight' => 1500,
-        //         'chartMarginTop' => 60,
-        //         'chartMarginLeft' => 90,
-        //         'chartMarginRight' => 30,
-        //         'chartMarginBottom' => 110,
-        //         'chartSpacingRight' => 10,
-        //         'chartSpacingBottom' => 15,
-        //         'chartSpacingLeft' => 0,
-        //         'chartAlignTicks' => FALSE,
-        //         'chartBackgroundColorLinearGradient' => array(0, 0, 0, 300),
-        //         'chartBackgroundColorStops' => array(array(0, 'rgb(217, 217, 217)'), array(1, 'rgb(255, 255, 255)')),
-        //         'title' => 'Monthly Sales Summary',
-        //         'titleAlign' => 'left',
-        //         'titleFloating' => TRUE,
-        //         'titleStyleFont' => '18px Metrophobic, Arial, sans-serif',
-        //         'titleStyleColor' => '#0099ff',
-        //         'titleX' => 20,
-        //         'titleY' => 20,
-        //         'legendEnabled' => TRUE,
-        //         'legendLayout' => 'horizontal',
-        //         'legendAlign' => 'center',
-        //         'legendVerticalAlign ' => 'bottom',
-        //         'legendItemStyle' => array('color' => '#222'),
-        //         'legendBackgroundColorLinearGradient' => array(0, 0, 0, 25),
-        //         'legendBackgroundColorStops' => array(array(0, 'rgb(217, 217, 217)'), array(1, 'rgb(255, 255, 255)')),
-        //         'tooltipEnabled' => FALSE,
-        //         // 'tooltipBackgroundColorLinearGradient' => array(0,0,0,50),   // triggers js error
-        //         // 'tooltipBackgroundColorStops' => array(array(0,'rgb(217, 217, 217)'),array(1,'rgb(255, 255, 255)')),
-        //         //'plotOptionsLinePointStart' 		=> strtotime('-30 day') * 1000,
-        //         //'plotOptionsLinePointInterval' 	=> 24 * 3600 * 1000,
-        //         //'xAxisType' 				=> 'datetime',
-        //         //'xAxisTickInterval' 			=> 10,
-        //         //'xAxisStartOnTick' 			=> TRUE,
-        //         //'xAxisTickmarkPlacement' 		=> 'on',
-        //         //'xAxisTickLength' 			=> 10,
-        //         //'xAxisMinorTickLength' 		=> 5,
-        //         'xAxisLabelsEnabled' => TRUE,
-        //         'xAxisLabelsAlign' => 'right',
-        //         'xAxisLabelsStep' => 1,
-        //         //'xAxisLabelsRotation' 		=> -35,
-        //         'xAxislabelsX' => -10,
-        //         'xAxisLabelsY' => 20,
-        //         'xAxisCategories' => array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'),
-        //         //'yAxisMin' 				=> 0,
-        //         //'yAxisMaxPadding'			=> 0.2,
-        //         //'yAxisEndOnTick'			=> FALSE,
-        //         //'yAxisMinorGridLineWidth' 		=> 0,
-        //         //'yAxisMinorTickInterval' 		=> 'auto',
-        //         //'yAxisMinorTickLength' 		=> 1,
-        //         //'yAxisTickLength'			=> 2,
-        //         //'yAxisMinorTickWidth'			=> 1,
-        //         'yAxisTitleText' => 'Units',
-        //         //'yAxisTitleAlign' 		=> 'high',
-        //         //'yAxisTitleStyleFont' 	=> '14px Metrophobic, Arial, sans-serif',
-        //         //'yAxisTitleRotation' 		=> 0,
-        //         //'yAxisTitleX' 		=> 0,
-        //         //'yAxisTitleY' 		=> -10,
-        //         //'yAxisPlotLines' 		=> array( array('color' => '#808080', 'width' => 1, 'value' => 0 )),
-        //         // autostep options
-        //         'exportingEnabled' => FALSE,
-        //         'enableAutoStep' => FALSE,
-        //         'plotOptionsColumnDataLabelsEnabled' => true
-        //     )
-        // );
-        // $hcxestablishments = $this->Hcxestablishment->find(
-        //     'all',
-        //     array(
-        //         'fields' => array(),
-        //         'conditions' => array(
-        //             'Hcxestablishment.year =' => $yer,
-        //             'Hcxestablishment.regions_id' => $reg
-        //         ),
-        //     )
-        // );
-
-        // foreach ($hcxestablishments as $valor) {
-        //     $t1 = (intval($valor['Hcxestablishment']['con_january']) + intval($valor['Hcxestablishment']['eme_january']) + intval($valor['Hcxestablishment']['ext_january']));
-
-        //     $t2 = ($valor['Hcxestablishment']['con_february'] + $valor['Hcxestablishment']['eme_february'] + $valor['Hcxestablishment']['ext_february']);
-
-        //     $t3 = ($valor['Hcxestablishment']['con_march'] + $valor['Hcxestablishment']['eme_march'] + $valor['Hcxestablishment']['ext_march']);
-
-        //     $t4 = ($valor['Hcxestablishment']['con_april'] + $valor['Hcxestablishment']['eme_april'] + $valor['Hcxestablishment']['ext_april']);
-
-        //     $t5 = ($valor['Hcxestablishment']['con_may'] + $valor['Hcxestablishment']['eme_may'] + $valor['Hcxestablishment']['ext_may']);
-
-        //     $t6 = ($valor['Hcxestablishment']['con_june'] + $valor['Hcxestablishment']['eme_june'] + $valor['Hcxestablishment']['ext_june']);
-
-        //     $t7 = ($valor['Hcxestablishment']['con_july'] + $valor['Hcxestablishment']['eme_july'] + $valor['Hcxestablishment']['ext_july']);
-
-        //     $t8 = ($valor['Hcxestablishment']['con_august'] + $valor['Hcxestablishment']['eme_august'] + $valor['Hcxestablishment']['ext_august']);
-
-        //     $t9 = ($valor['Hcxestablishment']['con_september'] + $valor['Hcxestablishment']['eme_september'] + $valor['Hcxestablishment']['ext_september']);
-
-        //     $t10 = ($valor['Hcxestablishment']['con_october'] + $valor['Hcxestablishment']['eme_october'] + $valor['Hcxestablishment']['ext_october']);
-
-        //     $t11 = ($valor['Hcxestablishment']['con_november'] + $valor['Hcxestablishment']['eme_november'] + $valor['Hcxestablishment']['ext_november']);
-
-        //     $t12 = ($valor['Hcxestablishment']['con_december'] + $valor['Hcxestablishment']['eme_decem'] + $valor['Hcxestablishment']['ext_decem']);
-
-        //     $dati = array($t1, $t2, $t3, $t4, $t5, $t6, $t7, $t8, $t9, $t10, $t11, $t12);
-
-        //     $estaSeries = $this->Highcharts->addChartSeries();
-        //     $estaSeries->type = 'column';
-        //     $estaSeries->addName($valor['Establishment']['establishment_name'])
-        //     ->addData($dati);
-
-        //     $Mychart->addSeries($estaSeries);
-
-        //     echo "<pre>";
-        //     var_dump($valor);
-        //     echo "</pre>";
-        // }
-
-        // $conSeries = $this->Highcharts->addChartSeries();
-        // $conSeries->type = 'column';
-        // $conSeries->addName('Consulta Externa')
-        // ->addData($conData);
-
-        // $emeSeries = $this->Highcharts->addChartSeries();
-        // $emeSeries->type = 'column';
-        // $emeSeries->addName('Emergencia')
-        // ->addData($emeData);
-
-        // $extSeries = $this->Highcharts->addChartSeries();
-        // $extSeries->type = 'column';
-        // $extSeries->addName('Extramural')
-        // ->addData($extData);
-
-        // $Mychart->addSeries($conSeries);
-        // $Mychart->addSeries($emeSeries);
-        // $Mychart->addSeries($extSeries);
-        // $this->set(compact('chartName3'));
-        // // *********************************************************************************************************************************************************************************************************************************************************************
-    
-        $chartName4 = 'Line Chart';
-
-        $michart = $this->Highcharts->create($chartName4, 'line');
-        if ($reg == 1 || $reg == 2 || $reg == 3 || $reg == 4) {
-            $e = 200;
-        }else {
-            $e = 300;
-        }
-        $this->Highcharts->setChartParams(
-            $chartName4,
-            array(
-                'renderTo' => 'linewrapper', // div to display chart inside
-                'chartWidth' => 700,
-                'chartHeight' => 600,
-                'chartMarginTop' => 60,
-                'chartMarginLeft' => 90,
-                'chartMarginRight' => 30,
-                'chartMarginBottom' => $e,
-                'chartSpacingRight' => 10,
-                'chartSpacingBottom' => 50,
-                'chartSpacingLeft' => 0,
-                'chartAlignTicks' => FALSE,
-                'chartBackgroundColorLinearGradient' => array(0, 0, 0, 300),
-                'chartBackgroundColorStops' => array(array(0, 'rgb(217, 217, 217)'), array(1, 'rgb(255, 255, 255)')),
-                'title' => 'Establecimientos por Mes',
-                'titleAlign' => 'left',
-                'titleFloating' => TRUE,
-                'titleStyleFont' => '18px Metrophobic, Arial, sans-serif',
-                'titleStyleColor' => '#0099ff',
-                'titleX' => 20,
-                'titleY' => 20,
-                'legendEnabled' => true,
-                'legendLayout' => 'horizontal',
-                'legendAlign' => 'center',
-                'legendY' => '',
-                'legendVerticalAlign ' => 'bottom',
-                'legendItemStyle' => array('color' => '#222'),
-                'legendBackgroundColorLinearGradient' => array(0, 0, 0, 25),
-                'legendBackgroundColorStops' => array(array(0, 'rgb(217, 217, 217)'), array(1, 'rgb(255, 255, 255)')),
-                'tooltipEnabled' => FALSE,
-                //'tooltipBackgroundColorLinearGradient' 	=> array(0,0,0,50),   // triggers js error
-                //'tooltipBackgroundColorStops' 		=> array(array(0,'rgb(217, 217, 217)'),array(1,'rgb(255, 255, 255)')),
-                //'plotOptionsLinePointStart' 		=> strtotime('-30 day') * 1000,
-                //'plotOptionsLinePointInterval' 	=> 24 * 3600 * 1000,
-                //'xAxisType' 				=> 'datetime',
-                //'xAxisTickInterval' 			=> 10,
-                //'xAxisStartOnTick' 			=> TRUE,
-                //'xAxisTickmarkPlacement' 		=> 'on',
-                //'xAxisTickLength' 			=> 10,
-                //'xAxisMinorTickLength' 		=> 5,
-                'xAxisLabelsEnabled' => TRUE,
-                'xAxisLabelsAlign' => 'right',
-                'xAxisLabelsStep' => 1,
-                //'xAxisLabelsRotation' 		=> -35,
-                'xAxislabelsX' => 5,
-                'xAxisLabelsY' => 10,
-
-                'xAxisCategories' => array(
-                    'Jan',
-                    'Feb',
-                    'Mar',
-                    'Apr',
-                    'May',
-                    'Jun',
-                    'Jul',
-                    'Aug',
-                    'Sep',
-                    'Oct',
-                    'Nov',
-                    'Dec'
-                ),
-                //'yAxisMin' 				=> 0,
-                //'yAxisMaxPadding'			=> 0.2,
-                //'yAxisEndOnTick'			=> FALSE,
-                //'yAxisMinorGridLineWidth' => 0,
-                //'yAxisMinorTickInterval' 		=> 'auto',
-                //'yAxisMinorTickLength' 		=> 1,
-                //'yAxisTickLength'			=> 2,
-                //'yAxisMinorTickWidth'			=> 1,
-                'yAxisTitleText' => 'Units Sold',
-                //'yAxisTitleAlign' 			=> 'high',
-                //'yAxisTitleStyleFont' 		=> '14px Metrophobic, Arial, sans-serif',
-                //'yAxisTitleRotation' 			=> 0,
-                //'yAxisTitleX' 			=> 0,
-                //'yAxisTitleY' 			=> -10,
-                //'yAxisPlotLines' 			=> array( array('color' => '#808080', 'width' => 1, 'value' => 0 )),
-
-                /* autostep options */
-                'enableAutoStep' => FALSE
-            )
-        );
-        
-            // $hcxestablishments = $this->Hcxestablishment->find(
-            //     'all',
-            //     array(
-            //         'fields' => array('SUM(Hcxestablishment.con_january) as c_jan, SUM(Hcxestablishment.eme_january) as em_jan, SUM(Hcxestablishment.con_february) as c_feb, SUM(Hcxestablishment.eme_february) as em_feb, SUM(Hcxestablishment.con_march) as c_mar, SUM(Hcxestablishment.eme_march) as em_mar, SUM(Hcxestablishment.con_april) as c_apr, SUM(Hcxestablishment.eme_april) as em_apr, SUM(Hcxestablishment.con_may) as c_may, SUM(Hcxestablishment.eme_may) as em_may, SUM(Hcxestablishment.con_june) as c_jun, SUM(Hcxestablishment.eme_june) as em_jun, SUM(Hcxestablishment.con_july) as c_jul, SUM(Hcxestablishment.eme_july) as em_jul,  SUM(Hcxestablishment.con_august) as c_aug, SUM(Hcxestablishment.eme_august) as em_aug, SUM(Hcxestablishment.con_september) as c_sep, SUM(Hcxestablishment.eme_september) as em_sep, SUM(Hcxestablishment.con_october) as c_oct, SUM(Hcxestablishment.eme_october) as em_oct, SUM(Hcxestablishment.con_november) as c_nov, SUM(Hcxestablishment.eme_november) as em_nov, SUM(Hcxestablishment.con_december) as c_decem, SUM(Hcxestablishment.eme_december) as em_decem, SUM(Hcxestablishment.ext_january) as ex_jan, SUM(Hcxestablishment.ext_february) as ex_feb, SUM(Hcxestablishment.ext_march) as ex_mar, SUM(Hcxestablishment.ext_april) as ex_apr, SUM(Hcxestablishment.ext_may) as ex_may, SUM(Hcxestablishment.ext_june) as ex_jun, SUM(Hcxestablishment.ext_july) as ex_jul, SUM(Hcxestablishment.ext_august) as ex_aug, SUM(Hcxestablishment.ext_september) as ex_sep, SUM(Hcxestablishment.ext_october) as ex_oct, SUM(Hcxestablishment.ext_november) as ex_nov, SUM(Hcxestablishment.ext_december) as ex_decem, sibase_name'),
-            //         'conditions' => array(
-            //             'Hcxestablishment.year =' => $yer,
-            //             'Hcxestablishment.regions_id' => $reg
-            //         ),
-            //         'group' => 'Hcxestablishment.sibases_id'
-            //     )
-            // );
-        
-            // foreach ($hcxestablishments as $valor) {
-                
-            //     $t1 = (intval($valor[0]['c_jan']) + intval($valor[0]['em_jan']) + intval($valor[0]['ex_jan']));
-
-            //     $t2 = ($valor[0]['c_feb'] + $valor[0]['em_feb'] + $valor[0]['ex_feb']);
-
-            //     $t3 = ($valor[0]['c_march'] + $valor[0]['em_mar'] + $valor[0]['ex_mar']);
-
-            //     $t4 = ($valor[0]['c_april'] + $valor[0]['em_apr'] + $valor[0]['ex_apr']);
-
-            //     $t5 = ($valor[0]['c_may'] + $valor[0]['em_may'] + $valor[0]['ex_may']);
-
-            //     $t6 = ($valor[0]['c_june'] + $valor[0]['em_jun'] + $valor[0]['ex_jun']);
-
-            //     $t7 = ($valor[0]['c_july'] + $valor[0]['em_jul'] + $valor[0]['ex_jul']);
-
-            //     $t8 = ($valor[0]['c_august'] + $valor[0]['em_aug'] + $valor[0]['ex_aug']);
-
-            //     $t9 = ($valor[0]['c_sep'] + $valor[0]['em_sep'] + $valor[0]['ext_sep']);
-
-            //     $t10 = ($valor[0]['c_october'] + $valor[0]['em_oct'] + $valor[0]['ex_oct']);
-
-            //     $t11 = ($valor[0]['c_nov'] + $valor[0]['em_nov'] + $valor[0]['ex_nov']);
-
-            //     $t12 = ($valor[0]['c_decem'] + $valor[0]['em_decem'] + $valor[0]['ex_decem']);
-
-            //     $dati = array($t1, $t2, $t3, $t4, $t5, $t6, $t7, $t8, $t9, $t10, $t11, $t12);
-            //     $dati2 = array(1,2);
-
-                // $siries1 = $this->Highcharts->addChartSeries();
-                // $siries1->type = 'line';
-                // $siries1->addName($valor['Sibase']['sibase_name'])
-                // ->addData($dati);
-
-                // $michart->addSeries($siries1);
-                
-            // echo "<pre>";
-            // $pru = $t1;
-            // $pru += $t1;
-            // var_dump($valor);
-            // echo "</pre>";
-
-            // }
-        
-        $this->set(compact('chartName4'));
     }
 }

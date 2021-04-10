@@ -1,6 +1,6 @@
 <div class="col-lg-12 col-xs-12 col-sm-12">
     <ol class="breadcrumb">
-        <li> <span class="fa fa-undo"></span> <?php echo $this->Html->Link('Regresar', array('controller' => 'Healingcares', 'action' => 'index?yir=' . $yer)); ?></li>
+        <li> <span class="fa fa-undo"></span> <?php echo $this->Html->Link('Regresar', array('controller' => 'Childhealingcares', 'action' => 'index?yir=' . $yer)); ?></li>
         <li> <span class="fa fa-upload"></span> Carga de Archivo Excel</li>
 
     </ol>

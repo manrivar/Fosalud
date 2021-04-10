@@ -9,7 +9,7 @@
 <div class="col-lg-12">
     <div class="col-lg-12">
         <center>
-            <h3>Carga de Recetas</h3>
+            <h3>Carga de Nebulizaciones</h3>
         </center>
     </div>
     <div class="col-lg-4">

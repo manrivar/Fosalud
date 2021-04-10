@@ -1,6 +1,6 @@
 <div class="col-lg-12 col-xs-12 col-sm-12">
     <ol class="breadcrumb">
-        <li> <span class="fa fa-undo"></span> <?php echo $this->Html->Link('Regresar', array('controller' => 'Healingcares', 'action' => 'index?yir=' . $yer)); ?></li>
+        <li> <span class="fa fa-undo"></span> <?php echo $this->Html->Link('Regresar', array('controller' => 'Talks', 'action' => 'index?yir=' . $yer)); ?></li>
         <li> <span class="fa fa-upload"></span> Carga de Archivo Excel</li>
 
     </ol>
@@ -9,7 +9,7 @@
 <div class="col-lg-12">
     <div class="col-lg-12">
         <center>
-            <h3>Carga de Consejerias</h3>
+            <h3>Carga de Charlas</h3>
         </center>
     </div>
     <div class="col-lg-4">

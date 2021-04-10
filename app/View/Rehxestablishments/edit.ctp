@@ -21,7 +21,7 @@
                 <div class="hijo">
                     <label>
                         <h4>
-                            <center>Rehabilitacion Oral</center>
+                            <center>Rehidratacion Oral</center>
                         </h4>
                     </label>
                     <?php
@@ -46,7 +46,7 @@
                 <div class="hijo">
                     <label>
                         <h4>
-                            <center>Rehabiliatcion Endovenosa</center>
+                            <center>Rehidratacion Endovenosa</center>
                         </h4>
                     </label>
                     <?php

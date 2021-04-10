@@ -8,7 +8,7 @@
 
 <div class="rehxestablishments index">
   <h2>
-    <center><?php echo __('Rehabilitacion Oral y Endovenosa - Establecimientos'); ?></center>
+    <center><?php echo __('Rehidratacion Oral y Endovenosa - Establecimientos'); ?></center>
   </h2>
   <div class="table-responsive">
     <table class="table table-bordered table-condensed" cellpadding="0" cellspacing="0">

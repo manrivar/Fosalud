@@ -433,8 +433,8 @@ class UsersController extends AppController {
         if ($this->request->is(array('post', 'put'))) {
             $this->User->create();
 
-            /* print_r($this->request->data); 
-              die(); */
+            //  print_r($this->request->data); 
+            //   die(); 
             if ($this->User->save($this->request->data)) {
                 $this->Flash->success(__('El usuario ha sido guardado.'));
                 //bitacora
@@ -552,7 +552,7 @@ class UsersController extends AppController {
             $this->request->data["User"]["fechahorapassword"] = date('Y-m-d H:i:s');
 
             if ($this->User->save($this->request->data)) {
-                $this->Flash->success(__('Datos Actualziados.'));
+                $this->Flash->success(__('Datos Actualizados.'));
                 return $this->redirect(array('action' => 'index', $id));
             } else {
                 $this->Flash->error(__('La contraseña no se actualizo. Intente nuevamente.'));

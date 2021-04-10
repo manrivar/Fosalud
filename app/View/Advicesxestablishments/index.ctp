@@ -10,7 +10,7 @@
     <h2>
         <center><?php echo __('Consejerias - Establecimientos'); ?></center>
     </h2>
-
+    <span class="fa fa-pie-chart"></span> <?php echo $this->Html->Link('Graficos', array('controller' => 'Advicesxestablishments', 'action' => 'chart', $yer, $reg)); ?>
     <div class="table-responsive">
         <table class="table table-bordered table-condensed" cellpadding="0" cellspacing="0">
             <thead>
