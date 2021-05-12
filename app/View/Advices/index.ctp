@@ -9,11 +9,15 @@
 <h2>
     <center>Consejerias</center>
 </h2>
+<<<<<<< HEAD
 <?php if($this->Session->read('Auth.User.acceso_id') <= 3):?>
 <span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Advicesxestablishments', 'action' => 'cargar_Evaluacion', $yer)); ?>
 &nbsp;&nbsp;
 <?php endif;  ?>
 <span class="fa fa-pie-chart"></span> <?php echo $this->Html->Link('Graficos', array('controller' => 'Advices', 'action' => 'chart', $yer)); ?>
+=======
+<span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Advicesxestablishments', 'action' => 'cargar_Evaluacion', $yer)); ?>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
 <?= $this->Form->create('advices', ['type' => 'get']); ?>
 <?php $option = array('2020' => '2020', '2021' => '2021', '2022' => '2022', '2023' => '2023', '2024' => '2024', '2025' => '2025', '2026' => '2026', '2027' => '2027', '2028' => '2028', '2029' => '2029', '2030' => '2030'); ?>

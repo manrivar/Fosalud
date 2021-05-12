@@ -81,6 +81,7 @@
                             <?php echo h($tubersxestablishment['Sibase']['sibase_name']); ?>
                         </td>
                         <td>
+<<<<<<< HEAD
                         <?php $region = $tubersxestablishment['Tubersxestablishment']['regions_id'] ?>
 
                         <?php if($this->Session->read('Auth.User.acceso_id') <= 2):?>
@@ -93,6 +94,10 @@
                                 <?php echo h($tubersxestablishment['Establishment']['establishment_name']); ?>
                             <?php endif; ?>
                             <?php endif; ?>
+=======
+                            <?php $region = $tubersxestablishment['Tubersxestablishment']['regions_id'] ?>
+                            <?php echo $this->Html->link($tubersxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $tubersxestablishment['Tubersxestablishment']['id'], $region, $yer)); ?>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                         </td>
                         <?php $total = $tubersxestablishment['Tubersxestablishment']['ide_january'] + $tubersxestablishment['Tubersxestablishment']['ide_february'] + $tubersxestablishment['Tubersxestablishment']['ide_march'] + $tubersxestablishment['Tubersxestablishment']['ide_april'] + $tubersxestablishment['Tubersxestablishment']['ide_may'] + $tubersxestablishment['Tubersxestablishment']['ide_june'] + $tubersxestablishment['Tubersxestablishment']['ide_july'] + $tubersxestablishment['Tubersxestablishment']['ide_august'] + $tubersxestablishment['Tubersxestablishment']['ide_september'] + $tubersxestablishment['Tubersxestablishment']['ide_october'] + $tubersxestablishment['Tubersxestablishment']['ide_november'] + $tubersxestablishment['Tubersxestablishment']['ide_december'] + $tubersxestablishment['Tubersxestablishment']['inv_january'] + $tubersxestablishment['Tubersxestablishment']['inv_february'] + $tubersxestablishment['Tubersxestablishment']['inv_march'] + $tubersxestablishment['Tubersxestablishment']['inv_april'] + $tubersxestablishment['Tubersxestablishment']['inv_may'] + $tubersxestablishment['Tubersxestablishment']['inv_june'] + $tubersxestablishment['Tubersxestablishment']['inv_july'] + $tubersxestablishment['Tubersxestablishment']['inv_august'] + $tubersxestablishment['Tubersxestablishment']['inv_september'] + $tubersxestablishment['Tubersxestablishment']['inv_october'] + $tubersxestablishment['Tubersxestablishment']['inv_november'] + $tubersxestablishment['Tubersxestablishment']['inv_december'];  ?>
                         <td bgcolor="#CBEEF2"><?php echo $total; ?>&nbsp;</td>

@@ -83,6 +83,7 @@
             </td>
             <td>
               <?php $region = $maternalhcxestablishment['Maternalhcxestablishment']['regions_id'] ?>
+<<<<<<< HEAD
 
               <?php if($this->Session->read('Auth.User.acceso_id') <= 2):?>
                 <?php echo $this->Html->link($maternalhcxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $maternalhcxestablishment['Maternalhcxestablishment']['id'], $region, $yer)); ?>
@@ -94,6 +95,9 @@
                     <?php echo h($maternalhcxestablishment['Establishment']['establishment_name']); ?>
                   <?php endif; ?>
                   <?php endif; ?>
+=======
+              <?php echo $this->Html->link($maternalhcxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $maternalhcxestablishment['Maternalhcxestablishment']['id'], $region, $yer)); ?>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
             </td>
             <?php $total = $maternalhcxestablishment['Maternalhcxestablishment']['ins_january'] + $maternalhcxestablishment['Maternalhcxestablishment']['ins_february'] + $maternalhcxestablishment['Maternalhcxestablishment']['ins_march'] + $maternalhcxestablishment['Maternalhcxestablishment']['ins_april'] + $maternalhcxestablishment['Maternalhcxestablishment']['ins_may'] + $maternalhcxestablishment['Maternalhcxestablishment']['ins_june'] + $maternalhcxestablishment['Maternalhcxestablishment']['ins_july'] + $maternalhcxestablishment['Maternalhcxestablishment']['ins_august'] + $maternalhcxestablishment['Maternalhcxestablishment']['ins_september'] + $maternalhcxestablishment['Maternalhcxestablishment']['ins_october'] + $maternalhcxestablishment['Maternalhcxestablishment']['ins_november'] + $maternalhcxestablishment['Maternalhcxestablishment']['ins_december'] + $maternalhcxestablishment['Maternalhcxestablishment']['con_january'] + $maternalhcxestablishment['Maternalhcxestablishment']['con_february'] + $maternalhcxestablishment['Maternalhcxestablishment']['con_march'] + $maternalhcxestablishment['Maternalhcxestablishment']['con_april'] + $maternalhcxestablishment['Maternalhcxestablishment']['con_may'] + $maternalhcxestablishment['Maternalhcxestablishment']['con_june'] + $maternalhcxestablishment['Maternalhcxestablishment']['con_july'] + $maternalhcxestablishment['Maternalhcxestablishment']['con_august'] + $maternalhcxestablishment['Maternalhcxestablishment']['con_september'] + $maternalhcxestablishment['Maternalhcxestablishment']['con_october'] + $maternalhcxestablishment['Maternalhcxestablishment']['con_november'] + $maternalhcxestablishment['Maternalhcxestablishment']['con_december'];  ?>
             <td bgcolor="#AEEAF1"><?php echo $total; ?>&nbsp;</td>

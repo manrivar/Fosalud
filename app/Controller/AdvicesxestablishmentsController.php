@@ -18,13 +18,17 @@ class AdvicesxestablishmentsController extends AppController
      * @var array
      */
     public $components = array('Paginator', 'Session', 'Flash');
+<<<<<<< HEAD
     public $layout = 'default';
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
     /**
      * index method
      *
      * @return void
      */
+<<<<<<< HEAD
     public function index($region, $yer, $layout = 0)
     {
         // ifpara no mostrar el layout en la tabla , implementar en todas las tablas
@@ -35,6 +39,14 @@ class AdvicesxestablishmentsController extends AppController
         $yir = $this->request->query('yir');
         $reg = $region;
         $this->set(array('reg' => $reg));
+=======
+    public function index($region, $yer)
+    {
+        // metodo para filtrar por fechas
+        $yir = $this->request->query('yir');
+        $reg = $region;
+
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         $conditions = [];
         if ($yir) {
             $conditions[] = [
@@ -231,7 +243,11 @@ class AdvicesxestablishmentsController extends AppController
     public function Autorizacion()
     {
         $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+<<<<<<< HEAD
         if ($nivel_acceso > 3) {
+=======
+        if ($nivel_acceso > 2) {
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
             $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
             $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
         }
@@ -263,6 +279,7 @@ class AdvicesxestablishmentsController extends AppController
             'fields' => array('count(*) as total')
                 )
         );
+<<<<<<< HEAD
         $exi = $this->Cexestablishment->find(
             'first',
             array(
@@ -272,6 +289,8 @@ class AdvicesxestablishmentsController extends AppController
                 ),
             )
         );
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
         if ($reg == 1) {
             $estanum = 31;  
@@ -414,6 +433,7 @@ class AdvicesxestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
+<<<<<<< HEAD
         unlink($fileName);
         $layout = 1;
         
@@ -422,6 +442,8 @@ class AdvicesxestablishmentsController extends AppController
         $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
         $this->Bitacora->save($Bitacora);  
 
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         $this->redirect([
             'controller' => 'Advicesxestablishments',
             'action' => 'index', $reg, $year
@@ -432,7 +454,11 @@ class AdvicesxestablishmentsController extends AppController
 
     public function import()
     {
+<<<<<<< HEAD
         $regions = $this->Advicesxestablishment->Region->find('list');
+=======
+        $regions = $this->Hcxestablishment->Region->find('list');
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         //$yir = $this->request->query('yir');
         $datos = $this->request->data;
         $this->set(compact('regions', 'datos'));
@@ -452,6 +478,7 @@ class AdvicesxestablishmentsController extends AppController
         //LLAMADA A FUNCION GUARDAR DEL MODELO BITACORA, se pasa como parametro el objeto $Bitacora
         $this->Bitacora->save($Bitacora);
     }    
+<<<<<<< HEAD
 
     public function chart($yer, $reg)
     {
@@ -672,3 +699,6 @@ class AdvicesxestablishmentsController extends AppController
     }
 }
 
+=======
+}
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1

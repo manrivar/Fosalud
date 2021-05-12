@@ -81,6 +81,7 @@
             </td>
             <td>
               <?php $region = $childhcxestablishment['Childhcxestablishment']['regions_id'] ?>
+<<<<<<< HEAD
 
               <?php if($this->Session->read('Auth.User.acceso_id') <= 2):?>
                 <?php echo $this->Html->link($childhcxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $childhcxestablishment['Childhcxestablishment']['id'], $region, $yer)); ?>
@@ -95,6 +96,10 @@
 
             </td>
 
+=======
+              <?php echo $this->Html->link($childhcxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $childhcxestablishment['Childhcxestablishment']['id'], $region, $yer)); ?>
+            </td>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
             <?php $total = $childhcxestablishment['Childhcxestablishment']['ins_january'] + $childhcxestablishment['Childhcxestablishment']['ins_february'] + $childhcxestablishment['Childhcxestablishment']['ins_march'] + $childhcxestablishment['Childhcxestablishment']['ins_april'] + $childhcxestablishment['Childhcxestablishment']['ins_may'] + $childhcxestablishment['Childhcxestablishment']['ins_june'] + $childhcxestablishment['Childhcxestablishment']['ins_july'] + $childhcxestablishment['Childhcxestablishment']['ins_august'] + $childhcxestablishment['Childhcxestablishment']['ins_september'] + $childhcxestablishment['Childhcxestablishment']['ins_october'] + $childhcxestablishment['Childhcxestablishment']['ins_november'] + $childhcxestablishment['Childhcxestablishment']['ins_december'] + $childhcxestablishment['Childhcxestablishment']['con_january'] + $childhcxestablishment['Childhcxestablishment']['con_february'] + $childhcxestablishment['Childhcxestablishment']['con_march'] + $childhcxestablishment['Childhcxestablishment']['con_april'] + $childhcxestablishment['Childhcxestablishment']['con_may'] + $childhcxestablishment['Childhcxestablishment']['con_june'] + $childhcxestablishment['Childhcxestablishment']['con_july'] + $childhcxestablishment['Childhcxestablishment']['con_august'] + $childhcxestablishment['Childhcxestablishment']['con_september'] + $childhcxestablishment['Childhcxestablishment']['con_october'] + $childhcxestablishment['Childhcxestablishment']['con_november'] + $childhcxestablishment['Childhcxestablishment']['con_december'];  ?>
             <td bgcolor="#CBEEF2"><?php echo $total; ?>&nbsp;</td>
             <td><?php echo h($childhcxestablishment['Childhcxestablishment']['ins_january']); ?>&nbsp;</td>

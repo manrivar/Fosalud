@@ -165,6 +165,7 @@ class ClinicalexamsController extends AppController
         }
         return $this->redirect(array('action' => 'index'));
     }
+<<<<<<< HEAD
 
     public function chart($yer)
     {
@@ -255,4 +256,6 @@ class ClinicalexamsController extends AppController
 
         $this->set(array('regocc' => $regocc, 'regcen' => $regcen, 'regmet' => $regmet, 'regpar' => $regpar, 'regori' => $regori, 'avgData' => $avgData, 'tot_trim' => $tot_trim, 'sum1' => $sum1, 'sum2' => $sum2, 'sum3' => $sum3, 'sum4' => $sum4, 'sum5' => $sum5));
     }
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 }

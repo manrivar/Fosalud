@@ -16,19 +16,27 @@ class SmokesxestablishmentsController extends AppController
      * @var array
      */
     public $components = array('Paginator', 'Session', 'Flash');
+<<<<<<< HEAD
     public $layout = 'default';
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
     /**
      * index method
      *
      * @return void
      */
+<<<<<<< HEAD
     public function index($region, $yer, $layout = 0)
     {
         // ifpara no mostrar el layout en la tabla , implementar en todas las tablas
         if($layout == 1){
             $this->autoLayout = false;
         }
+=======
+    public function index($region, $yer)
+    {
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         // metodo para filtrar por fechas
         $yir = $this->request->query('yir');
         $reg = $region;

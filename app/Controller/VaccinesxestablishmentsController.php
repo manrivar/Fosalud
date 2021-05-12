@@ -16,13 +16,17 @@ class VaccinesxestablishmentsController extends AppController
      * @var array
      */
     public $components = array('Paginator', 'Session', 'Flash');
+<<<<<<< HEAD
     public $layout = 'default';
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
     /**
      * index method
      *
      * @return void
      */
+<<<<<<< HEAD
     public function Autorizacion()
     {
         $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
@@ -37,6 +41,10 @@ class VaccinesxestablishmentsController extends AppController
         if($layout == 1){
             $this->autoLayout = false;
         }
+=======
+    public function index($region, $yer)
+    {
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         // metodo para filtrar por fechas
         $yir = $this->request->query('yir');
         $reg = $region;
@@ -317,20 +325,26 @@ class VaccinesxestablishmentsController extends AppController
      */
     public function edit($id = null, $region, $yer)
     {
+<<<<<<< HEAD
         $establishments = $this->Vaccinesxestablishment->Establishment->find('list');
         $sibases = $this->Vaccinesxestablishment->Sibase->find('list');
         $regions = $this->Vaccinesxestablishment->Region->find('list');
         $reg = $region;
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         if (!$this->Vaccinesxestablishment->exists($id)) {
             throw new NotFoundException(__('Invalid vaccinesxestablishment'));
         }
         if ($this->request->is(array('post', 'put'))) {
             if ($this->Vaccinesxestablishment->save($this->request->data)) {
                 $this->Flash->success(__('El registro fue actualizado con exito.'));
+<<<<<<< HEAD
                 $this->loadModel('Bitacora');
                 $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " edito registros de vacuna del establecimiento ". $establishments[$id];
                 $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
                 $this->Bitacora->save($Bitacora);
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                 return $this->redirect(array('action' => 'index', $region, '?yir=' . $yer));
             } else {
                 $this->Flash->error(__('El registro no se pudo actualizar, favor intente de nuevo.'));
@@ -339,7 +353,14 @@ class VaccinesxestablishmentsController extends AppController
             $options = array('conditions' => array('Vaccinesxestablishment.' . $this->Vaccinesxestablishment->primaryKey => $id));
             $this->request->data = $this->Vaccinesxestablishment->find('first', $options);
         }
+<<<<<<< HEAD
 
+=======
+        $establishments = $this->Vaccinesxestablishment->Establishment->find('list');
+        $sibases = $this->Vaccinesxestablishment->Sibase->find('list');
+        $regions = $this->Vaccinesxestablishment->Region->find('list');
+        $reg = $region;
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         $this->set(compact('establishments', 'sibases', 'regions', 'reg', 'yer'));
     }
 
@@ -365,21 +386,41 @@ class VaccinesxestablishmentsController extends AppController
         return $this->redirect(array('action' => 'index'));
     }
     //*****************************************/ prueba de excel *************************************************
+<<<<<<< HEAD
+=======
+    public function Autorizacion()
+    {
+        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+        if ($nivel_acceso > 2) {
+            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+        }
+    }
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
     public function cargar_Evaluacion($yer)
     {
         //llamada a funcion de autorizacion para validar acceso a funcion
         $this->Autorizacion();
         $regions = $this->Vaccinesxestablishment->Region->find('list');
+<<<<<<< HEAD
         $we = $this->Session->read('Auth.User.regions_id');
         $this->set(compact('regions'));
         $this->set(array('yer' => $yer, 'we' => $we));
+=======
+        $this->set(compact('regions'));
+        $this->set(array('yer' => $yer));
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
     }
 
     public function cargar()
     {
         $this->autoRender = false;
+<<<<<<< HEAD
         $this->autoLayout = false;
+=======
+
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         $reg = $this->request->data['regions'];
         $year = $this->request->data['year'];
 
@@ -397,6 +438,7 @@ class VaccinesxestablishmentsController extends AppController
                 'fields' => array('count(*) as total')
             )
         );
+<<<<<<< HEAD
         $exi = $this->Vaccinesxestablishment->find(
             'first',
             array(
@@ -406,6 +448,8 @@ class VaccinesxestablishmentsController extends AppController
                 ),
             )
         );
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
         if ($reg == 1) {
             $estanum = 31;
@@ -642,6 +686,7 @@ class VaccinesxestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
+<<<<<<< HEAD
         unlink($fileName);
         $layout = 1;
         
@@ -653,6 +698,11 @@ class VaccinesxestablishmentsController extends AppController
         $this->redirect([
             'controller' => 'Vaccinesxestablishments',
             'action' => 'index', $reg, $year, $layout
+=======
+        $this->redirect([
+            'controller' => 'Vaccinesxestablishments',
+            'action' => 'index', $reg, $year
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         ]);
     }
 

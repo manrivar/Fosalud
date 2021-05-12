@@ -133,6 +133,7 @@ class User extends AppModel {
             'exclusive' => '',
             'finderQuery' => '',
             'counterQuery' => ''
+<<<<<<< HEAD
         ),
         'Region' => array(
             'className' => 'Region',
@@ -146,6 +147,8 @@ class User extends AppModel {
             'exclusive' => '',
             'finderQuery' => '',
             'counterQuery' => ''
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         )
     );
 

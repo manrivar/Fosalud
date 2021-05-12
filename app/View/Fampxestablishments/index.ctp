@@ -82,6 +82,7 @@
                             <?php echo h($fampxestablishment['Sibase']['sibase_name']); ?>
                         </td>
                         <td>
+<<<<<<< HEAD
                         <?php $region = $fampxestablishment['Fampxestablishment']['regions_id'] ?>
 
                         <?php if($this->Session->read('Auth.User.acceso_id') <= 2):?>
@@ -94,6 +95,10 @@
                                 <?php echo h($fampxestablishment['Establishment']['establishment_name']); ?>
                             <?php endif; ?>
                             <?php endif; ?>
+=======
+                            <?php $region = $fampxestablishment['Fampxestablishment']['regions_id'] ?>
+                            <?php echo $this->Html->link($fampxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $fampxestablishment['Fampxestablishment']['id'], $region, $yer)); ?>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                         </td>
                         <?php $total = $fampxestablishment['Fampxestablishment']['ins_january'] + $fampxestablishment['Fampxestablishment']['ins_february'] + $fampxestablishment['Fampxestablishment']['ins_march'] + $fampxestablishment['Fampxestablishment']['ins_april'] + $fampxestablishment['Fampxestablishment']['ins_may'] + $fampxestablishment['Fampxestablishment']['ins_june'] + $fampxestablishment['Fampxestablishment']['ins_july'] + $fampxestablishment['Fampxestablishment']['ins_august'] + $fampxestablishment['Fampxestablishment']['ins_september'] + $fampxestablishment['Fampxestablishment']['ins_october'] + $fampxestablishment['Fampxestablishment']['ins_november'] + $fampxestablishment['Fampxestablishment']['ins_december'] + $fampxestablishment['Fampxestablishment']['con_january'] + $fampxestablishment['Fampxestablishment']['con_february'] + $fampxestablishment['Fampxestablishment']['con_march'] + $fampxestablishment['Fampxestablishment']['con_april'] + $fampxestablishment['Fampxestablishment']['con_may'] + $fampxestablishment['Fampxestablishment']['con_june'] + $fampxestablishment['Fampxestablishment']['con_july'] + $fampxestablishment['Fampxestablishment']['con_august'] + $fampxestablishment['Fampxestablishment']['con_september'] + $fampxestablishment['Fampxestablishment']['con_october'] + $fampxestablishment['Fampxestablishment']['con_november'] + $fampxestablishment['Fampxestablishment']['con_december'];  ?>
                         <td bgcolor="#CBEEF2"><?php echo $total; ?>&nbsp;</td>

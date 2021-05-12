@@ -12,7 +12,11 @@
     <div class="talksxestablishments form">
         <?php echo $this->Form->create('Eventsxestablishment'); ?>
         <fieldset>
+<<<<<<< HEAD
             <legend><?php echo __('Editar Eventos de Notificacion'); ?></legend>
+=======
+            <legend><?php echo __('Edit Eventsxestablishment'); ?></legend>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
             <div class="padre">
                 <div class="hijo">
                     <label>
@@ -22,9 +26,15 @@
                     </label>
                     <?php
                     echo $this->Form->input('id');
+<<<<<<< HEAD
                     // echo $this->Form->input('establishments_id');
                     // echo $this->Form->input('sibases_id');
                     // echo $this->Form->input('regions_id');
+=======
+                    echo $this->Form->input('establishments_id');
+                    echo $this->Form->input('sibases_id');
+                    echo $this->Form->input('regions_id');
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                     echo $this->Form->input('den_january', array('label' => 'Enero'));
                     echo $this->Form->input('den_february', array('label' => 'Febrero'));
                     echo $this->Form->input('den_march', array('label' => 'Marzo'));
@@ -48,9 +58,15 @@
                     <?php
                     // los campos de control infatil deben ir aqui 
                     echo $this->Form->input('id');
+<<<<<<< HEAD
                     // echo $this->Form->input('establishments_id');
                     // echo $this->Form->input('sibases_id');
                     // echo $this->Form->input('regions_id');
+=======
+                    echo $this->Form->input('establishments_id');
+                    echo $this->Form->input('sibases_id');
+                    echo $this->Form->input('regions_id');
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                     echo $this->Form->input('chi_january', array('label' => 'Enero'));
                     echo $this->Form->input('chi_february', array('label' => 'Febrero'));
                     echo $this->Form->input('chi_march', array('label' => 'Marzo'));
@@ -73,9 +89,15 @@
                     </label>
                     <?php
                     echo $this->Form->input('id');
+<<<<<<< HEAD
                     // echo $this->Form->input('establishments_id');
                     // echo $this->Form->input('sibases_id');
                     // echo $this->Form->input('regions_id');
+=======
+                    echo $this->Form->input('establishments_id');
+                    echo $this->Form->input('sibases_id');
+                    echo $this->Form->input('regions_id');
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                     echo $this->Form->input('zik_january', array('label' => 'Enero'));
                     echo $this->Form->input('zik_february', array('label' => 'Febrero'));
                     echo $this->Form->input('zik_march', array('label' => 'Marzo'));
@@ -98,9 +120,15 @@
                     </label>
                     <?php
                     echo $this->Form->input('id');
+<<<<<<< HEAD
                     // echo $this->Form->input('establishments_id');
                     // echo $this->Form->input('sibases_id');
                     // echo $this->Form->input('regions_id');
+=======
+                    echo $this->Form->input('establishments_id');
+                    echo $this->Form->input('sibases_id');
+                    echo $this->Form->input('regions_id');
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                     echo $this->Form->input('c19_january', array('label' => 'Enero'));
                     echo $this->Form->input('c19_february', array('label' => 'Febrero'));
                     echo $this->Form->input('c19_march', array('label' => 'Marzo'));

@@ -18,13 +18,17 @@ class PatientsxestablishmentsController extends AppController
      * @var array
      */
     public $components = array('Paginator', 'Session', 'Flash');
+<<<<<<< HEAD
     public $layout = 'default';
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
     /**
      * index method
      *
      * @return void
      */
+<<<<<<< HEAD
     public function Autorizacion()
     {
         $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
@@ -39,6 +43,10 @@ class PatientsxestablishmentsController extends AppController
         if($layout == 1){
             $this->autoLayout = false;
         }
+=======
+    public function index($region, $yer)
+    {
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         // metodo para filtrar por fechas
         $yir = $this->request->query('yir');
         $reg = $region;
@@ -192,21 +200,27 @@ class PatientsxestablishmentsController extends AppController
      */
     public function edit($id = null, $region, $yer)
     {
+<<<<<<< HEAD
         $establishments = $this->Patientsxestablishment->Establishment->find('list');
         $sibases = $this->Patientsxestablishment->Sibase->find('list');
         $regions = $this->Patientsxestablishment->Region->find('list');
         $reg = $region;
 
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         if (!$this->Patientsxestablishment->exists($id)) {
             throw new NotFoundException(__('Invalid patientsxestablishment'));
         }
         if ($this->request->is(array('post', 'put'))) {
             if ($this->Patientsxestablishment->save($this->request->data)) {
                 $this->Flash->success(__('El registro fue actualizado con exito.'));
+<<<<<<< HEAD
                 $this->loadModel('Bitacora');
                 $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " edito registros de pacientes vistos del establecimiento ". $establishments[$id];
                 $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
                 $this->Bitacora->save($Bitacora);
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                 return $this->redirect(array('action' => 'index', $region, '?yir=' . $yer));
             } else {
                 $this->Flash->error(__('El registro no se pudo actualizar, favor intente de nuevo'));
@@ -215,7 +229,14 @@ class PatientsxestablishmentsController extends AppController
             $options = array('conditions' => array('Patientsxestablishment.' . $this->Patientsxestablishment->primaryKey => $id));
             $this->request->data = $this->Patientsxestablishment->find('first', $options);
         }
+<<<<<<< HEAD
 
+=======
+        $establishments = $this->Patientsxestablishment->Establishment->find('list');
+        $sibases = $this->Patientsxestablishment->Sibase->find('list');
+        $regions = $this->Patientsxestablishment->Region->find('list');
+        $reg = $region;
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         $this->set(compact('establishments', 'sibases', 'regions', 'reg', 'yer'));
     }
 
@@ -242,22 +263,42 @@ class PatientsxestablishmentsController extends AppController
     }
 
     //*****************************************/ prueba de excel *************************************************
+<<<<<<< HEAD
    
+=======
+    public function Autorizacion()
+    {
+        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+        if ($nivel_acceso > 2) {
+            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+        }
+    }
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
     public function cargar_Evaluacion($yer)
     {
         //llamada a funcion de autorizacion para validar acceso a funcion
         $this->Autorizacion();
         $regions = $this->Patientsxestablishment->Region->find('list');
+<<<<<<< HEAD
         $we = $this->Session->read('Auth.User.regions_id');
         $this->set(compact('regions'));
         $this->set(array('yer' => $yer, 'we' => $we));
+=======
+        $this->set(compact('regions'));
+        $this->set(array('yer' => $yer));
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
     }
 
     public function cargar()
     {
         $this->autoRender = false;
+<<<<<<< HEAD
         $this->autoLayout = false;
+=======
+
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         $reg = $this->request->data['regions'];
         $year = $this->request->data['year'];
 
@@ -276,6 +317,7 @@ class PatientsxestablishmentsController extends AppController
             )
         );
 
+<<<<<<< HEAD
         $exi = $this->Patientsxestablishment->find(
             'first',
             array(
@@ -286,6 +328,8 @@ class PatientsxestablishmentsController extends AppController
             )
         );
 
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         if ($reg == 1) {
             $estanum = 31;
         } elseif ($reg == 2) {
@@ -425,6 +469,7 @@ class PatientsxestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
+<<<<<<< HEAD
         unlink($fileName);
         $layout = 1;
         
@@ -436,6 +481,11 @@ class PatientsxestablishmentsController extends AppController
         $this->redirect([
             'controller' => 'Patientsxestablishments',
             'action' => 'index', $reg, $year, $layout
+=======
+        $this->redirect([
+            'controller' => 'Patientsxestablishments',
+            'action' => 'index', $reg, $year
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         ]);
     }
 
@@ -443,7 +493,11 @@ class PatientsxestablishmentsController extends AppController
 
     public function import()
     {
+<<<<<<< HEAD
         $regions = $this->Patientsxestablishment->Region->find('list');
+=======
+        $regions = $this->Hcxestablishment->Region->find('list');
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         //$yir = $this->request->query('yir');
         $datos = $this->request->data;
         $this->set(compact('regions', 'datos'));

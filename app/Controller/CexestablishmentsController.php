@@ -16,13 +16,17 @@ class CexestablishmentsController extends AppController
      * @var array
      */
     public $components = array('Paginator', 'Session', 'Flash');
+<<<<<<< HEAD
     public $layout = 'default';
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
     /**
      * index method
      *
      * @return void
      */
+<<<<<<< HEAD
     public function Autorizacion()
     {
         $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
@@ -38,6 +42,10 @@ class CexestablishmentsController extends AppController
         if($layout == 1){
             $this->autoLayout = false;
         }
+=======
+    public function index($region, $yer)
+    {
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         // metodo para filtrar por fechas
         $yir = $this->request->query('yir');
         $reg = $region;
@@ -224,21 +232,27 @@ class CexestablishmentsController extends AppController
      */
     public function edit($id = null, $region, $yer)
     {
+<<<<<<< HEAD
         $establishments = $this->Cexestablishment->Establishment->find('list');
         $sibases = $this->Cexestablishment->Sibase->find('list');
         $regions = $this->Cexestablishment->Region->find('list');
         $reg = $region;
 
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         if (!$this->Cexestablishment->exists($id)) {
             throw new NotFoundException(__('Invalid cexestablishment'));
         }
         if ($this->request->is(array('post', 'put'))) {
             if ($this->Cexestablishment->save($this->request->data)) {
                 $this->Flash->success(__('El registro fue actualizado con exito.'));
+<<<<<<< HEAD
                 $this->loadModel('Bitacora');
                 $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " edito registros de examenes clinicos del establecimiento ". $establishments[$id];
                 $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
                 $this->Bitacora->save($Bitacora);
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                 return $this->redirect(array('action' => 'index',$region, '?yir=' . $yer));
             } else {
                 $this->Flash->error(__('El registro no se pudo actualizar, favor intente de nuevo'));
@@ -247,6 +261,13 @@ class CexestablishmentsController extends AppController
             $options = array('conditions' => array('Cexestablishment.' . $this->Cexestablishment->primaryKey => $id));
             $this->request->data = $this->Cexestablishment->find('first', $options);
         }
+<<<<<<< HEAD
+=======
+        $establishments = $this->Cexestablishment->Establishment->find('list');
+        $sibases = $this->Cexestablishment->Sibase->find('list');
+        $regions = $this->Cexestablishment->Region->find('list');
+        $reg = $region;
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         $this->set(compact('establishments', 'sibases', 'regions', 'reg', 'yer'));
     }
 
@@ -272,26 +293,50 @@ class CexestablishmentsController extends AppController
         return $this->redirect(array('action' => 'index'));
     }
     //*****************************************/ prueba de excel *************************************************
+<<<<<<< HEAD
     
+=======
+    public function Autorizacion()
+    {
+        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+        if ($nivel_acceso > 2) {
+            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+        }
+    }
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
     public function cargar_Evaluacion($yer)
     {
         //llamada a funcion de autorizacion para validar acceso a funcion
         $this->Autorizacion();
         $regions = $this->Cexestablishment->Region->find('list');
+<<<<<<< HEAD
         $we = $this->Session->read('Auth.User.regions_id');
         $this->set(compact('regions'));
         $this->set(array('yer' => $yer, 'we' => $we));
+=======
+        $this->set(compact('regions'));
+        $this->set(array('yer' => $yer));
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
     }
 
     public function cargar()
     {
         $this->autoRender = false;
+<<<<<<< HEAD
         $this->autoLayout = false;
         $reg = $this->request->data['regions'];
         $year = $this->request->data['year'];
 
         
+=======
+
+        $reg = $this->request->data['regions'];
+        $year = $this->request->data['year'];
+
+
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
         //corroborar que no existe informaciona sociada a ese regions
         $existe = $this->Cexestablishment->find(
@@ -306,6 +351,7 @@ class CexestablishmentsController extends AppController
             )
         );
 
+<<<<<<< HEAD
         $exi = $this->Cexestablishment->find(
             'first',
             array(
@@ -316,6 +362,8 @@ class CexestablishmentsController extends AppController
             )
         );
 
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         if ($reg == 1) {
             $estanum = 31;
         } elseif ($reg == 2) {
@@ -326,7 +374,11 @@ class CexestablishmentsController extends AppController
             $estanum = 27;
         } elseif ($reg == 5) {
             $estanum = 55;
+<<<<<<< HEAD
         }     
+=======
+        }
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
         if ($existe[0][0]['total'] != $estanum) {
             echo "YA EXISTEN REGISTROS PARA ESTE CARGO FUNCIONAL, VERIFIQUE";
@@ -435,6 +487,7 @@ class CexestablishmentsController extends AppController
 
                 if ($establishments_id != "") {
 
+<<<<<<< HEAD
                     $page['Cexestablishment']['cit_january'] = $ci_enero;
                     $page['Cexestablishment']['mam_january'] = $mam_enero;
                     $page['Cexestablishment']['cit_february'] = $ci_febrero;
@@ -459,6 +512,32 @@ class CexestablishmentsController extends AppController
                     $page['Cexestablishment']['mam_november'] = $mam_noviembre;
                     $page['Cexestablishment']['cit_december'] = $ci_diciembre;
                     $page['Cexestablishment']['mam_december'] = $mam_diciembre;
+=======
+                    $page['Childhcxestablishment']['cit_january'] = $ci_enero;
+                    $page['Childhcxestablishment']['mam_january'] = $mam_enero;
+                    $page['Childhcxestablishment']['cit_february'] = $ci_febrero;
+                    $page['Childhcxestablishment']['mam_february'] = $mam_febrero;
+                    $page['Childhcxestablishment']['cit_march'] = $ci_marzo;
+                    $page['Childhcxestablishment']['mam_march'] = $mam_marzo;
+                    $page['Childhcxestablishment']['cit_april'] = $ci_abril;
+                    $page['Childhcxestablishment']['mam_april'] = $mam_abril;
+                    $page['Childhcxestablishment']['cit_may'] = $ci_mayo;
+                    $page['Childhcxestablishment']['mam_may'] = $mam_mayo;
+                    $page['Childhcxestablishment']['cit_june'] = $ci_junio;
+                    $page['Childhcxestablishment']['mam_june'] = $mam_junio;
+                    $page['Childhcxestablishment']['cit_july'] = $ci_julio;
+                    $page['Childhcxestablishment']['mam_july'] = $mam_julio;
+                    $page['Childhcxestablishment']['cit_august'] = $ci_agosto;
+                    $page['Childhcxestablishment']['mam_august'] = $mam_agosto;
+                    $page['Childhcxestablishment']['cit_septiembre'] = $ci_septiembre;
+                    $page['Childhcxestablishment']['mam_septiembre'] = $mam_septiembre;
+                    $page['Childhcxestablishment']['cit_october'] = $ci_octubre;
+                    $page['Childhcxestablishment']['mam_october'] = $mam_octubre;
+                    $page['Childhcxestablishment']['cit_november'] = $ci_noviembre;
+                    $page['Childhcxestablishment']['mam_november'] = $mam_noviembre;
+                    $page['Childhcxestablishment']['cit_december'] = $ci_diciembre;
+                    $page['Childhcxestablishment']['mam_december'] = $mam_diciembre;
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
                     $page['EvaluacionObjetivo']['user_reg_id'] = $user_id_reg;
 
@@ -469,6 +548,10 @@ class CexestablishmentsController extends AppController
                         // $this->Cexestablishment->create();
                         // $this->Cexestablishment->save($page);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                     } catch (Exception $ex) {
                         var_dump($ex->getMessage());
                         $i = $tope;
@@ -476,6 +559,7 @@ class CexestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
+<<<<<<< HEAD
         unlink($fileName);
         $layout = 1;
         
@@ -491,11 +575,23 @@ class CexestablishmentsController extends AppController
     }
 
     
+=======
+        $this->redirect([
+            'controller' => 'Cexestablishments',
+            'action' => 'index', $reg, $year
+        ]);
+    }
+
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
 
     public function import()
     {
+<<<<<<< HEAD
         $regions = $this->Cexestablishment->Region->find('list');
+=======
+        $regions = $this->Hcxestablishment->Region->find('list');
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         //$yir = $this->request->query('yir');
         $datos = $this->request->data;
         $this->set(compact('regions', 'datos'));

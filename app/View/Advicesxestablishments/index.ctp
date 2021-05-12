@@ -10,7 +10,11 @@
     <h2>
         <center><?php echo __('Consejerias - Establecimientos'); ?></center>
     </h2>
+<<<<<<< HEAD
     <span class="fa fa-pie-chart"></span> <?php echo $this->Html->Link('Graficos', array('controller' => 'Advicesxestablishments', 'action' => 'chart', $yer, $reg)); ?>
+=======
+
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
     <div class="table-responsive">
         <table class="table table-bordered table-condensed" cellpadding="0" cellspacing="0">
             <thead>
@@ -46,6 +50,7 @@
                         </td>
                         <td>
                             <?php $region = $advicesxestablishment['Advicesxestablishment']['regions_id'] ?>
+<<<<<<< HEAD
                             <?php if($this->Session->read('Auth.User.acceso_id')>1):?>
                             <?php if($this->Session->read('Auth.User.regions_id')==$reg):?>
                             <?php echo $this->Html->link($advicesxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $advicesxestablishment['Advicesxestablishment']['id'], $region, $yer)); ?>
@@ -53,6 +58,9 @@
                             <?php echo h($hcxestablishment['Establishment']['establishment_name']); ?>
                             <?php endif; ?>
                             <?php endif; ?>
+=======
+                            <?php echo $this->Html->link($advicesxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $advicesxestablishment['Advicesxestablishment']['id'], $region, $yer)); ?>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                         </td>
 
                         <?php $total = $advicesxestablishment['Advicesxestablishment']['january'] + $advicesxestablishment['Advicesxestablishment']['february'] + $advicesxestablishment['Advicesxestablishment']['march'] + $advicesxestablishment['Advicesxestablishment']['april'] + $advicesxestablishment['Advicesxestablishment']['may'] + $advicesxestablishment['Advicesxestablishment']['june'] + $advicesxestablishment['Advicesxestablishment']['july'] + $advicesxestablishment['Advicesxestablishment']['august'] + $advicesxestablishment['Advicesxestablishment']['september'] + $advicesxestablishment['Advicesxestablishment']['october'] + $advicesxestablishment['Advicesxestablishment']['november'] + $advicesxestablishment['Advicesxestablishment']['december'];  ?>

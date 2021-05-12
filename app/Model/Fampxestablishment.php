@@ -9,6 +9,11 @@ App::uses('AppModel', 'Model');
  */
 class Fampxestablishment extends AppModel
 {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
     // The Associations below have been created with all possible keys, those that are not needed can be removed
 
     /**

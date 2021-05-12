@@ -21,7 +21,11 @@
                 <div class="hijo">
                     <label>
                         <h4>
+<<<<<<< HEAD
                             <center>Rehidratacion Oral</center>
+=======
+                            <center>Rehabilitacion Oral</center>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                         </h4>
                     </label>
                     <?php
@@ -46,7 +50,11 @@
                 <div class="hijo">
                     <label>
                         <h4>
+<<<<<<< HEAD
                             <center>Rehidratacion Endovenosa</center>
+=======
+                            <center>Rehabiliatcion Endovenosa</center>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                         </h4>
                     </label>
                     <?php

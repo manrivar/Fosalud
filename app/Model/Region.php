@@ -7,6 +7,7 @@ App::uses('AppModel', 'Model');
 class Region extends AppModel
 {
     public $displayField = 'region_name';
+<<<<<<< HEAD
 
     public $hasMany = array(
 		'User' => array(
@@ -23,4 +24,6 @@ class Region extends AppModel
 			'counterQuery' => ''
 		)
 	);
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 }

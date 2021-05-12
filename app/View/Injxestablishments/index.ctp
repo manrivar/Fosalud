@@ -42,6 +42,7 @@
                             <?php echo h($injxestablishment['Sibase']['sibase_name']); ?>
                         </td>
                         <td>
+<<<<<<< HEAD
               <?php $region = $injxestablishment['Injxestablishment']['regions_id'] ?>
 
               <?php if($this->Session->read('Auth.User.acceso_id') <= 2):?>
@@ -55,6 +56,11 @@
                   <?php endif; ?>
                   <?php endif; ?>
             </td>
+=======
+                            <?php $region = $injxestablishment['Injxestablishment']['regions_id'] ?>
+                            <?php echo $this->Html->link($injxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $injxestablishment['Injxestablishment']['id'], $region, $yer)); ?>
+                        </td>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                         <?php $total = $injxestablishment['Injxestablishment']['january'] + $injxestablishment['Injxestablishment']['february'] + $injxestablishment['Injxestablishment']['march'] + $injxestablishment['Injxestablishment']['april'] + $injxestablishment['Injxestablishment']['may'] + $injxestablishment['Injxestablishment']['june'] + $injxestablishment['Injxestablishment']['july'] + $injxestablishment['Injxestablishment']['august'] + $injxestablishment['Injxestablishment']['september'] + $injxestablishment['Injxestablishment']['october'] + $injxestablishment['Injxestablishment']['november'] + $injxestablishment['Injxestablishment']['december'];  ?>
                         <td bgcolor="#CBEEF2"><?php echo $total; ?>&nbsp;</td>
                         <td><?php echo h($injxestablishment['Injxestablishment']['january']); ?>&nbsp;</td>

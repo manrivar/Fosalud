@@ -42,6 +42,7 @@
                             <?php echo h($healingsxestablishment['Sibase']['sibase_name']); ?>
                         </td>
                         <td>
+<<<<<<< HEAD
                         <?php $region = $healingsxestablishment['Healingsxestablishment']['regions_id'] ?>
 
                         <?php if($this->Session->read('Auth.User.acceso_id') <= 2):?>
@@ -54,6 +55,10 @@
                                 <?php echo h($healingsxestablishment['Establishment']['establishment_name']); ?>
                             <?php endif; ?>
                             <?php endif; ?>
+=======
+                            <?php $region = $healingsxestablishment['Healingsxestablishment']['regions_id'] ?>
+                            <?php echo $this->Html->link($healingsxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $healingsxestablishment['Healingsxestablishment']['id'], $region, $yer)); ?>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                         </td>
                         <?php $total = $healingsxestablishment['Healingsxestablishment']['january'] + $healingsxestablishment['Healingsxestablishment']['february'] + $healingsxestablishment['Healingsxestablishment']['march'] + $healingsxestablishment['Healingsxestablishment']['april'] + $healingsxestablishment['Healingsxestablishment']['may'] + $healingsxestablishment['Healingsxestablishment']['june'] + $healingsxestablishment['Healingsxestablishment']['july'] + $healingsxestablishment['Healingsxestablishment']['august'] + $healingsxestablishment['Healingsxestablishment']['september'] + $healingsxestablishment['Healingsxestablishment']['october'] + $healingsxestablishment['Healingsxestablishment']['november'] + $healingsxestablishment['Healingsxestablishment']['december'];  ?>
                         <td bgcolor="#CBEEF2"><?php echo $total; ?>&nbsp;</td>

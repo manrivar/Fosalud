@@ -10,7 +10,11 @@
 
 <div class="row">
     <div class="injxestablishments form">
+<<<<<<< HEAD
         <?php echo $this->Form->create('Injxestablishment'); ?>
+=======
+        <?php echo $this->Form->create('injxestablishment'); ?>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         <fieldset>
             <div>
                 <legend>

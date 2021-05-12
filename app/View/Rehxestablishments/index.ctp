@@ -8,7 +8,11 @@
 
 <div class="rehxestablishments index">
   <h2>
+<<<<<<< HEAD
     <center><?php echo __('Rehidratacion Oral y Endovenosa - Establecimientos'); ?></center>
+=======
+    <center><?php echo __('Rehabilitacion Oral y Endovenosa - Establecimientos'); ?></center>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
   </h2>
   <div class="table-responsive">
     <table class="table table-bordered table-condensed" cellpadding="0" cellspacing="0">
@@ -83,6 +87,7 @@
             </td>
             <td>
               <?php $region = $rehxestablishment['Rehxestablishment']['regions_id'] ?>
+<<<<<<< HEAD
 
               <?php if($this->Session->read('Auth.User.acceso_id') <= 2):?>
                 <?php echo $this->Html->link($rehxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $rehxestablishment['Rehxestablishment']['id'], $region, $yer)); ?>
@@ -94,6 +99,9 @@
                     <?php echo h($rehxestablishment['Establishment']['establishment_name']); ?>
                   <?php endif; ?>
                   <?php endif; ?>
+=======
+              <?php echo $this->Html->link($rehxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $rehxestablishment['Rehxestablishment']['id'], $region, $yer)); ?>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
             </td>
             <?php $total = $rehxestablishment['Rehxestablishment']['ora_january'] + $rehxestablishment['Rehxestablishment']['ora_february'] + $rehxestablishment['Rehxestablishment']['ora_march'] + $rehxestablishment['Rehxestablishment']['ora_april'] + $rehxestablishment['Rehxestablishment']['ora_may'] + $rehxestablishment['Rehxestablishment']['ora_june'] + $rehxestablishment['Rehxestablishment']['ora_july'] + $rehxestablishment['Rehxestablishment']['ora_august'] + $rehxestablishment['Rehxestablishment']['ora_september'] + $rehxestablishment['Rehxestablishment']['ora_october'] + $rehxestablishment['Rehxestablishment']['ora_november'] + $rehxestablishment['Rehxestablishment']['ora_december'] + $rehxestablishment['Rehxestablishment']['end_january'] + $rehxestablishment['Rehxestablishment']['end_february'] + $rehxestablishment['Rehxestablishment']['end_march'] + $rehxestablishment['Rehxestablishment']['end_april'] + $rehxestablishment['Rehxestablishment']['end_may'] + $rehxestablishment['Rehxestablishment']['end_june'] + $rehxestablishment['Rehxestablishment']['end_july'] + $rehxestablishment['Rehxestablishment']['end_august'] + $rehxestablishment['Rehxestablishment']['end_september'] + $rehxestablishment['Rehxestablishment']['end_october'] + $rehxestablishment['Rehxestablishment']['end_november'] + $rehxestablishment['Rehxestablishment']['end_december'];  ?>
             <td bgcolor="#AEEAF1"><?php echo $total; ?>&nbsp;</td>

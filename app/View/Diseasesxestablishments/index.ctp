@@ -81,6 +81,7 @@
                         </td>
                         <td>
                             <?php $region = $diseasesxestablishment['Diseasesxestablishment']['regions_id'] ?>
+<<<<<<< HEAD
 
                             <?php if($this->Session->read('Auth.User.acceso_id') <= 2):?>
                             <?php echo $this->Html->link($diseasesxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $diseasesxestablishment['Diseasesxestablishment']['id'], $region, $yer)); ?>
@@ -93,6 +94,9 @@
                             <?php endif; ?>
                             <?php endif; ?>
 
+=======
+                            <?php echo $this->Html->link($diseasesxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $diseasesxestablishment['Diseasesxestablishment']['id'], $region, $yer)); ?>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                         </td>
                         <?php $total = $diseasesxestablishment['Diseasesxestablishment']['hip_january'] + $diseasesxestablishment['Diseasesxestablishment']['hip_february'] + $diseasesxestablishment['Diseasesxestablishment']['hip_march'] + $diseasesxestablishment['Diseasesxestablishment']['hip_april'] + $diseasesxestablishment['Diseasesxestablishment']['hip_may'] + $diseasesxestablishment['Diseasesxestablishment']['hip_june'] + $diseasesxestablishment['Diseasesxestablishment']['hip_july'] + $diseasesxestablishment['Diseasesxestablishment']['hip_august'] + $diseasesxestablishment['Diseasesxestablishment']['hip_september'] + $diseasesxestablishment['Diseasesxestablishment']['hip_october'] + $diseasesxestablishment['Diseasesxestablishment']['hip_november'] + $diseasesxestablishment['Diseasesxestablishment']['hip_december'] + $diseasesxestablishment['Diseasesxestablishment']['dia_january'] + $diseasesxestablishment['Diseasesxestablishment']['dia_february'] + $diseasesxestablishment['Diseasesxestablishment']['dia_march'] + $diseasesxestablishment['Diseasesxestablishment']['dia_april'] + $diseasesxestablishment['Diseasesxestablishment']['dia_may'] + $diseasesxestablishment['Diseasesxestablishment']['dia_june'] + $diseasesxestablishment['Diseasesxestablishment']['dia_july'] + $diseasesxestablishment['Diseasesxestablishment']['dia_august'] + $diseasesxestablishment['Diseasesxestablishment']['dia_september'] + $diseasesxestablishment['Diseasesxestablishment']['dia_october'] + $diseasesxestablishment['Diseasesxestablishment']['dia_november'] + $diseasesxestablishment['Diseasesxestablishment']['dia_december'];  ?>
                         <td bgcolor="#CBEEF2"><?php echo $total; ?>&nbsp;</td>

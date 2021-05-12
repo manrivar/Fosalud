@@ -9,6 +9,7 @@
 <h2>
     <center>Eventos de Notificación</center>
 </h2>
+<<<<<<< HEAD
 <?php if($this->Session->read('Auth.User.acceso_id') <= 3):?>
 <span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Eventsxestablishments', 'action' => 'cargar_Evaluacion', $yer)); ?>
 &nbsp;&nbsp;
@@ -17,6 +18,12 @@
 
 <?= $this->Form->create('event', ['type' => 'get']); ?>
 <?php $option = array('2021' => '2021'); ?>
+=======
+<span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Eventsxestablishments', 'action' => 'cargar_Evaluacion', $yer)); ?>
+
+<?= $this->Form->create('event', ['type' => 'get']); ?>
+<?php $option = array('2020' => '2020', '2021' => '2021', '2022' => '2022', '2023' => '2023', '2024' => '2024', '2025' => '2025', '2026' => '2026', '2027' => '2027', '2028' => '2028', '2029' => '2029', '2030' => '2030'); ?>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
 <?php echo $this->Form->input('yir', array(
     'label' => '',

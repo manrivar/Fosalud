@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 echo $this->Html->script('zingchart/modules/zingchart-line.min');
 echo $this->Html->script('zingchart/zingchart.min');
 ?>
 <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 <div class="col-lg-12 col-xs-12 col-sm-12">
   <ol class="breadcrumb">
     <li>
@@ -14,6 +17,7 @@ echo $this->Html->script('zingchart/zingchart.min');
 <h2>
   <center>Atencion Curativa</center>
 </h2>
+<<<<<<< HEAD
 
 <?php if($this->Session->read('Auth.User.acceso_id') <= 3):?>
 <span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Hcxestablishments', 'action' => 'cargar_Evaluacion', $yer)); ?>
@@ -23,6 +27,14 @@ echo $this->Html->script('zingchart/zingchart.min');
 
 <?= $this->Form->create('healingcares', ['type' => 'get']); ?>
 <?php $option = array('2021' => '2021'); ?>
+=======
+<span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Hcxestablishments', 'action' => 'cargar_Evaluacion', $yer)); ?>
+&nbsp;&nbsp;
+<span class="fa fa-pie-chart"></span> <?php echo $this->Html->Link('Graficos', array('controller' => 'Healingcares', 'action' => 'chart', $yer)); ?>
+
+<?= $this->Form->create('healingcares', ['type' => 'get']); ?>
+<?php $option = array('2020' => '2020', '2021' => '2021', '2022' => '2022', '2023' => '2023', '2024' => '2024', '2025' => '2025', '2026' => '2026', '2027' => '2027', '2028' => '2028', '2029' => '2029', '2030' => '2030'); ?>
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
 <?php 
   echo $this->Form->input('yir', array(
@@ -99,5 +111,8 @@ echo $this->Html->script('zingchart/zingchart.min');
     ?>
   </div>
 </div>
+<<<<<<< HEAD
 
 </body>
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1

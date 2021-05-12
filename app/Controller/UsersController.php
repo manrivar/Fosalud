@@ -449,7 +449,11 @@ class UsersController extends AppController {
                 $this->Flash->success(__('El usuario ha sido guardado.'));
                 //bitacora
                 $this->loadModel('Bitacora');
+<<<<<<< HEAD
                 $Bitacora["Bitacora"]["descripcion"] = "Creacion de usuario con acceso de  para: " .$this->request->data['User']['nombre_usuario'];
+=======
+                $Bitacora["Bitacora"]["descripcion"] = "CREACION DE USUARIO CON ACCESO de  PARA: " .$this->request->data['User']['nombre_usuario'] ;
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
                 $Bitacora["Bitacora"]["empleado_id"] = 0;
                 $Bitacora["Bitacora"]["medico_id"] = 0;
                 $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');

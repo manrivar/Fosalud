@@ -104,7 +104,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         }*/
     ?>
     <style type="text/css">
+<<<<<<< HEAD
         /* #aviso-movil-horizontal {
+=======
+        #aviso-movil-horizontal {
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
             display: none;
         }
 
@@ -119,12 +123,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             #aviso-movil-horizontal {
                 display: none;
             }
+<<<<<<< HEAD
         } */
+=======
+        }
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
     </style>
 </head>
 
 
 <body>
+<<<<<<< HEAD
     <!-- <div id="aviso-movil-horizontal" class="alert alert-warning">
         <span class="fa fa-warning"></span> Activa la rotacion de pantalla y coloca tu móvil en Horizontal para una mejor visibilidad del Sitio.
     </div> -->
@@ -141,14 +150,35 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         }
 
 
+=======
+    <div id="aviso-movil-horizontal" class="alert alert-warning">
+        <span class="fa fa-warning"></span> Activa la rotacion de pantalla y coloca tu móvil en Horizontal para una mejor visibilidad del Sitio.
+    </div>
+
+
+
+    <?php if (!empty($this->Session->read('Auth.User.id'))) {
+        //ver acuerdo
+        if ($this->Session->read('confidencial') != "1" or $this->Session->read('confidencial') != 1) {
+            //var_dump($this->Session->read('confidencial'));
+            $url = $this->base . "/users/confidencialidad";
+            header("Location: " . $url);
+            die();
+        }
+
+
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
     ?>
         <div id="header">
             <div class="centrardiv" style="background-color: #313945;">
 
                 <?php echo $this->Html->image("banner_header.svg", array("class" => "banner-noneresponsive img-responsive", "alt" => "Fondo Social para la Salud", 'width' => '100%')); ?>
                 <?php echo $this->Html->image("banner_responsive.svg", array("class" => "banner-responsive img-responsive", "alt" => "Fondo Social para la Salud", 'width' => '100%')); ?>
+<<<<<<< HEAD
 
             </div>
+=======
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
 
             <div class="">
                 <?php
@@ -158,6 +188,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 ?>
             </div>
 
+<<<<<<< HEAD
+=======
+            <div class="">
+                <?php
+                if ($this->Session->read('Auth.User.id')) {
+                    echo $this->requestAction(array('controller' => 'menus', 'action' => 'index'), array('return'));
+                }
+                ?>
+            </div>
+
+>>>>>>> 8b50ffdec22aa4aec5e5dba4191863e7c8b039d1
         </div>
     <?php } ?>
 
