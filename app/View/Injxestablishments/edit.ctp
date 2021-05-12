@@ -10,7 +10,7 @@
 
 <div class="row">
     <div class="injxestablishments form">
-        <?php echo $this->Form->create('injxestablishment'); ?>
+        <?php echo $this->Form->create('Injxestablishment'); ?>
         <fieldset>
             <div>
                 <legend>

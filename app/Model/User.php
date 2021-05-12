@@ -88,6 +88,16 @@ class User extends AppModel {
 //'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),
         ),
+        'regions_id' => array(
+            'numeric' => array(
+                'rule' => array('numeric'),
+            //'message' => 'Your custom message here',
+//'allowEmpty' => false,
+//'required' => false,
+//'last' => false, // Stop validation after this rule
+//'on' => 'create', // Limit validation to 'create' or 'update' operations
+            ),
+        ),
     );
 
     public function beforeSave($options = array()) {
@@ -123,11 +133,22 @@ class User extends AppModel {
             'exclusive' => '',
             'finderQuery' => '',
             'counterQuery' => ''
+        ),
+        'Region' => array(
+            'className' => 'Region',
+            'foreignKey' => 'regions_id',
+            'dependent' => false,
+            'conditions' => '',
+            'fields' => '',
+            'order' => '',
+            'limit' => '',
+            'offset' => '',
+            'exclusive' => '',
+            'finderQuery' => '',
+            'counterQuery' => ''
         )
     );
 
-
-    
      public function mail_msj($detalle) {
             $mensaje= "<html>
                     <head>
@@ -142,7 +163,6 @@ class User extends AppModel {
                                   <img src='http://www.sugerencias.fosalud.gob.sv/img/banner_header.png' alt='FOSALUD!' width='100%'  />
                                    <hr color='#848484' size='1'>
                                 </td>
-
                             </tr>
 
                             <tr style='background-color:#00a9a1;' width='25%'>
@@ -185,7 +205,6 @@ class User extends AppModel {
                                     <p style='font-size:15px; padding-top: 2px; text-align:center; padding-right:20px;'><strong>Ingresa al Sitio web desde el siguiente enlace</strong><br>
                                     <a style='text-color:#fc3d3d;' href='http://www.sugerencias.fosalud.gob.sv' target='blank'><img src='http://www.sugerencias.fosalud.gob.sv/img/sugerencias.png' style='padding-top:20px'></a>&nbsp;<br />
                                     </p>
-
                                 </td>
                             </tr>
 

@@ -17,14 +17,27 @@ class TubersxestablishmentsController extends AppController
      * @var array
      */
     public $components = array('Paginator', 'Session', 'Flash');
-
+    public $layout = 'default';
     /**
      * index method
      *
      * @return void
      */
-    public function index($region, $yer)
+    public function Autorizacion()
     {
+        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+        if ($nivel_acceso > 3) {
+            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+        }
+    }
+    
+    public function index($region, $yer, $layout = 0)
+    {
+        // ifpara no mostrar el layout en la tabla , implementar en todas las tablas
+        if($layout == 1){
+            $this->autoLayout = false;
+        }
         // metodo para filtrar por fechas
         $yir = $this->request->query('yir');
         $reg = $region;
@@ -206,12 +219,20 @@ class TubersxestablishmentsController extends AppController
      */
     public function edit($id = null, $region, $yer)
     {
+        $establishments = $this->Tubersxestablishment->Establishment->find('list');
+        $sibases = $this->Tubersxestablishment->Sibase->find('list');
+        $regions = $this->Tubersxestablishment->Region->find('list');
+        $reg = $region;
         if (!$this->Tubersxestablishment->exists($id)) {
             throw new NotFoundException(__('Invalid tubersxestablishment'));
         }
         if ($this->request->is(array('post', 'put'))) {
             if ($this->Tubersxestablishment->save($this->request->data)) {
                 $this->Flash->success(__('El registro fue actualizado con exito.'));
+                $this->loadModel('Bitacora');
+                $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " edito registros de tuberculosis del establecimiento ". $establishments[$id];
+                $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+                $this->Bitacora->save($Bitacora);
                 return $this->redirect(array('action' => 'index', $region, '?yir=' . $yer));
             } else {
                 $this->Flash->error(__('El registro no se pudo actualizar, favor intente de nuevo.'));
@@ -220,10 +241,6 @@ class TubersxestablishmentsController extends AppController
             $options = array('conditions' => array('Tubersxestablishment.' . $this->Tubersxestablishment->primaryKey => $id));
             $this->request->data = $this->Tubersxestablishment->find('first', $options);
         }
-        $establishments = $this->Tubersxestablishment->Establishment->find('list');
-        $sibases = $this->Tubersxestablishment->Sibase->find('list');
-        $regions = $this->Tubersxestablishment->Region->find('list');
-        $reg = $region;
         $this->set(compact('establishments', 'sibases', 'regions', 'reg', 'yer'));
     }
 
@@ -249,28 +266,21 @@ class TubersxestablishmentsController extends AppController
         return $this->redirect(array('action' => 'index'));
     }
     //*****************************************/ prueba de excel *************************************************
-    public function Autorizacion()
-    {
-        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
-        if ($nivel_acceso > 2) {
-            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
-            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
-        }
-    }
 
     public function cargar_Evaluacion($yer)
     {
         //llamada a funcion de autorizacion para validar acceso a funcion
         $this->Autorizacion();
         $regions = $this->Tubersxestablishment->Region->find('list');
+        $we = $this->Session->read('Auth.User.regions_id');
         $this->set(compact('regions'));
-        $this->set(array('yer' => $yer));
+        $this->set(array('yer' => $yer, 'we' => $we));
     }
 
     public function cargar()
     {
         $this->autoRender = false;
-
+        $this->autoLayout = false;
         $reg = $this->request->data['regions'];
         $year = $this->request->data['year'];
 
@@ -286,6 +296,15 @@ class TubersxestablishmentsController extends AppController
                 ),
 
                 'fields' => array('count(*) as total')
+            )
+        );
+        $exi = $this->Tubersxestablishment->find(
+            'first',
+            array(
+                'conditions' => array(
+                    'Tubersxestablishment.regions_id' => $reg,
+                    'Tubersxestablishment.year' => $year
+                ),
             )
         );
 
@@ -452,9 +471,17 @@ class TubersxestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
+        unlink($fileName);
+        $layout = 1;
+        
+        $this->loadModel('Bitacora');
+        $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " Cargo Plantilla de Excel de Tuberculosis de la ". $exi['Region']['region_name']. " del año ". $year;;
+        $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+        $this->Bitacora->save($Bitacora);  
+
         $this->redirect([
             'controller' => 'Tubersxestablishments',
-            'action' => 'index', $reg, $year
+            'action' => 'index', $reg, $year, $layout
         ]);
     }
 

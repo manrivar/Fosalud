@@ -20,7 +20,16 @@ class AccesosController extends AppController {
  *
  * @return void
  */
+public function Autorizacion()
+{
+    $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+    if ($nivel_acceso > 1) {
+        $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+        $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+    }
+}
 	public function index() {
+		$this->Autorizacion();
 		$this->Acceso->recursive = 0;
 		$this->set('accesos', $this->Paginator->paginate());
                 
@@ -36,6 +45,7 @@ class AccesosController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->Autorizacion();
 		if (!$this->Acceso->exists($id)) {
 			throw new NotFoundException(__('Invalid acceso'));
 		}
@@ -53,10 +63,15 @@ class AccesosController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->Autorizacion();
 		if ($this->request->is('post')) {
 			$this->Acceso->create();
 			if ($this->Acceso->save($this->request->data)) {
-				$this->Flash->success(__('The acceso has been saved'));
+				$this->Flash->success(__('El acceso fue creado exitosamente'));
+				$this->loadModel('Bitacora');
+                $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " creo el nivel de acceso ". $this->request->data['Acceso']['descripcion'];
+                $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+                $this->Bitacora->save($Bitacora);
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Flash->error(__('The acceso could not be saved. Please, try again.'));
@@ -72,6 +87,7 @@ class AccesosController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->Autorizacion();
 		if (!$this->Acceso->exists($id)) {
 			throw new NotFoundException(__('Invalid acceso'));
 		}
@@ -96,6 +112,7 @@ class AccesosController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		$this->Autorizacion();
 		$this->Acceso->id = $id;
 		if (!$this->Acceso->exists()) {
 			throw new NotFoundException(__('Invalid acceso'));

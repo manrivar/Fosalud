@@ -9,8 +9,10 @@
 <h2>
     <center>Consejerias</center>
 </h2>
+<?php if($this->Session->read('Auth.User.acceso_id') <= 3):?>
 <span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Advicesxestablishments', 'action' => 'cargar_Evaluacion', $yer)); ?>
 &nbsp;&nbsp;
+<?php endif;  ?>
 <span class="fa fa-pie-chart"></span> <?php echo $this->Html->Link('Graficos', array('controller' => 'Advices', 'action' => 'chart', $yer)); ?>
 
 <?= $this->Form->create('advices', ['type' => 'get']); ?>

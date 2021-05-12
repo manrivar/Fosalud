@@ -6,13 +6,13 @@
     <div class="col-lg-8 col-sm-12 col-xs-12 col-md-8">
         <form id="formulario" accept-charset="utf-8" method="post" id="buscarIndexForm" action="<?= $this->base; ?>/bitacoras/index">
             <div class="col-md-4">
-                <?php echo $this->Form->input('busqueda',array('label'=>'Busqueda Por:','options'=>array(1=>'Empleado',2=>'Usuario'),'empty'=>'Seleccione','default'=>$tipo));?>
+                <?php echo $this->Form->input('busqueda',array('label'=>'Busqueda Por:','options'=>array(1=>'Usuario'),'empty'=>'Seleccione','default'=>$tipo));?>
             </div>
             <div class="col-md-8">
                 <div class="input-group">
                     <input type="hidden" value="POST" name="_method">
-                    <label>Usuario / Empleado</label>
-                    <input type="text" class="form-control" id="q" name="q" autocomplete="off" value="<?= $q; ?>" placeholder="Nombre o Expediente...">
+                    <label>Nombre de Usuario</label>
+                    <input type="text" class="form-control" id="q" name="q" autocomplete="off" value="<?= $q; ?>" placeholder="Nombre de Usuario">
                     <span class="input-group-btn">
                         <label>&nbsp;</label>
                         <button class="btn btn-default" onclick="window.formulario.submit();" type="button"><span class="glyphicon glyphicon-search"></span> Buscar</button>
@@ -23,9 +23,7 @@
     </div>
 </div>
 
-
 <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">&nbsp;</div>
-
 
 <div class="col-lg-1 col-sm-12 col-xs-12 col-md-1"></div>
 

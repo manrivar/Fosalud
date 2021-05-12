@@ -20,7 +20,16 @@ class BitacorasController extends AppController {
  *
  * @return void
  */
+public function Autorizacion()
+{
+    $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+    if ($nivel_acceso > 1) {
+        $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+        $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+    }
+}
 	public function index() {
+        $this->Autorizacion();
             $condicion="";
             if (isset($_POST["q"])) {
                 $q = $_POST["q"];
@@ -28,13 +37,13 @@ class BitacorasController extends AppController {
                 $this->Session->write("tipo", $this->request->data['busqueda']);
                 switch ( $this->Session->read('tipo')){
          
-                    case 2:
+                    case 1:
                         $condicion .= "User.nombre_usuario like '%" . $this->Session->read("q") . "%'";
                         break;
 
                 }
                 
-            } elseif ($this->Session->read("q") != "") {                
+            } elseif ($this->Session->read("q") ) {                
                 switch ($this->Session->read('tipo')){
                     
                     case 2:

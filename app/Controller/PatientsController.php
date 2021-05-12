@@ -165,4 +165,93 @@ class PatientsController extends AppController
         }
         return $this->redirect(array('action' => 'index'));
     }
+    public function chart($yer)
+    {
+        $this->set(array('yer' => $yer));
+
+        $reg = $this->Patient->find('all', array(
+            'fields' => array('Patient.trimester1 as t1, Patient.trimester2 as t2, Patient.trimester3 as t3, Patient.trimester4 as t4'),
+            'conditions' => array('Patient.year =' => $yer, 'Patient.regions_id =' => 1)
+        ));
+
+        $reg2 = $this->Patient->find('all', array(
+            'fields' => array('Patient.trimester1 as t1, Patient.trimester2 as t2, Patient.trimester3 as t3, Patient.trimester4 as t4'),
+            'conditions' => array('Patient.year =' => $yer, 'Patient.regions_id =' => 2)
+        ));
+        $reg3 = $this->Patient->find('all', array(
+            'fields' => array('Patient.trimester1 as t1, Patient.trimester2 as t2, Patient.trimester3 as t3, Patient.trimester4 as t4'),
+            'conditions' => array('Patient.year =' => $yer, 'Patient.regions_id =' => 3)
+        ));
+        $reg4 = $this->Patient->find('all', array(
+            'fields' => array('Patient.trimester1 as t1, Patient.trimester2 as t2, Patient.trimester3 as t3, Patient.trimester4 as t4'),
+            'conditions' => array('Patient.year =' => $yer, 'Patient.regions_id =' => 4)
+        ));
+        $reg5 = $this->Patient->find('all', array(
+            'fields' => array('Patient.trimester1 as t1, Patient.trimester2 as t2, Patient.trimester3 as t3, Patient.trimester4 as t4'),
+            'conditions' => array('Patient.year =' => $yer, 'Patient.regions_id =' => 5)
+        ));
+
+        $tot_occ_1 = $reg[0]['Patient']['t1'];
+        $tot_occ_2 = $reg[0]['Patient']['t2'];
+        $tot_occ_3 = $reg[0]['Patient']['t3'];
+        $tot_occ_4 = $reg[0]['Patient']['t4'];
+
+        $tot_cen_1 = $reg2[0]['Patient']['t1'];
+        $tot_cen_2 = $reg2[0]['Patient']['t2'];
+        $tot_cen_3 = $reg2[0]['Patient']['t3'];
+        $tot_cen_4 = $reg2[0]['Patient']['t4'];
+
+        $tot_met_1 = $reg3[0]['Patient']['t1'];
+        $tot_met_2 = $reg3[0]['Patient']['t2'];
+        $tot_met_3 = $reg3[0]['Patient']['t3'];
+        $tot_met_4 = $reg3[0]['Patient']['t4'];
+
+        $tot_par_1 = $reg4[0]['Patient']['t1'];
+        $tot_par_2 = $reg4[0]['Patient']['t2'];
+        $tot_par_3 = $reg4[0]['Patient']['t3'];
+        $tot_par_4 = $reg4[0]['Patient']['t4'];
+
+        $tot_ori_1 = $reg5[0]['Patient']['t1'];
+        $tot_ori_2 = $reg5[0]['Patient']['t2'];
+        $tot_ori_3 = $reg5[0]['Patient']['t3'];
+        $tot_ori_4 = $reg5[0]['Patient']['t4'];
+        //**********************************
+        //Totales por trimestres
+        $tot_trim1 = $tot_occ_1 + $tot_cen_1 + $tot_met_1 + $tot_par_1 + $tot_ori_1;
+        $tot_trim2 = $tot_occ_2 + $tot_cen_2 + $tot_met_2 + $tot_par_2 + $tot_ori_2;
+        $tot_trim3 = $tot_occ_3 + $tot_cen_3 + $tot_met_3 + $tot_par_3 + $tot_ori_3;
+        $tot_trim4 = $tot_occ_4 + $tot_cen_4 + $tot_met_4 + $tot_par_4 + $tot_ori_4;
+
+        $tot_trim = array($tot_trim1, $tot_trim2, $tot_trim3, $tot_trim4);
+
+        // *********************************
+        //totales por region
+        $regocc = array(intval($tot_occ_1), intval($tot_occ_2), intval($tot_occ_3), intval($tot_occ_4));
+        $regcen = array(intval($tot_cen_1), intval($tot_cen_2), intval($tot_cen_3), intval($tot_cen_4));
+        $regmet = array(intval($tot_met_1), intval($tot_met_2), intval($tot_met_3), intval($tot_met_4));
+        $regpar = array(intval($tot_par_1), intval($tot_par_2), intval($tot_par_3), intval($tot_par_4));
+        $regori = array(intval($tot_ori_1), intval($tot_ori_2), intval($tot_ori_3), intval($tot_ori_4));
+
+
+        // suma
+        $sum1 = $tot_occ_1 + $tot_occ_2 + $tot_occ_3 + $tot_occ_4;
+
+        $sum2 = $tot_cen_1 + $tot_cen_2 + $tot_cen_3 + $tot_cen_4;
+
+        $sum3 = $tot_met_1 + $tot_met_2 + $tot_met_3 + $tot_met_4;
+
+        $sum4 = $tot_par_1 + $tot_par_2 + $tot_par_3 + $tot_par_4;
+
+        $sum5 = $tot_ori_1 + $tot_ori_2 + $tot_ori_3 + $tot_ori_4;
+
+        // promedio
+        $prom1 = ($tot_occ_1 + $tot_cen_1 + $tot_met_1 + $tot_par_1 + $tot_ori_1) / 5;
+        $prom2 = ($tot_occ_2 + $tot_cen_2 + $tot_met_2 + $tot_par_2 + $tot_ori_2) / 5;
+        $prom3 = ($tot_occ_3 + $tot_cen_3 + $tot_met_3 + $tot_par_3 + $tot_ori_3) / 5;
+        $prom4 = ($tot_occ_4 + $tot_cen_4 + $tot_met_4 + $tot_par_4 + $tot_ori_4) / 5;
+
+        $avgData = array($prom1, $prom2, $prom3, $prom4);
+
+        $this->set(array('regocc' => $regocc, 'regcen' => $regcen, 'regmet' => $regmet, 'regpar' => $regpar, 'regori' => $regori, 'avgData' => $avgData, 'tot_trim' => $tot_trim, 'sum1' => $sum1, 'sum2' => $sum2, 'sum3' => $sum3, 'sum4' => $sum4, 'sum5' => $sum5));
+    }
 }

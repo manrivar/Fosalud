@@ -10,7 +10,7 @@
           <h2 class="text-center" style="color: white">Fondo Solidario para la Salud</h2>
       </div>
       <div class="modal-header2">
-          <h3 class="text-center" style="color:#FFFFFF;font-size: 40px">ESTADISTICA</h3>
+          <h3 class="text-center" style="color:#FFFFFF;font-size: 40px">SISPRO</h3>
       </div>
 <!--      <div id="progreso2" class="modal-body btn-warning" ></div>-->
       <div class="modal-body">

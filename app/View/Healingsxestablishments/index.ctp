@@ -42,8 +42,18 @@
                             <?php echo h($healingsxestablishment['Sibase']['sibase_name']); ?>
                         </td>
                         <td>
-                            <?php $region = $healingsxestablishment['Healingsxestablishment']['regions_id'] ?>
+                        <?php $region = $healingsxestablishment['Healingsxestablishment']['regions_id'] ?>
+
+                        <?php if($this->Session->read('Auth.User.acceso_id') <= 2):?>
                             <?php echo $this->Html->link($healingsxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $healingsxestablishment['Healingsxestablishment']['id'], $region, $yer)); ?>
+                            <?php elseif($this->Session->read('Auth.User.acceso_id') > 2):?>
+
+                            <?php if($this->Session->read('Auth.User.regions_id')==$region && $this->Session->read('Auth.User.acceso_id') <= 3):?>
+                                <?php echo $this->Html->link($healingsxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $healingsxestablishment['Healingsxestablishment']['id'], $region, $yer)); ?>
+                            <?php else: ?>
+                                <?php echo h($healingsxestablishment['Establishment']['establishment_name']); ?>
+                            <?php endif; ?>
+                            <?php endif; ?>
                         </td>
                         <?php $total = $healingsxestablishment['Healingsxestablishment']['january'] + $healingsxestablishment['Healingsxestablishment']['february'] + $healingsxestablishment['Healingsxestablishment']['march'] + $healingsxestablishment['Healingsxestablishment']['april'] + $healingsxestablishment['Healingsxestablishment']['may'] + $healingsxestablishment['Healingsxestablishment']['june'] + $healingsxestablishment['Healingsxestablishment']['july'] + $healingsxestablishment['Healingsxestablishment']['august'] + $healingsxestablishment['Healingsxestablishment']['september'] + $healingsxestablishment['Healingsxestablishment']['october'] + $healingsxestablishment['Healingsxestablishment']['november'] + $healingsxestablishment['Healingsxestablishment']['december'];  ?>
                         <td bgcolor="#CBEEF2"><?php echo $total; ?>&nbsp;</td>

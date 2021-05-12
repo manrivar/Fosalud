@@ -1,17 +1,21 @@
+<?php if($this->Session->read('Auth.User.acceso_id') < 2):?>
 <div class="col-lg-12 col-xs-12 col-sm-12">
     <ol class="breadcrumb">
         <li>
-            <span class="glyphicon glyphicon-list"></span> <a href="<?= $this->base; ?>/users">Lista de Usuarios</a>
+            <span class="glyphicon glyphicon-list"></span> <a href="<?= $this->base; ?>/users">Listado de Usuarios</a>
         </li>
         <li>
             <span class="glyphicon glyphicon-pencil"></span> <a href="<?= $this->base; ?>/users/edit_gral/<?= $this->request->data["User"]["id"];?>">Editar Datos Generales</a>
         </li>
     </ol>
 </div>
+<?php endif; ?>
+<?php
 
+?>
 <div class="row">
     <div class="users  col-lg-8 col-xs-12 col-sm-12 col-md-8">
-        <form role="form" accept-charset="utf-8" method="post" id="UserEditForm" action="<?php $this->base; ?>/users/edit/<?= $this->request->data["User"]["id"];?>">
+        <form role="form" accept-charset="utf-8" method="post" id="UserEditForm" action="<?php echo $this->base; ?>/users/edit/<?= $this->request->data["User"]["id"];?>">
             <div style="display:none;">
                 <input type="hidden" value="PUT" name="_method">
             </div>        

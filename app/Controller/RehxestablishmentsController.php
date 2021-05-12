@@ -16,14 +16,27 @@ class RehxestablishmentsController extends AppController
      * @var array
      */
     public $components = array('Paginator', 'Session', 'Flash');
+    public $layout = 'default';
 
     /**
      * index method
      *
      * @return void
      */
-    public function index($region, $yer)
+    public function Autorizacion()
     {
+        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+        if ($nivel_acceso > 3) {
+            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+        }
+    }
+    public function index($region, $yer, $layout = 0)
+    {
+        // ifpara no mostrar el layout en la tabla , implementar en todas las tablas
+        if($layout == 1){
+            $this->autoLayout = false;
+        }
         // metodo para filtrar por fechas
         $yir = $this->request->query('yir');
         $reg = $region;
@@ -209,12 +222,21 @@ class RehxestablishmentsController extends AppController
      */
     public function edit($id = null, $region, $yer)
     {
+        $establishments = $this->Rehxestablishment->Establishment->find('list');
+        $sibases = $this->Rehxestablishment->Sibase->find('list');
+        $regions = $this->Rehxestablishment->Region->find('list');
+        $reg = $region;
+
         if (!$this->Rehxestablishment->exists($id)) {
             throw new NotFoundException(__('Invalid rehxestablishment'));
         }
         if ($this->request->is(array('post', 'put'))) {
             if ($this->Rehxestablishment->save($this->request->data)) {
                 $this->Flash->success(__('El registro fue actualizado con exito.'));
+                $this->loadModel('Bitacora');
+                $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " edito registros de rehidratacion oral del establecimiento ". $establishments[$id];
+                $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+                $this->Bitacora->save($Bitacora);
                 return $this->redirect(array('action' => 'index', $region, '?yir=' . $yer));
             } else {
                 $this->Flash->error(__('El registro no se pudo actualizar, favor intente de nuevo.'));
@@ -223,10 +245,7 @@ class RehxestablishmentsController extends AppController
             $options = array('conditions' => array('Rehxestablishment.' . $this->Rehxestablishment->primaryKey => $id));
             $this->request->data = $this->Rehxestablishment->find('first', $options);
         }
-        $establishments = $this->Rehxestablishment->Establishment->find('list');
-        $sibases = $this->Rehxestablishment->Sibase->find('list');
-        $regions = $this->Rehxestablishment->Region->find('list');
-        $reg = $region;
+
         $this->set(compact('establishments', 'sibases', 'regions', 'reg', 'yer'));
     }
 
@@ -252,28 +271,22 @@ class RehxestablishmentsController extends AppController
         return $this->redirect(array('action' => 'index'));
     }
     //*****************************************/ prueba de excel *************************************************
-    public function Autorizacion()
-    {
-        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
-        if ($nivel_acceso > 2) {
-            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
-            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
-        }
-    }
+
 
     public function cargar_Evaluacion($yer)
     {
         //llamada a funcion de autorizacion para validar acceso a funcion
         $this->Autorizacion();
         $regions = $this->Rehxestablishment->Region->find('list');
+        $we = $this->Session->read('Auth.User.regions_id');
         $this->set(compact('regions'));
-        $this->set(array('yer' => $yer));
+        $this->set(array('yer' => $yer, 'we' => $we));
     }
 
     public function cargar()
     {
         $this->autoRender = false;
-
+        $this->autoLayout = false;
         $reg = $this->request->data['regions'];
         $year = $this->request->data['year'];
 
@@ -289,6 +302,15 @@ class RehxestablishmentsController extends AppController
                 ),
 
                 'fields' => array('count(*) as total')
+            )
+        );
+        $exi = $this->Rehxestablishment->find(
+            'first',
+            array(
+                'conditions' => array(
+                    'Rehxestablishment.regions_id' => $reg,
+                    'Rehxestablishment.year' => $year
+                ),
             )
         );
 
@@ -455,9 +477,17 @@ class RehxestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
+        unlink($fileName);
+        $layout = 1;
+        
+        $this->loadModel('Bitacora');
+        $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " Cargo Plantilla de Excel de Rehidratacion Oral de la ". $exi['Region']['region_name']. " del año ". $year;
+        $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+        $this->Bitacora->save($Bitacora);  
+
         $this->redirect([
             'controller' => 'Rehxestablishments',
-            'action' => 'index', $reg, $year
+            'action' => 'index', $reg, $year, $layout
         ]);
     }
 
@@ -465,7 +495,7 @@ class RehxestablishmentsController extends AppController
 
     public function import()
     {
-        $regions = $this->Hcxestablishment->Region->find('list');
+        $regions = $this->Rehxestablishment->Region->find('list');
         //$yir = $this->request->query('yir');
         $datos = $this->request->data;
         $this->set(compact('regions', 'datos'));

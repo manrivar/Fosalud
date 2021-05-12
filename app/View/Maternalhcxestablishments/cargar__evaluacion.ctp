@@ -25,11 +25,20 @@
                     <td>
                     <td>
                         <?php
-                        echo $this->Form->input('regions', array('id' => 'regions'));
+                        if($this->Session->read('Auth.User.acceso_id') <= 2){
+                            echo $this->Form->input('regions', array('options' => array(1 => 'Region Occidental', 2 => 'Region Centro', 3 => 'Region Metropolitana', 4 => 'Region Paracentral', 5 => 'Region Oriente'),'id' => 'regions'));
+                        }else{
+                            echo $this->Form->input('regions', array(
+                                'options' => array(1 => 'Region Occidental', 2 => 'Region Centro', 3 => 'Region Metropolitana', 4 => 'Region Paracentral', 5 => 'Region Oriente'),
+                                'id' => 'regions',
+                                'default' => $we,
+                                'disabled' => true
+                            ));
+                        }
                         ?>
                     </td>
                     <td>
-                        <?php $option = array('2020' => '2020', '2021' => '2021', '2022' => '2022', '2023' => '2023', '2024' => '2024', '2025' => '2025', '2026' => '2026', '2027' => '2027', '2028' => '2028', '2029' => '2029', '2030' => '2030'); ?>
+                        <?php $option = array('2021' => '2021'); ?>
                         <?php echo $this->Form->input('year', array(
                             'id' => 'year',
                             'label' => 'Año',

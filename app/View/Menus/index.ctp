@@ -34,6 +34,10 @@
                         echo $this->Element('menu/administrador');
                       
                     break;
+                    case 2:
+                        echo $this->Element('menu/administrador2');
+                      
+                    break;
                 
                     endswitch;
                     ?>

@@ -16,14 +16,28 @@ class CexestablishmentsController extends AppController
      * @var array
      */
     public $components = array('Paginator', 'Session', 'Flash');
+    public $layout = 'default';
 
     /**
      * index method
      *
      * @return void
      */
-    public function index($region, $yer)
+    public function Autorizacion()
     {
+        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+        if ($nivel_acceso > 3) {
+            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+        }
+    }
+
+    public function index($region, $yer, $layout = 0)
+    {
+        // ifpara no mostrar el layout en la tabla , implementar en todas las tablas
+        if($layout == 1){
+            $this->autoLayout = false;
+        }
         // metodo para filtrar por fechas
         $yir = $this->request->query('yir');
         $reg = $region;
@@ -210,12 +224,21 @@ class CexestablishmentsController extends AppController
      */
     public function edit($id = null, $region, $yer)
     {
+        $establishments = $this->Cexestablishment->Establishment->find('list');
+        $sibases = $this->Cexestablishment->Sibase->find('list');
+        $regions = $this->Cexestablishment->Region->find('list');
+        $reg = $region;
+
         if (!$this->Cexestablishment->exists($id)) {
             throw new NotFoundException(__('Invalid cexestablishment'));
         }
         if ($this->request->is(array('post', 'put'))) {
             if ($this->Cexestablishment->save($this->request->data)) {
                 $this->Flash->success(__('El registro fue actualizado con exito.'));
+                $this->loadModel('Bitacora');
+                $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " edito registros de examenes clinicos del establecimiento ". $establishments[$id];
+                $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+                $this->Bitacora->save($Bitacora);
                 return $this->redirect(array('action' => 'index',$region, '?yir=' . $yer));
             } else {
                 $this->Flash->error(__('El registro no se pudo actualizar, favor intente de nuevo'));
@@ -224,10 +247,6 @@ class CexestablishmentsController extends AppController
             $options = array('conditions' => array('Cexestablishment.' . $this->Cexestablishment->primaryKey => $id));
             $this->request->data = $this->Cexestablishment->find('first', $options);
         }
-        $establishments = $this->Cexestablishment->Establishment->find('list');
-        $sibases = $this->Cexestablishment->Sibase->find('list');
-        $regions = $this->Cexestablishment->Region->find('list');
-        $reg = $region;
         $this->set(compact('establishments', 'sibases', 'regions', 'reg', 'yer'));
     }
 
@@ -253,32 +272,26 @@ class CexestablishmentsController extends AppController
         return $this->redirect(array('action' => 'index'));
     }
     //*****************************************/ prueba de excel *************************************************
-    public function Autorizacion()
-    {
-        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
-        if ($nivel_acceso > 2) {
-            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
-            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
-        }
-    }
+    
 
     public function cargar_Evaluacion($yer)
     {
         //llamada a funcion de autorizacion para validar acceso a funcion
         $this->Autorizacion();
         $regions = $this->Cexestablishment->Region->find('list');
+        $we = $this->Session->read('Auth.User.regions_id');
         $this->set(compact('regions'));
-        $this->set(array('yer' => $yer));
+        $this->set(array('yer' => $yer, 'we' => $we));
     }
 
     public function cargar()
     {
         $this->autoRender = false;
-
+        $this->autoLayout = false;
         $reg = $this->request->data['regions'];
         $year = $this->request->data['year'];
 
-
+        
 
         //corroborar que no existe informaciona sociada a ese regions
         $existe = $this->Cexestablishment->find(
@@ -293,6 +306,16 @@ class CexestablishmentsController extends AppController
             )
         );
 
+        $exi = $this->Cexestablishment->find(
+            'first',
+            array(
+                'conditions' => array(
+                    'Cexestablishment.regions_id' => $reg,
+                    'Cexestablishment.year' => $year
+                ),
+            )
+        );
+
         if ($reg == 1) {
             $estanum = 31;
         } elseif ($reg == 2) {
@@ -303,7 +326,7 @@ class CexestablishmentsController extends AppController
             $estanum = 27;
         } elseif ($reg == 5) {
             $estanum = 55;
-        }
+        }     
 
         if ($existe[0][0]['total'] != $estanum) {
             echo "YA EXISTEN REGISTROS PARA ESTE CARGO FUNCIONAL, VERIFIQUE";
@@ -412,30 +435,30 @@ class CexestablishmentsController extends AppController
 
                 if ($establishments_id != "") {
 
-                    $page['Childhcxestablishment']['cit_january'] = $ci_enero;
-                    $page['Childhcxestablishment']['mam_january'] = $mam_enero;
-                    $page['Childhcxestablishment']['cit_february'] = $ci_febrero;
-                    $page['Childhcxestablishment']['mam_february'] = $mam_febrero;
-                    $page['Childhcxestablishment']['cit_march'] = $ci_marzo;
-                    $page['Childhcxestablishment']['mam_march'] = $mam_marzo;
-                    $page['Childhcxestablishment']['cit_april'] = $ci_abril;
-                    $page['Childhcxestablishment']['mam_april'] = $mam_abril;
-                    $page['Childhcxestablishment']['cit_may'] = $ci_mayo;
-                    $page['Childhcxestablishment']['mam_may'] = $mam_mayo;
-                    $page['Childhcxestablishment']['cit_june'] = $ci_junio;
-                    $page['Childhcxestablishment']['mam_june'] = $mam_junio;
-                    $page['Childhcxestablishment']['cit_july'] = $ci_julio;
-                    $page['Childhcxestablishment']['mam_july'] = $mam_julio;
-                    $page['Childhcxestablishment']['cit_august'] = $ci_agosto;
-                    $page['Childhcxestablishment']['mam_august'] = $mam_agosto;
-                    $page['Childhcxestablishment']['cit_septiembre'] = $ci_septiembre;
-                    $page['Childhcxestablishment']['mam_septiembre'] = $mam_septiembre;
-                    $page['Childhcxestablishment']['cit_october'] = $ci_octubre;
-                    $page['Childhcxestablishment']['mam_october'] = $mam_octubre;
-                    $page['Childhcxestablishment']['cit_november'] = $ci_noviembre;
-                    $page['Childhcxestablishment']['mam_november'] = $mam_noviembre;
-                    $page['Childhcxestablishment']['cit_december'] = $ci_diciembre;
-                    $page['Childhcxestablishment']['mam_december'] = $mam_diciembre;
+                    $page['Cexestablishment']['cit_january'] = $ci_enero;
+                    $page['Cexestablishment']['mam_january'] = $mam_enero;
+                    $page['Cexestablishment']['cit_february'] = $ci_febrero;
+                    $page['Cexestablishment']['mam_february'] = $mam_febrero;
+                    $page['Cexestablishment']['cit_march'] = $ci_marzo;
+                    $page['Cexestablishment']['mam_march'] = $mam_marzo;
+                    $page['Cexestablishment']['cit_april'] = $ci_abril;
+                    $page['Cexestablishment']['mam_april'] = $mam_abril;
+                    $page['Cexestablishment']['cit_may'] = $ci_mayo;
+                    $page['Cexestablishment']['mam_may'] = $mam_mayo;
+                    $page['Cexestablishment']['cit_june'] = $ci_junio;
+                    $page['Cexestablishment']['mam_june'] = $mam_junio;
+                    $page['Cexestablishment']['cit_july'] = $ci_julio;
+                    $page['Cexestablishment']['mam_july'] = $mam_julio;
+                    $page['Cexestablishment']['cit_august'] = $ci_agosto;
+                    $page['Cexestablishment']['mam_august'] = $mam_agosto;
+                    $page['Cexestablishment']['cit_septiembre'] = $ci_septiembre;
+                    $page['Cexestablishment']['mam_septiembre'] = $mam_septiembre;
+                    $page['Cexestablishment']['cit_october'] = $ci_octubre;
+                    $page['Cexestablishment']['mam_october'] = $mam_octubre;
+                    $page['Cexestablishment']['cit_november'] = $ci_noviembre;
+                    $page['Cexestablishment']['mam_november'] = $mam_noviembre;
+                    $page['Cexestablishment']['cit_december'] = $ci_diciembre;
+                    $page['Cexestablishment']['mam_december'] = $mam_diciembre;
 
                     $page['EvaluacionObjetivo']['user_reg_id'] = $user_id_reg;
 
@@ -446,7 +469,6 @@ class CexestablishmentsController extends AppController
                         // $this->Cexestablishment->create();
                         // $this->Cexestablishment->save($page);
 
-
                     } catch (Exception $ex) {
                         var_dump($ex->getMessage());
                         $i = $tope;
@@ -454,17 +476,26 @@ class CexestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
+        unlink($fileName);
+        $layout = 1;
+        
+        $this->loadModel('Bitacora');
+        $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " Cargo Plantilla de Excel de Examenes Clinicos de la ". $exi['Region']['region_name']. " del año ". $year;;
+        $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+        $this->Bitacora->save($Bitacora);  
+        
         $this->redirect([
             'controller' => 'Cexestablishments',
-            'action' => 'index', $reg, $year
+            'action' => 'index', $reg, $year, $layout
         ]);
     }
 
+    
 
 
     public function import()
     {
-        $regions = $this->Hcxestablishment->Region->find('list');
+        $regions = $this->Cexestablishment->Region->find('list');
         //$yir = $this->request->query('yir');
         $datos = $this->request->data;
         $this->set(compact('regions', 'datos'));

@@ -28,11 +28,24 @@ class HcxestablishmentsController extends AppController
      *
      * @return void
      */
-    public function index($region, $yer)
+    public function Autorizacion()
+{
+    $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+    if ($nivel_acceso > 3) {
+        $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+        $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+    }
+}
+    public function index($region, $yer, $layout = 0)
     {
+        // ifpara no mostrar el layout en la tabla , implementar en todas las tablas
+        if($layout == 1){
+            $this->autoLayout = false;
+        }
         // metodo para filtrar por fechas
         $yir = $this->request->query('yir');
         $reg = $region;
+        
 
         $conditions = [];
         if ($yir) {
@@ -248,12 +261,24 @@ class HcxestablishmentsController extends AppController
      */
     public function edit($id = null, $region, $yer)
     {
+        $this->Autorizacion();
+        $establishments = $this->Hcxestablishment->Establishment->find('list');
+        $sibases = $this->Hcxestablishment->Sibase->find('list');
+        $regions = $this->Hcxestablishment->Region->find('list');
+        $reg = $region;
+
         if (!$this->Hcxestablishment->exists($id)) {
             throw new NotFoundException(__('Invalid hcxestablishment'));
         }
         if ($this->request->is(array('post', 'put'))) {
             if ($this->Hcxestablishment->save($this->request->data)) {
                 $this->Flash->success(__('El registro fue actualizado con exito.'));
+
+                $this->loadModel('Bitacora');
+                $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " edito registros de atencion curativa del establecimiento ". $establishments[$id];
+                $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+                $this->Bitacora->save($Bitacora);
+
                 return $this->redirect(array('action' => 'index', $region, '?yir=' . $yer));
             } else {
                 $this->Flash->error(__('El registro no se pudo actualizar, favor intente de nuevo.'));
@@ -262,10 +287,6 @@ class HcxestablishmentsController extends AppController
             $options = array('conditions' => array('Hcxestablishment.' . $this->Hcxestablishment->primaryKey => $id));
             $this->request->data = $this->Hcxestablishment->find('first', $options);
         }
-        $establishments = $this->Hcxestablishment->Establishment->find('list');
-        $sibases = $this->Hcxestablishment->Sibase->find('list');
-        $regions = $this->Hcxestablishment->Region->find('list');
-        $reg = $region;
         $this->set(compact('establishments', 'sibases', 'regions', 'reg', 'yer'));
     }
 
@@ -291,33 +312,26 @@ class HcxestablishmentsController extends AppController
         return $this->redirect(array('action' => 'index'));
     }
     //*****************************************/ prueba de excel *************************************************
-    public function Autorizacion()
-    {
-        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
-        if ($nivel_acceso > 2) {
-            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
-            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
-        }
-    }
+    
 
     public function cargar_Evaluacion($yer)
     {
         
         //llamada a funcion de autorizacion para validar acceso a funcion
         $this->Autorizacion();
+        
         $regions = $this->Hcxestablishment->Region->find('list');
+        $we = $this->Session->read('Auth.User.regions_id');
         $this->set(compact('regions'));
-        $this->set(array('yer' => $yer));
+        $this->set(array('yer' => $yer, 'we' => $we));
     }
 
     public function cargar()
     {
-        
         $this->autoRender = false;
-
+        $this->autoLayout = false;
         $reg = $this->request->data['regions'];
         $year = $this->request->data['year'];
-
 
 
         //corroborar que no existe informaciona sociada a ese regions
@@ -330,6 +344,16 @@ class HcxestablishmentsController extends AppController
                 ),
 
                 'fields' => array('count(*) as total')
+            )
+        );
+
+        $exi = $this->Hcxestablishment->find(
+            'first',
+            array(
+                'conditions' => array(
+                    'Hcxestablishment.regions_id' => $reg,
+                    'Hcxestablishment.year' => $year
+                ),
             )
         );
 
@@ -519,10 +543,19 @@ class HcxestablishmentsController extends AppController
                     }
                 }
             }
-        } //fin de la comprobacion
+        } 
+        //fin de la comprobacion
+        unlink($fileName);
+        $layout = 1;
+        
+        $this->loadModel('Bitacora');
+        $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " Cargo Plantilla de Excel de Atenciones Curativas de la ". $exi['Region']['region_name']. " del año ". $year;;
+        $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+        $this->Bitacora->save($Bitacora);
+
         $this->redirect([
             'controller' => 'Hcxestablishments',
-            'action' => 'index', $reg, $year
+            'action' => 'index', $reg, $year, $layout
         ]);
     }
 
@@ -556,7 +589,8 @@ class HcxestablishmentsController extends AppController
         $this->set(array('yer' => $yer));
         $this->set(array('reg' => $reg));
 
-        $mon = $this->Hcxestablishment->find('all',
+        $mon = $this->Hcxestablishment->find(
+            'all',
             array(
                 'fields' => array('SUM(Hcxestablishment.con_january) as c_jan, SUM(Hcxestablishment.eme_january) as em_jan, SUM(Hcxestablishment.con_february) as c_feb, SUM(Hcxestablishment.eme_february) as em_feb, SUM(Hcxestablishment.con_march) as c_mar, SUM(Hcxestablishment.eme_march) as em_mar, SUM(Hcxestablishment.con_april) as c_apr, SUM(Hcxestablishment.eme_april) as em_apr, SUM(Hcxestablishment.con_may) as c_may, SUM(Hcxestablishment.eme_may) as em_may, SUM(Hcxestablishment.con_june) as c_jun, SUM(Hcxestablishment.eme_june) as em_jun, SUM(Hcxestablishment.con_july) as c_jul, SUM(Hcxestablishment.eme_july) as em_jul,  SUM(Hcxestablishment.con_august) as c_aug, SUM(Hcxestablishment.eme_august) as em_aug, SUM(Hcxestablishment.con_september) as c_sep, SUM(Hcxestablishment.eme_september) as em_sep, SUM(Hcxestablishment.con_october) as c_oct, SUM(Hcxestablishment.eme_october) as em_oct, SUM(Hcxestablishment.con_november) as c_nov, SUM(Hcxestablishment.eme_november) as em_nov, SUM(Hcxestablishment.con_december) as c_decem, SUM(Hcxestablishment.eme_december) as em_decem, SUM(Hcxestablishment.ext_january) as ex_jan, SUM(Hcxestablishment.ext_february) as ex_feb, SUM(Hcxestablishment.ext_march) as ex_mar, SUM(Hcxestablishment.ext_april) as ex_apr, SUM(Hcxestablishment.ext_may) as ex_may, SUM(Hcxestablishment.ext_june) as ex_jun, SUM(Hcxestablishment.ext_july) as ex_jul, SUM(Hcxestablishment.ext_august) as ex_aug, SUM(Hcxestablishment.ext_september) as ex_sep, SUM(Hcxestablishment.ext_october) as ex_oct, SUM(Hcxestablishment.ext_november) as ex_nov, SUM(Hcxestablishment.ext_december) as ex_decem'),
                 'conditions' => array(
@@ -565,7 +599,6 @@ class HcxestablishmentsController extends AppController
                 )
             )
         );
-        
         $tot_jan1 = $mon[0][0]['c_jan'];
         $tot_jan2 = $mon[0][0]['em_jan'];
         $tot_jan3 = $mon[0][0]['ex_jan'];
@@ -602,7 +635,7 @@ class HcxestablishmentsController extends AppController
         $tot_dec1 = $mon[0][0]['c_decem'];
         $tot_dec2 = $mon[0][0]['em_decem'];
         $tot_dec3 = $mon[0][0]['ex_decem'];
-// *************************************************************************************************************************************
+        // *************************************************************************************************************************************
         $ene1 = array(intval($tot_jan1));
         $ene2 = array(intval($tot_jan2));
         $ene3 = array(intval($tot_jan3));
@@ -640,6 +673,20 @@ class HcxestablishmentsController extends AppController
         $dec2 = array(intval($tot_dec2));
         $dec3 = array(intval($tot_dec3));
         // suma
+
+        $to1 = ($tot_jan1 + $tot_jan2 + $tot_jan3);
+        $to2 = ($tot_feb1 + $tot_feb2 + $tot_feb3);
+        $to3 = ($tot_mar1 + $tot_mar2 + $tot_mar3);
+        $to4 = ($tot_apr1 + $tot_apr2 + $tot_apr3);
+        $to5 = ($tot_may1 + $tot_may2 + $tot_may3);
+        $to6 = ($tot_jun1 + $tot_jun2 + $tot_jun3);
+        $to7 = ($tot_jul1 + $tot_jul2 + $tot_jul3);
+        $to8 = ($tot_aug1 + $tot_aug2 + $tot_aug3);
+        $to9 = ($tot_sep1 + $tot_sep2 + $tot_sep3);
+        $to10 = ($tot_oct1 + $tot_oct2 + $tot_oct3);
+        $to11 = ($tot_nov1 + $tot_nov2 + $tot_nov3);
+        $to12 = ($tot_dec1 + $tot_dec2 + $tot_dec3);
+
         // promedio
         $prom1 = ($tot_jan1 + $tot_jan2 + $tot_jan3) / 3;
         $prom2 = ($tot_feb1 + $tot_feb2 + $tot_feb3) / 3;
@@ -654,370 +701,673 @@ class HcxestablishmentsController extends AppController
         $prom11 = ($tot_nov1 + $tot_nov2 + $tot_nov3) / 3;
         $prom12 = ($tot_dec1 + $tot_dec2 + $tot_dec3) / 3;
 
-        $conData = array($ene1, $feb1, $mar1, $abr1, $may1, $jun1, $jul1, $aug1, $sep1, $oct1, $nov1, $dec1);
-        $emeData = array($ene2, $feb2, $mar2, $abr2, $may2, $jun2, $jul2, $aug2, $sep2, $oct1, $nov2, $dec2);
-        $extData = array($ene3, $feb3, $mar3, $abr3, $may3, $jun3, $jul3, $aug3, $sep3, $oct3, $nov3, $dec3);
-        $avgData = array($prom1, $prom2, $prom3, $prom4, $prom5, $prom6, $prom7, $prom8, $prom9, $prom10, $prom11, $prom12);
 
-        $sum_con = $tot_jan1 + $tot_feb1 + $tot_mar1 + $tot_apr1 + $tot_may1 + $tot_jun1 + $tot_jul1 + $tot_aug1 + $tot_sep1 + $tot_oct1 + $tot_nov1 + $tot_dec1;
-        $sum_eme = $tot_jan2 + $tot_feb2 + $tot_mar2 + $tot_apr2 + $tot_may2 + $tot_jun2 + $tot_jul2 + $tot_aug2 + $tot_sep2 + $tot_oct2 + $tot_nov2 + $tot_dec2;
-        $sum_ext = $tot_jan3 + $tot_feb3 + $tot_mar3 + $tot_apr3 + $tot_may3 + $tot_jun3 + $tot_jul3 + $tot_aug3 + $tot_sep3 + $tot_oct3 + $tot_nov3 + $tot_dec3;
-
-    
-        $chartName = 'Combination Chart';
-
-        $mychart = $this->Highcharts->create($chartName, 'column');
-
-        $this->Highcharts->setChartParams(
-            $chartName,
-            array(
-                'renderTo' => 'combowrapper', // div to display chart inside
-                'chartWidth' => 1300,
-                'chartHeight' => 700,
-                'chartBackgroundColorLinearGradient' => array(0, 0, 0, 300),
-                'chartBackgroundColorStops' => array(array(0, 'rgb(217, 217, 217)'), array(1, 'rgb(255, 255, 255)')),
-                'title' => 'Atenciones Curativas - Anual',
-                'subtitle' => 'Fuente: Simmow',
-                'xAxisLabelsEnabled' => TRUE,
-                'xAxisCategories' => array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'),
-                'yAxisTitleText' => 'Unidades',
-                'yAxisMaxPadding' => '0.1',
-                'enableAutoStep' => FALSE,
-                'creditsEnabled' => FALSE,
-                'plotOptionsColumnDataLabelsEnabled' => true,
-                
-            )
-        );
-
-        $conSeries = $this->Highcharts->addChartSeries();
-        $conSeries->type = 'column';
-        $conSeries->addName('Consulta Externa')
-            ->addData($conData);
-
-        $emeSeries = $this->Highcharts->addChartSeries();
-        $emeSeries->type = 'column';
-        $emeSeries->addName('Emergencia')
-            ->addData($emeData);
-
-        $extSeries = $this->Highcharts->addChartSeries();
-        $extSeries->type = 'column';
-        $extSeries->addName('Extramural')
-            ->addData($extData);
-
-        $avgSeries = $this->Highcharts->addChartSeries();
-        $avgSeries->type = 'spline';
-        $avgSeries->addName('Promedio')
-            ->addData($avgData);
-
-        
-
-        $mychart->addSeries($conSeries);
-        $mychart->addSeries($emeSeries);
-        $mychart->addSeries($extSeries);
-
-        $mychart->addSeries($avgSeries);
-
-        $this->set(compact('chartName'));
-
-        // **********************************************************************************************************************************************************************************************************************************************************************
-
-        $mont = $this->Hcxestablishment->find(
-            'all',
-            array(
-                'conditions' => array(
-                    'Hcxestablishment.year =' => $yer,
-                    'Hcxestablishment.regions_id' => $reg
-                )
-            )
-        );
-
-        $tot = $sum_con + $sum_eme + $sum_ext;
-
-        $p1 = ($sum_con * 100) / $tot;
-        $p2 = ($sum_eme * 100) / $tot;
-        $p3 = ($sum_ext * 100) / $tot;
-        $p11 = number_format($p1, 2, '.', '');
-        $p22 = number_format($p2, 2, '.', '');
-        $p33 = number_format($p3, 2, '.', '');
-
-        $chartData = array(
-            array(
-                'name' => 'Consulta Externa '. $p11. '%',
-                'y' => doubleval($p11),
-                'sliced' => false,
-                'selected' => false,
-            ),
-            array(
-                'name' => 'Emergencias '. $p22. '%', 
-                'y' => doubleval($p22)
-            ),
-            array(
-                'name' => 'Extramural '.$p33. '%', 
-                'y' => doubleval($p33)
-            ),
-            
-        );
-$dataLabelsFormat = <<<EOF
-function(){return this.point.name; }
-EOF;
-
-$tooltipFormatFunction = <<<EOF
-function(){return this.y +'%'; }
-EOF;
-        $chartName2 = 'Pie 3D Chart';
-
-        $pie3dChart = $this->Highcharts->create($chartName2, 'pie');
-
-        $this->Highcharts->setChartParams(
-            $chartName2,
-            array(
-                'renderTo' => 'pie3dwrapper', // div to display chart inside
-                'chartWidth' => 1300,
-                'chartHeight' => 600,
-                'options3d' => array(
-                    'enabled' => true,
-                    'alpha' => 45,
-                    'beta' => 0,
-                ),
-                'plotOptionsPieDepth' => 45,   // this is needed for the 3D effect
-                'plotOptionsShowInLegend' => true,
-                'plotOptionsPieAllowPointSelect' => true,
-                'plotOptionsPieDataLabelsEnabled' => true,
-                'plotOptionsPieDataLabelsFormat' => $dataLabelsFormat,
-                'tooltipFormatter' => $tooltipFormatFunction,
-                'title' => 'Atenciones Curativas - Consultas Externas, Emergencias y Extramural',
-                'subtitle' => 'Fuente: Simmow, Vigepes, Seps, Vacunas, Silin, Desastres',
-                'creditsEnabled' => false,
-                'tooltipEnabled' => true,
-                'tooltipValueSuffix' => '%'
-                
-            )
-        );
-
-        $series = $this->Highcharts->addChartSeries();
-
-        $series->addName('Porcentaje')
-        ->addData($chartData);
-
-        $pie3dChart->addSeries($series);
-        $this->set(compact('chartName2'));
-
-        // **********************************************************************************************************************************************************************************************************************************************************************
-        $chartName3 = 'Stacked Column Chart';
-
-        $Mychart = $this->Highcharts->create(
-            $chartName3,
-            array(
-                'type' => 'column',
-                'exporting' => TRUE
-            )
-        );
-        $dataLabelsFormat = <<<EOF
-function(){point.x}
-EOF;
-
-        $tooltipFormatFunction = <<<EOF
-function(){series.name}: {point.y}<br/>Total: {point.stackTotal}
-EOF;
-
-        $this->Highcharts->setChartParams(
-            $chartName3,
-            array(
-                'renderTo' => 'columnwrapper', // div to display chart inside
-                'chartWidth' => 1300,
-                'chartHeight' => 750,
-                'chartBackgroundColorLinearGradient' => array(0, 0, 0, 300),
-                'chartBackgroundColorStops' => array(array(0, 'rgb(217, 217, 217)'), array(1, 'rgb(255, 255, 255)')),
-                'title' => 'Stacked Column Chart',
-                'subtitle' => 'Source: World Bank',
-                'xAxisLabelsEnabled' => TRUE,
-                'yAxisTitleText' => 'Total Fruit Consumption',
-                'enableAutoStep' => false,
-                'creditsEnabled' => FALSE,
-                'plotOptionsSeriesStacking' => 'normal', // other options is 'percent'
-                'plotOptionsColumnDataLabelsEnabled' => true,
-                'plotOptionsPieDataLabelsFormat' => $dataLabelsFormat,
-                'tooltipFormatter' => $tooltipFormatFunction,
-                'headerFormat' => '<b>{point.x}</b><br/>',
-                'pointFormat' => '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
-            )
-        );
-
-        // Consulta sql la cual devuelve todos los establecimientos de la region en la variable "reg"
-        $hcxesta = $this->Hcxestablishment->Establishment->find(
-            'list',
-            array(
-                'fields' => array('Establishment.establishment_name'),
-                'conditions' => array(
-                    'Establishment.regions_id' => $reg
-                )
-            )
-        );
-
-        //hace que empiece el array en 0
-        $hcxesta = array_values($hcxesta);
-
-        // se encarga de realizar un foreach y mostrar todos los establecimientos de esa region        
-            foreach ($hcxesta as $valo) {
-                $this->Highcharts->setChartParams(
-                    $chartName3, array(
-                        'xAxisCategories' => $hcxesta
-                    )    
-                );
-            }
-
-        // consulta sql que devuelve toda la tabla Hcxestablishments
-        $mes = $this->Hcxestablishment->query("SELECT con_january + eme_january + ext_january as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
-
-        $mes2 = $this->Hcxestablishment->query("SELECT con_february + eme_february + ext_february as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
-
-        $mes3 = $this->Hcxestablishment->query("SELECT con_march + eme_march + ext_march as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
-
-        $mes4 = $this->Hcxestablishment->query("SELECT con_april + eme_april + ext_april as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
-
-        $mes5 = $this->Hcxestablishment->query("SELECT con_may + eme_may + ext_may as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
-
-        $mes6 = $this->Hcxestablishment->query("SELECT con_june + eme_june + ext_june as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
-
-        $mes7 = $this->Hcxestablishment->query("SELECT con_july + eme_july + ext_july as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
-
-        $mes8 = $this->Hcxestablishment->query("SELECT con_august + eme_august + ext_august as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
-
-        $mes9 = $this->Hcxestablishment->query("SELECT con_september + eme_september + ext_september as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
-
-        $mes10 = $this->Hcxestablishment->query("SELECT con_october + eme_october + ext_october as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
-
-        $mes11 = $this->Hcxestablishment->query("SELECT con_november + eme_november + ext_november as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
-
-        $mes12 = $this->Hcxestablishment->query("SELECT con_december + eme_december + ext_december as suma FROM hcxestablishments WHERE regions_id = $reg && year = $yer");
-            
         function getSuma($arreglo)
         {
             $a_temp = array();
 
             foreach ($arreglo as $arr) {
-                $a_temp[] = $arr[0]["suma"];
-                
+                $a_temp[] = $arr[0];
+            }
+            return $a_temp;
+        }
+
+        $conData = array($ene1, $feb1, $mar1, $abr1, $may1, $jun1, $jul1, $aug1, $sep1, $oct1, $nov1, $dec1);
+
+        $emeData = array($ene2, $feb2, $mar2, $abr2, $may2, $jun2, $jul2, $aug2, $sep2, $oct2, $nov2, $dec2);
+
+        $extData = array($ene3, $feb3, $mar3, $abr3, $may3, $jun3, $jul3, $aug3, $sep3, $oct3, $nov3, $dec3);
+
+        $avgData = array($prom1, $prom2, $prom3, $prom4, $prom5, $prom6, $prom7, $prom8, $prom9, $prom10, $prom11, $prom12);
+
+        $totData = array($to1, $to2, $to3, $to4, $to5, $to6, $to7, $to8, $to9, $to10, $to11, $to12);
+
+        $conData = getSuma($conData);
+        $conData = array_map('intval', $conData);
+
+        $emeData = getSuma($emeData);
+        $emeData = array_map('intval', $emeData);
+
+        $extData = getSuma($extData);
+        $extData = array_map('intval', $extData);
+
+        $sum_con = $tot_jan1 + $tot_feb1 + $tot_mar1 + $tot_apr1 + $tot_may1 + $tot_jun1 + $tot_jul1 + $tot_aug1 + $tot_sep1 + $tot_oct1 + $tot_nov1 + $tot_dec1;
+        $sum_eme = $tot_jan2 + $tot_feb2 + $tot_mar2 + $tot_apr2 + $tot_may2 + $tot_jun2 + $tot_jul2 + $tot_aug2 + $tot_sep2 + $tot_oct2 + $tot_nov2 + $tot_dec2;
+        $sum_ext = $tot_jan3 + $tot_feb3 + $tot_mar3 + $tot_apr3 + $tot_may3 + $tot_jun3 + $tot_jul3 + $tot_aug3 + $tot_sep3 + $tot_oct3 + $tot_nov3 + $tot_dec3;
+
+        $this->set(array('conData' => $conData, 'emeData' => $emeData, 'extData' => $extData, 'avgData' => $avgData, 'totData' => $totData, 'sum_con' => $sum_con, 'sum_eme' => $sum_eme, 'sum_ext' => $sum_ext));
+
+        //mostrar todos las sibasis por region
+
+        // Consulta sql la cual devuelve todos los establecimientos de la region en la variable "reg"
+        $siba = $this->Hcxestablishment->Sibase->find(
+            'list',
+            array(
+                'fields' => array('Sibase.sibase_name'),
+                'conditions' => array(
+                    'Sibase.regions_id' => $reg
+                )
+            )
+        );
+        // devuelve el id de las sibasis
+        $sibaid = $this->Hcxestablishment->Sibase->find(
+            'list',
+            array(
+                'fields' => array('Sibase.id'),
+                'conditions' => array(
+                    'Sibase.regions_id' => $reg
+                )
+            )
+        );
+
+        //hace que empiece el array en 0
+        $siba = array_values($siba);
+        $sibaid = array_values($sibaid);
+        
+        if ($reg == 1) {
+            $tot1 = $this->Hcxestablishment->query("SELECT SUM(con_january) + SUM(con_february) + SUM(con_march) + SUM(con_april) + SUM(con_may) + SUM(con_june) + SUM(con_july) + SUM(con_august) + SUM(con_september) + SUM(con_october) + SUM(con_november) + SUM(con_december) + SUM(eme_january) + SUM(eme_february) + SUM(eme_march) + SUM(eme_april) + SUM(eme_may) + SUM(eme_june) + SUM(eme_july) + SUM(eme_august) + SUM(eme_september) + SUM(eme_october) + SUM(eme_november) + SUM(eme_december) + SUM(ext_january) + SUM(ext_february) + SUM(ext_march) + SUM(ext_april) + SUM(ext_may) + SUM(ext_june) + SUM(ext_july) + SUM(ext_august) + SUM(ext_september) + SUM(ext_october) + SUM(ext_november) + SUM(ext_december) as sib1 FROM hcxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+
+            $tot2 = $this->Hcxestablishment->query("SELECT SUM(con_january) + SUM(con_february) + SUM(con_march) + SUM(con_april) + SUM(con_may) + SUM(con_june) + SUM(con_july) + SUM(con_august) + SUM(con_september) + SUM(con_october) + SUM(con_november) + SUM(con_december) + SUM(eme_january) + SUM(eme_february) + SUM(eme_march) + SUM(eme_april) + SUM(eme_may) + SUM(eme_june) + SUM(eme_july) + SUM(eme_august) + SUM(eme_september) + SUM(eme_october) + SUM(eme_november) + SUM(eme_december) + SUM(ext_january) + SUM(ext_february) + SUM(ext_march) + SUM(ext_april) + SUM(ext_may) + SUM(ext_june) + SUM(ext_july) + SUM(ext_august) + SUM(ext_september) + SUM(ext_october) + SUM(ext_november) + SUM(ext_december) as sib1 FROM hcxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]");
+
+            $tot3 = $this->Hcxestablishment->query("SELECT SUM(con_january) + SUM(con_february) + SUM(con_march) + SUM(con_april) + SUM(con_may) + SUM(con_june) + SUM(con_july) + SUM(con_august) + SUM(con_september) + SUM(con_october) + SUM(con_november) + SUM(con_december) + SUM(eme_january) + SUM(eme_february) + SUM(eme_march) + SUM(eme_april) + SUM(eme_may) + SUM(eme_june) + SUM(eme_july) + SUM(eme_august) + SUM(eme_september) + SUM(eme_october) + SUM(eme_november) + SUM(eme_december) + SUM(ext_january) + SUM(ext_february) + SUM(ext_march) + SUM(ext_april) + SUM(ext_may) + SUM(ext_june) + SUM(ext_july) + SUM(ext_august) + SUM(ext_september) + SUM(ext_october) + SUM(ext_november) + SUM(ext_december) as sib1 FROM hcxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");
+
+            $sibas = array($tot1, $tot2, $tot3);
+
+            $estasib1 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[0]
+                    )
+                )
+            );
+            $estasib2 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[1]
+                    )
+                )
+            );
+            $estasib3 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[2]
+                    )
+                )
+            );
+            $estas1 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[0]
+                    )
+                )
+            );
+            $estas2 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[1]
+                    )
+                )
+            );
+            $estas3 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[2]
+                    )
+                )
+            );
+
+            // query para que traer informacion de cada mes por establecimiento filtrado por sibasi
+
+            $estas1 = array_values($estas1);
+            $estas2 = array_values($estas2);
+            $estas3 = array_values($estas3);
+            
+            $this->set(array('estasib1' => $estasib1, 'estasib2' => $estasib2, 'estasib3' => $estasib3,'estas1' => $estas1, 'estas2' => $estas2, 'estas3' => $estas3));
+
+        } elseif ($reg == 2) {
+            $tot1 = $this->Hcxestablishment->query("SELECT SUM(con_january) + SUM(con_february) + SUM(con_march) + SUM(con_april) + SUM(con_may) + SUM(con_june) + SUM(con_july) + SUM(con_august) + SUM(con_september) + SUM(con_october) + SUM(con_november) + SUM(con_december) + SUM(eme_january) + SUM(eme_february) + SUM(eme_march) + SUM(eme_april) + SUM(eme_may) + SUM(eme_june) + SUM(eme_july) + SUM(eme_august) + SUM(eme_september) + SUM(eme_october) + SUM(eme_november) + SUM(eme_december) + SUM(ext_january) + SUM(ext_february) + SUM(ext_march) + SUM(ext_april) + SUM(ext_may) + SUM(ext_june) + SUM(ext_july) + SUM(ext_august) + SUM(ext_september) + SUM(ext_october) + SUM(ext_november) + SUM(ext_december) as sib1 FROM hcxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+
+            $tot2 = $this->Hcxestablishment->query("SELECT SUM(con_january) + SUM(con_february) + SUM(con_march) + SUM(con_april) + SUM(con_may) + SUM(con_june) + SUM(con_july) + SUM(con_august) + SUM(con_september) + SUM(con_october) + SUM(con_november) + SUM(con_december) + SUM(eme_january) + SUM(eme_february) + SUM(eme_march) + SUM(eme_april) + SUM(eme_may) + SUM(eme_june) + SUM(eme_july) + SUM(eme_august) + SUM(eme_september) + SUM(eme_october) + SUM(eme_november) + SUM(eme_december) + SUM(ext_january) + SUM(ext_february) + SUM(ext_march) + SUM(ext_april) + SUM(ext_may) + SUM(ext_june) + SUM(ext_july) + SUM(ext_august) + SUM(ext_september) + SUM(ext_october) + SUM(ext_november) + SUM(ext_december) as sib1 FROM hcxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]");
+
+            $sibas = array($tot1, $tot2);
+
+            $estasib1 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[0]
+                    )
+                )
+            );
+            $estasib2 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[1]
+                    )
+                )
+            );
+            $estas1 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[0]
+                    )
+                )
+            );
+            $estas2 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[1]
+                    )
+                )
+            );
+
+            $estas1 = array_values($estas1);
+            $estas2 = array_values($estas2);
+           
+            $this->set(array('estasib1' => $estasib1, 'estasib2' => $estasib2,'estas1' => $estas1, 'estas2' => $estas2));
+
+        } elseif ($reg == 3 or $reg == 4 or $reg == 5) {
+            $tot1 = $this->Hcxestablishment->query("SELECT SUM(con_january) + SUM(con_february) + SUM(con_march) + SUM(con_april) + SUM(con_may) + SUM(con_june) + SUM(con_july) + SUM(con_august) + SUM(con_september) + SUM(con_october) + SUM(con_november) + SUM(con_december) + SUM(eme_january) + SUM(eme_february) + SUM(eme_march) + SUM(eme_april) + SUM(eme_may) + SUM(eme_june) + SUM(eme_july) + SUM(eme_august) + SUM(eme_september) + SUM(eme_october) + SUM(eme_november) + SUM(eme_december) + SUM(ext_january) + SUM(ext_february) + SUM(ext_march) + SUM(ext_april) + SUM(ext_may) + SUM(ext_june) + SUM(ext_july) + SUM(ext_august) + SUM(ext_september) + SUM(ext_october) + SUM(ext_november) + SUM(ext_december) as sib1 FROM hcxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+
+            $tot2 = $this->Hcxestablishment->query("SELECT SUM(con_january) + SUM(con_february) + SUM(con_march) + SUM(con_april) + SUM(con_may) + SUM(con_june) + SUM(con_july) + SUM(con_august) + SUM(con_september) + SUM(con_october) + SUM(con_november) + SUM(con_december) + SUM(eme_january) + SUM(eme_february) + SUM(eme_march) + SUM(eme_april) + SUM(eme_may) + SUM(eme_june) + SUM(eme_july) + SUM(eme_august) + SUM(eme_september) + SUM(eme_october) + SUM(eme_november) + SUM(eme_december) + SUM(ext_january) + SUM(ext_february) + SUM(ext_march) + SUM(ext_april) + SUM(ext_may) + SUM(ext_june) + SUM(ext_july) + SUM(ext_august) + SUM(ext_september) + SUM(ext_october) + SUM(ext_november) + SUM(ext_december) as sib1 FROM hcxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]");
+
+            $tot3 = $this->Hcxestablishment->query("SELECT SUM(con_january) + SUM(con_february) + SUM(con_march) + SUM(con_april) + SUM(con_may) + SUM(con_june) + SUM(con_july) + SUM(con_august) + SUM(con_september) + SUM(con_october) + SUM(con_november) + SUM(con_december) + SUM(eme_january) + SUM(eme_february) + SUM(eme_march) + SUM(eme_april) + SUM(eme_may) + SUM(eme_june) + SUM(eme_july) + SUM(eme_august) + SUM(eme_september) + SUM(eme_october) + SUM(eme_november) + SUM(eme_december) + SUM(ext_january) + SUM(ext_february) + SUM(ext_march) + SUM(ext_april) + SUM(ext_may) + SUM(ext_june) + SUM(ext_july) + SUM(ext_august) + SUM(ext_september) + SUM(ext_october) + SUM(ext_november) + SUM(ext_december) as sib1 FROM hcxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");
+
+            $tot4 = $this->Hcxestablishment->query("SELECT SUM(con_january) + SUM(con_february) + SUM(con_march) + SUM(con_april) + SUM(con_may) + SUM(con_june) + SUM(con_july) + SUM(con_august) + SUM(con_september) + SUM(con_october) + SUM(con_november) + SUM(con_december) + SUM(eme_january) + SUM(eme_february) + SUM(eme_march) + SUM(eme_april) + SUM(eme_may) + SUM(eme_june) + SUM(eme_july) + SUM(eme_august) + SUM(eme_september) + SUM(eme_october) + SUM(eme_november) + SUM(eme_december) + SUM(ext_january) + SUM(ext_february) + SUM(ext_march) + SUM(ext_april) + SUM(ext_may) + SUM(ext_june) + SUM(ext_july) + SUM(ext_august) + SUM(ext_september) + SUM(ext_october) + SUM(ext_november) + SUM(ext_december) as sib1 FROM hcxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]");
+
+            $sibas = array($tot1, $tot2, $tot3, $tot4); // Array con totales de cada sibasi
+
+            $estasib1 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[0]
+                    )
+                )
+            );
+            $estasib2 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[1]
+                    )
+                )
+            );
+            $estasib3 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[2]
+                    )
+                )
+            );
+            $estasib4 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[3]
+                    )
+                )
+            );
+            $estas1 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[0]
+                    )
+                )
+            );
+            $estas2 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[1]
+                    )
+                )
+            );
+            $estas3 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[2]
+                    )
+                )
+            );
+            $estas4 = $this->Hcxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[3]
+                    )
+                )
+            );
+            $estas1 = array_values($estas1);
+            $estas2 = array_values($estas2);
+            $estas3 = array_values($estas3);
+            $estas4 = array_values($estas4);
+
+            
+           
+            $this->set(array('estasib1' => $estasib1, 'estasib2' => $estasib2, 'estasib3' => $estasib3, 'estasib4' => $estasib4, 'estas1' => $estas1, 'estas2' => $estas2, 'estas3' => $estas3, 'estas4' => $estas4));
+        }
+
+        function getSuma2($arreglo)
+        {
+            $a_temp = array();
+
+            foreach ($arreglo as $arr) {
+                $a_temp[] = $arr[0][0]["sib1"];
+            }
+            return $a_temp;
+        }
+
+        function getSuma3($arreglo)
+        {
+            $a_temp = array();
+
+            foreach ($arreglo as $arr) {
+                $a_temp[] = $arr[0]['sum'];
             }
             return $a_temp;
         }
         
-        $mes = getSuma($mes);
-        $mes = array_map('intval', $mes);
 
-        $mes2 = getSuma($mes2);
-        $mes2 = array_map('intval', $mes2);
+        switch($reg){
+            case 1:
+                $sum_ene1 = $this->Hcxestablishment->query("SELECT `con_january` + `eme_january` + `ext_january` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_ene2 = $this->Hcxestablishment->query("SELECT `con_january` + `eme_january` + `ext_january` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_ene3 = $this->Hcxestablishment->query("SELECT `con_january` + `eme_january` + `ext_january` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]"); 
+                // cambio de mes 
+                $sum_feb1 = $this->Hcxestablishment->query("SELECT `con_february` + `eme_february` + `ext_february` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_feb2 = $this->Hcxestablishment->query("SELECT `con_february` + `eme_february` + `ext_february` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_feb3 = $this->Hcxestablishment->query("SELECT `con_february` + `eme_february` + `ext_february` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                // cambio de mes 
+                $sum_mar1 = $this->Hcxestablishment->query("SELECT `con_march` + `eme_march` + `ext_march` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_mar2 = $this->Hcxestablishment->query("SELECT `con_march` + `eme_march` + `ext_march` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_mar3 = $this->Hcxestablishment->query("SELECT `con_march` + `eme_march` + `ext_march` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                // cambio de mes 
+                $sum_abr1 = $this->Hcxestablishment->query("SELECT `con_april` + `eme_april` + `ext_april` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_abr2 = $this->Hcxestablishment->query("SELECT `con_april` + `eme_april` + `ext_april` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_abr3 = $this->Hcxestablishment->query("SELECT `con_april` + `eme_april` + `ext_april` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                // cambio de mes 
+                $sum_may1 = $this->Hcxestablishment->query("SELECT `con_may` + `eme_may` + `ext_may` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_may2 = $this->Hcxestablishment->query("SELECT `con_may` + `eme_may` + `ext_may` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_may3 = $this->Hcxestablishment->query("SELECT `con_may` + `eme_may` + `ext_may` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                // cambio de mes 
+                $sum_jun1 = $this->Hcxestablishment->query("SELECT `con_june` + `eme_june` + `ext_june` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_jun2 = $this->Hcxestablishment->query("SELECT `con_june` + `eme_june` + `ext_june` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_jun3 = $this->Hcxestablishment->query("SELECT `con_june` + `eme_june` + `ext_june` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                // cambio de mes 
+                $sum_jul1 = $this->Hcxestablishment->query("SELECT `con_july` + `eme_july` + `ext_july` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_jul2 = $this->Hcxestablishment->query("SELECT `con_july` + `eme_july` + `ext_july` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_jul3 = $this->Hcxestablishment->query("SELECT `con_july` + `eme_july` + `ext_july` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                // cambio de mes 
+                $sum_ago1 = $this->Hcxestablishment->query("SELECT `con_august` + `eme_august` + `ext_august` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_ago2 = $this->Hcxestablishment->query("SELECT `con_august` + `eme_august` + `ext_august` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_ago3 = $this->Hcxestablishment->query("SELECT `con_august` + `eme_august` + `ext_august` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                // cambio de mes 
+                $sum_sep1 = $this->Hcxestablishment->query("SELECT `con_september` + `eme_september` + `ext_september` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_sep2 = $this->Hcxestablishment->query("SELECT `con_september` + `eme_september` + `ext_september` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_sep3 = $this->Hcxestablishment->query("SELECT `con_september` + `eme_september` + `ext_september` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                // cambio de mes 
+                $sum_oct1 = $this->Hcxestablishment->query("SELECT `con_october` + `eme_october` + `ext_october` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_oct2 = $this->Hcxestablishment->query("SELECT `con_october` + `eme_october` + `ext_october` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_oct3 = $this->Hcxestablishment->query("SELECT `con_october` + `eme_october` + `ext_october` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                // cambio de mes 
+                $sum_nov1 = $this->Hcxestablishment->query("SELECT `con_november` + `eme_november` + `ext_november` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_nov2 = $this->Hcxestablishment->query("SELECT `con_november` + `eme_november` + `ext_november` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_nov3 = $this->Hcxestablishment->query("SELECT `con_november` + `eme_november` + `ext_november` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                // cambio de mes 
+                $sum_dic1 = $this->Hcxestablishment->query("SELECT `con_december` + `eme_december` + `ext_december` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_dic2 = $this->Hcxestablishment->query("SELECT `con_december` + `eme_december` + `ext_december` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_dic3 = $this->Hcxestablishment->query("SELECT `con_december` + `eme_december` + `ext_december` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
 
-        $mes3 = getSuma($mes3);
-        $mes3 = array_map('intval', $mes3);
+                $sum_ene3 = getSuma3($sum_ene3);
+                $sum_ene3 = array_map('intval', $sum_ene3);
+                $sum_feb3 = getSuma3($sum_feb3);
+                $sum_feb3 = array_map('intval', $sum_feb3);
+                $sum_mar3 = getSuma3($sum_mar3);
+                $sum_mar3 = array_map('intval', $sum_mar3);
+                $sum_abr3 = getSuma3($sum_abr3);
+                $sum_abr3 = array_map('intval', $sum_abr3);
+                $sum_may3 = getSuma3($sum_may3);
+                $sum_may3 = array_map('intval', $sum_may3);
+                $sum_jun3 = getSuma3($sum_jun3);
+                $sum_jun3 = array_map('intval', $sum_jun3);
+                $sum_jul3 = getSuma3($sum_jul3);
+                $sum_jul3 = array_map('intval', $sum_jul3);
+                $sum_ago3 = getSuma3($sum_ago3);
+                $sum_ago3 = array_map('intval', $sum_ago3);
+                $sum_sep3 = getSuma3($sum_sep3);
+                $sum_sep3 = array_map('intval', $sum_sep3);
+                $sum_oct3 = getSuma3($sum_oct3);
+                $sum_oct3 = array_map('intval', $sum_oct3);
+                $sum_nov3 = getSuma3($sum_nov3);
+                $sum_nov3 = array_map('intval', $sum_nov3);
+                $sum_dic3 = getSuma3($sum_dic3);
+                $sum_dic3 = array_map('intval', $sum_dic3);
 
-        $mes4 = getSuma($mes4);
-        $mes4 = array_map('intval', $mes4);
+                $this->set(array('sum_ene3' => $sum_ene3, 'sum_feb3' => $sum_feb3, 'sum_mar3' => $sum_mar3, 'sum_abr3' => $sum_abr3, 'sum_may3' => $sum_may3, 'sum_jun3' => $sum_jun3, 'sum_jul3' => $sum_jul3, 'sum_ago3' => $sum_ago3, 'sum_sep3' => $sum_sep3, 'sum_oct3' => $sum_oct3, 'sum_nov3' => $sum_nov3, 'sum_dic3' => $sum_dic3));
+            break;  
 
-        $mes5 = getSuma($mes5);
-        $mes5 = array_map('intval', $mes5);
-
-        $mes6 = getSuma($mes6);
-        $mes6 = array_map('intval', $mes6);
-
-        $mes7 = getSuma($mes7);
-        $mes7 = array_map('intval', $mes7);
-
-        $mes8 = getSuma($mes8);
-        $mes8 = array_map('intval', $mes8);
-
-        $mes9 = getSuma($mes9);
-        $mes9 = array_map('intval', $mes9);
-
-        $mes10 = getSuma($mes10);
-        $mes10 = array_map('intval', $mes10);
-
-        $mes11 = getSuma($mes11);
-        $mes11 = array_map('intval', $mes11);
-
-        $mes12 = getSuma($mes12);
-        $mes12 = array_map('intval', $mes12);
-
-        foreach ($mes as $valor) {
-
-            $data = $mes;
-
-            $enero = $this->Highcharts->addChartSeries();
-            $enero->type = 'column';
-            $enero->addName('Enero')
-            ->addData($mes);
-
-            $febrero = $this->Highcharts->addChartSeries();
-            $febrero->type = 'column';
-            $febrero->addName('Febrero')
-            ->addData($mes2);
-
-            $marzo = $this->Highcharts->addChartSeries();
-            $marzo->type = 'column';
-            $marzo->addName('Marzo')
-            ->addData($mes3);
-
-            $abril = $this->Highcharts->addChartSeries();
-            $abril->type = 'column';
-            $abril->addName('Abril')
-            ->addData($mes4);
-
-            $mayo = $this->Highcharts->addChartSeries();
-            $mayo->type = 'column';
-            $mayo->addName('Mayo')
-            ->addData($mes5);
-
-            $junio = $this->Highcharts->addChartSeries();
-            $junio->type = 'column';
-            $junio->addName('Junio')
-            ->addData($mes6);
-
-            $julio = $this->Highcharts->addChartSeries();
-            $julio->type = 'column';
-            $julio->addName('Julio')
-            ->addData($mes7);
-
-            $agosto = $this->Highcharts->addChartSeries();
-            $agosto->type = 'column';
-            $agosto->addName('Agosto')
-            ->addData($mes8);
-
-            $septiembre = $this->Highcharts->addChartSeries();
-            $septiembre->type = 'column';
-            $septiembre->addName('Septiembre')
-            ->addData($mes9);
-
-            $octubre = $this->Highcharts->addChartSeries();
-            $octubre->type = 'column';
-            $octubre->addName('Octubre')
-            ->addData($mes10);
-
-            $noviembre = $this->Highcharts->addChartSeries();
-            $noviembre->type = 'column';
-            $noviembre->addName('Noviembre')
-            ->addData($mes11);
-
-            $diciembre = $this->Highcharts->addChartSeries();
-            $diciembre->type = 'column';
-            $diciembre->addName('Diciembre')
-            ->addData($mes12);
-            
-        }
+            case 2:
+                $sum_ene1 = $this->Hcxestablishment->query("SELECT `con_january` + `eme_january` + `ext_january` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_ene2 = $this->Hcxestablishment->query("SELECT `con_january` + `eme_january` + `ext_january` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                  
+                // cambio de mes 
+                $sum_feb1 = $this->Hcxestablishment->query("SELECT `con_february` + `eme_february` + `ext_february` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_feb2 = $this->Hcxestablishment->query("SELECT `con_february` + `eme_february` + `ext_february` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                  
+                // cambio de mes 
+                $sum_mar1 = $this->Hcxestablishment->query("SELECT `con_march` + `eme_march` + `ext_march` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_mar2 = $this->Hcxestablishment->query("SELECT `con_march` + `eme_march` + `ext_march` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                  
+                // cambio de mes 
+                $sum_abr1 = $this->Hcxestablishment->query("SELECT `con_april` + `eme_april` + `ext_april` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_abr2 = $this->Hcxestablishment->query("SELECT `con_april` + `eme_april` + `ext_april` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                  
+                // cambio de mes 
+                $sum_may1 = $this->Hcxestablishment->query("SELECT `con_may` + `eme_may` + `ext_may` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_may2 = $this->Hcxestablishment->query("SELECT `con_may` + `eme_may` + `ext_may` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                  
+                // cambio de mes 
+                $sum_jun1 = $this->Hcxestablishment->query("SELECT `con_june` + `eme_june` + `ext_june` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_jun2 = $this->Hcxestablishment->query("SELECT `con_june` + `eme_june` + `ext_june` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                  
+                // cambio de mes 
+                $sum_jul1 = $this->Hcxestablishment->query("SELECT `con_july` + `eme_july` + `ext_july` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_jul2 = $this->Hcxestablishment->query("SELECT `con_july` + `eme_july` + `ext_july` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                  
+                // cambio de mes 
+                $sum_ago1 = $this->Hcxestablishment->query("SELECT `con_august` + `eme_august` + `ext_august` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_ago2 = $this->Hcxestablishment->query("SELECT `con_august` + `eme_august` + `ext_august` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                  
+                // cambio de mes 
+                $sum_sep1 = $this->Hcxestablishment->query("SELECT `con_september` + `eme_september` + `ext_september` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_sep2 = $this->Hcxestablishment->query("SELECT `con_september` + `eme_september` + `ext_september` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                  
+                // cambio de mes 
+                $sum_oct1 = $this->Hcxestablishment->query("SELECT `con_october` + `eme_october` + `ext_october` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_oct2 = $this->Hcxestablishment->query("SELECT `con_october` + `eme_october` + `ext_october` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                  
+                // cambio de mes 
+                $sum_nov1 = $this->Hcxestablishment->query("SELECT `con_november` + `eme_november` + `ext_november` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_nov2 = $this->Hcxestablishment->query("SELECT `con_november` + `eme_november` + `ext_november` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                  
+                // cambio de mes 
+                $sum_dic1 = $this->Hcxestablishment->query("SELECT `con_december` + `eme_december` + `ext_december` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_dic2 = $this->Hcxestablishment->query("SELECT `con_december` + `eme_december` + `ext_december` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]");                 
     
-        $Mychart->addSeries($enero);
-        $Mychart->addSeries($febrero);
-        $Mychart->addSeries($marzo);
-        $Mychart->addSeries($abril);
-        $Mychart->addSeries($mayo);
-        $Mychart->addSeries($junio);
-        $Mychart->addSeries($julio);
-        $Mychart->addSeries($agosto);
-        $Mychart->addSeries($septiembre);
-        $Mychart->addSeries($octubre);
-        $Mychart->addSeries($noviembre);
-        $Mychart->addSeries($diciembre);
+            break;
+            case 3:
+            case 4:
+            case 5:
+                $sum_ene1 = $this->Hcxestablishment->query("SELECT `con_january` + `eme_january` + `ext_january` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_ene2 = $this->Hcxestablishment->query("SELECT `con_january` + `eme_january` + `ext_january` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_ene3 = $this->Hcxestablishment->query("SELECT `con_january` + `eme_january` + `ext_january` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");
+                $sum_ene4 = $this->Hcxestablishment->query("SELECT `con_january` + `eme_january` + `ext_january` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]"); 
+                // cambio de mes 
+                $sum_feb1 = $this->Hcxestablishment->query("SELECT `con_february` + `eme_february` + `ext_february` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_feb2 = $this->Hcxestablishment->query("SELECT `con_february` + `eme_february` + `ext_february` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_feb3 = $this->Hcxestablishment->query("SELECT `con_february` + `eme_february` + `ext_february` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                $sum_feb4 = $this->Hcxestablishment->query("SELECT `con_february` + `eme_february` + `ext_february` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]");  
+                // cambio de mes 
+                $sum_mar1 = $this->Hcxestablishment->query("SELECT `con_march` + `eme_march` + `ext_march` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_mar2 = $this->Hcxestablishment->query("SELECT `con_march` + `eme_march` + `ext_march` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_mar3 = $this->Hcxestablishment->query("SELECT `con_march` + `eme_march` + `ext_march` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                $sum_mar4 = $this->Hcxestablishment->query("SELECT `con_march` + `eme_march` + `ext_march` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]");  
+                // cambio de mes 
+                $sum_abr1 = $this->Hcxestablishment->query("SELECT `con_april` + `eme_april` + `ext_april` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_abr2 = $this->Hcxestablishment->query("SELECT `con_april` + `eme_april` + `ext_april` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_abr3 = $this->Hcxestablishment->query("SELECT `con_april` + `eme_april` + `ext_april` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");
+                $sum_abr4 = $this->Hcxestablishment->query("SELECT `con_april` + `eme_april` + `ext_april` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]");
+                // cambio de mes 
+                $sum_may1 = $this->Hcxestablishment->query("SELECT `con_may` + `eme_may` + `ext_may` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_may2 = $this->Hcxestablishment->query("SELECT `con_may` + `eme_may` + `ext_may` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_may3 = $this->Hcxestablishment->query("SELECT `con_may` + `eme_may` + `ext_may` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]"); 
+                $sum_may4 = $this->Hcxestablishment->query("SELECT `con_may` + `eme_may` + `ext_may` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]"); 
+                // cambio de mes 
+                $sum_jun1 = $this->Hcxestablishment->query("SELECT `con_june` + `eme_june` + `ext_june` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_jun2 = $this->Hcxestablishment->query("SELECT `con_june` + `eme_june` + `ext_june` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_jun3 = $this->Hcxestablishment->query("SELECT `con_june` + `eme_june` + `ext_june` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");
+                $sum_jun4 = $this->Hcxestablishment->query("SELECT `con_june` + `eme_june` + `ext_june` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]");
+                // cambio de mes 
+                $sum_jul1 = $this->Hcxestablishment->query("SELECT `con_july` + `eme_july` + `ext_july` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_jul2 = $this->Hcxestablishment->query("SELECT `con_july` + `eme_july` + `ext_july` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_jul3 = $this->Hcxestablishment->query("SELECT `con_july` + `eme_july` + `ext_july` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");
+                $sum_jul4 = $this->Hcxestablishment->query("SELECT `con_july` + `eme_july` + `ext_july` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]");  
+                // cambio de mes 
+                $sum_ago1 = $this->Hcxestablishment->query("SELECT `con_august` + `eme_august` + `ext_august` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_ago2 = $this->Hcxestablishment->query("SELECT `con_august` + `eme_august` + `ext_august` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_ago3 = $this->Hcxestablishment->query("SELECT `con_august` + `eme_august` + `ext_august` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");  
+                $sum_ago4 = $this->Hcxestablishment->query("SELECT `con_august` + `eme_august` + `ext_august` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]");  
+                // cambio de mes 
+                $sum_sep1 = $this->Hcxestablishment->query("SELECT `con_september` + `eme_september` + `ext_september` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_sep2 = $this->Hcxestablishment->query("SELECT `con_september` + `eme_september` + `ext_september` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_sep3 = $this->Hcxestablishment->query("SELECT `con_september` + `eme_september` + `ext_september` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");
+                $sum_sep4 = $this->Hcxestablishment->query("SELECT `con_september` + `eme_september` + `ext_september` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]");
+                // cambio de mes 
+                $sum_oct1 = $this->Hcxestablishment->query("SELECT `con_october` + `eme_october` + `ext_october` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_oct2 = $this->Hcxestablishment->query("SELECT `con_october` + `eme_october` + `ext_october` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_oct3 = $this->Hcxestablishment->query("SELECT `con_october` + `eme_october` + `ext_october` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]"); 
+                $sum_oct4 = $this->Hcxestablishment->query("SELECT `con_october` + `eme_october` + `ext_october` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]"); 
+                // cambio de mes 
+                $sum_nov1 = $this->Hcxestablishment->query("SELECT `con_november` + `eme_november` + `ext_november` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_nov2 = $this->Hcxestablishment->query("SELECT `con_november` + `eme_november` + `ext_november` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_nov3 = $this->Hcxestablishment->query("SELECT `con_november` + `eme_november` + `ext_november` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");
+                $sum_nov4 = $this->Hcxestablishment->query("SELECT `con_november` + `eme_november` + `ext_november` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]");
+                // cambio de mes 
+                $sum_dic1 = $this->Hcxestablishment->query("SELECT `con_december` + `eme_december` + `ext_december` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+                $sum_dic2 = $this->Hcxestablishment->query("SELECT `con_december` + `eme_december` + `ext_december` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]"); 
+                $sum_dic3 = $this->Hcxestablishment->query("SELECT `con_december` + `eme_december` + `ext_december` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");
+                $sum_dic4 = $this->Hcxestablishment->query("SELECT `con_december` + `eme_december` + `ext_december` as sum FROM `hcxestablishments` WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]");
 
-        $this->set(compact('chartName3'));
+                $sum_ene3 = getSuma3($sum_ene3);
+                $sum_ene3 = array_map('intval', $sum_ene3);
+                $sum_feb3 = getSuma3($sum_feb3);
+                $sum_feb3 = array_map('intval', $sum_feb3);
+                $sum_mar3 = getSuma3($sum_mar3);
+                $sum_mar3 = array_map('intval', $sum_mar3);
+                $sum_abr3 = getSuma3($sum_abr3);
+                $sum_abr3 = array_map('intval', $sum_abr3);
+                $sum_may3 = getSuma3($sum_may3);
+                $sum_may3 = array_map('intval', $sum_may3);
+                $sum_jun3 = getSuma3($sum_jun3);
+                $sum_jun3 = array_map('intval', $sum_jun3);
+                $sum_jul3 = getSuma3($sum_jul3);
+                $sum_jul3 = array_map('intval', $sum_jul3);
+                $sum_ago3 = getSuma3($sum_ago3);
+                $sum_ago3 = array_map('intval', $sum_ago3);
+                $sum_sep3 = getSuma3($sum_sep3);
+                $sum_sep3 = array_map('intval', $sum_sep3);
+                $sum_oct3 = getSuma3($sum_oct3);
+                $sum_oct3 = array_map('intval', $sum_oct3);
+                $sum_nov3 = getSuma3($sum_nov3);
+                $sum_nov3 = array_map('intval', $sum_nov3);
+                $sum_dic3 = getSuma3($sum_dic3);
+                $sum_dic3 = array_map('intval', $sum_dic3);
 
+                $sum_ene4 = getSuma3($sum_ene4);
+                $sum_ene4 = array_map('intval', $sum_ene4);
+                $sum_feb4 = getSuma3($sum_feb4);
+                $sum_feb4 = array_map('intval', $sum_feb4);
+                $sum_mar4 = getSuma3($sum_mar4);
+                $sum_mar4 = array_map('intval', $sum_mar4);
+                $sum_abr4 = getSuma3($sum_abr4);
+                $sum_abr4 = array_map('intval', $sum_abr4);
+                $sum_may4 = getSuma3($sum_may4);
+                $sum_may4 = array_map('intval', $sum_may4);
+                $sum_jun4 = getSuma3($sum_jun4);
+                $sum_jun4 = array_map('intval', $sum_jun4);
+                $sum_jul4 = getSuma3($sum_jul4);
+                $sum_jul4 = array_map('intval', $sum_jul4);
+                $sum_ago4 = getSuma3($sum_ago4);
+                $sum_ago4 = array_map('intval', $sum_ago4);
+                $sum_sep4 = getSuma3($sum_sep4);
+                $sum_sep4 = array_map('intval', $sum_sep4);
+                $sum_oct4 = getSuma3($sum_oct4);
+                $sum_oct4 = array_map('intval', $sum_oct4);
+                $sum_nov4 = getSuma3($sum_nov4);
+                $sum_nov4 = array_map('intval', $sum_nov4);
+                $sum_dic4 = getSuma3($sum_dic4);
+                $sum_dic4 = array_map('intval', $sum_dic4);
+
+                $this->set(array('sum_ene3' => $sum_ene3, 'sum_feb3' => $sum_feb3, 'sum_mar3' => $sum_mar3, 'sum_abr3' => $sum_abr3, 'sum_may3' => $sum_may3, 'sum_jun3' => $sum_jun3, 'sum_jul3' => $sum_jul3, 'sum_ago3' => $sum_ago3, 'sum_sep3' => $sum_sep3, 'sum_oct3' => $sum_oct3, 'sum_nov3' => $sum_nov3, 'sum_dic3' => $sum_dic3, 'sum_ene4' => $sum_ene4, 'sum_feb4' => $sum_feb4, 'sum_mar4' => $sum_mar4, 'sum_abr4' => $sum_abr4, 'sum_may4' => $sum_may4, 'sum_jun4' => $sum_jun4, 'sum_jul4' => $sum_jul4, 'sum_ago4' => $sum_ago4, 'sum_sep4' => $sum_sep4, 'sum_oct4' => $sum_oct4, 'sum_nov4' => $sum_nov4, 'sum_dic4' => $sum_dic4));
+            break;
+        }
+        
+        $sum_ene1 = getSuma3($sum_ene1);
+        $sum_ene1 = array_map('intval', $sum_ene1);
+
+        $sum_ene2 = getSuma3($sum_ene2);
+        $sum_ene2 = array_map('intval', $sum_ene2);
+
+        
+        
+        // cambio de mes
+        $sum_feb1 = getSuma3($sum_feb1);
+        $sum_feb1 = array_map('intval', $sum_feb1);
+
+        $sum_feb2 = getSuma3($sum_feb2);
+        $sum_feb2 = array_map('intval', $sum_feb2);
+
+        
+        // cambio de mes
+        $sum_mar1 = getSuma3($sum_mar1);
+        $sum_mar1 = array_map('intval', $sum_mar1);
+
+        $sum_mar2 = getSuma3($sum_mar2);
+        $sum_mar2 = array_map('intval', $sum_mar2);
+
+        
+        // cambio de mes
+        $sum_abr1 = getSuma3($sum_abr1);
+        $sum_abr1 = array_map('intval', $sum_abr1);
+
+        $sum_abr2 = getSuma3($sum_abr2);
+        $sum_abr2 = array_map('intval', $sum_abr2);
+
+        
+        // cambio de mes
+        $sum_may1 = getSuma3($sum_may1);
+        $sum_may1 = array_map('intval', $sum_may1);
+
+        $sum_may2 = getSuma3($sum_may2);
+        $sum_may2 = array_map('intval', $sum_may2);
+
+        
+        // cambio de mes
+        $sum_jun1 = getSuma3($sum_jun1);
+        $sum_jun1 = array_map('intval', $sum_jun1);
+
+        $sum_jun2 = getSuma3($sum_jun2);
+        $sum_jun2 = array_map('intval', $sum_jun2);
+
+        
+        // cambio de mes
+        $sum_jul1 = getSuma3($sum_jul1);
+        $sum_jul1 = array_map('intval', $sum_jul1);
+
+        $sum_jul2 = getSuma3($sum_jul2);
+        $sum_jul2 = array_map('intval', $sum_jul2);
+
+        
+        // cambio de mes
+        $sum_ago1 = getSuma3($sum_ago1);
+        $sum_ago1 = array_map('intval', $sum_ago1);
+
+        $sum_ago2 = getSuma3($sum_ago2);
+        $sum_ago2 = array_map('intval', $sum_ago2);
+
+        
+        // cambio de mes
+        $sum_sep1 = getSuma3($sum_sep1);
+        $sum_sep1 = array_map('intval', $sum_sep1);
+
+        $sum_sep2 = getSuma3($sum_sep2);
+        $sum_sep2 = array_map('intval', $sum_sep2);
+
+        
+        // cambio de mes
+        $sum_oct1 = getSuma3($sum_oct1);
+        $sum_oct1 = array_map('intval', $sum_oct1);
+
+        $sum_oct2 = getSuma3($sum_oct2);
+        $sum_oct2 = array_map('intval', $sum_oct2);
+
+        
+        // cambio de mes
+        $sum_nov1 = getSuma3($sum_nov1);
+        $sum_nov1 = array_map('intval', $sum_nov1);
+
+        $sum_nov2 = getSuma3($sum_nov2);
+        $sum_nov2 = array_map('intval', $sum_nov2);
+
+        
+        // cambio de mes
+        $sum_dic1 = getSuma3($sum_dic1);
+        $sum_dic1 = array_map('intval', $sum_dic1);
+
+        $sum_dic2 = getSuma3($sum_dic2);
+        $sum_dic2 = array_map('intval', $sum_dic2);
+
+
+        $this->set(array('sum_ene1' => $sum_ene1, 'sum_ene2' => $sum_ene2, 'sum_feb1' => $sum_feb1, 'sum_feb2' => $sum_feb2, 'sum_mar1' => $sum_mar1, 'sum_mar2' => $sum_mar2, 'sum_abr1' => $sum_abr1, 'sum_abr2' => $sum_abr2, 'sum_may1' => $sum_may1, 'sum_may2' => $sum_may2, 'sum_jun1' => $sum_jun1, 'sum_jun2' => $sum_jun2, 'sum_jul1' => $sum_jul1, 'sum_jul2' => $sum_jul2, 'sum_ago1' => $sum_ago1, 'sum_ago2' => $sum_ago2, 'sum_sep1' => $sum_sep1, 'sum_sep2' => $sum_sep2, 'sum_oct1' => $sum_oct1, 'sum_oct2' => $sum_oct2, 'sum_nov1' => $sum_nov1, 'sum_nov2' => $sum_nov2, 'sum_dic1' => $sum_dic1, 'sum_dic2' => $sum_dic2));
+
+        // print_r($sum_ene1);
+        $sibas = getSuma2($sibas);
+        $sibas = array_map('intval', $sibas);
+        $this->set(array('siba' => $siba, 'sibas' => $sibas));
+
+
+
+    
     }
+
+
 }

@@ -1,6 +1,6 @@
 <div class="col-lg-12 col-xs-12 col-sm-12">
     <ol class="breadcrumb">
-        <li><span class="glyphicon glyphicon-plus-sign"></span> <li><?php echo $this->Html->link(__('Nuevo nivel de acceso'), array('action' => 'add')); ?></li>
+        <li><span class="glyphicon glyphicon-plus-sign"></span><?php echo $this->Html->link(__(' Nuevo nivel de acceso'), array('action' => 'add')); ?></li>
     </ol>
 </div>
 <div class="row">

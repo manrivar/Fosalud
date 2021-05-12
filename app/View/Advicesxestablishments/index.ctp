@@ -46,7 +46,13 @@
                         </td>
                         <td>
                             <?php $region = $advicesxestablishment['Advicesxestablishment']['regions_id'] ?>
+                            <?php if($this->Session->read('Auth.User.acceso_id')>1):?>
+                            <?php if($this->Session->read('Auth.User.regions_id')==$reg):?>
                             <?php echo $this->Html->link($advicesxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $advicesxestablishment['Advicesxestablishment']['id'], $region, $yer)); ?>
+                            <?php else: ?>
+                            <?php echo h($hcxestablishment['Establishment']['establishment_name']); ?>
+                            <?php endif; ?>
+                            <?php endif; ?>
                         </td>
 
                         <?php $total = $advicesxestablishment['Advicesxestablishment']['january'] + $advicesxestablishment['Advicesxestablishment']['february'] + $advicesxestablishment['Advicesxestablishment']['march'] + $advicesxestablishment['Advicesxestablishment']['april'] + $advicesxestablishment['Advicesxestablishment']['may'] + $advicesxestablishment['Advicesxestablishment']['june'] + $advicesxestablishment['Advicesxestablishment']['july'] + $advicesxestablishment['Advicesxestablishment']['august'] + $advicesxestablishment['Advicesxestablishment']['september'] + $advicesxestablishment['Advicesxestablishment']['october'] + $advicesxestablishment['Advicesxestablishment']['november'] + $advicesxestablishment['Advicesxestablishment']['december'];  ?>

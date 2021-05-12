@@ -17,14 +17,28 @@ class InjxestablishmentsController extends AppController
      * @var array
      */
     public $components = array('Paginator', 'Session', 'Flash');
+    public $layout = 'default';
 
     /**
      * index method
      *
      * @return void
      */
-    public function index($region, $yer)
+    public function Autorizacion()
     {
+        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
+        if ($nivel_acceso > 3) {
+            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
+            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
+        }
+    }
+
+    public function index($region, $yer, $layout = 0)
+    {
+        // ifpara no mostrar el layout en la tabla , implementar en todas las tablas
+        if($layout == 1){
+            $this->autoLayout = false;
+        }
         // metodo para filtrar por fechas
         $yir = $this->request->query('yir');
         $reg = $region;
@@ -178,12 +192,21 @@ class InjxestablishmentsController extends AppController
      */
     public function edit($id = null, $region, $yer)
     {
+        $establishments = $this->Injxestablishment->Establishment->find('list');
+        $sibases = $this->Injxestablishment->Sibase->find('list');
+        $regions = $this->Injxestablishment->Region->find('list');
+        $reg = $region;
+
         if (!$this->Injxestablishment->exists($id)) {
             throw new NotFoundException(__('Invalid injxestablishment'));
         }
         if ($this->request->is(array('post', 'put'))) {
             if ($this->Injxestablishment->save($this->request->data)) {
                 $this->Flash->success(__('El registro fue actualizado con exito.'));
+                $this->loadModel('Bitacora');
+                $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " edito registros de inyecciones del establecimiento ". $establishments[$id];
+                $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+                $this->Bitacora->save($Bitacora);
                 return $this->redirect(array('action' => 'index', $region, '?yir=' . $yer));
             } else {
                 $this->Flash->error(__('El registro no se pudo actualizar, favor intente de nuevo'));
@@ -192,10 +215,7 @@ class InjxestablishmentsController extends AppController
             $options = array('conditions' => array('Injxestablishment.' . $this->Injxestablishment->primaryKey => $id));
             $this->request->data = $this->Injxestablishment->find('first', $options);
         }
-        $establishments = $this->Injxestablishment->Establishment->find('list');
-        $sibases = $this->Injxestablishment->Sibase->find('list');
-        $regions = $this->Injxestablishment->Region->find('list');
-        $reg = $region;
+
         $this->set(compact('establishments', 'sibases', 'regions', 'reg', 'yer'));
     }
 
@@ -221,32 +241,24 @@ class InjxestablishmentsController extends AppController
         return $this->redirect(array('action' => 'index'));
     }
     //*****************************************/ prueba de excel *************************************************
-    public function Autorizacion()
-    {
-        $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
-        if ($nivel_acceso > 2) {
-            $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
-            $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
-        }
-    }
+
 
     public function cargar_Evaluacion($yer)
     {
         //llamada a funcion de autorizacion para validar acceso a funcion
         $this->Autorizacion();
         $regions = $this->Injxestablishment->Region->find('list');
+        $we = $this->Session->read('Auth.User.regions_id');
         $this->set(compact('regions'));
-        $this->set(array('yer' => $yer));
+        $this->set(array('yer' => $yer, 'we' => $we));
     }
 
     public function cargar()
     {
         $this->autoRender = false;
-
+        $this->autoLayout = false;
         $reg = $this->request->data['regions'];
         $year = $this->request->data['year'];
-
-
 
         //corroborar que no existe informaciona sociada a ese regions
         $existe = $this->Injxestablishment->find(
@@ -258,6 +270,16 @@ class InjxestablishmentsController extends AppController
                 ),
 
                 'fields' => array('count(*) as total')
+            )
+        );
+
+        $exi = $this->Injxestablishment->find(
+            'first',
+            array(
+                'conditions' => array(
+                    'Injxestablishment.regions_id' => $reg,
+                    'Injxestablishment.year' => $year
+                ),
             )
         );
 
@@ -400,9 +422,17 @@ class InjxestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
+        unlink($fileName);
+        $layout = 1;
+        
+        $this->loadModel('Bitacora');
+        $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " Cargo Plantilla de Excel de Inyecciones de la ". $exi['Region']['region_name']. " del año ". $year;;
+        $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+        $this->Bitacora->save($Bitacora); 
+
         $this->redirect([
             'controller' => 'Injxestablishments',
-            'action' => 'index', $reg, $year
+            'action' => 'index', $reg, $year, $layout
         ]);
     }
 

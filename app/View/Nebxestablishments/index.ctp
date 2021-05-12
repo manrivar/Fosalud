@@ -16,8 +16,8 @@
             <thead>
                 <tr>
                     <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('id'); ?></th>
-                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('establishments_id', 'Establecimientos'); ?></th>
                     <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('sibases_id', 'Sibasis'); ?></th>
+                    <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('establishments_id', 'Establecimientos'); ?></th>
                     <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('total', 'Total'); ?></th>
                     <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('january', 'Enero'); ?></th>
                     <th bgcolor="#AEEAF1"><?php echo $this->Paginator->sort('february', 'Febrero'); ?></th>
@@ -42,8 +42,18 @@
                             <?php echo h($nebxestablishment['Sibase']['sibase_name']); ?>
                         </td>
                         <td>
-                            <?php $region = $nebxestablishment['Nebxestablishment']['regions_id'] ?>
+                        <?php $region = $nebxestablishment['Nebxestablishment']['regions_id'] ?>
+
+                        <?php if($this->Session->read('Auth.User.acceso_id') <= 2):?>
                             <?php echo $this->Html->link($nebxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $nebxestablishment['Nebxestablishment']['id'], $region, $yer)); ?>
+                            <?php elseif($this->Session->read('Auth.User.acceso_id') > 2):?>
+
+                            <?php if($this->Session->read('Auth.User.regions_id')==$region && $this->Session->read('Auth.User.acceso_id') <= 3):?>
+                                <?php echo $this->Html->link($nebxestablishment['Establishment']['establishment_name'], array('action' => 'edit', $nebxestablishment['Nebxestablishment']['id'], $region, $yer)); ?>
+                            <?php else: ?>
+                                <?php echo h($nebxestablishment['Establishment']['establishment_name']); ?>
+                            <?php endif; ?>
+                            <?php endif; ?>
                         </td>
                         <?php $total = $nebxestablishment['Nebxestablishment']['january'] + $nebxestablishment['Nebxestablishment']['february'] + $nebxestablishment['Nebxestablishment']['march'] + $nebxestablishment['Nebxestablishment']['april'] + $nebxestablishment['Nebxestablishment']['may'] + $nebxestablishment['Nebxestablishment']['june'] + $nebxestablishment['Nebxestablishment']['july'] + $nebxestablishment['Nebxestablishment']['august'] + $nebxestablishment['Nebxestablishment']['september'] + $nebxestablishment['Nebxestablishment']['october'] + $nebxestablishment['Nebxestablishment']['november'] + $nebxestablishment['Nebxestablishment']['december'];  ?>
                         <td bgcolor="#CBEEF2"><?php echo $total; ?>&nbsp;</td>

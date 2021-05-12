@@ -61,12 +61,12 @@
 
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
-        <a href="<?= $this->base ?>/Advices/index">
-            <img src="<?= $this->base ?>/img/ima/Speech.png" width="200" height="224">
+        <a href="<?= $this->base ?>/Odons/index">
+            <img src="<?= $this->base ?>/img/ima/Dental Support.png" width="200" height="224">
 
             <div class="box-nombre">
                 <center>
-                    <h4>Consejerias</h4>
+                    <h4>Odontologia</h4>
                 </center>
             </div>
         </a>
@@ -90,7 +90,7 @@
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
         <a href="<?= $this->base ?>/Recipes/index">
-            <img src="<?= $this->base ?>/img/ima/Symptom List.png" width="200" height="224">
+            <img src="<?= $this->base ?>/img/ima/Pill Bottle.png" width="200" height="224">
 
             <div class="box-nombre">
                 <h4>Recetas</h4>
@@ -170,7 +170,7 @@
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
         <a href="<?= $this->base ?>/Vaccines/index">
-            <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
+            <img src="<?= $this->base ?>/img/ima/Injection.png" width="200" height="224">
 
             <div class="box-nombre">
                 <center>
@@ -183,9 +183,9 @@
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
         <a href="<?= $this->base ?>/Tubers/index">
-            <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
+            <img src="<?= $this->base ?>/img/ima/Lungs.png" width="200" height="224">
 
-            <div class="box-nombre"> 
+            <div class="box-nombre">
                 <center>
                     <h4>Tuberculosis</h4>
                 </center>
@@ -196,7 +196,7 @@
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
         <a href="<?= $this->base ?>/Patients/index">
-            <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
+            <img src="<?= $this->base ?>/img/ima/Symptom List.png" width="200" height="224">
 
             <div class="box-nombre">
                 <center>
@@ -209,7 +209,7 @@
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
         <a href="<?= $this->base ?>/Events/index">
-            <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
+            <img src="<?= $this->base ?>/img/ima/Search Of Symptoms.png" width="200" height="224">
 
             <div class="box-nombre">
                 <center>
@@ -219,10 +219,11 @@
         </a>
     </div>
 </div>
+
 <div class="col-sm-3 col-xs-12 col-lg-3 col-md-3">
     <div style="text-align:center;">
         <a href="<?= $this->base ?>/Diseases/index">
-            <img src="<?= $this->base ?>/img/ima/Under Construction 2.png" width="200" height="224">
+            <img src="<?= $this->base ?>/img/ima/Chemotheraphy.png" width="200" height="224">
 
             <div class="box-nombre">
                 <center>

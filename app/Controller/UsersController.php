@@ -29,9 +29,6 @@ class UsersController extends AppController {
         Configure::write('debug', '0'); 
     } 
 
-
-
-
     public function Autorizacion() {
         $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
         if ($nivel_acceso > 2) {
@@ -64,7 +61,7 @@ class UsersController extends AppController {
                     if ($this->Session->read('Auth.User.id') != 1) {
                         $this->loadModel('Bitacora');
                         $persona_id = 0;
-                        $descripcion = "Inicio de Session  DEL USUARIO " . $this->Session->read('Auth.User.username') . " " . $this->Session->read('Auth.User.nombre_usuario');
+                        $descripcion = "Inicio de Sesion del usuario " . $this->Session->read('Auth.User.nombre_usuario') . " - " . $this->Session->read('Auth.User.username');
                         $Bitacora["Bitacora"]["descripcion"] = $descripcion;
                         $Bitacora["Bitacora"]["persona_id"] = $persona_id;
                         $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
@@ -388,12 +385,25 @@ class UsersController extends AppController {
                 '(User.nombre_usuario like "%' . $this->Session->read("q") . '%" OR User.username like "%' . $this->Session->read("q") . '%") and User.id<>1 '
             );
         }
-
-
-        $this->Paginator->settings = $this->paginate;
-        $this->User->recursive = 0;
-        $this->set('users', $this->Paginator->paginate(null, array($this->option)));
+        
+        if($this->Session->read('Auth.User.acceso_id') == 1){
+            $this->Paginator->settings = $this->paginate;
+            $this->User->recursive = 0;
+            $this->set('users', $this->Paginator->paginate(null, array($this->option)));
             $this->set('q', $this->Session->read('q'));
+        }else{
+            $users = $this->User->find(
+                'all',
+                array(
+                    'conditions' => array('User.acceso_id <>' => 1)
+                )
+                );
+                $this->Paginator->settings = $this->paginate;
+                $this->User->recursive = 0;
+                $this->set(array('users' => $users, $this->Paginator->paginate(null, array($this->option))));
+                $this->set('q', $this->Session->read('q'));
+        }
+        
             /*
         if ($this->Session->read('Auth.User.unidadorganizativa_id') == 0) {
             $this->set('users', $this->Paginator->paginate(null, array($this->option)));
@@ -439,7 +449,7 @@ class UsersController extends AppController {
                 $this->Flash->success(__('El usuario ha sido guardado.'));
                 //bitacora
                 $this->loadModel('Bitacora');
-                $Bitacora["Bitacora"]["descripcion"] = "CREACION DE USUARIO CON ACCESO de  PARA: " .$this->request->data['User']['nombre_usuario'] ;
+                $Bitacora["Bitacora"]["descripcion"] = "Creacion de usuario con acceso de  para: " .$this->request->data['User']['nombre_usuario'];
                 $Bitacora["Bitacora"]["empleado_id"] = 0;
                 $Bitacora["Bitacora"]["medico_id"] = 0;
                 $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
@@ -463,7 +473,6 @@ class UsersController extends AppController {
                 //mail($casilla, $asunto, $mensaje, $cabeceras);
                 //***************************************************************************************************************
 
-
                 return $this->redirect(array('action' => 'index'));
             } else {
                 $this->Flash->error(__('El usuario no se guardo. Intentelo nuevamente.'));
@@ -480,6 +489,10 @@ class UsersController extends AppController {
             $accesos = $this->User->Acceso->find('list');
             $this->set(compact('accesos'));
 
+            //Carga de combo Regiones
+
+            $regions = $this->User->Region->find('list');
+            $this->set(compact('regions'));
 
             //Carga de combo para las unidades presupuestarias
             $comp = "";
@@ -509,7 +522,6 @@ class UsersController extends AppController {
             $id=$user_id;
             
         }
-
         return $id;
     }
     
@@ -522,14 +534,32 @@ class UsersController extends AppController {
      */
     public function edit($id = null) {
         $id=$this->Autorizacion_modificacion($id);
+        // $this->Autorizacion();
+
+        $use = $this->User->find(
+            'all',
+            array(
+                'conditions' => array(
+                    'User.id' => $id
+                ),
+
+                'fields' => array('User.nombre_usuario')
+            )
+        );
+     
         if (!$this->User->exists($id)) {
             throw new NotFoundException(__('Usuario no valido'));
         }
+        
         if ($this->request->is(array('post', 'put'))) {
             $this->request->data["User"]["fechahorapassword"] = date('Y-m-d H:i:s');
-
+    
             if ($this->User->save($this->request->data)) {
                 $this->Flash->success(__('Contraseña actualizada.'));
+                $this->loadModel('Bitacora');
+                $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " cambio contraseña del usuario ". $use[0]['User']['nombre_usuario'];
+                $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+                $this->Bitacora->save($Bitacora);
                 return $this->redirect(array('action' => 'edit', $id));
             } else {
                 $this->Flash->error(__('La contraseña no se actualizo. Intente nuevamente.'));
@@ -544,6 +574,17 @@ class UsersController extends AppController {
     }
     
     public function edit_gral($id = null) {
+        $this->Autorizacion();
+        $use = $this->User->find(
+            'all',
+            array(
+                'conditions' => array(
+                    'User.id' => $id
+                ),
+
+                'fields' => array('User.nombre_usuario')
+            )
+        );
 
         if (!$this->User->exists($id)) {
             throw new NotFoundException(__('Usuario no valido'));
@@ -553,6 +594,10 @@ class UsersController extends AppController {
 
             if ($this->User->save($this->request->data)) {
                 $this->Flash->success(__('Datos Actualizados.'));
+                $this->loadModel('Bitacora');
+                $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " edito al usuario ". $use[0]['User']['nombre_usuario'];
+                $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+                $this->Bitacora->save($Bitacora);
                 return $this->redirect(array('action' => 'index', $id));
             } else {
                 $this->Flash->error(__('La contraseña no se actualizo. Intente nuevamente.'));
@@ -561,13 +606,12 @@ class UsersController extends AppController {
             $options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
             $this->request->data = $this->User->find('first', $options);
         }
-
         $groups = $this->User->Group->find('list');
         $accesos = $this->User->Acceso->find('list');
+        $regions = $this->User->Region->find('list');
         $this->set(compact('accesos'));
+        $this->set(compact('regions'));
     }
-
-    
 
     /**
      * delete method
@@ -590,16 +634,4 @@ class UsersController extends AppController {
         $this->Flash->error(__('El usuario no puede ser eliminado'));
         return $this->redirect(array('action' => 'index'));
     }
-
-    
-    
-    
-
-
-
-
-
 }
-
-
-

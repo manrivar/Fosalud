@@ -14,12 +14,15 @@ echo $this->Html->script('zingchart/zingchart.min');
 <h2>
   <center>Atencion Curativa</center>
 </h2>
+
+<?php if($this->Session->read('Auth.User.acceso_id') <= 3):?>
 <span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Hcxestablishments', 'action' => 'cargar_Evaluacion', $yer)); ?>
 &nbsp;&nbsp;
+<?php endif;  ?>
 <span class="fa fa-pie-chart"></span> <?php echo $this->Html->Link('Graficos', array('controller' => 'Healingcares', 'action' => 'chart', $yer)); ?>
 
 <?= $this->Form->create('healingcares', ['type' => 'get']); ?>
-<?php $option = array('2020' => '2020', '2021' => '2021', '2022' => '2022', '2023' => '2023', '2024' => '2024', '2025' => '2025', '2026' => '2026', '2027' => '2027', '2028' => '2028', '2029' => '2029', '2030' => '2030'); ?>
+<?php $option = array('2021' => '2021'); ?>
 
 <?php 
   echo $this->Form->input('yir', array(
@@ -97,23 +100,4 @@ echo $this->Html->script('zingchart/zingchart.min');
   </div>
 </div>
 
-<div id="myChart"></div>
-<!-- Just before the closing body tag is best -->
-<?php print_r($uno);?>
-<script>  
-  zingchart.render({    
-    id: 'myChart',    
-    data: {      
-      type: 'hbar',
-      'scale-x': {
-      labels: [ "Q1", "Q2", "Q3", "Q4" ]
-      },    
-      series: [        
-        { values: [54,23,34,23] },        
-        { values: [10,15,16,20] }      
-      ]    
-    }  
-  });
-
-</script>
 </body>

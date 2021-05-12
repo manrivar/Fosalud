@@ -104,7 +104,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         }*/
     ?>
     <style type="text/css">
-        #aviso-movil-horizontal {
+        /* #aviso-movil-horizontal {
             display: none;
         }
 
@@ -119,15 +119,15 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             #aviso-movil-horizontal {
                 display: none;
             }
-        }
+        } */
     </style>
 </head>
 
 
 <body>
-    <div id="aviso-movil-horizontal" class="alert alert-warning">
+    <!-- <div id="aviso-movil-horizontal" class="alert alert-warning">
         <span class="fa fa-warning"></span> Activa la rotacion de pantalla y coloca tu móvil en Horizontal para una mejor visibilidad del Sitio.
-    </div>
+    </div> -->
 
 
 

@@ -18,14 +18,19 @@ class AdvicesxestablishmentsController extends AppController
      * @var array
      */
     public $components = array('Paginator', 'Session', 'Flash');
+    public $layout = 'default';
 
     /**
      * index method
      *
      * @return void
      */
-    public function index($region, $yer)
+    public function index($region, $yer, $layout = 0)
     {
+        // ifpara no mostrar el layout en la tabla , implementar en todas las tablas
+        if($layout == 1){
+            $this->autoLayout = false;
+        }
         // metodo para filtrar por fechas
         $yir = $this->request->query('yir');
         $reg = $region;
@@ -226,7 +231,7 @@ class AdvicesxestablishmentsController extends AppController
     public function Autorizacion()
     {
         $nivel_acceso = $this->Session->read('Auth.User.acceso_id');
-        if ($nivel_acceso > 2) {
+        if ($nivel_acceso > 3) {
             $this->Flash->error("Error: No cuenta con permisos para ingresar a esta pagina.");
             $this->redirect(array('controller' => 'users', 'action' => 'Bienvenida'));
         }
@@ -257,6 +262,15 @@ class AdvicesxestablishmentsController extends AppController
             
             'fields' => array('count(*) as total')
                 )
+        );
+        $exi = $this->Cexestablishment->find(
+            'first',
+            array(
+                'conditions' => array(
+                    'Cexestablishment.regions_id' => $reg,
+                    'Cexestablishment.year' => $year
+                ),
+            )
         );
 
         if ($reg == 1) {
@@ -400,6 +414,14 @@ class AdvicesxestablishmentsController extends AppController
                 }
             }
         } //fin de la comprobacion
+        unlink($fileName);
+        $layout = 1;
+        
+        $this->loadModel('Bitacora');
+        $Bitacora["Bitacora"]["descripcion"] = "El usuario ".$this->Session->read('Auth.User.nombre_usuario'). " Cargo Plantilla de Excel de Examenes Clinicos de la ". $ex['Region']['region_name'];
+        $Bitacora["Bitacora"]["user_id"] = $this->Session->read('Auth.User.id');
+        $this->Bitacora->save($Bitacora);  
+
         $this->redirect([
             'controller' => 'Advicesxestablishments',
             'action' => 'index', $reg, $year
@@ -445,68 +467,208 @@ class AdvicesxestablishmentsController extends AppController
                 )
             )
         );
-        
-        $tot_jan = $mon[0][0]['jan'];
-        $tot_feb = $mon[0][0]['feb'];
-        $tot_mar = $mon[0][0]['mar'];
-        $tot_apr = $mon[0][0]['apr'];
-        $tot_may = $mon[0][0]['may'];
-        $tot_jun = $mon[0][0]['jun'];
-        $tot_jul = $mon[0][0]['jul'];
-        $tot_aug = $mon[0][0]['aug'];
-        $tot_sep = $mon[0][0]['sep'];
-        $tot_oct = $mon[0][0]['oct'];
-        $tot_nov = $mon[0][0]['nov'];
-        $tot_dec = $mon[0][0]['decem'];
-        
-        
-        // *************************************************************************************************************************************
-
+ 
         function getSuma($arreglo)
         {
             $a_temp = array();
 
             foreach ($arreglo as $arr) {
-                $a_temp[] = $arr[0]["suma"];
-                
+                $a_temp[] = $arr[0]['jan'];
+                $a_temp[] = $arr[0]['feb'];
+                $a_temp[] = $arr[0]['mar'];
+                $a_temp[] = $arr[0]['apr'];
+                $a_temp[] = $arr[0]['may'];
+                $a_temp[] = $arr[0]['jun'];
+                $a_temp[] = $arr[0]['jul'];
+                $a_temp[] = $arr[0]['aug'];
+                $a_temp[] = $arr[0]['sep'];
+                $a_temp[] = $arr[0]['oct'];
+                $a_temp[] = $arr[0]['nov'];
+                $a_temp[] = $arr[0]['decem'];
             }
             return $a_temp;
         }
 
-        $tot_jan = getSuma($tot_jan);
-        $tot_jan = array_map('intval', $tot_jan);
+        $mon = getSuma($mon);
+        $mon = array_map('intval', $mon);
 
+        $this->set(array('mon' => $mon));
 
-        $ene = $tot_jan;
-        $feb = array(intval($tot_feb));
-        $mar = array(intval($tot_mar));
-        $abr = array(intval($tot_apr));
-        $may = array(intval($tot_may));
-        $jun = array(intval($tot_jun));
-        $jul = array(intval($tot_jul));
-        $aug = array(intval($tot_aug));
-        $sep = array(intval($tot_sep));
-        $oct = array(intval($tot_oct));
-        $nov = array(intval($tot_nov));
-        $dec = array(intval($tot_dec));
-        // suma
-        // promedio
-        $prom1 = ($tot_jan + $tot_jan + $tot_jan) / 3;
-        $prom2 = ($tot_feb + $tot_feb + $tot_feb) / 3;
-        $prom3 = ($tot_mar + $tot_mar + $tot_mar) / 3;
-        $prom4 = ($tot_apr + $tot_apr + $tot_apr) / 3;
-        $prom5 = ($tot_may + $tot_may + $tot_may) / 3;
-        $prom6 = ($tot_jun + $tot_jun + $tot_jun) / 3;
-        $prom7 = ($tot_jul + $tot_jul + $tot_jul) / 3;
-        $prom8 = ($tot_aug + $tot_aug + $tot_aug) / 3;
-        $prom9 = ($tot_sep + $tot_sep + $tot_sep) / 3;
-        $prom10 = ($tot_oct + $tot_oct + $tot_oct) / 3;
-        $prom11 = ($tot_nov + $tot_nov + $tot_nov) / 3;
-        $prom12 = ($tot_dec + $tot_dec + $tot_dec) / 3;
+        //mostrar todos las sibasis por region
 
-        $yearData = array($ene, $feb, $mar, $abr, $may, $jun, $jul, $aug, $sep, $oct, $nov, $dec);
-        $avgData = array($prom1, $prom2, $prom3, $prom4, $prom5, $prom6, $prom7, $prom8, $prom9, $prom10, $prom11, $prom12);
-        $this->set(array('yearData' => $yearData));
+        // Consulta sql la cual devuelve todos los establecimientos de la region en la variable "reg"
+        $siba = $this->Advicesxestablishment->Sibase->find(
+            'list',
+            array(
+                'fields' => array('Sibase.sibase_name'),
+                'conditions' => array(
+                    'Sibase.regions_id' => $reg
+                )
+            )
+        );
+        // devuelve el id de las sibasis
+        $sibaid = $this->Advicesxestablishment->Sibase->find(
+            'list',
+            array(
+                'fields' => array('Sibase.id'),
+                'conditions' => array(
+                    'Sibase.regions_id' => $reg
+                )
+            )
+        );
+        
+        //hace que empiece el array en 0
+        $siba = array_values($siba);
+        $sibaid = array_values($sibaid);
+        
+        if($reg == 1){
+            $tot1 = $this->Advicesxestablishment->query("SELECT SUM(january) + SUM(february) + SUM(march) + SUM(april) + SUM(may) + SUM(june) + SUM(july) + SUM(august) + SUM(september) + SUM(october) + SUM(november) + SUM(december) as sib1 FROM advicesxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
 
+            $tot2 = $this->Advicesxestablishment->query("SELECT SUM(january) + SUM(february) + SUM(march) + SUM(april) + SUM(may) + SUM(june) + SUM(july) + SUM(august) + SUM(september) + SUM(october) + SUM(november) + SUM(december) as sib1 FROM advicesxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]");
+
+            $tot3 = $this->Advicesxestablishment->query("SELECT SUM(january) + SUM(february) + SUM(march) + SUM(april) + SUM(may) + SUM(june) + SUM(july) + SUM(august) + SUM(september) + SUM(october) + SUM(november) + SUM(december) as sib1 FROM advicesxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");
+
+            $sibas = array($tot1, $tot2, $tot3);
+
+            $estasib1 = $this->Advicesxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[0]
+                    )
+                )
+            );
+            $estasib2 = $this->Advicesxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[1]
+                    )
+                )
+            );
+            $estasib3 = $this->Advicesxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[2]
+                    )
+                )
+            );
+            $this->set(array('estasib1' => $estasib1, 'estasib2' => $estasib2, 'estasib3' => $estasib3));
+        }elseif ($reg == 2) {
+            $tot1 = $this->Advicesxestablishment->query("SELECT SUM(january) + SUM(february) + SUM(march) + SUM(april) + SUM(may) + SUM(june) + SUM(july) + SUM(august) + SUM(september) + SUM(october) + SUM(november) + SUM(december) as sib1 FROM advicesxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+
+            $tot2 = $this->Advicesxestablishment->query("SELECT SUM(january) + SUM(february) + SUM(march) + SUM(april) + SUM(may) + SUM(june) + SUM(july) + SUM(august) + SUM(september) + SUM(october) + SUM(november) + SUM(december) as sib1 FROM advicesxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]");
+
+            $sibas = array($tot1, $tot2);
+
+            $estasib1 = $this->Advicesxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[0]
+                    )
+                )
+            );
+            $estasib2 = $this->Advicesxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[1]
+                    )
+                )
+            );
+            $this->set(array('estasib1' => $estasib1, 'estasib2' => $estasib2));
+
+        }elseif ($reg == 3 or $reg == 4 or $reg == 5) {
+            $tot1 = $this->Advicesxestablishment->query("SELECT SUM(january) + SUM(february) + SUM(march) + SUM(april) + SUM(may) + SUM(june) + SUM(july) + SUM(august) + SUM(september) + SUM(october) + SUM(november) + SUM(december) as sib1 FROM advicesxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[0]");
+
+            $tot2 = $this->Advicesxestablishment->query("SELECT SUM(january) + SUM(february) + SUM(march) + SUM(april) + SUM(may) + SUM(june) + SUM(july) + SUM(august) + SUM(september) + SUM(october) + SUM(november) + SUM(december) as sib1 FROM advicesxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[1]");
+
+            $tot3 = $this->Advicesxestablishment->query("SELECT SUM(january) + SUM(february) + SUM(march) + SUM(april) + SUM(may) + SUM(june) + SUM(july) + SUM(august) + SUM(september) + SUM(october) + SUM(november) + SUM(december) as sib1 FROM advicesxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[2]");
+
+            $tot4 = $this->Advicesxestablishment->query("SELECT SUM(january) + SUM(february) + SUM(march) + SUM(april) + SUM(may) + SUM(june) + SUM(july) + SUM(august) + SUM(september) + SUM(october) + SUM(november) + SUM(december) as sib1 FROM advicesxestablishments WHERE regions_id = $reg && year = $yer && sibases_id = $sibaid[3]");
+
+            $sibas = array($tot1, $tot2, $tot3, $tot4);
+
+            $estasib1 = $this->Advicesxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[0]
+                    )
+                )
+            );
+            $estasib2 = $this->Advicesxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[1]
+                    )
+                )
+            );
+            $estasib3 = $this->Advicesxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[2]
+                    )
+                )
+            );
+            $estasib4 = $this->Advicesxestablishment->Establishment->find(
+                'list',
+                array(
+                    'fields' => array('Establishment.establishment_name'),
+                    'conditions' => array(
+                        'Establishment.regions_id' => $reg,
+                        'Establishment.sibases_id' => $sibaid[3]
+                    )
+                )
+            );
+            $this->set(array('estasib1' => $estasib1, 'estasib2' => $estasib2, 'estasib3' => $estasib3, 'estasib4' => $estasib4));
+        }
+
+        function getSuma2($arreglo)
+        {
+            $a_temp = array();
+
+            foreach ($arreglo as $arr) {
+                $a_temp[] = $arr[0][0]["sib1"];
+            }
+            return $a_temp;
+        }
+
+        $sibas = getSuma2($sibas);
+        $sibas = array_map('intval', $sibas);
+
+        $estas = $this->Advicesxestablishment->Establishment->find(
+            'list',
+            array(
+                'fields' => array('Establishment.establishment_name'),
+                'conditions' => array(
+                    'Establishment.regions_id' => $reg
+                )
+            )
+        );
+
+        $estas = array_values($estas);
+        $this->set(array('siba' => $siba, 'sibas' => $sibas, 'estas' => $estas));
     }
 }
+

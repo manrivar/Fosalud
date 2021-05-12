@@ -9,10 +9,14 @@
 <h2>
     <center>Pacientes Vistos</center>
 </h2>
+<?php if($this->Session->read('Auth.User.acceso_id') <= 3):?>
 <span class="fa fa-upload"></span> <?php echo $this->Html->Link('Importar', array('controller' => 'Patientsxestablishments', 'action' => 'cargar_Evaluacion', $yer)); ?>
+&nbsp;&nbsp;
+<?php endif;  ?>
+<span class="fa fa-pie-chart"></span> <?php echo $this->Html->Link('Graficos', array('controller' => 'Patients', 'action' => 'chart', $yer)); ?>
 
 <?= $this->Form->create('patients', ['type' => 'get']); ?>
-<?php $option = array('2020' => '2020', '2021' => '2021', '2022' => '2022', '2023' => '2023', '2024' => '2024', '2025' => '2025', '2026' => '2026', '2027' => '2027', '2028' => '2028', '2029' => '2029', '2030' => '2030'); ?>
+<?php $option = array('2021' => '2021'); ?>
 
 <?php echo $this->Form->input('yir', array(
     'label' => '',

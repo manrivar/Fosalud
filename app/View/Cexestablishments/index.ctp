@@ -80,8 +80,22 @@
             </td>
             <td>
               <?php $region = $cexestablishment['Cexestablishment']['regions_id'] ?>
-              <?php echo $this->Html->link($cexestablishment['Establishment']['establishment_name'], array('action' => 'edit', $cexestablishment['Cexestablishment']['id'], $region, $yer)); ?>
+
+              <?php if($this->Session->read('Auth.User.acceso_id') <= 2):?>
+                <?php echo $this->Html->link($cexestablishment['Establishment']['establishment_name'], array('action' => 'edit', $cexestablishment['Cexestablishment']['id'], $region, $yer)); ?>
+                <?php elseif($this->Session->read('Auth.User.acceso_id') > 2):?>
+
+                  <?php if($this->Session->read('Auth.User.regions_id')== $region && $this->Session->read('Auth.User.acceso_id') <= 3):?>
+                    <?php echo $this->Html->link($cexestablishment['Establishment']['establishment_name'], array('action' => 'edit', $cexestablishment['Cexestablishment']['id'], $region, $yer)); ?>
+                  <?php else: ?>
+                    <?php echo h($cexestablishment['Establishment']['establishment_name']); ?>
+                  <?php endif; ?>
+                  <?php endif; ?>
+
             </td>
+
+
+
             <?php $total = $cexestablishment['Cexestablishment']['cit_january'] + $cexestablishment['Cexestablishment']['cit_february'] + $cexestablishment['Cexestablishment']['cit_march'] + $cexestablishment['Cexestablishment']['cit_april'] + $cexestablishment['Cexestablishment']['cit_may'] + $cexestablishment['Cexestablishment']['cit_june'] + $cexestablishment['Cexestablishment']['cit_july'] + $cexestablishment['Cexestablishment']['cit_august'] + $cexestablishment['Cexestablishment']['cit_september'] + $cexestablishment['Cexestablishment']['cit_october'] + $cexestablishment['Cexestablishment']['cit_november'] + $cexestablishment['Cexestablishment']['cit_december'] + $cexestablishment['Cexestablishment']['mam_january'] + $cexestablishment['Cexestablishment']['mam_february'] + $cexestablishment['Cexestablishment']['mam_march'] + $cexestablishment['Cexestablishment']['mam_april'] + $cexestablishment['Cexestablishment']['mam_may'] + $cexestablishment['Cexestablishment']['mam_june'] + $cexestablishment['Cexestablishment']['mam_july'] + $cexestablishment['Cexestablishment']['mam_august'] + $cexestablishment['Cexestablishment']['mam_september'] + $cexestablishment['Cexestablishment']['mam_october'] + $cexestablishment['Cexestablishment']['mam_november'] + $cexestablishment['Cexestablishment']['mam_december'];  ?>
             <td bgcolor="#CBEEF2"><?php echo $total; ?>&nbsp;</td>
             <td><?php echo h($cexestablishment['Cexestablishment']['cit_january']); ?>&nbsp;</td>
